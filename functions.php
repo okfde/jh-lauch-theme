@@ -122,9 +122,7 @@ add_action( 'widgets_init', 'lauch_widgets_init' );
  */
 function lauch_scripts() {
 	wp_enqueue_style( 'lauch-style', get_stylesheet_uri() );
-
 	wp_enqueue_script( 'lauch-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
 	wp_enqueue_script( 'lauch-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -171,3 +169,6 @@ require get_template_directory() . '/inc/project_type.php';
 require get_template_directory() . '/inc/taxonomies.php';
 
 require get_template_directory() . '/inc/metaboxes.php';
+
+
+require get_template_directory() . '/inc/api_endpoints.php';

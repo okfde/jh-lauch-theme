@@ -15,17 +15,9 @@ get_header();
 
         get_template_part( 'template-parts/content', 'page' );
 
-print_r();
-
-$taxonomies = get_post_taxonomies($post->ID);
-
-if ($taxonomies) {
-foreach($taxonomies as $taxonomy) {
-    $term = wp_get_post_terms($post->ID, $taxonomy);
-
-    echo $term[0]->taxonomy . ": ". $term[0]->slug . '<br>';
-}
-}
+//$loc_term = wp_get_post_terms($post->ID, 'location');
+//      $year_term = wp_get_post_terms($post->ID, 'year');
+//        echo do_shortcode("[vuevideo type='project-presentation' location='". $loc_term[0]->slug ."' year='". $year_term[0]->slug ."']");
 
         // If comments are open or we have at least one comment, load up the comment template.
         if ( comments_open() || get_comments_number() ) :
