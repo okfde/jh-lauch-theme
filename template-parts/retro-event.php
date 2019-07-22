@@ -11,7 +11,15 @@ if ((get_field('next_event'))) {
 
   <p><?php the_field('summary_video', $next->ID); ?></p>
 
-  <p><?php echo apply_filters( 'the_content', get_field('videoplayer', $next->ID)); ?></p>
+  <?php //echo do_shortcode("[vuevideo type='project-presentation' location='rostock' year='2019']");
+
+  $loc_term = wp_get_post_terms($next->ID, 'location');
+  $year_term = wp_get_post_terms($next->ID, 'year');
+  if ($loc_term && $year_term) {
+    echo do_shortcode("[vuevideo type='project-presentation' location='". $loc_term[0]->slug ."' year='". $year_term[0]->slug ."']");
+  }
+  ?>
+
 
   <h3>Bilder</h3>
   <ul>
