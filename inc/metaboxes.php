@@ -4,6 +4,9 @@
  * https://wordpress.stackexchange.com/questions/128622/how-do-i-create-a-relationship-between-two-custom-post-types
  */
 
+/**
+ * VIDEO <-> PROJECT
+ */
 add_action( 'admin_init', 'lauch_add_video_project_meta_boxes' );
 function lauch_add_video_project_meta_boxes() {
     add_meta_box( 'video_project_metabox', 'Video Relationship', 'videos_field', 'project' );

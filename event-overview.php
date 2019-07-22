@@ -12,7 +12,7 @@ get_header();
   while ( have_posts() ) :
       the_post();
 
-      ?>THIS IS EVENT OVERVIEW<?php
+      ?>EVENT INDEX<?php
       get_template_part( 'template-parts/content', 'page' );
 
       get_template_part( 'template-parts/children', 'page' );

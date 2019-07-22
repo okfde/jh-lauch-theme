@@ -164,11 +164,11 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  */
 require get_template_directory() . '/inc/video_type.php';
 require get_template_directory() . '/inc/project_type.php';
-
+require get_template_directory() . '/inc/event_type.php';
 
 require get_template_directory() . '/inc/taxonomies.php';
 
 require get_template_directory() . '/inc/metaboxes.php';
-
+//require get_template_directory() . '/inc/metabox/event.php';
 
 require get_template_directory() . '/inc/api_endpoints.php';

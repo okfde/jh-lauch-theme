@@ -14,12 +14,20 @@ get_header();
         the_post();
 
         get_template_part( 'template-parts/content', 'page' );
-        get_template_part( 'template-parts/children', 'page' );
 
-        // If comments are open or we have at least one comment, load up the comment template.
-        if ( comments_open() || get_comments_number() ) :
-            comments_template();
-        endif;
+    if (get_field('is_active') == true) {
+
+      get_template_part( 'template-parts/active', 'event' );
+
+    } else {
+
+      get_template_part( 'template-parts/retro', 'event' );
+
+      // hier auch eine liste an noch vergangeneren retros
+
+    }
+
+       // get_template_part( 'template-parts/children', 'event' );
 
     endwhile; // End of the loop.
     ?>

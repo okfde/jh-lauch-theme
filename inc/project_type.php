@@ -44,7 +44,7 @@ function lauch_projects_init() {
         'has_archive'        => true,
         'hierarchical'       => false,
         'menu_position'      => null,
-        'supports'           => array( 'title', 'editor', 'custom-fields','page-attributes' ),
+        'supports'           => array( 'title', 'editor', 'custom-fields','page-attributes', 'thumbnail' ),
         'taxonomies'         => array('tech', 'topic', 'location', 'year'),
     );
 

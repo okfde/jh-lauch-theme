@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all single projects
+ * The template for displaying all single events
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
@@ -19,17 +19,8 @@ get_header();
 
         get_template_part( 'template-parts/content', get_post_type() );
 
-        $hackdash = get_post_meta($post->ID, 'hackdashurl', true);
-        ?><p><a href="<?php echo $hackdash ?>">Project bei Hackdash</a></p><?php
 
-        $mediaccc = get_post_meta($post->ID, 'mediaccc', true);
-        ?><p><a href="<?php echo $mediaccc ?>">Video bei Media.ccc</a></p><?php
-
-        $video = get_post(get_post_meta($post->ID, '_video', true));
-        $video_id = get_post_meta($video->ID, 'youtubeid', true)
-        ?>
-<iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/<?php echo $video_id; ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        <?php
+        print_r(get_post_meta($post->ID));
 
         the_post_navigation();
 

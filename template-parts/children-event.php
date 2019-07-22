@@ -28,7 +28,7 @@ if ($children) { ?>
           }
           ?>
             <h2><?php echo $child->post_title ?></h2>
-            <?php echo $child->post_content ?>
+
             <a href="<?php echo $child->post_name; ?>" title="Mehr über <?php echo $child->post_title ?>">Mehr lesen</a>
         </li>
 <?php
