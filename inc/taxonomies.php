@@ -37,7 +37,7 @@ function lauch_register_location_taxonomy() {
         'show_in_rest' => true,
     );
 
-    register_taxonomy( 'location', ['video', 'project', 'page', 'event'], $args );
+    register_taxonomy( 'location', ['video', 'project', 'page', 'event', 'post'], $args );
 }
 add_action( 'init', 'lauch_register_location_taxonomy', 0 );
 
@@ -50,7 +50,7 @@ function lauch_register_year_taxonomy() {
         'show_in_rest' => true,
     );
 
-    register_taxonomy( 'year', ['video', 'project', 'page', 'event'], $args );
+    register_taxonomy( 'year', ['video', 'project', 'page', 'event', 'post'], $args );
 }
 add_action( 'init', 'lauch_register_year_taxonomy', 0 );
 
