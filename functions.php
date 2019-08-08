@@ -162,14 +162,15 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 /**
  * ALL THE CUSTOM POST TYPES
  */
-require get_template_directory() . '/inc/video_type.php';
-require get_template_directory() . '/inc/project_type.php';
-require get_template_directory() . '/inc/event_type.php';
-require get_template_directory() . '/inc/downloads_type.php';
+require get_template_directory() . '/inc/custom_types/event_type.php';
+require get_template_directory() . '/inc/custom_types/lab_type.php';
+require get_template_directory() . '/inc/custom_types/exchange_type.php';
+require get_template_directory() . '/inc/custom_types/video_type.php';
+require get_template_directory() . '/inc/custom_types/project_type.php';
+require get_template_directory() . '/inc/custom_types/person_type.php';
 
 require get_template_directory() . '/inc/taxonomies.php';
 
 require get_template_directory() . '/inc/metaboxes.php';
-//require get_template_directory() . '/inc/metabox/event.php';
 
 require get_template_directory() . '/inc/api_endpoints.php';

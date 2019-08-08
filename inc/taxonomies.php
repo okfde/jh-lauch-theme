@@ -50,7 +50,7 @@ function lauch_register_year_taxonomy() {
         'show_in_rest' => true,
     );
 
-    register_taxonomy( 'year', ['video', 'project', 'page', 'event', 'post'], $args );
+    register_taxonomy( 'year', ['video', 'project', 'page', 'event', 'post', 'exchange'], $args );
 }
 add_action( 'init', 'lauch_register_year_taxonomy', 0 );
 
@@ -67,3 +67,16 @@ function lauch_register_type_taxonomy() {
     register_taxonomy( 'type', 'video', $args );
 }
 add_action( 'init', 'lauch_register_type_taxonomy', 0 );
+
+function lauch_register_exchange-program_taxonomy() {
+  $args = array(
+    'label'        => __( 'Austausch', 'textdomain' ),
+    'public'       => true,
+    'rewrite'      => false,
+    'hierarchical' => true,
+    'show_in_rest' => true,
+  );
+
+  register_taxonomy( 'exchange-program', ['exchange'], $args );
+}
+add_action( 'init', 'lauch_register_exchange-program_taxonomy', 0 );
