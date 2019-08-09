@@ -83,7 +83,7 @@ add_action( 'init', 'lauch_register_exchange_program_taxonomy', 0 );
 
 function lauch_register_labs_taxonomy() {
 $args = array(
-'label'        => __( 'Labs', 'textdomain' ),
+'label'        => __( 'Lab Location', 'textdomain' ),
 'public'       => true,
 'rewrite'      => false,
 'hierarchical' => true,
