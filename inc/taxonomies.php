@@ -90,7 +90,7 @@ $args = array(
 'show_in_rest' => true,
 );
 
-register_taxonomy( 'lab', ['lab', 'person'], $args );
+register_taxonomy( 'lab-location', ['lab', 'person', 'post'], $args );
 }
 add_action( 'init', 'lauch_register_labs_taxonomy', 0 );
 
