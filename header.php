@@ -34,14 +34,12 @@
 				<?php
 			else :
 				?>
+
 				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 				<?php
-			endif;
-			$lauch_description = get_bloginfo( 'description', 'display' );
-			if ( $lauch_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $lauch_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
+			endif; ?>
+
+	                <p class="site-title">Mit <span id="revolving-claims"></span><noscript>Code</noscript> die Welt verbessern</p>
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
