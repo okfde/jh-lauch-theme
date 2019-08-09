@@ -68,7 +68,7 @@ function lauch_register_type_taxonomy() {
 }
 add_action( 'init', 'lauch_register_type_taxonomy', 0 );
 
-function lauch_register_exchange-program_taxonomy() {
+function lauch_register_exchange_program_taxonomy() {
   $args = array(
     'label'        => __( 'Austausch', 'textdomain' ),
     'public'       => true,
@@ -79,4 +79,4 @@ function lauch_register_exchange-program_taxonomy() {
 
   register_taxonomy( 'exchange-program', ['exchange'], $args );
 }
-add_action( 'init', 'lauch_register_exchange-program_taxonomy', 0 );
+add_action( 'init', 'lauch_register_exchange_program_taxonomy', 0 );
