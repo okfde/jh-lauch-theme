@@ -45,7 +45,7 @@ function lauch_persons_init() {
         'hierarchical'       => false,
         'menu_position'      => null,
         'supports'           => array( 'title', 'custom-fields', 'thumbnail' ),
-        //'taxonomies'         => array('exchange-program', 'year'),
+        'taxonomies'         => array('lab', 'job'),
     );
 
     register_post_type( 'person', $args );

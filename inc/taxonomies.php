@@ -80,3 +80,29 @@ function lauch_register_exchange_program_taxonomy() {
   register_taxonomy( 'exchange-program', ['exchange'], $args );
 }
 add_action( 'init', 'lauch_register_exchange_program_taxonomy', 0 );
+
+function lauch_register_labs_taxonomy() {
+$args = array(
+'label'        => __( 'Labs', 'textdomain' ),
+'public'       => true,
+'rewrite'      => false,
+'hierarchical' => true,
+'show_in_rest' => true,
+);
+
+register_taxonomy( 'lab', ['lab', 'person'], $args );
+}
+add_action( 'init', 'lauch_register_labs_taxonomy', 0 );
+
+function lauch_register_jobs_taxonomy() {
+    $args = array(
+        'label'        => __( 'Job', 'textdomain' ),
+        'public'       => true,
+        'rewrite'      => false,
+        'hierarchical' => true,
+        'show_in_rest' => true,
+    );
+
+    register_taxonomy( 'job', ['person'], $args );
+}
+add_action( 'init', 'lauch_register_jobs_taxonomy', 0 );

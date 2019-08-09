@@ -45,7 +45,7 @@ function lauch_labs_init() {
         'hierarchical'       => false,
         'menu_position'      => null,
         'supports'           => array( 'title', 'editor', 'custom-fields', 'page-attributes', 'thumbnail' ),
-        //'taxonomies'         => array('location', 'year'),
+        'taxonomies'         => array('lab'),
     );
 
     register_post_type( 'lab', $args );
