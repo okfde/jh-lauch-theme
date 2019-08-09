@@ -173,4 +173,5 @@ require get_template_directory() . '/inc/taxonomies.php';
 
 require get_template_directory() . '/inc/metaboxes.php';
 
+//require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/api_endpoints.php';

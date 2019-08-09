@@ -44,9 +44,24 @@ function lauch_event_retro_videos( $data ) {
     return $payload;
 }
 
+function lauch_revolving_claims_endoint( $data ) {
+    $tmp = get_theme_mod('revolving_claims', 'Code');
+    if ($tmp) {
+      $payload = explode(',', $tmp);
+    }
+    $response = new WP_REST_Response( $payload );
+    return $response;
+}
+
+
 add_action( 'rest_api_init', function () {
     register_rest_route( 'lauch/v1', '/retro_videos', array(
         'methods' => 'GET',
         'callback' => 'lauch_event_retro_videos',
+    ));
+
+    register_rest_route( 'lauch/v1', '/revolving_claims', array(
+        'methods' => 'GET',
+        'callback' => 'lauch_revolving_claims_endoint',
     ));
 });
