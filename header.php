@@ -12,45 +12,53 @@
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
-<head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="https://gmpg.org/xfn/11">
+  <head>
+    <meta charset="<?php bloginfo( 'charset' ); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
 
-	<?php wp_head(); ?>
-</head>
+    <?php wp_head(); ?>
+  </head>
 
-<body <?php body_class(); ?>>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'lauch' ); ?></a>
+  <body <?php body_class(); ?>>
+    <div id="page" class="site">
+      <a class="skip show-on-focus" href="#content"><?php esc_html_e( 'Skip to content', 'lauch' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
+      <header class="l-header" id="masthead">
+        <nav class="c-nav c-topnav l-inner" id="site-navigation">
+          <input type="checkbox" id="menu-toggle" class="c-nav-toggle" aria-controls="primary-menu" aria-expanded="false">
+          <label for="menu-toggle" class="c-nav-label no-text"
+                 title="Menü öffnen"
+                 aria-label="Menü öffnen">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
 
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif; ?>
+          <?php
+	  if ( is_front_page() && is_home() ) :
+	  ?>
+	    <h1 class="c-nav-logo">
+              <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                <img src="<?php echo get_header_image(); ?>" alt="<?php bloginfo( 'name' ); ?>"></a></h1>
+	  <?php
+	  else :
+	  ?>
+            <p class="c-nav-logo">
+              <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                <img src="<?php echo get_header_image(); ?>" alt="<?php bloginfo( 'name' ); ?>"></a></p>
+	  <?php
+	  endif; ?>
 
-	                <p class="site-title">Mit <span id="revolving-claims"></span><noscript>Code</noscript> die Welt verbessern</p>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'lauch' ); ?></button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-main',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
-
-	<div id="content" class="site-content">
+            <?php
+	    wp_nav_menu( array(
+	      'theme_location' => 'menu-main',
+	      'menu_id'        => 'primary-menu',
+              'menu_class'     => 'c-nav-items c-list-pointless',
+              'container'      => false
+	    ) );
+	    ?>
+        </nav>
+      </header>
+      <main id="content" class="site-content">
+        <p class="site-title">Mit <span id="revolving-claims"></span><noscript>Code</noscript> die Welt verbessern</p>

@@ -115,9 +115,9 @@ add_action( 'widgets_init', 'lauch_widgets_init' );
  * Enqueue scripts and styles.
  */
 function lauch_scripts() {
-	wp_enqueue_style( 'lauch-style', get_stylesheet_uri() );
-	wp_enqueue_script( 'lauch-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-	wp_enqueue_script( 'lauch-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+    wp_enqueue_style( 'lauch-style', get_template_directory_uri() . '/styles/main.min.css');
+    wp_enqueue_script( 'lauch-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+    wp_enqueue_script( 'lauch-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
     wp_enqueue_script('vue', 'https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js', [], '2.5.2');
     wp_enqueue_script( 'lauch-revolving-claims', get_template_directory_uri() . '/js/revolving-claims.js', array(), '20190809', true );
