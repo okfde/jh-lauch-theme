@@ -23,6 +23,12 @@ get_header();
     endwhile; // End of the loop.
     ?>
 
+    <pretix-button event="https://anmeldung.jugendhackt.org/vernetztewelten/2019-busan-tokio/" items="item_13=1">
+      Buy ticket!
+    </pretix-button>
+
+
+
     <pretix-widget event="https://anmeldung.jugendhackt.org/vernetztewelten/2019-busan-tokio/"></pretix-widget>
     <noscript>
       <div class="pretix-widget">

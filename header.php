@@ -26,7 +26,9 @@
 
       <header class="l-header" id="masthead">
         <nav class="c-nav c-topnav l-inner" id="site-navigation">
-          <input type="checkbox" id="menu-toggle" class="c-nav-toggle" aria-controls="primary-menu" aria-expanded="false">
+          <input type="checkbox" id="menu-toggle"
+                 class="c-nav-toggle a11y-visuallyhidden"
+                 tabindex=0>
           <label for="menu-toggle" class="c-nav-label no-text"
                  title="Menü öffnen"
                  aria-label="Menü öffnen">
@@ -39,14 +41,22 @@
 	  if ( is_front_page() && is_home() ) :
 	  ?>
 	    <h1 class="c-nav-logo">
-              <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                <img src="<?php echo get_header_image(); ?>" alt="<?php bloginfo( 'name' ); ?>"></a></h1>
+              <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"
+                 class="no-text"
+                 style="background-image: url(<?php echo get_header_image(); ?>">
+                <?php bloginfo( 'name' ); ?>
+              </a>
+            </h1>
 	  <?php
 	  else :
 	  ?>
-            <p class="c-nav-logo">
-              <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                <img src="<?php echo get_header_image(); ?>" alt="<?php bloginfo( 'name' ); ?>"></a></p>
+             <p class="c-nav-logo">
+                  <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"
+                     class="no-text"
+                     style="background-image: url(<?php echo get_header_image(); ?>">
+                    <?php bloginfo( 'name' ); ?>
+                  </a>
+             </p>
 	  <?php
 	  endif; ?>
 
@@ -58,6 +68,23 @@
               'container'      => false
 	    ) );
 	    ?>
+
+          <input type="checkbox" id="search-toggle"
+                 class="c-search-toggle a11y-visuallyhidden"
+                 tabindex=0>
+          <label for="search-toggle" class="c-search-label"
+                 title="Suche öffnen"
+                 aria-label="Suche öffnen"></label>
+          <div class="c-search">
+            <div class="c-search-inner">
+              <form action="/suche" class="c-search-bottomline">
+                <input type="text" id="search-input" placeholder="Wonach suchst du?" class="c-search-input">
+                <label for="search-input" class="a11y-visuallyhidden">Suche</label>
+                <input type="submit" value="Suche" class="c-search-submit">
+              </form>
+              <div class="c-search-illustration"></div>
+            </div>
+          </div>
         </nav>
       </header>
       <main id="content" class="site-content">
