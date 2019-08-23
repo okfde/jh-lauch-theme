@@ -93,4 +93,3 @@
         </nav>
       </header>
       <main id="content" class="site-content">
-        <p class="site-title">Mit <span id="revolving-claims"></span><noscript>Code</noscript> die Welt verbessern</p>
