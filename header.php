@@ -86,20 +86,8 @@
           <label for="search-toggle" class="c-search-label"
                  title="Suche öffnen"
                  aria-label="Suche öffnen"></label>
-          <div class="c-search">
-            <div class="c-search-inner">
-              <form action="/suche" class="c-search-bottomline">
-                <input type="text" id="search-input" placeholder="Wonach suchst du?" class="c-search-input">
-                <label for="search-input" class="a11y-visuallyhidden">Suche</label>
-                <input type="submit" value="Suche" class="c-search-submit">
 
-                <div class="c-search-illustration">
-                  <?php get_template_part('images/illustrations', 'search.svg' ); ?>
-                </div>
-              </form>
-
-            </div>
-          </div>
+          <?php get_search_form(); ?>
 
         </nav>
       </header>
