@@ -160,6 +160,9 @@ add_image_size( 'blog-small', 320, 200, true );
 add_image_size( 'blog-large-highdpi', 1430, 1180 );
 add_image_size( 'blog-small-highdpi', 640, 400, true);
 
+function lauch_hide_admin_barr(){ return false; }
+add_filter( 'show_admin_bar' , 'lauch_hide_admin_bar');
+
 
 require get_template_directory() . '/inc/custom_types/event_type.php';
 require get_template_directory() . '/inc/custom_types/lab_type.php';
