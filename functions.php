@@ -134,15 +134,8 @@ add_action( 'wp_enqueue_scripts', 'lauch_scripts' );
  */
 require get_template_directory() . '/inc/custom-header.php';
 
-/**
- * Custom template tags for this theme.
- */
-require get_template_directory() . '/inc/template-tags.php';
-
-/**
- * Functions which enhance the theme by hooking into WordPress.
- */
-require get_template_directory() . '/inc/template-functions.php';
+//require get_template_directory() . '/inc/template-tags.php';
+//require get_template_directory() . '/inc/template-functions.php';
 
 /**
  * Customizer additions.
@@ -159,6 +152,15 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 /**
  * ALL THE CUSTOM POST TYPES
  */
+
+
+
+add_image_size( 'blog-large', 715, 590 );
+add_image_size( 'blog-small', 320, 200, true );
+add_image_size( 'blog-large-highdpi', 1430, 1180 );
+add_image_size( 'blog-small-highdpi', 640, 400, true);
+
+
 require get_template_directory() . '/inc/custom_types/event_type.php';
 require get_template_directory() . '/inc/custom_types/lab_type.php';
 require get_template_directory() . '/inc/custom_types/exchange_type.php';
@@ -167,7 +169,6 @@ require get_template_directory() . '/inc/custom_types/project_type.php';
 require get_template_directory() . '/inc/custom_types/person_type.php';
 
 require get_template_directory() . '/inc/taxonomies.php';
-
 require get_template_directory() . '/inc/metaboxes.php';
 
 //require get_template_directory() . '/inc/customizer.php';
