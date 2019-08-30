@@ -106,3 +106,17 @@ function lauch_register_jobs_taxonomy() {
     register_taxonomy( 'job', ['person'], $args );
 }
 add_action( 'init', 'lauch_register_jobs_taxonomy', 0 );
+
+
+function lauch_register_audience_taxonomy() {
+  $args = array(
+    'label'        => __( 'Zielgruppe', 'textdomain' ),
+    'public'       => true
+,
+    'rewrite'      => false,
+    'hierarchical' => true,
+    'show_in_rest' => true,
+  );
+  register_taxonomy( 'audience', ['faq'], $args );
+}
+add_action( 'init', 'lauch_register_audience_taxonomy', 0 );

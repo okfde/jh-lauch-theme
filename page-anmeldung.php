@@ -15,7 +15,6 @@ get_header();
 
 
 <div id="primary" class="content-area page-signup">
-  <main id="main" class="site-main">
 
     <div class="c-copy">
       <?php
@@ -38,7 +37,6 @@ get_header();
         </div>
       </noscript>
     <?php endif ?>
-  </main><!-- #main -->
 </div><!-- #primary -->
 
 <?php

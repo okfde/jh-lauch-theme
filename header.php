@@ -32,7 +32,7 @@
   </head>
 
   <body <?php body_class(); ?>>
-    <div id="page" class="site">
+
       <a class="skip show-on-focus" href="#content"><?php esc_html_e( 'Skip to content', 'lauch' ); ?></a>
 
       <header class="l-header" id="masthead">
@@ -91,4 +91,4 @@
 
         </nav>
       </header>
-      <main id="content" class="site-content">
+      <main id="content" class="l-main site-content">

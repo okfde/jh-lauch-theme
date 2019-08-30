@@ -15,6 +15,9 @@
 get_header();
 ?>
 
+<p class="site-title">Mit <span id="revolving-claims"></span><noscript>Code</noscript> die Welt verbessern</p>
+
+
 <div id="primary" class="content-area">
   <main id="main" class="site-main">
 

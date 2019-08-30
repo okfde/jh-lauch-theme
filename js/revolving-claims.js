@@ -3,7 +3,7 @@ console.log('revolving claims');
 var rc = new Vue({
   el: document.querySelector('#revolving-claims'),
   data: {
-    baseUrl: 'wp-json/lauch/v1/revolving_claims',
+    baseUrl: '/wp-json/lauch/v1/revolving_claims',
     claims: [],
     waiter: 0,
     distance: 100
