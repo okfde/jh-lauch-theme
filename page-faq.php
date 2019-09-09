@@ -6,12 +6,12 @@ get_header();
 ?>
 
 <?php
-  while ( have_posts() ) :
-  the_post();
-  ?>
+while ( have_posts() ) :
+the_post();
+?>
   <div class="c-page-header">
 
-   <?php
+    <?php
     get_template_part( 'template-parts/header-simple', get_post_type() ); ?>
 
   </div>
@@ -20,7 +20,6 @@ get_header();
       <ul class="c-toc-nav">
         <?php
         $aud = get_terms('audience');
-
         foreach ($aud as $audience) : ?>
           <li><a href="#<?php echo $audience->slug; ?>"><?php echo $audience->name; ?></a></li>
         <?php
@@ -32,25 +31,33 @@ get_header();
         foreach ($aud as $audience) : ?>
           <section id="<?php echo $audience->slug; ?>">
             <?php
-            echo $audience->name;
-            $posts = get_posts(array('post_type' => 'faq'));
+            $faqs = get_posts(array('post_type' => 'faq',
+                                    'tax_query' => array(
+                                      array(
+                                        'taxonomy' => 'audience',
+                                        'field' => 'slug',
+                                        'terms' => $audience->slug,
+                                        'include_children' => false
+                                      ))));
 
-
-            foreach ($posts as $post) {
-
-              echo  $post->slug;
-            }
-            ?>
+            foreach ($faqs as $faq) : ?>
+              <details>
+                <summary><?php echo $faq->post_title; ?></summary>
+                <?php echo apply_filters( 'the_content', $faq->post_content ); ?>
+              </details>
+            <?php
+            endforeach; ?>
           </section>
         <?php
-        endforeach ?>
+        endforeach; ?>
+
+        <?php get_template_part( 'template-parts/contact-person', get_post_type() ); ?>
       </div>
     </div>
   </div>
 
-  <?php
-  endwhile; // End of the loop. ?>
-
 <?php
+endwhile;
+
 get_sidebar();
 get_footer();
