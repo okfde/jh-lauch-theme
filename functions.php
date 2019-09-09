@@ -45,7 +45,10 @@ if ( ! function_exists( 'lauch_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'menu-main' => esc_html__( 'Primary', 'lauch' ),
-            'menu-sub' => esc_html__( 'Secondary', 'lauch' ),
+                        'menu-sub' => esc_html__( 'Secondary', 'lauch' ),
+                        'menu-footer-1' => esc_html__('Footer 1', 'lauch'),
+                        'menu-footer-2' => esc_html__('Footer 2', 'lauch'),
+                        'menu-footer-3' => esc_html__('Footer 3', 'lauch'),
 		) );
 
 		/*
