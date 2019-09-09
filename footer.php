@@ -15,34 +15,36 @@
         <footer class="l-footer c-footer">
           <section class="c-footer-menu">
             <h3>Das Programm</h3>
-            <nav>
-              <ul>
-                <li><a href="#">Über Jugend hackt</a></li>
-                <li><a href="#">Code of Conduct</a></li>
-                <li><a href="#">Presse</a></li>
-                <li><a href="#">Kontakt</a></li>
-                <li><a href="#">Newsletter</a></li>
-              </ul>
-            </nav>
+            <?php
+	    wp_nav_menu( array(
+	      'theme_location' => 'menu-footer-1',
+	      'menu_id'        => 'foote-menu-1',
+              'menu_class'     => '',
+              'container'      => 'nav'
+	    ) );
+	    ?>
           </section>
           <section  class="c-footer-menu">
             <h3>Für Mentor*innen</h3>
-            <nav>
-              <ul>
-                <li><a href="#">Mentor*in werden</a></li>
-                <li><a href="#">Ressourcen</a></li>
-              </ul>
-            </nav>
+            <?php
+	    wp_nav_menu( array(
+	      'theme_location' => 'menu-footer-2',
+	      'menu_id'        => 'foote-menu-2',
+              'menu_class'     => '',
+              'container'      => 'nav'
+	    ) );
+	    ?>
           </section>
           <section  class="c-footer-menu">
             <h3>Für Teilnehmer*innen</h3>
-            <nav>
-              <ul>
-                <li><a href="#">Lernen</a></li>
-                <li><a href="#">Mitmachen</a></li>
-                <li><a href="#">Diversity</a></li>
-              </ul>
-            </nav>
+            <?php
+	    wp_nav_menu( array(
+	      'theme_location' => 'menu-footer-3',
+	      'menu_id'        => 'foote-menu-3',
+              'menu_class'     => '',
+              'container'      => 'nav'
+	    ) );
+	    ?>
           </section>
         </footer>
         <?php wp_footer(); ?>
