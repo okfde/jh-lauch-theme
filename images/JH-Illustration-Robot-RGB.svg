@@ -1,0 +1,36 @@
+<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 105 182">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ea680c;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <title>Zeichenfläche 1</title>
+  <path class="cls-1" d="M7,182h7V133H7Zm84,0h7V133H91ZM42,168h7v7H42Zm7-7h7v7H49ZM21,126v56H35v-7h7v7H63v-7H56v-7h7v7h7v7H84V126ZM42,0V7H35v7H14v7H7V56H0V77H7v35h7v7H91v-7h7V77h7V56H98V21H91V14H70V7H63v7H42V7H63V0Z"/>
+  <g>
+    <rect x="21" y="55.87" width="14" height="3.5"/>
+    <rect x="21" y="73.37" width="14" height="3.5"/>
+    <rect x="17.5" y="59.37" width="3.5" height="14"/>
+    <rect x="35" y="59.37" width="3.5" height="14"/>
+    <rect x="70" y="55.87" width="14" height="3.5"/>
+    <rect x="66.5" y="59.37" width="3.5" height="14"/>
+    <rect x="84" y="59.37" width="3.5" height="14"/>
+    <rect x="70" y="73.37" width="14" height="3.5"/>
+    <polygon points="28 97.87 28 94.37 24.5 94.37 24.5 97.87 24.5 101.37 24.5 104.87 28 104.87 28 101.37 28 97.87"/>
+    <path d="M70,104.87V94.37h7v-3.5H28v3.5h7v10.5H28v3.5H77v-3.5H70Zm-24.5-7v7h-7V94.37h7Zm10.5,0v7H49V94.37h7Zm10.5,0v7h-7V94.37h7Z"/>
+    <polygon points="77 97.87 77 101.37 77 104.87 80.5 104.87 80.5 101.37 80.5 97.87 80.5 94.37 77 94.37 77 97.87"/>
+  </g>
+  <g>
+    <rect class="cls-2" x="49" y="161" width="7" height="7"/>
+    <rect class="cls-2" x="56" y="168" width="7" height="7"/>
+    <rect class="cls-2" x="42" y="168" width="7" height="7"/>
+    <rect class="cls-2" x="35" y="175" width="7" height="7"/>
+    <rect class="cls-2" x="63" y="175" width="7" height="7"/>
+    <polygon class="cls-2" points="56 14 63 14 63 7 56 7 49 7 42 7 42 14 49 14 56 14"/>
+  </g>
+</svg>

@@ -159,10 +159,20 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 
 
 
+add_image_size( 'blog-alpaka', 480, 480, true );
+add_image_size( 'blog-alpaka-highdpi', 960, 960, true );
 add_image_size( 'blog-large', 715, 590 );
 add_image_size( 'blog-small', 320, 200, true );
 add_image_size( 'blog-large-highdpi', 1430, 1180 );
 add_image_size( 'blog-small-highdpi', 640, 400, true);
+
+
+add_filter( 'image_size_names_choose', 'lauch_custom_sizes' );
+function lauch_custom_sizes( $sizes ) {
+  return array_merge( $sizes, array(
+    'blog-alpaka' => __( 'Alpaka' ),
+  ) );
+}
 
 #function lauch_hide_admin_barr(){ return false; }
 #add_filter( 'show_admin_bar' , 'lauch_hide_admin_bar');

@@ -9,12 +9,10 @@ get_header();
 while ( have_posts() ) :
 the_post();
 ?>
-  <div class="c-page-header">
 
-    <?php
-    get_template_part( 'template-parts/header-simple', get_post_type() ); ?>
+  <?php
+  get_template_part( 'template-parts/header-simple', get_post_type() ); ?>
 
-  </div>
   <div class="c-page-section white">
     <div class="c-toc">
       <ul class="c-toc-nav">
