@@ -1,5 +1,5 @@
 <div class="c-page-alpaca-header">
-  <div class="c-page-alpaca-featured addon addon--wrestler addon--large addon--left addon--bottom">
+  <div class="c-page-alpaca-featured addon addon--<?php the_field('illustration_class'); ?> addon--large addon--<?php the_field('illustration_xaxis'); ?> addon--<?php the_field('illustration_yaxis'); ?>">
     <img src="<?php echo get_the_post_thumbnail_url($post->ID, 'blog-alpaka'); ?>" alt="" class="clip-alpaka" >
   </div>
   <div class="c-page-alpaca-title">
