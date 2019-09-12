@@ -92,7 +92,7 @@ the_post();
         <div class="c-page-2col ai-b">
           <h3 class="col-s"><?php echo $post1->post_title; ?></h3>
           <div class="col-m fs">
-            <?php echo wp_trim_words(apply_filters('the_excerpt', $post1->post_content), 200, '...'  ); ?>
+            <?php echo wp_trim_words(apply_filters('the_excerpt', $post1->post_content), 100, '...'  ); ?>
             <p><a href="<?php echo get_post_permalink($post1->ID); ?>" title="Mehr lesen über <?php echo $post1->post_title; ?>">Mehr lesen</a></p>
           </div>
         </div>
@@ -106,7 +106,7 @@ the_post();
         <div class="">
           <h3><?php echo $post2->post_title; ?></h3>
           <div>
-            <?php echo apply_filters('the_excerpt', $post2->post_content); ?>
+            <?php echo wp_trim_words(apply_filters('the_excerpt', $post2->post_content), 100, '...'); ?>
             <p><a href="<?php echo get_post_permalink($post2->ID); ?>" title="Mehr lesen über <?php echo $post2->post_title; ?>">Mehr lesen</a></p>
           </div>
       </article>
