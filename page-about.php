@@ -13,7 +13,6 @@ the_post();
   <?php
   get_template_part( 'template-parts/header-alpaka', get_post_type() ); ?>
 
-
   <section class="c-page-section white pt-5 pb-2">
     <div class="c-page-2col">
       <div class="col-s">
@@ -34,8 +33,12 @@ the_post();
           <li class="c-flagitem c-flag points-bottom">
             <h3 class="c-flagitem-title"><?php the_sub_field('pub_title'); ?></h3>
             <p>
-              <?php if (get_sub_field('pub_pdf')) : ?><a href="<?php the_sub_field('pub_pdf'); ?>" download>Download [PDF]</a><?php endif ?>
-              <?php if (get_sub_field('pub_link')) : ?><a href="<?php the_sub_field('pub_link'); ?>" target="_blank">Onlineversion</a><?php endif ?>
+              <?php if (get_sub_field('pub_pdf')) : ?>
+                <a href="<?php the_sub_field('pub_pdf'); ?>"><?php echo __('download>Download [PDF]', 'lauch'); ?></a>
+              <?php endif ?>
+              <?php if (get_sub_field('pub_link')) : ?>
+                <a href="<?php the_sub_field('pub_link'); ?>" target="_blank"><?php echo __('Onlineversion', 'lauch'); ?></a>
+              <?php endif ?>
             </p>
           </li>
           <?php endwhile ?>
@@ -123,53 +126,44 @@ the_post();
   </section>
 
   <section class="c-page-section white">
-    <h2>Partner*innen & Unterstützer*innen</h2>
+    <div class="c-page-2col">
+      <h2 class="col-s"><?php the_field('partner_title'); ?></h2>
+    </div>
     <div class="c-toc ai-s">
       <ul class="c-toc-nav fs">
-        <li><a href="#netzwerk">Netzwerk</a></li>
-        <li><a href="#foerderer">Förderer</a></li>
+        <li><a href="#<?php echo sanitize_title(get_field('partner_category')); ?>"><?php the_field('partner_category'); ?></a></li>
+        <li><a href="#<?php echo sanitize_title(get_field('supporter_category')); ?>"><?php the_field('supporter_category'); ?></a></li>
       </ul>
 
       <div class="c-toc-content fg">
-        <section id="netzwerk">
-          <ul class="c-grid-displayitems">
-            <li class="c-displayitem">
-              <img src="https://placekitten.com/200/106" alt="">
-              <p class="c-displayitem-text">Netz</p>
-            </li>
-            <li class="c-displayitem">
-              <img src="https://placekitten.com/200/106" alt="">
-              <p class="c-displayitem-text">Netz</p>
-            </li>
-            <li class="c-displayitem">
-              <img src="https://placekitten.com/200/106" alt="">
-              <p class="c-displayitem-text">Netz</p>
-            </li>
-            <li class="c-displayitem">
-              <img src="https://placekitten.com/200/106" alt="">
-              <p class="c-displayitem-text">Netz</p>
-            </li>
-          </ul>
+        <section id="<?php echo sanitize_title(get_field('partner_category')); ?>">
+          <?php if( have_rows('partners') ): ?>
+            <ul class="c-grid-displayitems">
+              <?php while ( have_rows('partners') ): the_row(); ?>
+                <li class="c-displayitem">
+                  <img src="<?php echo wp_get_attachment_image_src(get_sub_field('part_logo'), 'medium')[0]; ?>" alt="Logo" >
+                  <div class="c-displayitem-text">
+                    <?php the_sub_field('part_text'); ?>
+                  </div>
+                </li>
+              <?php endwhile ?>
+            </ul>
+          <?php endif ?>
         </section>
-        <section id="foerderer">
-          <ul class="c-grid-displayitems">
-            <li class="c-displayitem">
-              <img src="https://placekitten.com/200/106" alt="">
-              <p class="c-displayitem-text">Foerder</p>
-            </li>
-            <li class="c-displayitem">
-              <img src="https://placekitten.com/200/106" alt="">
-              <p class="c-displayitem-text">Foerder</p>
-            </li>
-            <li class="c-displayitem">
-              <img src="https://placekitten.com/200/106" alt="">
-              <p class="c-displayitem-text">Foerder</p>
-            </li>
-            <li class="c-displayitem">
-              <img src="https://placekitten.com/200/106" alt="">
-              <p class="c-displayitem-text">Foerder</p>
-            </li>
-          </ul>
+        <section id="<?php echo sanitize_title(get_field('supporter_category')); ?>">
+          <?php if( have_rows('supporters') ): ?>
+            <ul class="c-grid-displayitems">
+              <?php while ( have_rows('supporters') ): the_row(); ?>
+                <li class="c-displayitem">
+                  <img src="<?php echo wp_get_attachment_image_src(get_sub_field('sup_logo'), 'medium')[0]; ?>" alt="Logo" >
+
+                  <div class="c-displayitem-text">
+                    <?php the_sub_field('sup_text'); ?>
+                  </div>
+                </li>
+              <?php endwhile ?>
+            </ul>
+          <?php endif ?>
         </section>
   </section>
 <?php
