@@ -46,6 +46,16 @@
 	    ) );
 	    ?>
           </section>
+
+          <section  class="c-footer-support">
+            <div class="support-illustration">
+              <?php get_template_part('images/illustrations', 'freundeskreis.svg' ); ?>
+            </div>
+            <div class="support-cta">
+              <p>Werde Mitglied im Jugend hackt-Freundes und unterstütze junge Menschen dabei, mit Code die Welt zu verbessern.</p>
+              <p><a href="<?php echo get_theme_mod('support_link', 'https://freundeskreis.jugendhackt.org'); ?> " class="link-cta"><?php echo __('Jetzt unterstützen!', 'lauch'); ?></a></p>
+            </div>
+          </section>
         </footer>
         <?php wp_footer(); ?>
 </body>

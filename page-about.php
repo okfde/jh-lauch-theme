@@ -79,42 +79,45 @@ the_post();
   </section>
 
   <section class="c-page-section pt-1">
-    <h2 class="c-flag mini softblue points-bottom upper">Aus dem Blog</h2>
+    <h2 class="c-flag mini softblue points-bottom upper"><?php the_field('blog_title'); ?></h2>
     <div class="c-page-2col col-break-small jc-sb pt-1">
+      <?php $post1 = get_field('post_1'); ?>
       <article class="col-l c-page-blog fg fs">
         <div class="p-r addon addon--alpaka addon--bottom addon--left">
-          <img src="https://placekitten.com/720/420" alt="alpaka">
+          <?php echo get_the_post_thumbnail($post1->ID, 'blog-large'); ?>
         </div>
         <div class="c-page-2col ai-b">
-          <h3 class="col-s">Lorkem IPsum dolor sit amet</h3>
-          <div class="col-m">
-            <p>Lorem ipsum dolor sit amet</p>
+          <h3 class="col-s"><?php echo $post1->post_title; ?></h3>
+          <div class="col-m fs">
+            <?php echo apply_filters('the_excerpt', $post1->post_content); ?>
+            <p><a href="<?php echo get_post_permalink($post1->ID); ?>" title="Mehr lesen über <?php echo $post1->post_title; ?>">Mehr lesen</a></p>
           </div>
         </div>
       </article>
 
+      <?php $post2 = get_field('post_2'); ?>
       <article class="col-s c-page-blog fg">
         <div class="p-r addon addon--octopus addon--top addon--right">
-          <img src="https://placekitten.com/300/200" alt="alpaka">
+          <?php echo get_the_post_thumbnail($post2->ID, 'blog-small'); ?>
         </div>
         <div class="">
-          <h3>Lorkem IPsum dolor sit amet</h3>
+          <h3><?php echo $post2->post_title; ?></h3>
           <div>
-            <p>Lorem ipsum dolor sit a</p>
+            <?php echo apply_filters('the_excerpt', $post2->post_content); ?>
+            <p><a href="<?php echo get_post_permalink($post2->ID); ?>" title="Mehr lesen über <?php echo $post2->post_title; ?>">Mehr lesen</a></p>
           </div>
       </article>
   </section>
 
   <section class="c-page-section c-page-2col c-support col-break-small">
     <div class="c-page-2col col-m fs">
-      {{ readFile "/static/images/pixel-wave.svg" | safeHTML  }}
-      {{ readFile "/static/images/alpaka-red.svg" | safeHTML  }}
+      <?php get_template_part('images/illustrations', 'freundeskreis.svg' ); ?>
     </div>
     <div class="col-m ml-10 fs">
-      <h2>Unterstütze unsere Arbeit</h2>
+      <h2><?php the_field('support_title'); ?></h2>
       <div>
-        <p>Werde Mitglied im Jugend hackt-Freundes und unterstütze junge Menschen dabei, mit Code die Welt zu verbessern. Der Jugend hackt Freundeskreis ist deine Möglichkeit, die Arbeit unseres Programms langfristig zu sichern. Als Fördermitglied wirst du Teil von Jugend hackt: Du erfährst Inside-Stories und bekommst spezielle Dankeschöns. Auch für engagierte Unternehmen ist etwas dabei!</p>
-        <p><a href="#" class="link-cta">ein link</a></p>
+        <?php echo apply_filters('the_content', get_field('support_text')); ?>
+        <p><a href="<?php echo get_theme_mod('support_link', 'https://freundeskreis.jugendhackt.org'); ?> " class="link-cta"><?php echo __('Jetzt unterstützen!', 'lauch'); ?></a></p>
       </div>
     </div>
   </section>
