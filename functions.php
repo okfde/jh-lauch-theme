@@ -159,8 +159,9 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 
 
 
-add_image_size( 'blog-alpaka', 480, 480, true );
-add_image_size( 'blog-alpaka-highdpi', 960, 960, true );
+add_image_size( 'blog-alpaka-small', 300, 300, true );
+add_image_size( 'blog-alpaka', 560, 560, true );
+add_image_size( 'blog-alpaka-highdpi', 1120, 1120, true );
 add_image_size( 'blog-large', 715, 590 );
 add_image_size( 'blog-small', 320, 200, true );
 add_image_size( 'blog-large-highdpi', 1430, 1180 );
@@ -171,6 +172,7 @@ add_filter( 'image_size_names_choose', 'lauch_custom_sizes' );
 function lauch_custom_sizes( $sizes ) {
   return array_merge( $sizes, array(
     'blog-alpaka' => __( 'Alpaka' ),
+    'blog-alpaka-small' => __( 'Alpaka klein' ),
   ) );
 }
 
