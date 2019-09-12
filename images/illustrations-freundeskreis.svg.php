@@ -62,7 +62,7 @@
 	    <rect y="184.2" fill="#FF4B4E" width="33.3" height="33.3"/>
 	</g>
 	<g>
-	    <rect id="Rechteck_129_1_" x="833.7" y="67.9" fill="#2070BC" width="33.3" height="33.3"/>
+	    <rect x="833.7" y="67.9" fill="#2070BC" width="33.3" height="33.3"/>
 	    <rect x="833.7" y="150.9" fill="#FF4B4E" width="33.3" height="33.3"/>
 	    <rect x="500.3" y="67.9" fill="#2070BC" width="33.3" height="33.3"/>
 	    <rect x="500.3" y="150.9" fill="#FF4B4E" width="33.3" height="33.3"/>

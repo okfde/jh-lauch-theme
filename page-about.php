@@ -37,7 +37,7 @@ the_post();
                 <a href="<?php the_sub_field('pub_pdf'); ?>"><?php echo __('download>Download [PDF]', 'lauch'); ?></a>
               <?php endif ?>
               <?php if (get_sub_field('pub_link')) : ?>
-                <a href="<?php the_sub_field('pub_link'); ?>" target="_blank"><?php echo __('Onlineversion', 'lauch'); ?></a>
+                <a href="<?php the_sub_field('pub_link'); ?>" target="_blank" rel="noopener"><?php echo __('Onlineversion', 'lauch'); ?></a>
               <?php endif ?>
             </p>
           </li>
@@ -50,7 +50,7 @@ the_post();
 
   <section class="">
     <div class="c-page-video needs-js">
-      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/<?php the_field('about_video_id') ?>?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="560" height="315" title="Unterwegs mit ... Jugend hackt Video" src="https://www.youtube-nocookie.com/embed/<?php the_field('about_video_id') ?>?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <noscript>Kein JavaScript? <a href="https://www.youtube.com/watch?v=<?php the_field('about_video_id') ?>">Sie dir das Video hier an!</a></noscript>
     </div>
 
