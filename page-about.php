@@ -112,17 +112,8 @@ the_post();
       </article>
   </section>
 
-  <section class="c-page-section c-page-2col c-support col-break-small">
-    <div class="c-page-2col col-m fs">
-      <?php get_template_part('images/illustrations', 'freundeskreis.svg' ); ?>
-    </div>
-    <div class="col-m ml-10 fs">
-      <h2><?php the_field('support_title'); ?></h2>
-      <div>
-        <?php echo apply_filters('the_content', get_field('support_text')); ?>
-        <p><a href="<?php echo get_theme_mod('support_link', 'https://freundeskreis.jugendhackt.org'); ?> " class="link-cta"><?php echo __('Jetzt unterstützen!', 'lauch'); ?></a></p>
-      </div>
-    </div>
+  <section class='c-page-section'>
+    <?php get_template_part( 'template-parts/support-cta', get_post_type() ); ?>
   </section>
 
   <section class="c-page-section white">

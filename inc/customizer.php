@@ -18,6 +18,9 @@ function lauch_customize_register( $wp_customize ) {
   // revolving claims
   $wp_customize->add_setting( 'revolving_claims', array('default' => 'Code') );
   $wp_customize->add_setting( 'support_link', array('default' => 'https://freundeskreis.jugendhackt.org') );
+  $wp_customize->add_setting( 'support_title', array('default' => 'Unterstütze unsere Arbeit') );
+  $wp_customize->add_setting( 'support_copy', array('default' => '') );
+
   $wp_customize->add_section( 'lauch_variables_section' , array(
       'title'      => __( 'Lauch Variablen', 'lauch' ),
       'priority'   => 10,
@@ -37,6 +40,22 @@ function lauch_customize_register( $wp_customize ) {
     'section'    => 'lauch_variables_section',
     'settings'   => 'support_link',
     'type'       => 'text'
+  ) );
+
+  $wp_customize->add_control( 'support_title_setting', array(
+    'label'      => __( '"Unterstützt uns" Titel', 'lauch' ),
+    'description' => __( 'Unterstützt uns! Oder so', 'lauch' ),
+    'section'    => 'lauch_variables_section',
+    'settings'   => 'support_title',
+    'type'       => 'text'
+  ) );
+
+  $wp_customize->add_control( 'support_copy_setting', array(
+    'label'      => __( '"Unterstützt uns" Blurb', 'lauch' ),
+    'description' => __( 'Ein kleiner Text', 'lauch' ),
+    'section'    => 'lauch_variables_section',
+    'settings'   => 'support_copy',
+    'type'       => 'textarea'
   ) );
 
 
