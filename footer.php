@@ -14,7 +14,7 @@
 	</main><!-- #content -->
         <footer class="l-footer c-footer">
           <section class="c-footer-menu">
-            <h3>Das Programm</h3>
+            <h3><?php echo __("Das Programm", "lauch"); ?></h3>
             <?php
 	    wp_nav_menu( array(
 	      'theme_location' => 'menu-footer-1',
