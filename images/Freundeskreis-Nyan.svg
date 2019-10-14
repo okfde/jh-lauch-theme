@@ -11,11 +11,10 @@
 
          @keyframes a1 {
          0% {
-           transform: translate(0%, 70px);
+         transform: translateX(0%);
          }
          100% {
-           transform: translate(-330px, 70px);
-         }
+         transform: translateX(-330px);t}
      </style>
      <g class="all">
 	 <g>

@@ -1,8 +1,8 @@
-<div class="c-page-2col c-support col-break-small">
-  <div class="c-page-2col col-m fs">
+<div class="c-footer-support">
+  <div class="support-illustration">
     <?php get_template_part('images/illustrations', 'freundeskreis.svg' ); ?>
   </div>
-  <div class="col-m fs pl-2">
+  <div class="support-cta">
     <div>
       <?php echo explode(PHP_EOL, get_theme_mod('support_copy', 'foo'))[0]; ?>
       <p>

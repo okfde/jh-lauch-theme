@@ -1,6 +1,6 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
      viewBox="0 0 1614.5 760" style="enable-background:new 0 0 1614.5 760;" xml:space="preserve">
-    <title>OKF DE Logo</title>
+    <title>Open Knowledge Foundation Deutschland e.V.</title>
     <style type="text/css">
 	.st0{fill:#FFFFFF;}
     </style>

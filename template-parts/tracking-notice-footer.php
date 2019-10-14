@@ -1,0 +1,2 @@
+<p>Wir verwenden die datenschutzfreundliche Technologie von <a href="https://matomo.org/">Matomo</a>, um statistische Auswertungen der Seitennutzung zu erhalten. Wer das nicht möchte, kann <a href="https://traffic.okfn.de/index.php?module=CoreAdminHome&action=optOut&language=de">hier</a> den Haken entfernen. Näheres in unserer <a href="#">Datenschutzerklärung</a>.</p>
+<p>Die Inhalte dieser Webseite sind, sofern nicht anders angegeben, nach Creative Commons 4.0 Attribution lizenziert.</p>
