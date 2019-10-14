@@ -1,6 +1,6 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1051.6 476.2" style="enable-background:new 0 0 1051.6 476.2;" xml:space="preserve">
     <style type="text/css">
-	 .st0{fill:#2969B2;}
+	 .nyan-blue{fill:#2969B2;}
 	 .st1{fill:#E6414A;}
 	 .st2{fill:#FFD003;}
 	 .st3{fill:#FFFFFF;}
@@ -11,41 +11,40 @@
 
          @keyframes a1 {
          0% {
-           transform: translate(0%, 70px);
+         transform: translate(0%, 70px);
          }
          100% {
-           transform: translate(-330px, 70px);
-         }
+         transform: translate(-330px, 70px);}
      </style>
      <g class="all">
 	 <g>
-	     <rect x="366.7" y="67.9" class="st0" width="33.3" height="33.3"/>
+	     <rect x="366.7" y="67.9" class="nyan-blue" width="33.3" height="33.3"/>
 	     <rect x="366.7" y="150.9" class="st1" width="33.3" height="33.3"/>
-	     <rect x="33.3" y="67.9" class="st0" width="33.3" height="33.3"/>
+	     <rect x="33.3" y="67.9" class="nyan-blue" width="33.3" height="33.3"/>
 	     <rect x="33.3" y="150.9" class="st1" width="33.3" height="33.3"/>
-	     <rect x="200" y="34.6" class="st0" width="33.3" height="33.3"/>
+	     <rect x="200" y="34.6" class="nyan-blue" width="33.3" height="33.3"/>
 	     <rect x="200" y="117.6" class="st1" width="33.3" height="33.3"/>
-	     <rect x="433.3" y="67.9" class="st0" width="33.3" height="33.3"/>
+	     <rect x="433.3" y="67.9" class="nyan-blue" width="33.3" height="33.3"/>
 	     <rect x="433.3" y="150.9" class="st1" width="33.3" height="33.3"/>
-	     <rect x="100" y="67.9" class="st0" width="33.3" height="33.3"/>
+	     <rect x="100" y="67.9" class="nyan-blue" width="33.3" height="33.3"/>
 	     <rect x="100" y="150.9" class="st1" width="33.3" height="33.3"/>
-	     <rect x="266.7" y="34.6" class="st0" width="33.3" height="33.3"/>
+	     <rect x="266.7" y="34.6" class="nyan-blue" width="33.3" height="33.3"/>
 	     <rect x="266.7" y="117.6" class="st1" width="33.3" height="33.3"/>
-	     <rect x="466.7" y="101.3" class="st0" width="33.3" height="33.3"/>
+	     <rect x="466.7" y="101.3" class="nyan-blue" width="33.3" height="33.3"/>
 	     <rect x="466.7" y="184.2" class="st1" width="33.3" height="33.3"/>
-	     <rect x="333.3" y="101.3" class="st0" width="33.3" height="33.3"/>
+	     <rect x="333.3" y="101.3" class="nyan-blue" width="33.3" height="33.3"/>
 	     <rect x="333.3" y="184.2" class="st1" width="33.3" height="33.3"/>
-	     <rect x="133.3" y="101.3" class="st0" width="33.3" height="33.3"/>
+	     <rect x="133.3" y="101.3" class="nyan-blue" width="33.3" height="33.3"/>
 	     <rect x="133.3" y="184.2" class="st1" width="33.3" height="33.3"/>
-	     <rect x="300" y="67.9" class="st0" width="33.3" height="33.3"/>
+	     <rect x="300" y="67.9" class="nyan-blue" width="33.3" height="33.3"/>
 	     <rect x="300" y="150.9" class="st1" width="33.3" height="33.3"/>
-	     <rect x="166.7" y="67.9" class="st0" width="33.3" height="33.3"/>
+	     <rect x="166.7" y="67.9" class="nyan-blue" width="33.3" height="33.3"/>
 	     <rect x="166.7" y="150.9" class="st1" width="33.3" height="33.3"/>
-	     <rect x="400" y="34.6" class="st0" width="33.3" height="33.3"/>
+	     <rect x="400" y="34.6" class="nyan-blue" width="33.3" height="33.3"/>
 	     <rect x="400" y="117.6" class="st1" width="33.3" height="33.3"/>
-	     <rect x="66.7" y="34.6" class="st0" width="33.3" height="33.3"/>
+	     <rect x="66.7" y="34.6" class="nyan-blue" width="33.3" height="33.3"/>
 	     <rect x="66.7" y="117.6" class="st1" width="33.3" height="33.3"/>
-	     <rect x="233.3" y="1.3" class="st0" width="33.3" height="33.3"/>
+	     <rect x="233.3" y="1.3" class="nyan-blue" width="33.3" height="33.3"/>
 	     <rect x="233.3" y="84.2" class="st1" width="33.3" height="33.3"/>
 	     <rect x="366.7" y="243.1" class="st2" width="33.3" height="33.3"/>
 	     <rect x="33.3" y="243.1" class="st2" width="33.3" height="33.3"/>
@@ -62,37 +61,37 @@
 	     <rect x="400" y="209.8" class="st2" width="33.3" height="33.3"/>
 	     <rect x="66.7" y="209.8" class="st2" width="33.3" height="33.3"/>
 	     <rect x="233.3" y="176.4" class="st2" width="33.3" height="33.3"/>
-	     <rect y="101.3" class="st0" width="33.3" height="33.3"/>
+	     <rect y="101.3" class="nyan-blue" width="33.3" height="33.3"/>
 	     <rect y="184.2" class="st1" width="33.3" height="33.3"/>
 	 </g>
 	 <g>
-	     <rect id="Rechteck_129_1_" x="833.7" y="67.9" class="st0" width="33.3" height="33.3"/>
+	     <rect id="Rechteck_129_1_" x="833.7" y="67.9" class="nyan-blue" width="33.3" height="33.3"/>
 	     <rect x="833.7" y="150.9" class="st1" width="33.3" height="33.3"/>
-	     <rect x="500.3" y="67.9" class="st0" width="33.3" height="33.3"/>
+	     <rect x="500.3" y="67.9" class="nyan-blue" width="33.3" height="33.3"/>
 	     <rect x="500.3" y="150.9" class="st1" width="33.3" height="33.3"/>
-	     <rect x="667" y="34.6" class="st0" width="33.3" height="33.3"/>
+	     <rect x="667" y="34.6" class="nyan-blue" width="33.3" height="33.3"/>
 	     <rect x="667" y="117.6" class="st1" width="33.3" height="33.3"/>
-	     <rect x="900.3" y="67.9" class="st0" width="33.3" height="33.3"/>
+	     <rect x="900.3" y="67.9" class="nyan-blue" width="33.3" height="33.3"/>
 	     <rect x="900.3" y="150.9" class="st1" width="33.3" height="33.3"/>
-	     <rect x="567" y="67.9" class="st0" width="33.3" height="33.3"/>
+	     <rect x="567" y="67.9" class="nyan-blue" width="33.3" height="33.3"/>
 	     <rect x="567" y="150.9" class="st1" width="33.3" height="33.3"/>
-	     <rect x="733.7" y="34.6" class="st0" width="33.3" height="33.3"/>
+	     <rect x="733.7" y="34.6" class="nyan-blue" width="33.3" height="33.3"/>
 	     <rect x="733.7" y="117.6" class="st1" width="33.3" height="33.3"/>
-	     <rect x="933.7" y="101.3" class="st0" width="33.3" height="33.3"/>
+	     <rect x="933.7" y="101.3" class="nyan-blue" width="33.3" height="33.3"/>
 	     <rect x="933.7" y="184.2" class="st1" width="33.3" height="33.3"/>
-	     <rect x="800.3" y="101.3" class="st0" width="33.3" height="33.3"/>
+	     <rect x="800.3" y="101.3" class="nyan-blue" width="33.3" height="33.3"/>
 	     <rect x="800.3" y="184.2" class="st1" width="33.3" height="33.3"/>
-	     <rect x="600.3" y="101.3" class="st0" width="33.3" height="33.3"/>
+	     <rect x="600.3" y="101.3" class="nyan-blue" width="33.3" height="33.3"/>
 	     <rect x="600.3" y="184.2" class="st1" width="33.3" height="33.3"/>
-	     <rect x="767" y="67.9" class="st0" width="33.3" height="33.3"/>
+	     <rect x="767" y="67.9" class="nyan-blue" width="33.3" height="33.3"/>
 	     <rect x="767" y="150.9" class="st1" width="33.3" height="33.3"/>
-	     <rect x="633.7" y="67.9" class="st0" width="33.3" height="33.3"/>
+	     <rect x="633.7" y="67.9" class="nyan-blue" width="33.3" height="33.3"/>
 	     <rect x="633.7" y="150.9" class="st1" width="33.3" height="33.3"/>
-	     <rect x="867" y="34.6" class="st0" width="33.3" height="33.3"/>
+	     <rect x="867" y="34.6" class="nyan-blue" width="33.3" height="33.3"/>
 	     <rect x="867" y="117.6" class="st1" width="33.3" height="33.3"/>
-	     <rect x="533.7" y="34.6" class="st0" width="33.3" height="33.3"/>
+	     <rect x="533.7" y="34.6" class="nyan-blue" width="33.3" height="33.3"/>
 	     <rect x="533.7" y="117.6" class="st1" width="33.3" height="33.3"/>
-	     <rect x="700.3" y="1.3" class="st0" width="33.3" height="33.3"/>
+	     <rect x="700.3" y="1.3" class="nyan-blue" width="33.3" height="33.3"/>
 	     <rect x="700.3" y="84.2" class="st1" width="33.3" height="33.3"/>
 	     <rect x="833.7" y="243.1" class="st2" width="33.3" height="33.3"/>
 	     <rect x="500.3" y="243.1" class="st2" width="33.3" height="33.3"/>
@@ -109,37 +108,37 @@
 	     <rect x="867" y="209.8" class="st2" width="33.3" height="33.3"/>
 	     <rect x="533.7" y="209.8" class="st2" width="33.3" height="33.3"/>
 	     <rect x="700.3" y="176.4" class="st2" width="33.3" height="33.3"/>
-	     <rect x="467" y="101.3" class="st0" width="33.3" height="33.3"/>
+	     <rect x="467" y="101.3" class="nyan-blue" width="33.3" height="33.3"/>
 	     <rect x="467" y="184.2" class="st1" width="33.3" height="33.3"/>
 	 </g>
 	 <g>
-	     <rect x="833.7" y="67.9" class="st0" width="33.3" height="33.3"/>
+	     <rect x="833.7" y="67.9" class="nyan-blue" width="33.3" height="33.3"/>
 	     <rect x="833.7" y="150.9" class="st1" width="33.3" height="33.3"/>
-	     <rect x="500.3" y="67.9" class="st0" width="33.3" height="33.3"/>
+	     <rect x="500.3" y="67.9" class="nyan-blue" width="33.3" height="33.3"/>
 	     <rect x="500.3" y="150.9" class="st1" width="33.3" height="33.3"/>
-	     <rect x="667" y="34.6" class="st0" width="33.3" height="33.3"/>
+	     <rect x="667" y="34.6" class="nyan-blue" width="33.3" height="33.3"/>
 	     <rect x="667" y="117.6" class="st1" width="33.3" height="33.3"/>
-	     <rect x="900.3" y="67.9" class="st0" width="33.3" height="33.3"/>
+	     <rect x="900.3" y="67.9" class="nyan-blue" width="33.3" height="33.3"/>
 	     <rect x="900.3" y="150.9" class="st1" width="33.3" height="33.3"/>
-	     <rect x="567" y="67.9" class="st0" width="33.3" height="33.3"/>
+	     <rect x="567" y="67.9" class="nyan-blue" width="33.3" height="33.3"/>
 	     <rect x="567" y="150.9" class="st1" width="33.3" height="33.3"/>
-	     <rect x="733.7" y="34.6" class="st0" width="33.3" height="33.3"/>
+	     <rect x="733.7" y="34.6" class="nyan-blue" width="33.3" height="33.3"/>
 	     <rect x="733.7" y="117.6" class="st1" width="33.3" height="33.3"/>
-	     <rect x="933.7" y="101.3" class="st0" width="33.3" height="33.3"/>
+	     <rect x="933.7" y="101.3" class="nyan-blue" width="33.3" height="33.3"/>
 	     <rect x="933.7" y="184.2" class="st1" width="33.3" height="33.3"/>
-	     <rect x="800.3" y="101.3" class="st0" width="33.3" height="33.3"/>
+	     <rect x="800.3" y="101.3" class="nyan-blue" width="33.3" height="33.3"/>
 	     <rect x="800.3" y="184.2" class="st1" width="33.3" height="33.3"/>
-	     <rect x="600.3" y="101.3" class="st0" width="33.3" height="33.3"/>
+	     <rect x="600.3" y="101.3" class="nyan-blue" width="33.3" height="33.3"/>
 	     <rect x="600.3" y="184.2" class="st1" width="33.3" height="33.3"/>
-	     <rect x="767" y="67.9" class="st0" width="33.3" height="33.3"/>
+	     <rect x="767" y="67.9" class="nyan-blue" width="33.3" height="33.3"/>
 	     <rect x="767" y="150.9" class="st1" width="33.3" height="33.3"/>
-	     <rect x="633.7" y="67.9" class="st0" width="33.3" height="33.3"/>
+	     <rect x="633.7" y="67.9" class="nyan-blue" width="33.3" height="33.3"/>
 	     <rect x="633.7" y="150.9" class="st1" width="33.3" height="33.3"/>
-	     <rect x="867" y="34.6" class="st0" width="33.3" height="33.3"/>
+	     <rect x="867" y="34.6" class="nyan-blue" width="33.3" height="33.3"/>
 	     <rect x="867" y="117.6" class="st1" width="33.3" height="33.3"/>
-	     <rect x="533.7" y="34.6" class="st0" width="33.3" height="33.3"/>
+	     <rect x="533.7" y="34.6" class="nyan-blue" width="33.3" height="33.3"/>
 	     <rect x="533.7" y="117.6" class="st1" width="33.3" height="33.3"/>
-	     <rect x="700.3" y="1.3" class="st0" width="33.3" height="33.3"/>
+	     <rect x="700.3" y="1.3" class="nyan-blue" width="33.3" height="33.3"/>
 	     <rect x="700.3" y="84.2" class="st1" width="33.3" height="33.3"/>
 	     <rect x="833.7" y="243.1" class="st2" width="33.3" height="33.3"/>
 	     <rect x="500.3" y="243.1" class="st2" width="33.3" height="33.3"/>
@@ -156,7 +155,7 @@
 	     <rect x="867" y="209.8" class="st2" width="33.3" height="33.3"/>
 	     <rect x="533.7" y="209.8" class="st2" width="33.3" height="33.3"/>
 	     <rect x="700.3" y="176.4" class="st2" width="33.3" height="33.3"/>
-	     <rect x="467" y="101.3" class="st0" width="33.3" height="33.3"/>
+	     <rect x="467" y="101.3" class="nyan-blue" width="33.3" height="33.3"/>
 	     <rect x="467" y="184.2" class="st1" width="33.3" height="33.3"/>
 	 </g>
      </g>
