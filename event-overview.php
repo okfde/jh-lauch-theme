@@ -20,6 +20,8 @@ the_post();
 
   <section class="c-events-list">
     <h2 class="events-list-sectionheader">Vergangene Events</h2>
+    <?php
+    get_template_part( 'template-parts/children', 'event-ended' ); ?>
   </section>
 <?php
   endwhile;

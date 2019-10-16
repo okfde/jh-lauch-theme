@@ -18,7 +18,7 @@ if ($children) : ?>
   <ul>
     <?php
     foreach($children as $child): the_row(); ?>
-      <?php if (get_field('is_active', $child->ID) == 1): ?>
+      <?php if (get_field('is_active', $child->ID) != 1): ?>
       <li class="">
         <div class="events-list-item">
           <?php
@@ -33,18 +33,9 @@ if ($children) : ?>
         <div class="events-list-body">
           <h2 class="events-list-title"><?php echo $child->post_title ?></h2>
 
-          <?php
-          $event = get_field('next_event', $child->ID)[0];
-          if ($event) : ?>
-            <time class="events-list-date" datetime=""><?php the_field('datum', $event->ID); ?></time>
-          <?php
-          endif; ?>
-
           <div class="events-list-actions">
             <a href="<?php echo $child->post_name; ?>"
                title="Mehr Infos zu Jugend hackt in <?php echo $child->post_title ?>">Mehr Infos</a>
-            <a href="<?php the_field('anmeldungslink', $event->ID); ?>"
-               title="Anmeldung für Jugend hackt in <?php echo $child->post_title ?>">Anmelden</a>
           </div>
         </div>
         <div class="events-list-hover">
