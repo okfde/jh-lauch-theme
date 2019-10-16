@@ -1,0 +1,13 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 112 168" xml:space="preserve">
+<style type="text/css">
+	.changecolor{fill:#00A6DE;}
+	.lightgrey{fill:#FCFCFC;}
+</style>
+<polygon class="changecolor" points="105,28 105,21 98,21 98,14 91,14 91,7 84,7 84,0 28,0 28,7 21,7 21,14 14,14 14,21 7,21
+	7,28 0,28 0,133 7,133 7,140 14,140 14,147 28,147 28,161 35,161 35,168 77,168 77,161 84,161 84,147 98,147 98,140 105,140
+	105,133 112,133 112,28 "/>
+<path class="lightgrey" d="M63,98H49v-7h14V98z M105,77V49H63v7H49v-7H7v28h7v7h7v7h21v14H28v28h56v-28H70V91h21v-7h7v-7H105z"
+	/>
+<path d="M42,73.5h3.5v-7h-7V63H14v3.5h3.5V70H21v3.5h3.5V77H42V73.5z M66.5,119H63v-3.5H49v3.5h-3.5v7H49v3.5h14V126h3.5
+	V119z M98,66.5V63H73.5v3.5h-7v7H70V77h17.5v-3.5H91V70h3.5v-3.5H98z"/>
+</svg>
