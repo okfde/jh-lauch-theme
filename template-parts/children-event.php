@@ -26,6 +26,8 @@ if ($children) : ?>
             <picture class="events-list-image">
               <source srcset="<?php echo get_the_post_thumbnail_url($child->ID, 'events-teaser-s'); ?>"
                       media="(max-width: 1900px)">
+              <source srcset="<?php echo get_the_post_thumbnail_url($child->ID, 'events-teaser-highdpi'); ?>"
+                      media="(min-resolution: 192dpi)">
               <img src="<?php echo get_the_post_thumbnail_url($child->ID, 'events-teaser-m'); ?>">
             </picture>
           <?php

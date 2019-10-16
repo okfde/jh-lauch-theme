@@ -190,6 +190,7 @@ add_image_size( 'blog-large-highdpi', 1430, 1180 );
 add_image_size( 'blog-small-highdpi', 640, 400, true);
 add_image_size( 'events-teaser-s', 90, 60, true);
 add_image_size( 'events-teaser-m', 170, 120, true);
+add_image_size( 'events-teaser-highdpi', 340, 240, true);
 
 
 add_filter( 'image_size_names_choose', 'lauch_custom_sizes' );
