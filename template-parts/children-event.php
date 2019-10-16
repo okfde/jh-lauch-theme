@@ -52,10 +52,9 @@ if ($children) : ?>
           </div>
         </div>
         <div class="events-list-hover">
-          <?php the_field('event_color', $child->ID); ?>
-
           <?php
-          $illustrations = array('wrestler', 'octopus');
+          // get random illustration and color in event colors
+          $illustrations = array('wrestler', 'octopus', 'teddy', 'monster', 'elias', 'robot');
           $rand_key = array_rand($illustrations, 1);
 
           $filename = get_template_directory() . "/images/illustrations/change-". $illustrations[$rand_key] .".svg";
@@ -63,13 +62,10 @@ if ($children) : ?>
           $contents = fread($handle, filesize($filename));
           fclose($handle);
           preg_match('/changecolor{fill:#([[0-9a-fA-F]+);}/i', $contents, $prev_color);
-          $contents = str_replace("changecolor", $illustrations[$rand_key], $contents);
+          $contents = str_replace("changecolor", "event-". $illustrations[$rand_key], $contents);
           $contents = str_replace('#'.$prev_color[1], get_field('event_color', $child->ID), $contents);
-          echo $contents;
+          echo $contents; ?>
 
-          ?>
-
-          <?php //get_template_part('images/illustrations/change', 'wrestler.svg' ); ?>
         </div>
         </div>
       </li>

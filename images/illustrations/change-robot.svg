@@ -1,0 +1,43 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     viewBox="0 0 105 182" style="enable-background:new 0 0 105 182;" xml:space="preserve">
+     <style type="text/css">
+	 .changecolor{fill:#EA680C;}
+	 .white{fill:#FFFFFF;}
+     </style>
+     <path class="changecolor" d="M7,182h7v-49H7V182z M91,182h7v-49h-7V182z M42,168h7v7h-7V168z M49,161h7v7h-7V161z M21,126v56h14 v-7h7v7h21v-7h-7v-7h7v7h7v7h14v-56H21z M42,0v7h-7v7H14v7H7v35H0v21h7v35h7v7h77v-7h7V77h7V56h-7V21h-7v-7H70V7h-7v7H42V7h21V0H42z "/>
+     <g>
+	 <rect x="49" y="161" class="white" width="7" height="7"/>
+	 <rect x="56" y="168" class="white" width="7" height="7"/>
+	 <rect x="42" y="168" class="white" width="7" height="7"/>
+	 <rect x="35" y="175" class="white" width="7" height="7"/>
+	 <rect x="63" y="175" class="white" width="7" height="7"/>
+	 <polygon class="white" points="56,14 63,14 63,7 56,7 49,7 42,7 42,14 49,14 	"/>
+     </g>
+     <g>
+	 <rect x="28" y="94.4" class="white" width="7" height="10.5"/>
+	 <rect x="38.5" y="94.4" class="white" width="7" height="10.5"/>
+	 <rect x="49" y="94.4" class="white" width="7" height="10.5"/>
+	 <rect x="59.5" y="94.4" class="white" width="7" height="10.5"/>
+	 <rect x="70" y="94.4" class="white" width="7" height="10.5"/>
+	 <rect x="70" y="59.4" class="white" width="14" height="14"/>
+	 <rect x="21" y="59.4" class="white" width="14" height="14"/>
+     </g>
+     <g>
+	 <g>
+	     <rect x="21" y="55.9" width="14" height="3.5"/>
+	     <rect x="21" y="73.4" width="14" height="3.5"/>
+	     <rect x="17.5" y="59.4" width="3.5" height="14"/>
+	     <rect x="35" y="59.4" width="3.5" height="14"/>
+	     <rect x="70" y="55.9" width="14" height="3.5"/>
+	     <rect x="66.5" y="59.4" width="3.5" height="14"/>
+	     <rect x="84" y="59.4" width="3.5" height="14"/>
+	     <rect x="70" y="73.4" width="14" height="3.5"/>
+	     <polygon points="28,97.9 28,94.4 24.5,94.4 24.5,97.9 24.5,101.4 24.5,104.9 28,104.9 28,101.4 		"/>
+	     <path d="M70,94.4h7v-3.5H28v3.5h7v10.5h-7v3.5h49v-3.5h-7V94.4z M45.5,97.9v7h-7V94.4h7V97.9z M56,97.9v7h-7V94.4h7V97.9z
+		      M66.5,97.9v7h-7V94.4h7V97.9z"/>
+		      <polygon points="77,97.9 77,101.4 77,104.9 80.5,104.9 80.5,101.4 80.5,97.9 80.5,94.4 77,94.4 		"/>
+	 </g>
+	 <rect x="28" y="64.5" width="3.5" height="3.5"/>
+	 <rect x="77" y="64.5" width="3.5" height="3.5"/>
+     </g>
+ </svg>
