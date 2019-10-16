@@ -43,7 +43,7 @@ if ($children) : ?>
           $svg = get_random_illustration();
           echo replace_svg_css_class_fill(get_svg_content($svg),
                                           "changecolor",
-                                          "event-". $svg,
+                                          "event-". $child->ID ."-" . $svg,
                                           get_field('event_color', $child->ID)); ?>
 
         </div>
