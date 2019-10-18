@@ -28,24 +28,26 @@ get_header();
   </header>
 
   <div class="c-blog-list is-grid">
-  <?php if ( have_posts() ) : ?>
-    <ul>
-    <?php
-    while ( have_posts() ) :
-    the_post();
+    <?php if ( have_posts() ) : ?>
+      <ul>
+        <?php
+        while ( have_posts() ) :
+        the_post(); ?>
+          <li>
+            <?php
+            get_template_part( 'template-parts/content', 'teaser'); ?>
 
-    get_template_part( 'template-parts/content', 'teaser');
+          </li>
+          <?php
+          endwhile;
+          the_posts_navigation(); ?>
+      </ul>
 
-    endwhile;
+    <?php  else :
 
-    the_posts_navigation(); ?>
-  </ul>
+    get_template_part( 'template-parts/content', 'none' );
 
-  <?php  else :
-
-  get_template_part( 'template-parts/content', 'none' );
-
-  endif; ?>
+    endif; ?>
   </div>
 </section>
 

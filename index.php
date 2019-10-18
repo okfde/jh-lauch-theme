@@ -16,39 +16,46 @@ get_header();
 ?>
 
 <?php
-
-$blog = get_option( 'page_for_posts' );
-
-?>
-
+$blog = get_option( 'page_for_posts' ); ?>
 
 <header class="c-page-offcenter-header">
   <h1 class="c-page-title"><?php echo get_the_title($blog);  ?></h1>
   <div class="c-page-excerpt"><?php echo get_post($blog)->post_content; ?></div>
 </header>
 
-<?php
-$sticky = get_option( 'sticky_posts' );
-$sticky = $sticky[0];
-
-$args = array( 'exclude' => array($sticky), 'numberposts' => 999);
-$latest_posts = get_posts($args );
-
-$firsts = array_slice($latest_posts, 0, 3);
-$rests = array_slice($latest_posts, 3);
-?>
-
 <section class="c-blog-list is-feature">
   <div class="js-sticky-container c-compact-teaser">
-    <?php render_post($post->ID, "js-sticky"); ?>
+    <?php
+    $sticky = get_option( 'sticky_posts' );
+    $args_sticky = array('post__in' => $sticky,
+                         'posts_per_page' => 1);
+    $the_query_sticks = new WP_Query( $args_sticky ); ?>
+
+    <?php if ( $the_query_sticks->have_posts() ) : ?>
+      <?php while ( $the_query_sticks->have_posts() ) : $the_query_sticks->the_post(); ?>
+        <?php get_template_part( 'template-parts/content', 'teaser'); ?>
+      <?php endwhile; ?>
+      <?php wp_reset_postdata(); ?>
+    <?php endif; ?>
   </div>
 
-  <ul>
   <?php
-  foreach ($firsts as $post): ?>
-    <li><?php render_post($post->ID); ?></li>
-  <?php endforeach; ?>
-  <ul>
+  $args1 = array('post__not_in' => $sticky,
+                 'posts_per_page' => 3);
+  $the_query = new WP_Query( $args1 ); ?>
+
+  <?php if ( $the_query->have_posts() ) : ?>
+    <ul>
+      <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+        <li>
+          <?php get_template_part( 'template-parts/content', 'teaser'); ?>
+        </li>
+      <?php endwhile; ?>
+      <?php wp_reset_postdata(); ?>
+    </ul>
+  <?php else : ?>
+    <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+  <?php endif; ?>
 </section>
 
 
@@ -58,7 +65,7 @@ $rests = array_slice($latest_posts, 3);
     <ul>
       <?php $terms = get_terms( array(
         'taxonomy' => 'category',
-        'hide_empty' => false,
+        'hide_empty' => true,
       ) );
 
       foreach ($terms as $term): ?>
@@ -75,12 +82,24 @@ $rests = array_slice($latest_posts, 3);
 </section>
 
 <section class="c-blog-list is-grid">
-  <ul>
-    <?php
-    foreach ($rests as $post): ?>
-      <li><?php render_post($post->ID); ?></li>
-    <?php endforeach; ?>
+  <?php
+  $args2 = array('post__not_in' => $sticky,
+                 'posts_per_page' => 999,
+                 'offset' => 3);
+  $the_query2 = new WP_Query( $args2 ); ?>
+
+  <?php if ( $the_query2->have_posts() ) : ?>
     <ul>
+      <?php while ( $the_query2->have_posts() ) : $the_query2->the_post(); ?>
+        <li>
+          <?php get_template_part( 'template-parts/content', 'teaser'); ?>
+        </li>
+      <?php endwhile; ?>
+      <?php wp_reset_postdata(); ?>
+    </ul>
+  <?php else : ?>
+    <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+  <?php endif; ?>
 </section>
 
 <?php
