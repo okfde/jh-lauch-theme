@@ -71,8 +71,9 @@ $blog = get_option( 'page_for_posts' ); ?>
       foreach ($terms as $term): ?>
         <li class="c-catnav-item">
           <a href="<?php echo get_term_link($term->slug, $term->taxonomy ); ?>"
-             title="Alle Posts zu <?php echo $term->name ?>">
-            <h3><span><?php echo $term->name; ?></span></h3>
+             title="Alle Posts zu <?php echo $term->name ?>"
+             class="hover-line-trigger">
+            <h3><span class="hover-line"><?php echo $term->name; ?></span></h3>
             <p><?php echo $term->description; ?></p>
           </a>
         </li>
