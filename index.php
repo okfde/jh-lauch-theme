@@ -45,7 +45,10 @@ function render_post($id, $optional_class = "") { ?>
           <source srcset="<?php echo get_the_post_thumbnail_url($id, 'blog-large-highdpi'); ?>"
                   media="(min-width: 1240px)"">
           <?php echo get_the_post_thumbnail($id, 'blog-large'); ?>
+
         </picture>
+
+        <?php if (get_field('illustration')): ?><img src="<?php echo the_field('illustration') ?>" alt=""><?php endif; ?>
       </div>
       <h2 class="teaser-title"><?php echo get_the_title($id); ?></h2>
       <div>
