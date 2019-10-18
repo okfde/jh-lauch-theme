@@ -70,7 +70,7 @@ add_action( 'init', 'lauch_register_type_taxonomy', 0 );
 
 function lauch_register_exchange_program_taxonomy() {
   $args = array(
-    'label'        => __( 'Austausch', 'textdomain' ),
+    'label'        => __( 'Austauschprogramm', 'textdomain' ),
     'public'       => true,
     'rewrite'      => false,
     'hierarchical' => true,
