@@ -19,7 +19,7 @@ the_post();
   </section>
 
   <section class="c-events-list">
-    <h2 class="events-list-sectionheader">Vergangene Events</h2>
+    <h2 class="events-list-sectionheader"><?php echo __("Vergangene Events", "lauch"); ?></h2>
     <?php
     get_template_part( 'template-parts/children', 'event-ended' ); ?>
   </section>
