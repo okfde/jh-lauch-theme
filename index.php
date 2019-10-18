@@ -15,48 +15,120 @@
 get_header();
 ?>
 
-<p class="site-title">Mit <span id="revolving-claims"></span><noscript>Code</noscript> die Welt verbessern</p>
+<?php
+
+$blog = get_option( 'page_for_posts' );
+
+?>
 
 
-<div id="primary" class="content-area">
-  <main id="main" class="site-main">
-
-    <?php
-    if ( have_posts() ) :
-
-    if ( is_home() && ! is_front_page() ) :
-    ?>
-      <header>
-	<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-      </header>
-				<?php
-			        endif;
-
-			        /* Start the Loop */
-			        while ( have_posts() ) :
-				the_post();
-
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
-
-			        endwhile;
-
-			        the_posts_navigation();
-
-		                else :
-
-			        get_template_part( 'template-parts/content', 'none' );
-
-		                endif;
-		                ?>
-
-  </main><!-- #main -->
-</div><!-- #primary -->
+<header class="c-page-offcenter-header">
+  <h1 class="c-page-title"><?php echo get_the_title($blog);  ?></h1>
+  <div class="c-page-excerpt"><?php echo get_post($blog)->post_content; ?></div>
+</header>
 
 <?php
-get_sidebar();
+
+$sticky = get_option( 'sticky_posts' );
+$sticky = $sticky[0];
+
+$args = array( 'exclude' => array($sticky));
+$latest_posts = get_posts($args );
+
+#$sticky = array_slice($latest_posts, 0, 1);
+$firsts = array_slice($latest_posts, 0, 3);
+$rests = array_slice($latest_posts, 3);
+
+?>
+
+<section class="c-blog-list is-feature">
+  <div class="js-sticky-container c-compact-teaser">
+    <article class="js-sticky">
+      <a href="<?php echo get_permalink($sticky); ?>">
+        <div class="teaser-image"><img src="https://placekitten.com/320/200" alt=""></div>
+        <h2 class="teaser-title"><?php echo get_the_title($sticky); ?></h2>
+        <div class="teaser-summary"><?php echo get_the_excerpt($sticky); ?></div>
+        <div class="teaser-date">
+          <time datetime="<?php echo get_the_date( 'Y-m-j',$sticky); ?>"><?php echo get_the_date( 'j. F Y', $sticky); ?></time></div>
+      </a>
+    </article>
+  </div>
+
+  <ul>
+  <?php
+  foreach ($firsts as $post): ?>
+    <li>
+      <article class="c-compact-teaser">
+        <a href="<?php echo get_permalink($post->ID); ?>">
+          <div class="teaser-image"><img src="https://placekitten.com/320/200" alt=""></div>
+          <h2 class="teaser-title"><?php echo get_the_title($post->ID); ?></h2>
+          <div class="teaser-summary"><?php echo get_the_excerpt($post->ID); ?></div>
+          <div class="teaser-date">
+            <time datetime="<?php echo get_the_date( 'Y-m-j',$post->ID); ?>"><?php echo get_the_date( 'j. F Y',$post->ID); ?></time></div>
+        </a>
+      </article>
+    </li>
+  <?php endforeach; ?>
+  <ul>
+</section>
+
+
+<section class="c-catnav">
+  <h2 class="c-catnav-title">Alles zum Thema</h2>
+  <nav>
+    <ul>
+      <li class="c-catnav-item">
+        <a href="#">
+          <h3><span>Unterwegs mit</span></h3>
+          <p>Lorem ipsum dolor sit amet</p>
+        </a>
+      </li>
+      <li class="c-catnav-item">
+        <a href="#">
+          <h3>Mit Code die Um:welt verbessern</h3>
+          <p>Lorem ipsum dolor sit amet</p>
+        </a>
+      </li>
+      <li class="c-catnav-item">
+        <a href="#">
+          <h3>Vernetzte Welten</h3>
+          <p>Lorem ipsum dolor sit amet</p>
+        </a>
+      </li>
+      <li class="c-catnav-item">
+        <a href="#">
+          <h3>Open data</h3>
+          <p>Lorem ipsum dolor sit amet</p>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</section>
+
+
+
+<section class="c-blog-list is-grid">
+  <ul>
+    <?php
+    foreach ($rests as $post): ?>
+      <li>
+        <article class="c-compact-teaser">
+          <a href="<?php echo get_permalink($post->ID); ?>">
+            <div class="teaser-image"><img src="https://placekitten.com/320/200" alt=""></div>
+            <h2 class="teaser-title"><?php echo get_the_title($post->ID); ?></h2>
+            <div class="teaser-summary"><?php echo get_the_excerpt($post->ID); ?></div>
+            <div class="teaser-date">
+              <time datetime="<?php echo get_the_date( 'Y-m-j',$post->ID); ?>"><?php echo get_the_date( 'j. F Y',$post->ID); ?></time></div>
+          </a>
+        </article>
+      </li>
+    <?php endforeach; ?>
+    <ul>
+</section>
+
+
+<?php the_posts_pagination(); ?>
+
+
+<?php
 get_footer();
