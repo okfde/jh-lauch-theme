@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Austausch Übersicht
+ * Template Name: Austausch Übersicht Neu
  */
 get_header();
 ?>
