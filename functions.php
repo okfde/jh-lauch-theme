@@ -99,6 +99,32 @@ function lauch_setup() {
     return $contents;
   }
 
+
+  function render_post($id, $optional_class = "") { ?>
+  <article class="c-compact-teaser <?php echo $optional_class; ?>">
+    <a href="<?php echo get_permalink($id); ?>" title="Lies den ganzen Artikel zu <?php echo get_the_title($id); ?>">
+      <div class="teaser-image">
+        <picture>
+          <source srcset="<?php echo get_the_post_thumbnail_url($id, 'blog-large-highdpi'); ?>"
+                  media="(min-width: 1240px)"">
+          <?php echo get_the_post_thumbnail($id, 'blog-large'); ?>
+
+        </picture>
+
+        <?php if (get_field('illustration')): ?><img src="<?php echo the_field('illustration') ?>" alt=""><?php endif; ?>
+      </div>
+      <h2 class="teaser-title"><?php echo get_the_title($id); ?></h2>
+      <div>
+        <div class="teaser-summary"><?php echo get_the_excerpt($id); ?></div>
+        <div class="teaser-date">
+          <time datetime="<?php echo get_the_date( 'Y-m-j', $id); ?>">
+            <?php echo get_the_date( 'j. F Y', $id); ?></time>
+        </div>
+      </div>
+    </a>
+  </article>
+<?php }
+
 }
 endif;
 add_action( 'after_setup_theme', 'lauch_setup' );

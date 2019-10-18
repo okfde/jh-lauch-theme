@@ -31,36 +31,12 @@ $blog = get_option( 'page_for_posts' );
 $sticky = get_option( 'sticky_posts' );
 $sticky = $sticky[0];
 
-$args = array( 'exclude' => array($sticky));
+$args = array( 'exclude' => array($sticky), 'numberposts' => 999);
 $latest_posts = get_posts($args );
 
 $firsts = array_slice($latest_posts, 0, 3);
 $rests = array_slice($latest_posts, 3);
-
-function render_post($id, $optional_class = "") { ?>
-  <article class="c-compact-teaser <?php echo $optional_class; ?>">
-    <a href="<?php echo get_permalink($id); ?>" title="Lies den ganzen Artikel zu <?php echo get_the_title($id); ?>">
-      <div class="teaser-image">
-        <picture>
-          <source srcset="<?php echo get_the_post_thumbnail_url($id, 'blog-large-highdpi'); ?>"
-                  media="(min-width: 1240px)"">
-          <?php echo get_the_post_thumbnail($id, 'blog-large'); ?>
-
-        </picture>
-
-        <?php if (get_field('illustration')): ?><img src="<?php echo the_field('illustration') ?>" alt=""><?php endif; ?>
-      </div>
-      <h2 class="teaser-title"><?php echo get_the_title($id); ?></h2>
-      <div>
-        <div class="teaser-summary"><?php echo get_the_excerpt($id); ?></div>
-        <div class="teaser-date">
-          <time datetime="<?php echo get_the_date( 'Y-m-j', $id); ?>">
-            <?php echo get_the_date( 'j. F Y', $id); ?></time>
-        </div>
-      </div>
-    </a>
-  </article>
-<?php } ?>
+?>
 
 <section class="c-blog-list is-feature">
   <div class="js-sticky-container c-compact-teaser">
@@ -76,7 +52,7 @@ function render_post($id, $optional_class = "") { ?>
 </section>
 
 
-<section class="c-catnav">
+<section class="c-catnav" id="kategorien">
   <h2 class="c-catnav-title"><?php echo _('Alles zum Thema', 'lauch'); ?></h2>
   <nav>
     <ul>

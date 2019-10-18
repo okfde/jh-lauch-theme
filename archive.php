@@ -10,44 +10,44 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
 
-		<?php if ( have_posts() ) : ?>
+<section class="">
+  <header class="d-f jc-fe">
+    <div class="c-bookmarklike">
+      <div class="bookmark-right">
+        <p class="bookmark-sub"><?php echo _('Alles zum Thema', 'lauch'); ?></p>
+        <h1 class="bookmark-title"><?php single_term_title();  ?></h1>
+        <?php //the_archive_description( '<div class="archive-description">', '</div>' ); ?>
+      </div>
+      <div class="bookmark-left">
+        <a href="<?php echo get_permalink(get_option('page_for_posts')); ?>"
+           title="<?php echo __('Zurück zum Blog', 'lauch'); ?>"
+           class="bookmark-back no-text"><?php echo __('Zurück zum Blog', 'lauch'); ?></a>
+      </div>
+    </div>
+  </header>
 
-			<header class="page-header">
-				<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
-				the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
+  <div class="c-blog-list is-grid">
+  <?php if ( have_posts() ) : ?>
+    <ul>
+    <?php
+    while ( have_posts() ) :
+    the_post();
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+    get_template_part( 'template-parts/content', 'teaser');
 
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+    endwhile;
 
-			endwhile;
+    the_posts_navigation(); ?>
+  </ul>
 
-			the_posts_navigation();
+  <?php  else :
 
-		else :
+  get_template_part( 'template-parts/content', 'none' );
 
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
+  endif; ?>
+  </div>
+</section>
 
 <?php
-get_sidebar();
 get_footer();
