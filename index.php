@@ -40,7 +40,13 @@ $rests = array_slice($latest_posts, 3);
 function render_post($id, $optional_class = "") { ?>
   <article class="c-compact-teaser <?php echo $optional_class; ?>">
   <a href="<?php echo get_permalink($id); ?>">
-  <div class="teaser-image"><img src="https://placekitten.com/320/200" alt=""></div>
+    <div class="teaser-image">
+      <picture>
+        <source srcset="<?php echo get_the_post_thumbnail_url($id, 'blog-large-highdpi'); ?>"
+                media="(min-width: 1240px)"">
+        <?php echo get_the_post_thumbnail($id, 'blog-large'); ?>
+      </picture>
+    </div>
   <h2 class="teaser-title"><?php echo get_the_title($id); ?></h2>
   <div class="teaser-summary"><?php echo get_the_excerpt($id); ?></div>
   <div class="teaser-date">
