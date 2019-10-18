@@ -28,107 +28,73 @@ $blog = get_option( 'page_for_posts' );
 </header>
 
 <?php
-
 $sticky = get_option( 'sticky_posts' );
 $sticky = $sticky[0];
 
 $args = array( 'exclude' => array($sticky));
 $latest_posts = get_posts($args );
 
-#$sticky = array_slice($latest_posts, 0, 1);
 $firsts = array_slice($latest_posts, 0, 3);
 $rests = array_slice($latest_posts, 3);
 
-?>
+function render_post($id, $optional_class = "") { ?>
+  <article class="c-compact-teaser <?php echo $optional_class; ?>">
+  <a href="<?php echo get_permalink($id); ?>">
+  <div class="teaser-image"><img src="https://placekitten.com/320/200" alt=""></div>
+  <h2 class="teaser-title"><?php echo get_the_title($id); ?></h2>
+  <div class="teaser-summary"><?php echo get_the_excerpt($id); ?></div>
+  <div class="teaser-date">
+    <time datetime="<?php echo get_the_date( 'Y-m-j', $id); ?>">
+      <?php echo get_the_date( 'j. F Y', $id); ?></time>
+  </div>
+  </a>
+  </article>
+<?php } ?>
 
 <section class="c-blog-list is-feature">
   <div class="js-sticky-container c-compact-teaser">
-    <article class="js-sticky">
-      <a href="<?php echo get_permalink($sticky); ?>">
-        <div class="teaser-image"><img src="https://placekitten.com/320/200" alt=""></div>
-        <h2 class="teaser-title"><?php echo get_the_title($sticky); ?></h2>
-        <div class="teaser-summary"><?php echo get_the_excerpt($sticky); ?></div>
-        <div class="teaser-date">
-          <time datetime="<?php echo get_the_date( 'Y-m-j',$sticky); ?>"><?php echo get_the_date( 'j. F Y', $sticky); ?></time></div>
-      </a>
-    </article>
+    <?php render_post($post->ID, "js-sticky"); ?>
   </div>
 
   <ul>
   <?php
   foreach ($firsts as $post): ?>
-    <li>
-      <article class="c-compact-teaser">
-        <a href="<?php echo get_permalink($post->ID); ?>">
-          <div class="teaser-image"><img src="https://placekitten.com/320/200" alt=""></div>
-          <h2 class="teaser-title"><?php echo get_the_title($post->ID); ?></h2>
-          <div class="teaser-summary"><?php echo get_the_excerpt($post->ID); ?></div>
-          <div class="teaser-date">
-            <time datetime="<?php echo get_the_date( 'Y-m-j',$post->ID); ?>"><?php echo get_the_date( 'j. F Y',$post->ID); ?></time></div>
-        </a>
-      </article>
-    </li>
+    <li><?php render_post($post->ID); ?></li>
   <?php endforeach; ?>
   <ul>
 </section>
 
 
 <section class="c-catnav">
-  <h2 class="c-catnav-title">Alles zum Thema</h2>
+  <h2 class="c-catnav-title"><?php echo _('Alles zum Thema', 'lauch'); ?></h2>
   <nav>
     <ul>
-      <li class="c-catnav-item">
-        <a href="#">
-          <h3><span>Unterwegs mit</span></h3>
-          <p>Lorem ipsum dolor sit amet</p>
-        </a>
-      </li>
-      <li class="c-catnav-item">
-        <a href="#">
-          <h3>Mit Code die Um:welt verbessern</h3>
-          <p>Lorem ipsum dolor sit amet</p>
-        </a>
-      </li>
-      <li class="c-catnav-item">
-        <a href="#">
-          <h3>Vernetzte Welten</h3>
-          <p>Lorem ipsum dolor sit amet</p>
-        </a>
-      </li>
-      <li class="c-catnav-item">
-        <a href="#">
-          <h3>Open data</h3>
-          <p>Lorem ipsum dolor sit amet</p>
-        </a>
-      </li>
+      <?php $terms = get_terms( array(
+        'taxonomy' => 'category',
+        'hide_empty' => false,
+      ) );
+
+      foreach ($terms as $term): ?>
+        <li class="c-catnav-item">
+          <a href="<?php echo get_term_link($term->slug, $term->taxonomy ); ?>"
+             title="Alle Posts zu <?php echo $term->name ?>">
+            <h3><span><?php echo $term->name; ?></span></h3>
+            <p><?php echo $term->description; ?></p>
+          </a>
+        </li>
+      <?php endforeach; ?>
     </ul>
   </nav>
 </section>
-
-
 
 <section class="c-blog-list is-grid">
   <ul>
     <?php
     foreach ($rests as $post): ?>
-      <li>
-        <article class="c-compact-teaser">
-          <a href="<?php echo get_permalink($post->ID); ?>">
-            <div class="teaser-image"><img src="https://placekitten.com/320/200" alt=""></div>
-            <h2 class="teaser-title"><?php echo get_the_title($post->ID); ?></h2>
-            <div class="teaser-summary"><?php echo get_the_excerpt($post->ID); ?></div>
-            <div class="teaser-date">
-              <time datetime="<?php echo get_the_date( 'Y-m-j',$post->ID); ?>"><?php echo get_the_date( 'j. F Y',$post->ID); ?></time></div>
-          </a>
-        </article>
-      </li>
+      <li><?php render_post($post->ID); ?></li>
     <?php endforeach; ?>
     <ul>
 </section>
-
-
-<?php the_posts_pagination(); ?>
-
 
 <?php
 get_footer();
