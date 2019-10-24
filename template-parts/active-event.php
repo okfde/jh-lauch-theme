@@ -136,3 +136,6 @@ if ((get_field('next_event'))) {
 } else {
   echo "Es wird ein Event geben, aber noch nichts konkretes!";
 }
+?>
+
+<?php get_template_part( 'template-parts/support-cta', get_post_type() ); ?>
