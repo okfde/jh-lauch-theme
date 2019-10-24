@@ -8,8 +8,9 @@
  */
 
 get_header();
-?>
 
+
+?>
   <div id="primary" class="content-area">
     <main id="main" class="site-main">
 
@@ -18,7 +19,6 @@ get_header();
         the_post();
 
         get_template_part( 'template-parts/content', get_post_type() );
-
 
         print_r(get_post_meta($post->ID));
 

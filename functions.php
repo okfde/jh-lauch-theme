@@ -99,6 +99,14 @@ function lauch_setup() {
     return $contents;
   }
 
+  function render_svg($svgpath) {
+    $filename = get_template_directory() . "". $svgpath;
+    $handle = fopen($filename, "r");
+    $contents = fread($handle, filesize($filename));
+    fclose($handle);
+    echo $contents;
+  }
+
 }
 endif;
 add_action( 'after_setup_theme', 'lauch_setup' );
