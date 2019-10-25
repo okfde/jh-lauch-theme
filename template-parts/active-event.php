@@ -44,7 +44,7 @@ if ((get_field('next_event'))) {
 <section class="c-page-section c-page-center">
   <h2 class="ta-c c-event-title"><?php echo __("Facts zum Event", "lauch"); ?></h2>
   <div class="c-page-2col ai-c c-event-info">
-    <div class="col-m fg c-event-overview">
+    <div class="col-l c-event-overview">
       <?php the_field('event_facts', $next->ID); ?>
     </div>
     <div class="col-m c-event-map" id="map"><noscript>Kein JavaScript? Hier sollte eine Karte mit der Event Location dargestellt werden.</noscript></div>
