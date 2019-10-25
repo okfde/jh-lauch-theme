@@ -75,66 +75,155 @@ if ((get_field('next_event'))) {
     <div class="col-s">
       <h3><?php render_svg("/images/events/_freitag.svg"); ?></h3>
       <ol class="">
-        <li><img src="https://placehold.it/40x40" class="" alt=""><time>16:00</time><div>Anreise</div></li>
-        <li><img src="https://placehold.it/40x40" class="" alt=""><time>16:00</time><div>Anreise</div></li>
-        <li><img src="https://placehold.it/40x40" class="" alt=""><time>16:00</time><div>Anreise</div></li>
-        <li><img src="https://placehold.it/40x40" class="" alt=""><time>16:00</time><div>Anreise</div></li>
+        <?php if( have_rows('event_friday', $next->ID) ):
+        while( have_rows('event_friday', $next->ID) ): the_row(); ?>
+          <li><img src="<?php the_sub_field('icon'); ?>" class="" alt="">
+            <time><?php the_sub_field('time', $next->ID); ?></time>
+            <div><?php the_sub_field('what', $next->ID); ?></time></div></li>
+        <?php endwhile;
+        endif; ?>
       </ol>
     </div>
     <div class="col-s">
       <h3><?php render_svg("/images/events/_samstag.svg"); ?></h3>
-      <ol>
-        <li><img src="https://placehold.it/40x40" class="" alt=""><time>16:00</time><div>Anreise</div></li>
-        <li><img src="https://placehold.it/40x40" class="" alt=""><time>16:00</time><div>Anreise</div></li>
-        <li><img src="https://placehold.it/40x40" class="" alt=""><time>16:00</time><div>Anreise dfuhdslf sdilufgh lidsufhg idflhglidfuhg lisduhg ilsh</div></li>
-        <li><img src="https://placehold.it/40x40" class="" alt=""><time>16:00</time><div>Anreise</div></li>
+      <ol class="">
+        <?php if( have_rows('event_saturday', $next->ID) ):
+        while( have_rows('event_saturday', $next->ID) ): the_row(); ?>
+          <li><img src="<?php the_sub_field('icon'); ?>" class="" alt="">
+            <time><?php the_sub_field('time', $next->ID); ?></time>
+            <div><?php the_sub_field('what', $next->ID); ?></time></div></li>
+        <?php endwhile;
+        endif; ?>
       </ol>
     </div>
     <div class="col-s">
       <h3><?php render_svg("/images/events/_sonntag.svg"); ?></h3>
-      <ol>
-        <li><img src="https://placehold.it/40x40" class="" alt=""><time>16:00</time><div>Anreise</div></li>
-        <li><img src="https://placehold.it/40x40" class="" alt=""><time>16:00</time><div>Anreise</div></li>
-        <li><img src="https://placehold.it/40x40" class="" alt=""><time>16:00</time><div>Anreise</div></li>
-        <li><img src="https://placehold.it/40x40" class="" alt=""><time>16:00</time><div>Anreise</div></li>
+      <ol class="">
+        <?php if( have_rows('event_sunday', $next->ID) ):
+        while( have_rows('event_sunday', $next->ID) ): the_row(); ?>
+          <li><img src="<?php the_sub_field('icon'); ?>" class="" alt="">
+            <time><?php the_sub_field('time', $next->ID); ?></time>
+            <div><?php the_sub_field('what', $next->ID); ?></time></div></li>
+        <?php endwhile;
+        endif; ?>
       </ol>
     </div>
   </div>
 </section>
 
 
-  <h3>Sponsor*innen</h3>
-  <ul>
-  <?php if( have_rows('supporter', $next->ID) ):
+<section class="c-page-section">
+  <div class="c-page-2col jc-sb c-event-video">
+    <div class="col-m">
+      <h2><?php the_field('event_how_title', $next->ID); ?></h2>
+      <div><?php the_field('event_how_text', $next->ID); ?></div>
+      <?php
+      $the_query = new WP_Query( array(
+        'post_type' => 'event',
+        'post__not_in' => array($next->ID),
+        'tax_query' => array(
+          array (
+            'taxonomy' => 'location',
+            'field' => 'slug',
+            'terms' => get_the_terms(get_the_ID(), 'location')[0]->slug,
+          )),
+      ));
 
-  while( have_rows('supporter', $next->ID) ): the_row();
+      if ( $the_query->have_posts() ): ?>
+        <div class="c-event-throwback">
+          <h3><?php echo __('Rückblicke auf Jugend hackt '); ?> <?php the_title(); ?></h3>
+          <ol>
+            <?php
+            while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+              <li><a href="<?php the_permalink(); ?>"><?php echo get_the_terms(get_the_ID(),  'year')[0]->slug; ?></a></li>
+            <?php
+            endwhile; ?>
+          </ol>
+        </div>
+      <?php
+      endif;
+      wp_reset_postdata();  ?>
+    </div>
 
-  $image = get_sub_field('supporter_img');
-  $link = get_sub_field('supporter_link');
-  $name = get_sub_field('supporter_name');
-  ?>
-  <li><a href="<?php echo $link; ?>"><?php echo $name; ?></a></li>
-  <?php endwhile;
-  endif; ?>
-  </ul>
-  <h3>Partner*innen</h3>
-  <ul>
-  <?php if( have_rows('partner', $next->ID) ):
+    <div class="col-l fg">
+      <div class="needs-js p-r mt-2">
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/<?php the_field('event_how_video', $next->ID); ?>?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <noscript>Kein JavaScript? <a href="https://www.youtube-nocookie.com/watch?v=<?php the_field('event_how_video', $next->ID); ?>">Sie dir das Video hier an!</a></noscript>
+      </div>
+      <div class="c-page-video-bottom">
+        <div class="c-page-video-label"><?php render_svg("/images/soist.svg"); ?></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  while( have_rows('partner', $next->ID) ): the_row();
-  $image = get_sub_field('partner_img');
-  $link = get_sub_field('partner_link');
-  $name = get_sub_field('partner_name');
-  ?>
-  <li><a href="<?php echo $link; ?>"><?php echo $name; ?></a></li>
 
-  <?php endwhile;
-  endif; ?>
-  </ul>
+<section class="c-page-section white p-r">
+  <div class="c-page-2col jc-sb ai-e">
+    <div class="col-m">
+      <h2><?php echo __('Vorbereitung auf das Event', 'lauch'); ?></h2>
+    </div>
+    <div class="col-xs c-event-illu">
+      <?php render_svg("/images/JH-Illustration-Katze-Hund.svg"); ?>
+    </div>
+  </div>
+  <div class="c-page-3col c-blog-list is-grid">
+    <ul>
+      <li class="c-compact-teaser">
+        <div class="teaser-image">
+          <picture><img src="https://placekitten.com/200/106" alt=""></picture></div>
+
+        <h3 class="teaser-title">GitHub Enführung</h3>
+        <p class="teaser-summary">Pellentesque ullamcorper consectetur tortor, eget mollis nunc tincidunt a.</p>
+      </li>
+      <li class="c-compact-teaser">
+        <div class="teaser-image">
+          <picture><img src="https://placekitten.com/200/106" alt=""></picture></div>
+
+        <h3 class="teaser-title">GitHub Enführung</h3>
+        <p class="teaser-summary">Pellentesque ullamcorper consectetur tortor, eget mollis nunc tincidunt a.</p>
+      </li>
+      <li class="c-compact-teaser">
+        <div class="teaser-image">
+          <picture><img src="https://placekitten.com/200/106" alt=""></picture></div>
+
+        <h3 class="teaser-title">GitHub Enführung</h3>
+        <p class="teaser-summary">Pellentesque ullamcorper consectetur tortor, eget mollis nunc tincidunt a.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="c-page-section p-r">
+  <div class="c-page-2col jc-sb ai-e">
+    <div class="col-l">
+      <h2 class="mt-2"><?php the_field('event_support_title', $next->ID); ?></h2>
+      <div><?php the_field('event_support_text', $next->ID); ?></div>
+    </div>
+    <div class="col-xs c-event-illu--large">
+      <?php render_svg("/images/JH-Illustration-Robot-RGB.svg"); ?>
+    </div>
+  </div>
+  <div class="c-page-section white pb-2 mt-2">
+    <ul class="c-list-displayitems pt-2">
+      <?php if( have_rows('event_supporters', $next->ID) ):
+      while( have_rows('event_supporters', $next->ID) ): the_row(); ?>
+        <li class="c-displayitem">
+          <a href="<?php the_sub_field('link'); ?>" title="">
+            <img src="<?php the_sub_field('image'); ?>" alt="">
+            <p class="c-displayitem-title"><?php the_sub_field('name'); ?></p>
+          </a>
+        </li>
+      <?php endwhile;
+      endif; ?>
+    </ul>
+  </div>
+</section>
+
 
 <?php
 } else {
-  echo "Es wird ein Event geben, aber noch nichts konkretes!";
+  echo "Es wird ein Event geben, bald mehr!";
 }
 ?>
 
