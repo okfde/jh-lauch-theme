@@ -152,7 +152,11 @@ function lauch_scripts() {
   wp_enqueue_script( 'lauch-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
   wp_enqueue_script( 'lauch-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
-  wp_enqueue_script( 'vue', 'https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js', [], '2.5.2');
+  wp_enqueue_script( 'vue', 'https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.min.js', [], '2.5.2');
+
+  wp_enqueue_style( 'leaftlet-style', 'https://unpkg.com/leaflet@1.5.1/dist/leaflet.css');
+  wp_enqueue_script( 'leaflet-js', 'https://unpkg.com/leaflet@1.5.1/dist/leaflet.js', [], '1.51');
+
   wp_enqueue_script( 'lauch-revolving-claims', get_template_directory_uri() . '/js/revolving-claims.js', array('vue'), '20190809', true );
   wp_enqueue_script( 'lauch-main', get_template_directory_uri() . '/js/main.min.js', array(), '20190830', true );
 
@@ -192,9 +196,9 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 add_image_size( 'blog-alpaka-small', 300, 300, true );
 add_image_size( 'blog-alpaka', 560, 560, true );
 add_image_size( 'blog-alpaka-highdpi', 1120, 1120, true );
-add_image_size( 'blog-large', 715, 590, true );
+add_image_size( 'blog-large', 715, 590 );
 //add_image_size( 'blog-small', 320, 200, true );
-add_image_size( 'blog-large-highdpi', 1430, 1180, true );
+add_image_size( 'blog-large-highdpi', 1430, 1180 );
 //add_image_size( 'blog-small-highdpi', 640, 400, true);
 add_image_size( 'events-teaser-s', 90, 60, true);
 add_image_size( 'events-teaser-m', 170, 120, true);
@@ -220,6 +224,7 @@ require get_template_directory() . '/inc/custom_types/video_type.php';
 require get_template_directory() . '/inc/custom_types/project_type.php';
 require get_template_directory() . '/inc/custom_types/person_type.php';
 require get_template_directory() . '/inc/custom_types/faq_type.php';
+require get_template_directory() . '/inc/custom_types/learning_type.php';
 
 require get_template_directory() . '/inc/taxonomies.php';
 require get_template_directory() . '/inc/metaboxes.php';
