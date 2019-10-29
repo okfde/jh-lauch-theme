@@ -236,8 +236,8 @@ if ((get_field('next_event'))) {
   </section>
 
   <script>
-   var mymap = L.map('map').setView([<?php the_field('event_lon', $next->ID); ?>,
-                                     <?php the_field('event_lat', $next->ID); ?>], 15);
+   var mymap = L.map('map').setView([<?php the_field('event_lat', $next->ID); ?>,
+                                     <?php the_field('event_lon', $next->ID); ?>], 15);
     //https://api.mapbox.com/styles/v1/okfn/{id}/tiles/256/{z}/{x}/{y}?access_token={accessToken}
 
    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
@@ -252,8 +252,8 @@ if ((get_field('next_event'))) {
      iconSize:     [17, 23],
      iconAnchor:   [9, 22],
    });
-   var marker = L.marker([<?php the_field('event_lon', $next->ID); ?>,
-                         <?php the_field('event_lat', $next->ID); ?>], {icon: customMarker})
+   var marker = L.marker([<?php the_field('event_lat', $next->ID); ?>,
+                         <?php the_field('event_lon', $next->ID); ?>], {icon: customMarker})
                  .addTo(mymap);
   </script>
 
