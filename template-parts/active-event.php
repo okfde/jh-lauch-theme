@@ -4,7 +4,7 @@ if ((get_field('next_event'))) {
 ?>
 
   <div class="c-page-alpaca-header">
-    <div class="c-page-alpaca-featured as-s addon addon--<?php the_field('illustration_class', $next->ID); ?> addon--large addon--<?php the_field('illustration_xaxis'); ?> addon--<?php the_field('illustration_yaxis'); ?>">
+    <div class="c-page-alpaca-featured as-s addon addon--<?php the_field('illustration_class', $next->ID); ?> addon--large addon--<?php the_field('illustration_xaxis', $next->ID); ?> addon--<?php the_field('illustration_yaxis', $next->ID); ?>">
       <img src="<?php echo get_the_post_thumbnail_url($post->ID, 'blog-alpaka'); ?>" alt="" class="clip-alpaka" >
     </div>
     <div class="c-page-alpaca-title">
@@ -45,7 +45,7 @@ if ((get_field('next_event'))) {
     </div>
 
 
-    <?php if (get_field('illustration_right')) : ?>
+    <?php if (get_field('illustration_right') != '') : ?>
       <div class="c-page-header-illustration right-top">
         <img src="<?php echo get_field('illustration_right', $next->ID); ?>" alt="" width="200">
       </div>
