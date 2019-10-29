@@ -33,7 +33,7 @@ if ((get_field('next_event'))) {
                                   'p' => $next));
       if ($query->have_posts()):
                while ($query->have_posts()): $query->the_post(); ?>
-        <div class="pt-1">
+        <div class="pt-1 c-page-header-copy">
           <?php the_field('event_longform'); ?>
         </div>
         <?php get_template_part( 'template-parts/contact-person', get_post_type() ); ?>
