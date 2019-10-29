@@ -3,9 +3,10 @@ if ((get_field('next_event'))) {
   $next = get_field('next_event')[0];
 ?>
 
-  <div class="c-page-alpaca-header">
+  <div class="js-sticky-container c-page-alpaca-header">
     <div class="c-page-alpaca-featured as-s addon addon--<?php the_field('illustration_class'); ?> addon--large addon--<?php the_field('illustration_xaxis'); ?> addon--<?php the_field('illustration_yaxis'); ?>">
-      <img src="<?php echo get_the_post_thumbnail_url($post->ID, 'blog-alpaka'); ?>" alt="" class="clip-alpaka" >
+      <img src="<?php echo get_the_post_thumbnail_url($post->ID, 'blog-alpaka'); ?>"
+           alt="" class="clip-alpaka js-sticky" >
     </div>
     <div class="c-page-alpaca-title">
       <nav class="c-breadcrumb" aria-label="breadcrumb">
