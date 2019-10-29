@@ -4,7 +4,7 @@ if ((get_field('next_event'))) {
 ?>
 
   <div class="c-page-alpaca-header">
-    <div class="c-page-alpaca-featured as-s addon addon--<?php the_field('illustration_class', $next->ID); ?> addon--large addon--<?php the_field('illustration_xaxis', $next->ID); ?> addon--<?php the_field('illustration_yaxis', $next->ID); ?>">
+    <div class="c-page-alpaca-featured as-s addon addon--<?php the_field('illustration_class'); ?> addon--large addon--<?php the_field('illustration_xaxis'); ?> addon--<?php the_field('illustration_yaxis'); ?>">
       <img src="<?php echo get_the_post_thumbnail_url($post->ID, 'blog-alpaka'); ?>" alt="" class="clip-alpaka" >
     </div>
     <div class="c-page-alpaca-title">
@@ -45,9 +45,9 @@ if ((get_field('next_event'))) {
     </div>
 
 
-    <?php if (get_field('illustration_right') != '') : ?>
+    <?php if (get_field('illustration_right')) : ?>
       <div class="c-page-header-illustration right-top">
-        <img src="<?php echo get_field('illustration_right', $next->ID); ?>" alt="" width="200">
+        <img src="<?php the_field('illustration_right'); ?>" alt="" width="200">
       </div>
     <?php endif ?>
   </div>
@@ -215,7 +215,7 @@ if ((get_field('next_event'))) {
         <img src="<?php the_field('event_support_illustration', $next->ID); ?>" alt="">
       </div>
     </div>
-    <div class="c-page-section white pb-2 mt-2">
+    <div class="c-page-section pb-2 mt-2">
       <ul class="c-list-displayitems pt-2">
         <?php if( have_rows('event_supporters', $next->ID) ):
         while( have_rows('event_supporters', $next->ID) ): the_row(); ?>
@@ -223,7 +223,7 @@ if ((get_field('next_event'))) {
             <a href="<?php the_sub_field('link'); ?>"
                title="Zur Website von <?php the_sub_field('name'); ?> "
                class="hover-line-trigger">
-              <img src="<?php the_sub_field('image'); ?>" alt="">
+              <img src="<?php the_sub_field('image'); ?>" alt="" class="white">
               <h3 class="c-displayitem-title">
                 <span class="hover-line"><?php the_sub_field('name'); ?></span>
               </h3>
