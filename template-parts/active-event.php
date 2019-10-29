@@ -30,7 +30,7 @@ if ((get_field('next_event'))) {
 
       <?php
       $query = new WP_Query(array('post_type' => 'event',
-                                  'p' => $next));
+                                  'p' => $next->ID));
       if ($query->have_posts()):
                while ($query->have_posts()): $query->the_post(); ?>
         <div class="pt-1 c-page-header-copy">
@@ -264,7 +264,6 @@ if ((get_field('next_event'))) {
 }
 ?>
 <?php get_template_part( 'template-parts/support-cta', get_post_type() ); ?>
-
 
 <script>
  document.querySelector('html').style.setProperty("--event-single-color", "<?php echo the_field('event_color'); ?>");
