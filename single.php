@@ -8,30 +8,53 @@
  */
 
 get_header();
-?>
 
-<div id="primary" class="content-area">
-  <main id="main" class="site-main">
+while ( have_posts() ) :
+the_post(); ?>
 
-    <?php
-    while ( have_posts() ) :
-    the_post();
+  <section>
+    <div class="c-page-alpaca-header">
+      <div class="c-page-alpaca-featured addon addon--<?php the_field('illustration_class'); ?> addon--large addon--<?php the_field('illustration_xaxis'); ?> addon--<?php the_field('illustration_yaxis'); ?>">
+        <img src="<?php echo get_the_post_thumbnail_url($post->ID, 'blog-alpaka'); ?>" alt="" class="clip-alpaka" >
+      </div>
+      <div class="c-page-alpaca-title">
+        <nav class="c-breadcrumb" aria-label="breadcrumb">
+          <ol>
+            <?php $ancestors = get_post_ancestors( $post );
+            foreach ($ancestors as $a): ?>
+              <li>
+                <a href="<?php echo get_post_permalink($a); ?>"><?php echo get_the_title($a); ?></a>
+              </li>
+            <?php endforeach; ?>
+          </ol>
+        </nav>
+        <?php the_title('<h1 class="c-page-title">', '</h1>')?>
+        <div class="c-page-excerpt"><?php the_field('retro_intro'); ?></div>
+      </div>
 
-    get_template_part( 'template-parts/content', get_post_type() );
+      <?php if (get_field('illustration_right')) : ?>
+        <div class="c-page-header-illustration right-bottom">
+          <img src="<?php echo get_field('illustration_right'); ?>" alt="" width="200">
+        </div>
+      <?php endif ?>
+    </div>
 
-    the_post_navigation();
+  <div class="c-page-section white">
+    <div class="c-page-standard wp-styles">
+      <?php the_content(); ?>
+    </div>
+  </div>
 
-    // If comments are open or we have at least one comment, load up the comment template.
-    if ( comments_open() || get_comments_number() ) :
-    comments_template();
-    endif;
+  autor
 
-    endwhile; // End of the loop.
-    ?>
+  tags
+</section>
 
-  </main><!-- #main -->
-</div><!-- #primary -->
+3 posts
+
 
 <?php
-get_sidebar();
+endwhile; ?>
+
+<?php
 get_footer();
