@@ -20,12 +20,10 @@ the_post(); ?>
       <div class="c-page-alpaca-title">
         <nav class="c-breadcrumb" aria-label="breadcrumb">
           <ol>
-            <?php $ancestors = get_post_ancestors( $post );
-            foreach ($ancestors as $a): ?>
-              <li>
-                <a href="<?php echo get_post_permalink($a); ?>"><?php echo get_the_title($a); ?></a>
-              </li>
-            <?php endforeach; ?>
+            <?php $blog = get_option( 'page_for_posts' ); ?>
+            <li>
+              <a href="<?php echo get_post_permalink($blog); ?>"><?php echo get_the_title($blog); ?></a>
+            </li>
           </ol>
         </nav>
         <?php the_title('<h1 class="c-page-title">', '</h1>')?>
