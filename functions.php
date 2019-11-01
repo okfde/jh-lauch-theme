@@ -277,6 +277,7 @@ function contactperson_handle_shortcode($atts = '') {
   $out .= '</p></div></div></div>';
 
   return $out;
+
 }
 add_shortcode('contactperson', 'contactperson_handle_shortcode');
 
