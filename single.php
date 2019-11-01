@@ -32,6 +32,7 @@ the_post(); ?>
           <?php
           $person = get_field('contact_person', $post->ID);
           $img = get_the_post_thumbnail_url( $person, array(50, 50) );
+          if ($person):
           ?>
           <img src="<?php echo $img ?>" alt="Bild von <?php echo get_the_title($person); ?>" class="c-author-image">
           <div class="c-author-text">
@@ -39,6 +40,7 @@ the_post(); ?>
               <time datetime="<?php echo get_the_date( 'Y-m-j'); ?>">
                 <?php echo get_the_date('j. F Y'); ?></time></p>
           </div>
+          <?php endif; ?>
         </div>
       </div>
 
