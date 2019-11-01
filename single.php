@@ -40,15 +40,21 @@ the_post(); ?>
   <div class="c-page-section white">
     <div class="c-page-standard wp-styles">
       <?php the_content(); ?>
-      <?php  echo do_shortcode("[contactperson person='". get_field('contact_person') ."']"); ?>
+
+      <?php echo do_shortcode("[contactperson person='". get_field('contact_person') ."']"); ?>
       <hr>
-      <?php $terms = wp_get_post_terms($post->ID, 'tag');
+    </div>
 
-      foreach ($terms as $t) {
-        echo $t->slug;
-      }
-
-      ?>
+    <div class="c-tags mt-2 c-page-slim">
+      <h4 class="c-tag-title">Tags</h4>
+      <ul class="c-tag-list d-f mt-1">
+        <?php $terms = wp_get_post_tags($post->ID);
+        foreach ($terms as $t): ?>
+          <li><a href="<?php echo get_term_link($t, 'tag'); ?>"
+                 class="c-tag"
+                 title=""><?php echo $t->slug; ?></a></li>
+        <?php endforeach; ?>
+      </ul>
     </div>
   </div>
 </section>
