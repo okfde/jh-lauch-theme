@@ -40,12 +40,17 @@ the_post(); ?>
   <div class="c-page-section white">
     <div class="c-page-standard wp-styles">
       <?php the_content(); ?>
+      <?php  echo do_shortcode("[contactperson person='". get_field('contact_person') ."']"); ?>
+      <hr>
+      <?php $terms = wp_get_post_terms($post->ID, 'tag');
+
+      foreach ($terms as $t) {
+        echo $t->slug;
+      }
+
+      ?>
     </div>
   </div>
-
-  autor
-
-  tags
 </section>
 
 3 posts

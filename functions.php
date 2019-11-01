@@ -99,12 +99,16 @@ function lauch_setup() {
     return $contents;
   }
 
-  function render_svg($svgpath) {
+  function get_svg($svgpath) {
     $filename = get_template_directory() . "". $svgpath;
     $handle = fopen($filename, "r");
     $contents = fread($handle, filesize($filename));
     fclose($handle);
-    echo $contents;
+    return $contents;
+  }
+
+  function render_svg($svgpath) {
+    echo get_svg($svgpath);
   }
 
 }
@@ -229,11 +233,52 @@ function vuevideo_handle_shortcode($atts = '') {
   $data_str .= 'window.v.year = "'. $value['year'] .'"; ';
   $data_str .= 'window.v.type = "'. $value['type'] .'";';
 
-  wp_enqueue_script('vuevideo', plugin_dir_url( __FILE__ ) . 'vuevideo.js', [], '1.0', true);
-
   return '<div class="js"><script>'. $data_str .'</script><div id="vuevideo"></div></div><noscript>Aktiviere JavaScript um den Videoplayer zu benutzen</noscript>';
 }
 add_shortcode('vuevideo', 'vuevideo_handle_shortcode');
+
+
+function contactperson_handle_shortcode($atts = '') {
+  $value = shortcode_atts( array(
+    'person' => null,
+    'title' => null
+  ), $atts );
+
+  $person = get_posts(array( 'post_type' => 'person',
+                             'p' => $value['person']))[0];
+  $img = get_the_post_thumbnail_url( $person->ID, array(139, 106) );
+  $description = get_field('person_description', $person->ID);
+  $twitter = get_field('person_twitter', $person->ID);
+  $mastodon = get_field('person_mastodon', $person->ID);
+  $instagram = get_field('person_instagram', $person->ID);
+  $email = get_field('person_email', $person->ID);
+
+  $out = '<div class="c-contact">';
+  if ($value['title']) {
+    $out .= '<h4 class="c-contact-title">'. $value[title] .'</h4>';
+  }
+  $out .= '<div class="c-contact-body">';
+  $out .= '<img src="'. $img .'" alt="" class="c-contact-image">';
+  $out .= '<div class="c-contact-text"><p><strong>'. $person->post_title .'</strong>,<br>'. $description.'</p><p>';
+
+  if ($twitter != "") {
+    $out .= '<a href="'. $twitter .'" title="'. _('Bei Twitter', 'lauch') .'">'. get_svg('/images/icons/contact-twitter.svg') .'</a>';
+  }
+  if ($instagram != "") {
+    $out .= '<a href="'. $instagram .'" title="'. _('Bei Instagram', 'lauch') .'">'. get_svg('/images/icons/contact-instagram.svg') .'</a>';
+  }
+  if ($mastodon != "") {
+    $out .= '<a href="'. $mastodon .'" title="'. _('Bei Mastodon', 'lauch') .'">'. get_svg('/images/icons/contact-mastodon.svg') .'</a>';
+  }
+  if ($email != "") {
+    $out .= '<a href=mailto:"'. $email .'" title="'. _('Schreib eine Mail', 'lauch') .'">'. get_svg('/images/icons/contact-mail.svg') .'</a>';
+  }
+
+  $out .= '</p></div></div></div>';
+
+  return $out;
+}
+add_shortcode('contactperson', 'contactperson_handle_shortcode');
 
 
 
