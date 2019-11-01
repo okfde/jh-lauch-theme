@@ -281,7 +281,6 @@ function contactperson_handle_shortcode($atts = '') {
 add_shortcode('contactperson', 'contactperson_handle_shortcode');
 
 
-
 require get_template_directory() . '/inc/custom_types/event_type.php';
 require get_template_directory() . '/inc/custom_types/lab_type.php';
 require get_template_directory() . '/inc/custom_types/exchange_type.php';
