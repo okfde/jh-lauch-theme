@@ -30,7 +30,7 @@ the_post(); ?>
 
         <div class="c-author">
           <?php
-          $person = get_field('contact_person', $post->ID);
+          $person = get_field('contact_person');
           $img = get_the_post_thumbnail_url( $person, array(50, 50) );
           if ($person):
           ?>
