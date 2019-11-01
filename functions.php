@@ -152,12 +152,13 @@ function lauch_scripts() {
   wp_enqueue_script( 'lauch-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
   wp_enqueue_script( 'lauch-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
-  wp_enqueue_script( 'vue', 'https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.min.js', [], '2.5.2');
+  wp_enqueue_script( 'vue', 'https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.min.js', [], '2.5.2', true);
+  wp_enqueue_script( 'vueplayer', get_template_directory_uri() . '/js/vueplayer.js', ['vue'], '0.1.0');
 
   wp_enqueue_style( 'leaftlet-style', 'https://unpkg.com/leaflet@1.5.1/dist/leaflet.css');
   wp_enqueue_script( 'leaflet-js', 'https://unpkg.com/leaflet@1.5.1/dist/leaflet.js', [], '1.51');
 
-  wp_enqueue_script( 'lauch-revolving-claims', get_template_directory_uri() . '/js/revolving-claims.js', array('vue'), '20190809', true );
+  wp_enqueue_script( 'lauch-revolving-claims', get_template_directory_uri() . '/js/revolving-claims.js', ['vue'], '20190809');
   wp_enqueue_script( 'lauch-main', get_template_directory_uri() . '/js/main.min.js', array(), '20190830', true );
 
   if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -215,6 +216,25 @@ function lauch_custom_sizes( $sizes ) {
 
 #function lauch_hide_admin_barr(){ return false; }
 #add_filter( 'show_admin_bar' , 'lauch_hide_admin_bar');
+
+
+function vuevideo_handle_shortcode($atts = '') {
+  $value = shortcode_atts( array(
+    'location' => null,
+    'year' => null,
+    'type' => null
+  ), $atts );
+
+  $data_str = 'window.v = {}; window.v.location = "'. $value['location'] .'"; ';
+  $data_str .= 'window.v.year = "'. $value['year'] .'"; ';
+  $data_str .= 'window.v.type = "'. $value['type'] .'";';
+
+  wp_enqueue_script('vuevideo', plugin_dir_url( __FILE__ ) . 'vuevideo.js', [], '1.0', true);
+
+  return '<div class="js"><script>'. $data_str .'</script><div id="vuevideo"></div></div><noscript>Aktiviere JavaScript um den Videoplayer zu benutzen</noscript>';
+}
+add_shortcode('vuevideo', 'vuevideo_handle_shortcode');
+
 
 
 require get_template_directory() . '/inc/custom_types/event_type.php';

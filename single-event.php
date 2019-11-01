@@ -16,7 +16,7 @@ the_post(); ?>
   <section>
     <div class="c-page-alpaca-header">
       <div class="c-page-alpaca-featured addon addon--<?php the_field('illustration_class'); ?> addon--large addon--<?php the_field('illustration_xaxis'); ?> addon--<?php the_field('illustration_yaxis'); ?>">
-        <img src="<?php echo get_the_post_thumbnail_url($post->ID, 'blog-alpaka'); ?>" alt="" class="clip-alpaka" >
+        <img src="<?php echo get_the_post_thumbnail_url($post->ID, 'blog-alpaka'); ?>" alt="" class="clip-alpaka">
       </div>
       <div class="c-page-alpaca-title">
         <nav class="c-breadcrumb" aria-label="breadcrumb">
@@ -41,7 +41,7 @@ the_post(); ?>
           </ol>
         </nav>
         <?php the_title('<h1 class="c-page-title">', '</h1>')?>
-        <div class="c-page-excerpt"><?php the_field('retro_intro'); ?></div>
+        <div class="c-page-excerpt"><p><?php the_field('retro_intro'); ?></p></div>
       </div>
 
       <?php if (get_field('illustration_right')) : ?>
@@ -51,10 +51,19 @@ the_post(); ?>
       <?php endif ?>
     </div>
 
-  <div class="c-page-section white">
+  <div class="c-page-section white c-page-event-retro">
     <div class="c-page-standard wp-styles">
-      <?php the_field('retro_text'); ?>
+      <?php echo apply_filters( 'the_content', get_field('retro_text')); ?>
     </div>
+
+    <?php
+    $loc_term = wp_get_post_terms($post->ID, 'location');
+    $year_term = wp_get_post_terms($post->ID, 'year');
+    if ($loc_term[0]->slug && $year_term[0]->slug) {
+      echo do_shortcode("[vuevideo type='project-presentation' location='". $loc_term[0]->slug ."' year='". $year_term[0]->slug ."']");
+    }
+
+    ?>
   </div>
   </section>
 
@@ -91,6 +100,10 @@ the_post(); ?>
 
 <?php
 endwhile; ?>
+
+<script>
+ document.querySelector('html').style.setProperty("--event-single-color", "<?php echo the_field('event_color'); ?>");
+</script>
 
 <?php
 get_footer();
