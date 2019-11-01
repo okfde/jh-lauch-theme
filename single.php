@@ -13,9 +13,9 @@ while ( have_posts() ) :
 the_post(); ?>
 
   <section>
-    <div class="c-page-alpaca-header">
+    <div class="c-page-alpaca-header p-r">
       <div class="c-page-alpaca-featured addon addon--<?php the_field('illustration_class'); ?> addon--large addon--<?php the_field('illustration_xaxis'); ?> addon--<?php the_field('illustration_yaxis'); ?>">
-        <img src="<?php echo get_the_post_thumbnail_url($post->ID, 'blog-alpaka'); ?>" alt="" class="clip-alpaka" >
+        <img src="<?php echo get_the_post_thumbnail_url($post->ID, 'blog-alpaka'); ?>" alt="" class="clip-alpaka">
       </div>
       <div class="c-page-alpaca-title large">
         <nav class="c-breadcrumb" aria-label="breadcrumb">
@@ -27,7 +27,19 @@ the_post(); ?>
           </ol>
         </nav>
         <?php the_title('<h1 class="c-page-title">', '</h1>')?>
-        <div class="c-page-excerpt"><?php the_field('retro_intro'); ?></div>
+
+        <div class="c-author">
+          <?php
+          $person = get_field('contact_person', $post->ID);
+          $img = get_the_post_thumbnail_url( $person, array(50, 50) );
+          ?>
+          <img src="<?php echo $img ?>" alt="Bild von <?php echo get_the_title($person); ?>" class="c-author-image">
+          <div class="c-author-text">
+            <p>von <?php echo get_the_title($person); ?><br>
+              <time datetime="<?php echo get_the_date( 'Y-m-j'); ?>">
+                <?php echo get_the_date('j. F Y'); ?></time></p>
+          </div>
+        </div>
       </div>
 
       <?php if (get_field('illustration_right')) : ?>
@@ -39,7 +51,7 @@ the_post(); ?>
 
     <div class="c-page-section white">
       <div class="c-page-standard wp-styles">
-        <?php the_content(); ?>
+        <div class="c-page-capital-first"><?php the_content(); ?></div>
 
         <?php echo do_shortcode("[contactperson person='". get_field('contact_person') ."']"); ?>
         <hr>

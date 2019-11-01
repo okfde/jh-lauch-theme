@@ -51,7 +51,7 @@ the_post(); ?>
       <?php endif ?>
     </div>
 
-  <div class="c-page-section white c-page-event-retro">
+  <div class="c-page-section white c-page-cpital-first">
     <div class="c-page-standard wp-styles">
       <?php echo apply_filters( 'the_content', get_field('retro_text')); ?>
     </div>
