@@ -76,6 +76,7 @@ the_post(); ?>
     <?php
     $args = array('post_type' => 'post',
                   'posts_per_page' => 3,
+                  'numberposts' => 3,
                   'post__not_in' => array($post->ID),
                   'orderby' => 'rand',
                   'tax-query' => array(
