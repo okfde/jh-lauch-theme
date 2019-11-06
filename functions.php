@@ -258,7 +258,7 @@ function contactperson_handle_shortcode($atts = '') {
     $out .= '<h4 class="c-contact-title">'. $value[title] .'</h4>';
   }
   $out .= '<div class="c-contact-body">';
-  $out .= '<img src="'. $img .'" alt="" class="c-contact-image">';
+  $out .= '<img src="'. $img .'" alt="" class="c-contact-image" width="100">';
   $out .= '<div class="c-contact-text"><p><strong>'. $person->post_title .'</strong>,<br>'. $description.'</p><p>';
 
   if ($twitter != "") {

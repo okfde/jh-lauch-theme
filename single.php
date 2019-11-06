@@ -33,7 +33,7 @@ the_post(); ?>
           $person = get_field('contact_person');
           $img = get_the_post_thumbnail_url( $person, array(50, 50) );
           ?>
-          <img src="<?php echo $img ?>" alt="Bild von <?php echo get_the_title($person); ?>" class="c-author-image">
+          <img src="<?php echo $img ?>" alt="Bild von <?php echo get_the_title($person); ?>" class="c-author-image" width="75">
           <div class="c-author-text">
             <p>von <?php echo get_the_title($person); ?><br>
               <time datetime="<?php echo get_the_date( 'Y-m-j'); ?>">
