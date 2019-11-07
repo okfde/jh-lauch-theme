@@ -27,7 +27,7 @@ $event_color = get_field('event_color', get_the_ID());
 
       <?php
       $event = get_field('next_event')[0];
-      if ($event) : ?>
+      if ($event  && get_field('is_active', get_the_ID())) : ?>
         <time class="events-list-date" datetime=""><?php the_field('datum', $event->ID); ?></time>
       <?php
       endif; ?>
