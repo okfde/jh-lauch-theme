@@ -17,9 +17,13 @@ the_post(); ?>
 
     <?php get_template_part( 'template-parts/current', 'exchange'); ?>
 
+    <div class="c-page-section pb-0">
+      <?php get_template_part( 'template-parts/support-cta', get_post_type() ); ?>
+    </div>
+
   <?php  } else { ?>
 
-    <?php get_template_part( 'template-parts/retro', 'event'); ?>
+    <?php get_template_part( 'template-parts/retro', 'exchange'); ?>
 
     <div class="c-page-section pb-0 white">
       <?php get_template_part( 'template-parts/support-cta', get_post_type() ); ?>
