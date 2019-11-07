@@ -32,10 +32,27 @@ if ($children) : ?>
           endif; ?>
         <div class="events-list-body">
           <h2 class="events-list-title"><?php echo $child->post_title ?></h2>
-
           <div class="events-list-actions">
-            <a href="<?php echo $child->post_name; ?>"
-               title="Mehr Infos zu Jugend hackt in <?php echo $child->post_title ?>">Mehr Infos</a>
+            <?php
+            $the_query = new WP_Query( array(
+              'post_type' => 'event',
+              'tax_query' => array(
+                array (
+                  'taxonomy' => 'location',
+                  'field' => 'slug',
+                  'terms' => get_the_terms($child->ID, 'location')[0]->slug,
+                )),
+            ));
+
+            if ( $the_query->have_posts() ):
+              while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+              <a href="<?php the_permalink(); ?>">
+                <?php echo get_the_terms(get_the_ID(),  'year')[0]->slug; ?>
+              </a>
+            <?php
+              endwhile;
+            endif;
+            wp_reset_postdata();  ?>
           </div>
         </div>
         <div class="events-list-hover">

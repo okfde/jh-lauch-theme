@@ -13,97 +13,18 @@ get_header();
 while ( have_posts() ) :
 the_post(); ?>
 
-  <section>
-    <div class="c-page-alpaca-header">
-      <div class="c-page-alpaca-featured addon addon--<?php the_field('illustration_class'); ?> addon--large addon--<?php the_field('illustration_xaxis'); ?> addon--<?php the_field('illustration_yaxis'); ?>">
-        <img src="<?php echo get_the_post_thumbnail_url($post->ID, 'blog-alpaka'); ?>" alt="" class="clip-alpaka">
-      </div>
-      <div class="c-page-alpaca-title">
-        <nav class="c-breadcrumb" aria-label="breadcrumb">
-          <ol>
-            <?php
-            $args = array(
-              'post_type'  => 'page',
-              'meta_query' => array(
-                array(
-                  'key'   => '_wp_page_template',
-                  'value' => 'event-overview.php'
-                )
-              )
-            );
-            $events_maybe = get_posts($args); ?>
-            <li>
-              <a href="<?php echo get_post_permalink($events_maybe[0]->ID); ?>"><?php echo get_the_title($events_maybe[0]->ID); ?></a>
-            </li>
-            <li>
-              <a href="<?php echo get_post_permalink(); ?>"><?php echo get_the_title(); ?></a>
-            </li>
-          </ol>
-        </nav>
-        <?php the_title('<h1 class="c-page-title">', '</h1>')?>
-        <div class="c-page-excerpt"><p><?php the_field('retro_intro'); ?></p></div>
-      </div>
-
-      <?php if (get_field('illustration_right')) : ?>
-        <div class="c-page-header-illustration right-bottom">
-          <img src="<?php echo get_field('illustration_right'); ?>" alt="" width="200">
-        </div>
-      <?php endif ?>
-    </div>
-
-  <div class="c-page-section white c-page-cpital-first">
-    <div class="c-page-standard wp-styles">
-      <?php echo apply_filters( 'the_content', get_field('retro_text')); ?>
-    </div>
-
-    <?php
-    $loc_term = wp_get_post_terms($post->ID, 'location');
-    $year_term = wp_get_post_terms($post->ID, 'year');
-    if ($loc_term[0]->slug && $year_term[0]->slug) {
-      echo do_shortcode("[vuevideo type='project-presentation' location='". $loc_term[0]->slug ."' year='". $year_term[0]->slug ."']");
-    }
-
-    ?>
-  </div>
-  </section>
-
-  <section class="c-page-section p-r">
-    <div class="c-page-2col jc-sb ai-e">
-      <div class="col-l">
-        <h2 class="mt-2"><?php the_field('event_support_title'); ?></h2>
-        <div><?php the_field('event_support_text'); ?></div>
-      </div>
-    </div>
-    <div class="c-page-section white pb-2 mt-2">
-      <ul class="c-list-displayitems pt-2">
-        <?php if( have_rows('event_supporters') ):
-        while( have_rows('event_supporters') ): the_row(); ?>
-          <li class="c-displayitem">
-            <a href="<?php the_sub_field('link'); ?>"
-               title="Zur Website von <?php the_sub_field('name'); ?> "
-               class="hover-line-trigger">
-              <img src="<?php the_sub_field('image'); ?>" alt="" class="">
-              <h3 class="c-displayitem-title">
-                <span class="hover-line"><?php the_sub_field('name'); ?></span>
-              </h3>
-            </a>
-          </li>
-        <?php endwhile;
-        endif; ?>
-      </ul>
-    </div>
-  </section>
+  <?php get_template_part( 'template-parts/retro', 'event'); ?>
 
   <div class="c-page-section pb-0 white">
     <?php get_template_part( 'template-parts/support-cta', get_post_type() ); ?>
   </div>
 
+  <script>
+   document.querySelector('html').style.setProperty("--event-single-color", "<?php echo the_field('event_color'); ?>");
+  </script>
+
 <?php
 endwhile; ?>
-
-<script>
- document.querySelector('html').style.setProperty("--event-single-color", "<?php echo the_field('event_color'); ?>");
-</script>
 
 <?php
 get_footer();

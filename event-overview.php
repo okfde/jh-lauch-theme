@@ -7,9 +7,9 @@ get_header();
 <?php
 while ( have_posts() ) :
 the_post();
-?>
-  <?php
-  get_template_part( 'template-parts/header-alpaka', get_post_type() ); ?>
+get_template_part( 'template-parts/header-alpaka', get_post_type() );
+
+endwhile; ?>
 
   <section class="c-events-list">
 
@@ -24,7 +24,4 @@ the_post();
     get_template_part( 'template-parts/children', 'event-ended' ); ?>
   </section>
 <?php
-  endwhile;
-
-get_sidebar();
 get_footer();

@@ -13,11 +13,6 @@ the_post();
 
     get_template_part( 'template-parts/active', 'event' );
 
-  } else {
-
-    get_template_part( 'template-parts/retro', 'event' );
-  // hier auch eine liste an noch vergangeneren retros
-
   }
 
 endwhile; ?>

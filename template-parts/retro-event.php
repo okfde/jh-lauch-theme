@@ -1,72 +1,63 @@
 <?php
-
-if ((get_field('next_event'))) {
-  $next = get_field('next_event')[0];
-  echo "LAST EVENT:";
+/**
+ * Template part for event and exchange reviews
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package Lauch
+ */
 ?>
-  <h2><?php echo $next->post_title; ?></h2>
-
-  <p><?php echo apply_filters( 'the_content', $next->post_content); ?></p>
-  <p><?php the_field('datum', $next->ID); ?></p>
-
-  <p><?php the_field('summary_video', $next->ID); ?></p>
-
-  <?php //echo do_shortcode("[vuevideo type='project-presentation' location='rostock' year='2019']");
-
-  $loc_term = wp_get_post_terms($next->ID, 'location');
-  $year_term = wp_get_post_terms($next->ID, 'year');
-  if ($loc_term && $year_term) {
-    echo do_shortcode("[vuevideo type='project-presentation' location='". $loc_term[0]->slug ."' year='". $year_term[0]->slug ."']");
-  }
-  ?>
 
 
-  <h3>Bilder</h3>
-  <ul>
-    <?php if( have_rows('image_gallery', $next->ID) ):
+<section>
+  <div class="c-page-alpaca-header">
+    <div class="c-page-alpaca-featured addon addon--<?php the_field('illustration_class'); ?> addon--large addon--<?php the_field('illustration_xaxis'); ?> addon--<?php the_field('illustration_yaxis'); ?>">
+      <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'blog-alpaka'); ?>" alt="" class="clip-alpaka">
+    </div>
+    <div class="c-page-alpaca-title">
+      <nav class="c-breadcrumb" aria-label="breadcrumb">
+        <ol>
+          <?php
+          $args = array(
+            'post_type'  => 'page',
+            'meta_query' => array(
+              array(
+                'key'   => '_wp_page_template',
+                'value' => 'event-overview.php'
+              )
+            )
+          );
+          $events_maybe = get_posts($args); ?>
+          <li>
+            <a href="<?php echo get_post_permalink($events_maybe[0]->ID); ?>"><?php echo get_the_title($events_maybe[0]->ID); ?></a>
+          </li>
+          <li>
+            <a href="<?php echo get_post_permalink(); ?>"><?php echo get_the_title(); ?></a>
+          </li>
+        </ol>
+      </nav>
+      <?php the_title('<h1 class="c-page-title">', '</h1>')?>
+      <div class="c-page-excerpt"><p><?php the_field('retro_intro'); ?></p></div>
+    </div>
 
-    while( have_rows('image_gallery', $next->ID) ): the_row();
-    $image = get_sub_field('image');
+    <?php if (get_field('illustration_right')) : ?>
+      <div class="c-page-header-illustration right-bottom">
+        <img src="<?php echo get_field('illustration_right'); ?>" alt="" width="200">
+      </div>
+    <?php endif ?>
+  </div>
+
+  <div class="c-page-section white c-page-cpital-first">
+    <div class="c-page-standard wp-styles">
+      <?php echo apply_filters( 'the_content', get_field('retro_text')); ?>
+    </div>
+
+    <?php
+    $loc_term = wp_get_post_terms($post->ID, 'location');
+    $year_term = wp_get_post_terms($post->ID, 'year');
+    if ($loc_term[0]->slug && $year_term[0]->slug) {
+      echo do_shortcode("[vuevideo type='project-presentation' location='". $loc_term[0]->slug ."' year='". $year_term[0]->slug ."']");
+    }
     ?>
-      <li><img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['description'] ?>"></li>
-
-    <?php endwhile;
-    endif; ?>
-  </ul>
-
-  <h3>Mentor*innen</h3>
-  <p>Hier stehen die Mentor*innen</p>
-
-  <h3>Sponsor*innen</h3>
-  <ul>
-  <?php if( have_rows('supporter', $next->ID) ):
-
-  while( have_rows('supporter', $next->ID) ): the_row();
-
-  $image = get_sub_field('supporter_img');
-  $link = get_sub_field('supporter_link');
-  $name = get_sub_field('supporter_name');
-  ?>
-  <li><a href="<?php echo $link; ?>"><?php echo $name; ?></a></li>
-  <?php endwhile;
-  endif; ?>
-  </ul>
-  <h3>Partner*innen</h3>
-  <ul>
-  <?php if( have_rows('partner', $next->ID) ):
-
-  while( have_rows('partner', $next->ID) ): the_row();
-  $image = get_sub_field('partner_img');
-  $link = get_sub_field('partner_link');
-  $name = get_sub_field('partner_name');
-  ?>
-  <li><a href="<?php echo $link; ?>"><?php echo $name; ?></a></li>
-
-  <?php endwhile;
-  endif; ?>
-  </ul>
-
-<?php
-} else {
-  echo "Bisher ist hier noch kein neues Event geplant!";
-}
+  </div>
+</section>

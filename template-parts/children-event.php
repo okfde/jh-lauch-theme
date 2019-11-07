@@ -42,7 +42,7 @@ if ($children) : ?>
           <?php
           endif; ?>
 
-          <div class="events-list-actions">
+          <div class="events-list-actions active">
             <a href="<?php echo $child->post_name; ?>"
                title="Mehr Infos zu Jugend hackt in <?php echo $child->post_title ?>">Mehr Infos</a>
             <a href="<?php the_field('anmeldungslink', $event->ID); ?>"
