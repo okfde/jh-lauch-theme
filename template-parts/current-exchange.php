@@ -85,29 +85,29 @@
 
 
 <section class="c-page-section">
-  <div class="c-page-2col jc-sb c-event-video">
+  <div class="c-event-video">
     <div class="col-m">
       <h2><?php the_field('event_how_title'); ?></h2>
       <div><?php the_field('event_how_text'); ?></div>
       <?php
       $the_query = new WP_Query( array(
-        'post_type' => 'event',
-        'post__not_in' => array(),
+        'post_type' => 'exchange',
+        'post__not_in' => array(get_the_ID()),
         'tax_query' => array(
           array (
-            'taxonomy' => 'location',
+            'taxonomy' => 'exchange-program',
             'field' => 'slug',
-            'terms' => get_the_terms(get_the_ID(), 'location')[0]->slug,
+            'terms' => get_the_terms(get_the_ID(), 'exchange-program')[0]->slug,
           )),
       ));
 
       if ( $the_query->have_posts() ): ?>
         <div class="c-event-throwback">
-          <h3><?php echo __('Rückblicke auf Jugend hackt '); ?> <?php the_title(); ?></h3>
+          <h3><?php echo __('Vergangene'); ?> <?php echo get_the_terms(get_the_ID(), 'exchange-program')[0]->name;  ?></h3>
           <ol>
             <?php
             while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-              <li><a href="<?php the_permalink(); ?>"><?php echo get_the_terms(get_the_ID(),  'year')[0]->slug; ?></a></li>
+              <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
             <?php
             endwhile; ?>
           </ol>
@@ -143,7 +143,7 @@
       <img src="<?php the_field('event_support_illustration'); ?>" alt="">
     </div>
   </div>
-  <div class="c-page-section pb-2 mt-2">
+  <div class="c-page-section pb-2 mt-2 white">
     <ul class="c-list-displayitems pt-2">
       <?php if( have_rows('event_supporters') ):
       while( have_rows('event_supporters') ): the_row(); ?>
