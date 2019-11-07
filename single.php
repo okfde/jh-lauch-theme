@@ -52,22 +52,26 @@ the_post(); ?>
     <div class="c-page-section white">
       <div class="c-page-standard wp-styles">
         <div class="c-page-capital-first"><?php the_content(); ?></div>
+      </div>
 
+      <aside class="c-page-slim">
         <?php echo do_shortcode("[contactperson person='". get_field('contact_person') ."']"); ?>
         <hr>
-      </div>
-
-      <div class="c-tags mt-2 c-page-slim">
-        <h4 class="c-tag-title"><?php echo _("Tags", "lauch"); ?></h4>
-        <ul class="c-tag-list d-f mt-1">
-          <?php $terms = wp_get_post_tags($post->ID);
-          foreach ($terms as $t): ?>
-            <li><a href="<?php echo get_term_link($t, 'tag'); ?>"
-                   class="c-tag"
-                   title=""><?php echo $t->slug; ?></a></li>
-          <?php endforeach; ?>
-        </ul>
-      </div>
+        <?php $terms = wp_get_post_tags($post->ID);
+        if ($terms) : ?>
+        <div class="c-tags mt-2">
+          <h4 class="c-tag-title"><?php echo _("Tags", "lauch"); ?></h4>
+          <ul class="c-tag-list d-f mt-1">
+            <?php
+            foreach ($terms as $t): ?>
+              <li><a href="<?php echo get_term_link($t, 'tag'); ?>"
+                     class="c-tag"
+                     title=""><?php echo $t->slug; ?></a></li>
+            <?php endforeach; ?>
+          </ul>
+        </div>
+        <?php endif; ?>
+      </aside>
     </div>
   </section>
 
