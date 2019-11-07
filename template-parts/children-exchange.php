@@ -27,12 +27,13 @@
 
       <div class="events-list-actions">
         <a href="<?php the_permalink() ?>"
-           title="Mehr Infos zu <?php the_title() ?>"><?php echo __('Mehr Infos', 'lauch'); ?></a>
+           title="Mehr Infos zu <?php the_title() ?>">
+          <?php echo __('Mehr Infos', 'lauch'); ?></a>
         <?php
         if (get_field('is_current') == 1): ?>
           <a href="<?php the_field('anmeldungslink', $event->ID); ?>"
-             title="Anmeldung für <?php the_title() ?>"><?php echo __('Anmelden', 'lauch'); ?></a>
-        <?php endif; ?>
+             title="Anmeldung für <?php the_title() ?>"><?php echo __('Anmelden', 'lauch'); ?>
+        <?php endif; ?></a>
       </div>
     </div>
   </div>
