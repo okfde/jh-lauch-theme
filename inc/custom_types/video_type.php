@@ -34,17 +34,17 @@ function lauch_videos_init() {
     $args = array(
         'labels'             => $labels,
         'public'             => true,
-        'publicly_queryable' => true,
+        'publicly_queryable' => false,
         'show_ui'            => true,
         'show_in_menu'       => true,
-        'show_in_rest'       => true,
+        'show_in_rest'       => false,
         'query_var'          => true,
         'rewrite'            => array( 'slug' => 'video' ),
         'capability_type'    => 'post',
-        'has_archive'        => true,
+        'has_archive'        => false,
         'hierarchical'       => false,
         'menu_position'      => null,
-        'supports'           => array( 'title', 'custom-fields', 'thumbnail' ),
+        'supports'           => array( 'title', 'editor', 'custom-fields', 'thumbnail' ),
         'taxonomies'         => array('tech', 'topic', 'location', 'year', 'type'),
     );
 
