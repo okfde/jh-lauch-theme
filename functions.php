@@ -292,9 +292,6 @@ require get_template_directory() . '/inc/custom_types/faq_type.php';
 require get_template_directory() . '/inc/custom_types/learning_type.php';
 
 require get_template_directory() . '/inc/taxonomies.php';
-//require get_template_directory() . '/inc/metaboxes.php';
 
 //require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/api_endpoints.php';
-
-//require get_template_directory() . '/blocks/faq/index.php';
