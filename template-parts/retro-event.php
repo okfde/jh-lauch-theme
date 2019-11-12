@@ -61,3 +61,33 @@
     ?>
   </div>
 </section>
+
+<section class="c-page-section p-r">
+  <div class="c-page-2col jc-sb ai-e">
+    <div class="col-l">
+      <h2 class="mt-2"><?php the_field('event_support_title', $post->ID); ?></h2>
+      <div><?php the_field('event_support_text', $post->ID); ?></div>
+    </div>
+    <div class="col-xs c-event-illu--large">
+      <img src="<?php the_field('event_support_illustration', $post->ID); ?>" alt="">
+    </div>
+  </div>
+  <div class="c-page-section pb-2 mt-2 white">
+    <ul class="c-list-displayitems pt-2">
+      <?php if( have_rows('event_supporters', $post->ID) ):
+      while( have_rows('event_supporters', $post->ID) ): the_row(); ?>
+        <li class="c-displayitem">
+          <a href="<?php the_sub_field('link'); ?>"
+             title="Zur Website von <?php the_sub_field('name'); ?> "
+             class="hover-line-trigger">
+            <img src="<?php the_sub_field('image'); ?>" alt="" class="white">
+            <h3 class="c-displayitem-title">
+              <span class="hover-line"><?php the_sub_field('name'); ?></span>
+            </h3>
+          </a>
+        </li>
+      <?php endwhile;
+      endif; ?>
+    </ul>
+  </div>
+</section>
