@@ -72,17 +72,17 @@
       <img src="<?php the_field('event_support_illustration', $post->ID); ?>" alt="">
     </div>
   </div>
-  <div class="c-page-section pb-2 mt-2 white">
+  <div class="c-page-section pb-2 mt-2 white ">
     <ul class="c-list-displayitems pt-2">
-      <?php if( have_rows('event_supporters', $post->ID) ):
-      while( have_rows('event_supporters', $post->ID) ): the_row(); ?>
+      <?php if( have_rows('partner', $post->ID) ):
+      while( have_rows('partner', $post->ID) ): the_row(); ?>
         <li class="c-displayitem">
-          <a href="<?php the_sub_field('link'); ?>"
-             title="Zur Website von <?php the_sub_field('name'); ?> "
+          <a href="<?php the_sub_field('partner_link'); ?>"
+             title="Zur Website von <?php the_sub_field('partner_name'); ?> "
              class="hover-line-trigger">
-            <img src="<?php the_sub_field('image'); ?>" alt="" class="white">
+            <img src="<?php the_sub_field('partner_image'); ?>" alt="" class="white">
             <h3 class="c-displayitem-title">
-              <span class="hover-line"><?php the_sub_field('name'); ?></span>
+              <span class="hover-line"><?php the_sub_field('partner_name'); ?></span>
             </h3>
           </a>
         </li>
