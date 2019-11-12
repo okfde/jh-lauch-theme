@@ -224,7 +224,7 @@ if ((get_field('next_event'))) {
             <a href="<?php the_sub_field('partner_link'); ?>"
                title="Zur Website von <?php the_sub_field('partner_name'); ?> "
                class="hover-line-trigger">
-              <img src="<?php the_sub_field('partner_image'); ?>" alt="" class="white">
+              <img src="<?php the_sub_field('partner_img'); ?>" alt="" class="white">
               <h3 class="c-displayitem-title">
                 <span class="hover-line"><?php the_sub_field('partner_name'); ?></span>
               </h3>
