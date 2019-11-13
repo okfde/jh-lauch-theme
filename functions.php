@@ -161,9 +161,9 @@ function lauch_scripts() {
 
   wp_enqueue_style( 'leaftlet-style', 'https://unpkg.com/leaflet@1.5.1/dist/leaflet.css');
   wp_enqueue_script( 'leaflet-js', 'https://unpkg.com/leaflet@1.5.1/dist/leaflet.js', [], '1.51');
-
+  wp_enqueue_script( 'isotope', get_template_directory_uri() . '/js/isotope.min.js', [], '1.51');
   wp_enqueue_script( 'lauch-revolving-claims', get_template_directory_uri() . '/js/revolving-claims.js', ['vue'], '20190809');
-  wp_enqueue_script( 'lauch-main', get_template_directory_uri() . '/js/main.min.js', array(), '20190830', true );
+  wp_enqueue_script( 'lauch-main', get_template_directory_uri() . '/js/main.min.js', array('isotope'), '20190830', true );
 
   if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
     wp_enqueue_script( 'comment-reply' );

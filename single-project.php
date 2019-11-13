@@ -8,45 +8,117 @@
  */
 
 get_header();
-?>
+while ( have_posts() ) :
+the_post(); ?>
 
-  <div id="primary" class="content-area">
-    <main id="main" class="site-main">
+  <section class="">
+    <header class="c-page-offcenter-header">
+      <h1 class="c-page-title"><?php the_title(); ?></h1>
+      <div class="c-page-excerpt"><?php the_content(); ?></div>
+    </header>
 
-    <?php
-    while ( have_posts() ) :
-        the_post();
+    <?php if (have_rows('videos')):
+    while( have_rows('videos') ): the_row(); $post = get_sub_field('video')[0]; ?>
 
-        get_template_part( 'template-parts/content', get_post_type() );
+        <div class="c-page-section jc-sb c-page-2col c-project">
+          <div class="col-l fg needs-js">
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/<?php the_field('youtubeid', $post) ?>?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <noscript>Kein JavaScript? <a href="https://youtube.com/watch?v=<?php $post ?>">Sie dir das Video hier an!</a></noscript>
+          </div>
+          <div class="col-s c-project-profile">
+            <dl>
+              <dt>von</dt>
+              <dd><?php the_field('attendees', $post) ?></dd>
 
-        $hackdash = get_post_meta($post->ID, 'hackdashurl', true);
-        ?><p><a href="<?php echo $hackdash ?>">Project bei Hackdash</a></p><?php
+              <?php if (wp_get_post_terms($post, 'location')): ?>
+              <dt>Ort</dt>
+              <dd><?php echo wp_get_post_terms($post, 'location')[0]->name; ?></dd>
+              <?php endif ?>
 
-        $mediaccc = get_post_meta($post->ID, 'mediaccc', true);
-        ?><p><a href="<?php echo $mediaccc ?>">Video bei Media.ccc</a></p><?php
+              <?php if (wp_get_post_terms($post, 'year')): ?>
+              <dt>Jahr</dt>
+              <dd><?php echo wp_get_post_terms($post, 'year')[0]->name; ?></dd>
+              <?php endif ?>
 
-        $video = get_post(get_post_meta($post->ID, '_video', true));
-        $video_id = get_post_meta($video->ID, 'youtubeid', true)
-        ?>
-<iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/<?php echo $video_id; ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              <?php if (wp_get_post_terms($post, 'topics')): ?>
+              <dt>Thema</dt>
+              <dd><?php echo wp_get_post_terms($post, 'topics')[0]->name; ?></dd>
+              <?php endif ?>
+
+              <?php if (wp_get_post_terms($post, 'tech')): ?>
+              <dt>Technik</dt>
+              <dd><?php echo wp_get_post_terms($post, 'tech')[0]->name; ?></dd>
+              <?php endif ?>
+
+              <dt>Links</dt>
+              <dd>
+                <?php if (get_field('github', $post)): ?>
+                  <a href="<?php the_field('github', $post); ?>">Git-Repository <?php echo render_svg('/images/arrow-external-white.svg'); ?></a>
+                <?php endif ?>
+                <?php if (get_field('mediaccc', $post)): ?>
+                  <a href="<?php the_field('mediaccc', $post)?>">Media.CCC <?php echo render_svg('/images/arrow-external-white.svg'); ?></a></dd>
+                <?php endif ?>
+                <?php if (get_field('hackdashurl', $post)): ?>
+                  <a href="<?php the_field('hackdashurl', $post)?>">HackDash <?php echo render_svg('/images/arrow-external-white.svg'); ?></a></dd>
+                <?php endif ?>
+            </dl>
+          </div>
+        </div>
+
         <?php
+        //get_template_part( 'template-parts/children', 'exchange' )
+        ?>
 
-        the_post_navigation();
+        <?php endwhile; ?>
+    <?php endif; ?>
 
-        // If comments are open or we have at least one comment, load up the comment template.
-        if ( comments_open() || get_comments_number() ) :
-            comments_template();
-        endif;
-
-    endwhile; // End of the loop.
-
-    ?>
+  </section>
 
 
-
-    </main><!-- #main -->
-  </div><!-- #primary -->
+  <section class="c-catnav c-catnav--slider p-r">
+  <h2 class="c-catnav-title--rot">Weiter geht's</h2>
+  <nav>
+    <ul>
+      <li class="c-catnav-slide">
+        <a href="#" class="c-page-2col ai-c">
+          <img src="//placekitten.com/300/200" alt="" width="400" height="200">
+          <div class="">
+            <p class="c-catnav-meta">Rostock 2019</p>
+            <h3><span>Unterwegs mit</span></h3>
+            <p>Lorem ipsum dolor sit amet ipsum dolor sit amet.</p>
+          </div>
+        </a>
+      </li>
+      <li class="c-catnav-slide">
+        <a href="#" class="c-page-2col ai-c">
+          <img src="//placekitten.com/300/200" alt="" width="400" height="200">
+          <div class="">
+            <p class="c-catnav-meta">Rostock 2019</p>
+            <h3><span>Unterwegs mit</span></h3>
+            <p>Lorem ipsum dolor sit amet ipsum dolor sit amet.</p>
+          </div>
+        </a>
+      </li>
+      <li class="c-catnav-slide">
+        <a href="#" class="c-page-2col ai-c">
+          <img src="//placekitten.com/300/200" alt="" width="400" height="200">
+          <div class="">
+            <p>Rostock 2019</p>
+            <h3><span>Unterwegs mit</span></h3>
+            <p>Lorem ipsum dolor sit amet ipsum dolor sit amet.</p>
+          </div>
+        </a>
+      </li>
+    </ul>
+    <!-- <div class="c-catnav-nav p-a">
+         <button type="button">back</button>
+         <button type="button">next</button>
+         </div> -->
+  </nav>
+</section>
 
 <?php
-get_sidebar();
+endwhile; ?>
+
+<?php
 get_footer();

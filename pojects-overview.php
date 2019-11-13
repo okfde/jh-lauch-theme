@@ -35,7 +35,7 @@ endwhile; ?>
           <option value=""><?php echo __($tax[0], 'lauch') ?></option>
           <?php $terms = get_terms($tax[1]);
           foreach ($terms as $t) : ?>
-            <option value="<?php echo $t->slug; ?>"><?php echo $t->name; ?></option>
+            <option value="<?php echo $t->taxonomy; ?>-<?php echo $t->slug; ?>"><?php echo $t->name; ?></option>
           <?php endforeach; ?>
         </select>
       </label>
@@ -92,7 +92,7 @@ endwhile; ?>
   <li class="c-catnav fullwidth needs-js">
     <h2 class="c-catnav-title"><?php echo __('Spannende Themen', 'lauch') ?></h2>
     <ul class="js-filter-parent">
-      <?php $terms = get_terms('topics');
+      <?php $terms = get_terms('topics', array('hide_empty' => true));
       foreach ($terms as $t) : ?>
         <li class="c-catnav-item">
           <a href="<?php echo get_term_link($t->slug, $t->taxonomy ); ?>"

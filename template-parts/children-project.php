@@ -11,25 +11,25 @@
 $all_tech = wp_get_post_terms(get_the_ID(), 'tech');
 $tech_class = [];
 foreach ($all_tech as $t) {
-  array_push($tech_class, $t->slug);
+  array_push($tech_class, $t->taxonomy. '-'. $t->slug);
 }
 
 $all_topics = wp_get_post_terms(get_the_ID(), 'topics');
 $topic_class = [];
 foreach ($all_topics as $t) {
-  array_push($topic_class, $t->slug);
+  array_push($topic_class, $t->taxonomy. '-'. $t->slug);
 }
 
 $all_years = wp_get_post_terms(get_the_ID(), 'year');
 $year_class = [];
 foreach ($all_years as $t) {
-  array_push($year_class, $t->slug);
+  array_push($year_class, $t->taxonomy. '-'. $t->slug);
 }
 
 $all_location = wp_get_post_terms(get_the_ID(), 'location');
 $location_class = [];
 foreach ($all_location as $t) {
-  array_push($location_class, $t->slug);
+  array_push($location_class, $t->taxonomy. '-'. $t->slug);
 }
 ?>
 <li class="<?php echo join(" ", $location_class); ?>
