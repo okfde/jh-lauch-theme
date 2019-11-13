@@ -56,11 +56,12 @@ the_post(); ?>
                   <a href="<?php the_field('github', $post); ?>">Git-Repository <?php echo render_svg('/images/arrow-external-white.svg'); ?></a>
                 <?php endif ?>
                 <?php if (get_field('mediaccc', $post)): ?>
-                  <a href="<?php the_field('mediaccc', $post)?>">Media.CCC <?php echo render_svg('/images/arrow-external-white.svg'); ?></a></dd>
+                  <a href="<?php the_field('mediaccc', $post)?>">Media.CCC <?php echo render_svg('/images/arrow-external-white.svg'); ?></a>
                 <?php endif ?>
                 <?php if (get_field('hackdashurl', $post)): ?>
-                  <a href="<?php the_field('hackdashurl', $post)?>">HackDash <?php echo render_svg('/images/arrow-external-white.svg'); ?></a></dd>
+                  <a href="<?php the_field('hackdashurl', $post)?>">HackDash <?php echo render_svg('/images/arrow-external-white.svg'); ?></a>
                 <?php endif ?>
+              </dd>
             </dl>
           </div>
         </div>
