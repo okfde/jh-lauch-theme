@@ -35,7 +35,7 @@ foreach ($all_location as $t) {
 <li class="<?php echo join(" ", $location_class); ?>
            <?php echo join(" ", $year_class); ?>
            <?php echo join(" ", $tech_class); ?>
-           <?php echo join(" ", $topic_class); ?>">
+           <?php echo join(" ", $topic_class); ?>  c-project-listitem">
   <article class="c-compact-teaser">
     <a href="<?php the_permalink() ?>" class="hover-line-trigger">
       <div class="teaser-image">
