@@ -156,7 +156,7 @@ function lauch_scripts() {
   wp_enqueue_script( 'lauch-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
   wp_enqueue_script( 'lauch-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
-  wp_enqueue_script( 'vue', 'https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.min.js', [], '2.5.2', true);
+  wp_enqueue_script( 'vue', get_template_directory_uri() . '/js/vue.min.js', [], '2.5.2', true);
   wp_enqueue_script( 'vueplayer', get_template_directory_uri() . '/js/vueplayer.js', ['vue'], '0.1.0');
 
   wp_enqueue_style( 'leaftlet-style', 'https://unpkg.com/leaflet@1.5.1/dist/leaflet.css');
