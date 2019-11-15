@@ -68,7 +68,7 @@ endwhile; ?>
       <?php wp_reset_postdata(); ?>
   <?php endif; ?>
 
-  <li class="c-videoplayer fullwidth--padding needs-js">
+  <li class="fullwidth--padding needs-js">
     <?php
     $loc_term = get_field('term_location');
     $year_term = get_field('term_year');

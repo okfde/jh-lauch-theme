@@ -52,13 +52,13 @@
       <?php echo apply_filters( 'the_content', get_field('retro_text')); ?>
     </div>
 
-    <?php
-    $loc_term = wp_get_post_terms($post->ID, 'location');
-    $year_term = wp_get_post_terms($post->ID, 'year');
-    if ($loc_term[0]->slug && $year_term[0]->slug) {
-      echo do_shortcode("[vuevideo type='project-presentation' location='". $loc_term[0]->slug ."' year='". $year_term[0]->slug ."']");
-    }
-    ?>
+      <?php
+      $loc_term = wp_get_post_terms($post->ID, 'location');
+      $year_term = wp_get_post_terms($post->ID, 'year');
+      if ($loc_term[0]->slug && $year_term[0]->slug) {
+        echo do_shortcode("[vuevideo type='project-presentation' location='". $loc_term[0]->slug ."' year='". $year_term[0]->slug ."']");
+      }
+      ?>
   </div>
 </section>
 

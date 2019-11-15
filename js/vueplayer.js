@@ -97,6 +97,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       },
       template: `
+      <div class="c-videoplayer">
       <div class="video-player">
         <VideoHeader :taxonomies=taxonomies
                      :isLarge=false></VideoHeader>
@@ -116,7 +117,8 @@ document.addEventListener('DOMContentLoaded', function () {
                :active="activeVideo"></VideoPrev>
         </ul>
        </div
-      </div>`,
+      </div>
+      </div`,
       mounted: function(){
         const url = this.constructUrl();
         fetch(url).then((response)=>{
