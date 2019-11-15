@@ -226,12 +226,16 @@ function vuevideo_handle_shortcode($atts = '') {
   $value = shortcode_atts( array(
     'location' => null,
     'year' => null,
-    'type' => null
+    'type' => null,
+    'topics' => null,
+    'tech' => null,
   ), $atts );
 
   $data_str = 'window.v = {}; window.v.location = "'. $value['location'] .'"; ';
   $data_str .= 'window.v.year = "'. $value['year'] .'"; ';
   $data_str .= 'window.v.type = "'. $value['type'] .'";';
+  $data_str .= 'window.v.tech = "'. $value['tech'] .'";';
+  $data_str .= 'window.v.topics = "'. $value['topics'] .'";';
 
   return '<div class="js"><script>'. $data_str .'</script><div id="vuevideo"></div></div><noscript>Aktiviere JavaScript um den Videoplayer zu benutzen</noscript>';
 }

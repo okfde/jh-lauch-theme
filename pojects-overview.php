@@ -69,8 +69,28 @@ endwhile; ?>
   <?php endif; ?>
 
   <li class="c-videoplayer fullwidth--padding needs-js">
-    <div><h1>Videoplayer</h1>
-    </div>
+    <?php
+    $loc_term = get_field('term_location');
+    $year_term = get_field('term_year');
+    $topic_term = get_field('term_topics');
+    $tech_term = get_field('term_tech');
+
+    $out = "[vuevideo type='project-presentation' ";
+    if ($loc_term) {
+      $out .= "location='". $loc_term->slug ."' ";
+    }
+    if ($year_term) {
+      $out .= "year='". $year_term->slug ."' ";
+    }
+    if ($tech_term) {
+      $out .= "tech='". $tech_term->slug ."' ";
+    }
+    if ($topic_term) {
+      $out .= "topics='". $topic_term->slug ."' ";
+    }
+    $out .= "]";
+
+    echo do_shortcode($out); ?>
   </li>
 
   <?php
