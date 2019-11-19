@@ -1,0 +1,14 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "My New Hugo Site"
+
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+
+[outputs]
+  home = ["HTML", "RSS"]
+  page = ["HTML"]
+  taxonomyTerm = ["HTML"]

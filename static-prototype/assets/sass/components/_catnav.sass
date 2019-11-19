@@ -1,0 +1,74 @@
+.c-catnav
+  $catnav-space: 1.5rem
+
+  position: relative
+  margin-top: 2rem
+  margin-bottom: 2.5rem
+  margin-left: -$body-padding
+  margin-right: -$body-padding
+  background-color: #002343
+  color: $color-white
+  ul
+    +scroll-x-hide-scrollbar
+    display: flex
+    align-items: flex-end
+
+  .c-catnav-title
+    position: absolute
+    top: $catnav-space
+    left: $catnav-space
+    +uppercase-title
+
+  .c-catnav-item
+    flex: 0 0 16rem
+    border-left: 1px solid $color-deepblue
+
+    a
+      display: block
+      height: 16rem
+      padding: 1rem $catnav-space * 2 2em $catnav-space
+      display: flex
+      flex-flow: column
+      justify-content: flex-end
+      color: currentColor
+      text-decoration: none
+    h3
+      font-size: 2rem
+      line-height: 1.1
+
+    p
+      margin-top: 1.5rem
+      font-weight: $font-weight-semi
+      font-size: 0.85rem
+      color: #d2e3f3
+
+  .c-catnav-title--rot
+    +uppercase-title
+    position: absolute
+    color: $color-deepblue
+    left: 0
+    transform: rotate(-90deg) translateX(-50%)
+    @media (min-width: $break-medium)
+      left: 1.8rem
+
+
+  &.c-catnav--slider
+    padding: 2rem 0 2rem 4rem
+    @media (min-width: $break-medium)
+      padding: 5rem 0 5rem 7rem
+
+  .c-catnav-slide
+    flex: 0 0 50vw
+    a
+      color: $color-white
+      text-decoration: none
+    img
+      padding-right: 2rem
+    h3
+      font-size: 2rem
+      margin: .3em 0
+      line-height: 1.1
+
+  .c-catnav-meta
+    color: $color-softblue
+    +uppercase-title

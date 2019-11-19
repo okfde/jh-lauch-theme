@@ -1,0 +1,51 @@
+.c-compact-teaser
+  margin-bottom: 2rem
+  @media (min-width: $break-small)
+    margin-bottom: 6rem
+  a
+    display: block
+    color: currentColor
+    text-decoration: none
+
+  .teaser-image
+    position: relative
+    margin-bottom: 1rem
+    picture,
+    picture img
+      width: 100%
+      height: auto
+    > img
+      position: absolute
+      right: -1em
+      width: 7em
+      max-height: 8em
+      bottom: 0
+    &:nth-of-type(3n)
+      > img
+        top: -1em
+    &:nth-of-type(2n+5)
+      > img
+        top: -1em
+        margin: auto
+
+  .teaser-title
+    padding-bottom: 0
+    line-height: 1.4
+    word-break: break-word
+    font-size: 1.4rem
+
+  .teaser-summary
+    margin-top: 1rem
+
+  .teaser-date
+    margin-top: .5em
+    font-size: 0.85rem
+    text-transform: uppercase
+    color: $color-deepgrey
+    font-weight: $font-weight-bold
+
+  .teaser-meta
+    color: $color-softblue
+    +uppercase-title
+    font-size: 1rem
+    margin-bottom: 0.5rem

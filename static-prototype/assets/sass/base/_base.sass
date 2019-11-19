@@ -1,0 +1,56 @@
+*, *:after, *:before
+  box-sizing: border-box
+
+html,
+body
+  font-size: 17px
+  font-family: "Source Sans Pro", sans-serif
+  color: $body-color
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  font-smooth: always
+  overflow-x: hidden
+
+body
+  +bg-pattern($color-bg-grey)
+  line-height: 1.47
+
+h1
+  font-size: 3.5rem
+  line-height: 1.1
+  margin-bottom: 0.9em
+
+h2
+  font-size: 2rem
+  line-height: 1.1
+  margin-bottom: 0.8em
+
+h1, h2, h3, h4
+  font-weight: $font-weight-bold
+
+strong
+  font-weight: $font-weight-semi
+
+
+details
+  padding: 1em 0 0.7em
+  border-bottom: 1px solid $color-softgrey
+  &[open]
+    padding-bottom: 1.7em
+
+summary
+  padding: 0.7em 0
+  font-weight: $font-weight-bold
+  font-size: 20px
+  &::-webkit-details-marker
+    color: $color-pink
+  @media (min-width: $break-small)
+    list-style-position: outside
+
+iframe
+  width: 100%
+  height: auto
+  min-height: 40vh
+
+hr
+  border-color: $color-softgrey;

@@ -1,0 +1,76 @@
+{{ define "main" }}
+
+<section>
+  <div class="c-page-alpaca-header">
+    <div class="c-page-alpaca-featured as-s">
+      <img src="//placekitten.com/486/486" alt="" class="clip-alpaka">
+      <!-- <img src="//placekitten.com/150/190" alt="" class="addon bottom left"> -->
+    </div>
+    <div class="c-page-alpaca-title">
+      <nav class="c-breadcrumb" aria-label="breadcrumb">
+        <ol>
+          <li>
+            <a href="#">Events</a>
+          </li>
+          <li><a href="#">Berlin</a></li>
+        </ol>
+      </nav>
+      <h1 class="c-page-title pt-1">{{.Title}}</h1>
+      <div class="c-page-excerpt">
+        <p>Hier steht ein Einleitungssatz</p>
+        <a href="#" class="mt-1 button event-button">Anmelden für 2020</a>
+      </div>
+      <div class="c-page-header-illustration right-bottom">
+        <img src="//placekitten.com/200/150" alt="">
+      </div>
+    </div>
+  </div>
+
+  <div class="c-page-section white">
+    <div class="c-page-standard wp-styles">
+      {{ .Content }}
+    </div>
+  </div>
+</section>
+
+<section class="c-page-section p-r">
+  <div class="c-page-2col jc-sb ai-e">
+    <div class="col-l">
+      <h2 class="mt-2">Dankeschön</h2>
+      <p>Etiam ut mi quam. Mauris viverra hendrerit dui id lobortis. Etiam convallis gravida metus, at imperdiet risus porta nec. Ut porta ante ultricies augue suscipit fringilla. Mauris porta faucibus mauris at semper. Duis sed volutpat dolor. Pellentesque ullamcorper consectetur tortor, eget mollis nunc tincidunt a.</p>
+    </div>
+  </div>
+  <div class="c-page-section white pb-2 mt-2">
+    <ul class="c-list-displayitems pt-2">
+      <li class="c-displayitem">
+        <img src="https://placekitten.com/200/106" alt="">
+        <p class="c-displayitem-title">1 Preis</p>
+      </li>
+      <li class="c-displayitem">
+        <img src="https://placekitten.com/200/106" alt="">
+        <p class="c-displayitem-title"><a href="#">1 Preis</a></p>
+      </li>
+      <li class="c-displayitem">
+        <img src="https://placekitten.com/200/106" alt="">
+        <p class="c-displayitem-title">1 Preis sdof sdoifus odifusodifu </p>
+      </li>
+      <li class="c-displayitem">
+        <img src="https://placekitten.com/200/106" alt="">
+        <p class="c-displayitem-title">1 Preis</p>
+      </li>
+      <li class="c-displayitem">
+        <img src="https://placekitten.com/200/106" alt="">
+        <p class="c-displayitem-title">1 Preis</p>
+      </li>
+      <li class="c-displayitem">
+        <img src="https://placekitten.com/200/106" alt="">
+        <p class="c-displayitem-title">1 Preis</p>
+      </li>
+    </ul>
+  </div>
+</section>
+<div class="c-page-section pb-0 white">
+  {{ partial "freundeskreis.html" }}
+</div>
+
+{{end}}

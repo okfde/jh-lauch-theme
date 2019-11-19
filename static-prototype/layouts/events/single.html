@@ -1,0 +1,255 @@
+{{ define "main" }}
+
+<div class="c-page-alpaca-header">
+  <div class="c-page-alpaca-featured as-s">
+    <img src="//placekitten.com/486/486" alt="" class="clip-alpaka">
+    <!-- <img src="//placekitten.com/150/190" alt="" class="addon bottom left"> -->
+  </div>
+  <div class="c-page-alpaca-title">
+    <nav class="c-breadcrumb" aria-label="breadcrumb">
+      <ol>
+        <li>
+          <a href="#">Events</a>
+        </li>
+      </ol>
+    </nav>
+    <h1 class="c-page-title pt-1">{{.Title}}</h1>
+    <div class="c-page-excerpt">
+      {{ .Content }}
+      <a href="#" class="mt-1 button event-button">Anmelden</a>
+    </div>
+    <div class="pt-1 c-page-header-copy">
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue, orci ut bibendum luctus, risus sem finibus urna, non varius metus purus vitae libero. Nulla a ex ut elit lobortis pretium. Donec mollis ex et lacus pulvinar malesuada. In eleifend quam odio, non posuere neque dapibus nec. In porttitor odio dolor, in sollicitudin diam rhoncus eu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. <a hef="#">Phasellus eget lacinia</a> mauris, a varius tellus. Sed varius sodales erat, ut dignissim nulla molestie sed. Donec molestie interdum quam, eu accumsan diam congue id. Aenean non magna leo. Maecenas vel mi nec nulla sollicitudin porttitor. Sed facilisis in metus vel tristique. Proin eros felis, molestie et odio id, efficitur hendrerit augue. Etiam nec nisl et purus rutrum consectetur dictum vitae orci. Cras fermentum mauris ac nunc gravida sodales. Phasellus vestibulum ut justo in consequat.</p>
+
+      <p>Donec a porta velit. Aenean placerat felis quis dolor aliquet, finibus lacinia lectus iaculis. Vestibulum nec nibh ligula. Aliquam at elementum lacus. Fusce vel ex posuere, placerat nulla in, posuere turpis. Proin eu gravida mauris. Quisque sit amet elit non enim varius bibendum non eu mi. Praesent sapien neque, malesuada eu enim ut, ullamcorper dapibus arcu.</p>
+
+      <p>Fusce arcu dolor, placerat vel velit ac, mollis dictum enim. Phasellus sed tincidunt nisi. Nunc euismod lacus ac lacus pulvinar, ac luctus lacus consequat. Nulla bibendum risus diam. Ut id massa eu elit tempor blandit. Cras eleifend luctus suscipit. Integer commodo nec tellus sit amet consequat. Cras et pretium metus. Vivamus ac volutpat eros, ut facilisis tellus. Integer commodo dolor sed odio dignissim, at mollis leo gravida. Aenean fermentum efficitur turpis nec tincidunt. Curabitur blandit risus non diam venenatis, ac consectetur erat mattis. Aliquam scelerisque erat sed arcu interdum, ut euismod neque eleifend. Aliquam interdum tortor ut nisl elementum finibus. </p>
+    </div>
+    <aside>
+      <div class="c-contact">
+        <h4 class="c-contact-title">Du hast Fragen?</h4>
+        <div class="c-contact-body">
+          <img src="https://placekitten.com/139/106" class="c-contact-image">
+          <div class="c-contact-text">
+            <p><strong>Birte Frische</strong>,<br>
+              macht Orga bei Jugend hackt Hamburg</p>
+            <p>
+              <a href="mailto:#">{{ readFile "/static/images/icons/contact-twitter.svg" | safeHTML  }}</a>
+              <a href="mailto:#">{{ readFile "/static/images/icons/contact-instagram.svg" | safeHTML  }}</a>
+              <a href="mailto:#">{{ readFile "/static/images/icons/contact-mastodon.svg" | safeHTML  }}</a>
+              <a href="mailto:#">{{ readFile "/static/images/icons/contact-mail.svg" | safeHTML  }}</a></p>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <div class="c-page-header-illustration right-top">
+    <img src="//placekitten.com/200/150" alt="">
+  </div>
+</div>
+
+<section class="c-page-section c-page-center">
+  <h2 class="ta-c c-event-title">Facts zum Event</h2>
+  <div class="c-page-2col ai-c c-event-info">
+    <div class="col-m fg c-event-overview">
+      <h3>Wann?</h3>
+      <p>30.08.2019 - 01.09.2019</p>
+      <h3>Wo?</h3>
+      <p>Pellentesque ullamcorper consectetur tortor, eget mollis nunc tincidunt a.</p>
+      <h3>Wer?</h3>
+      <p>Pellentesque ullamcorper consectetur tortor, eget mollis nunc tincidunt a.</p>
+      <h3>Übernachten?</h3>
+      <p>Etiam ut mi quam. Mauris viverra hendrerit dui id lobortis. Pellentesque ullamcorper consectetur tortor, eget mollis nunc tincidunt a.</p>
+      <h3>Kosten?</h3>
+      <p>Etiam ut mi quam. Mauris viverra hendrerit dui id lobortis. Etiam convallis gravida metus, at imperdiet risus porta nec. Ut porta ante ultricies augue suscipit fringilla. Mauris porta faucibus mauris at semper. Duis sed volutpat dolor. Pellentesque ullamcorper consectetur tortor, eget mollis nunc tincidunt a.</p>
+      <h3>Bleib auf dem laufenden</h3>
+      <p>
+        <a href="mailto:#">{{ readFile "/static/images/icons/contact-twitter.svg" | safeHTML  }}</a>
+        <a href="mailto:#">{{ readFile "/static/images/icons/contact-instagram.svg" | safeHTML  }}</a>
+        <a href="mailto:#">{{ readFile "/static/images/icons/contact-zulip.svg" | safeHTML  }}</a>
+      </p>
+    </div>
+    <div class="col-s fg c-event-map">
+      <div id="map" class="c-map"></div>
+      <noscript>Kein JavaScript? Hier sollte eine Karte mit der Event Location dargestellt werden.</noscript></div>
+  </div>
+</section>
+
+<div>
+  <div class="c-planebanner">
+    <a href="#" title="Jetzt anmelden für">
+      {{ readFile "/static/images/events/Anmeldung.svg" | safeHTML  }}
+      {{ readFile "/static/images/events/Anmeldung.svg" | safeHTML  }}
+      {{ readFile "/static/images/events/Anmeldung.svg" | safeHTML  }}
+      {{ readFile "/static/images/events/Anmeldung.svg" | safeHTML  }}
+      {{ readFile "/static/images/events/Anmeldung.svg" | safeHTML  }}
+      </a>
+  </div>
+</div>
+
+<section class="c-page-section">
+  <div class="">
+    <div class="c-program-title">
+      <h2>Das Programm</h2>
+      <p>Donec a porta velit. Aenean placerat felis quis dolor aliquet, finibus lacinia lectus iaculis. Vestibulum nec nibh ligula. Aliquam at elementum lacus. Fusce vel ex posuere, placerat nulla in, posuere turpis. Proin eu gravida mauris. Quisque sit amet elit non enim varius bibendum non eu mi. Praesent sapien neque, malesuada eu enim ut, ullamcorper dapibus arcu.</p>
+    </div>
+  </div>
+  <div class="c-page-3col c-program jc-sb mt-1">
+    <div class="col-s">
+      <h3 >{{ readFile "/static/images/events/_freitag.svg" | safeHTML  }}</h3>
+      <ol class="">
+        <li><img src="https://placehold.it/40x40" class="" alt=""><time>16:00</time><div>Anreise</div></li>
+        <li><img src="https://placehold.it/40x40" class="" alt=""><time>16:00</time><div>Anreise</div></li>
+        <li><img src="https://placehold.it/40x40" class="" alt=""><time>16:00</time><div>Anreise</div></li>
+        <li><img src="https://placehold.it/40x40" class="" alt=""><time>16:00</time><div>Anreise</div></li>
+      </ol>
+    </div>
+    <div class="col-s">
+      <h3>{{ readFile "/static/images/events/_samstag.svg" | safeHTML  }}</h3>
+      <ol>
+        <li><img src="https://placehold.it/40x40" class="" alt=""><time>16:00</time><div>Anreise</div></li>
+        <li><img src="https://placehold.it/40x40" class="" alt=""><time>16:00</time><div>Anreise</div></li>
+        <li><img src="https://placehold.it/40x40" class="" alt=""><time>16:00</time><div>Anreise dfuhdslf sdilufgh lidsufhg idflhglidfuhg lisduhg ilsh</div></li>
+        <li><img src="https://placehold.it/40x40" class="" alt=""><time>16:00</time><div>Anreise</div></li>
+      </ol>
+    </div>
+    <div class="col-s">
+      <h3>{{ readFile "/static/images/events/_sonntag.svg" | safeHTML  }}</h3>
+      <ol>
+        <li><img src="https://placehold.it/40x40" class="" alt=""><time>16:00</time><div>Anreise</div></li>
+        <li><img src="https://placehold.it/40x40" class="" alt=""><time>16:00</time><div>Anreise</div></li>
+        <li><img src="https://placehold.it/40x40" class="" alt=""><time>16:00</time><div>Anreise</div></li>
+        <li><img src="https://placehold.it/40x40" class="" alt=""><time>16:00</time><div>Anreise</div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="c-page-section">
+  <div class="c-page-2col jc-sb c-event-video">
+    <div class="col-m">
+      <h2>Wie ist es bei Jugend hackt dabei zu sein?</h2>
+      <div><p>Etiam ut mi quam. Mauris viverra hendrerit dui id lobortis. Etiam convallis gravida metus, at imperdiet risus porta nec. Ut porta ante ultricies augue suscipit fringilla. Mauris porta faucibus mauris at semper. Duis sed volutpat dolor. Pellentesque ullamcorper consectetur tortor, eget mollis nunc tincidunt a.</p></div>
+      <div class="c-event-throwback">
+        <h3>Rückblicke von Jugend hackt Hamburg</h3>
+        <ol>
+          <li><a href="#">2017</a></li>
+          <li><a href="#">2016</a></li>
+          <li><a href="#">2015</a></li>
+        </ol>
+      </div>
+    </div>
+    <div class="col-l fg">
+      <div class="needs-js p-r mt-2">
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ZmD1_1EuhQ8?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <noscript>Kein JavaScript? <a href="#">Sie dir das Video hier an!</a></noscript>
+        <div class="p-a t-n4 r-n3">
+          <img src="//placekitten.com/200/150" alt="">
+        </div>
+      </div>
+      <div class="c-page-video-bottom">
+        <div class="c-page-video-label">{{ readFile "/static/images/soist.svg" | safeHTML  }}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="c-page-section white p-r">
+  <div class="c-page-2col jc-sb ai-e">
+    <div class="col-m">
+      <h2>Vorbereitung auf das Event</h2>
+    </div>
+    <div class="col-xs c-event-illu">
+      {{ readFile "/static/images/illustrations/JH-Illustration-Monster.svg" | safeHTML  }}
+    </div>
+  </div>
+  <div class="c-page-3col c-blog-list is-grid">
+    <ul>
+      <li class="c-compact-teaser">
+        <div class="teaser-image">
+          <picture><img src="https://placekitten.com/200/106" alt=""></picture></div>
+
+        <h3 class="teaser-title">GitHub Enführung</h3>
+        <p class="teaser-summary">Pellentesque ullamcorper consectetur tortor, eget mollis nunc tincidunt a.</p>
+      </li>
+      <li class="c-compact-teaser">
+        <div class="teaser-image">
+          <picture><img src="https://placekitten.com/200/106" alt=""></picture></div>
+
+        <h3 class="teaser-title">GitHub Enführung</h3>
+        <p class="teaser-summary">Pellentesque ullamcorper consectetur tortor, eget mollis nunc tincidunt a.</p>
+      </li>
+      <li class="c-compact-teaser">
+        <div class="teaser-image">
+          <picture><img src="https://placekitten.com/200/106" alt=""></picture></div>
+
+        <h3 class="teaser-title">GitHub Enführung</h3>
+        <p class="teaser-summary">Pellentesque ullamcorper consectetur tortor, eget mollis nunc tincidunt a.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="c-page-section p-r">
+  <div class="c-page-2col jc-sb ai-e">
+    <div class="col-l">
+      <h2 class="mt-2">Dankeschön</h2>
+      <p>Etiam ut mi quam. Mauris viverra hendrerit dui id lobortis. Etiam convallis gravida metus, at imperdiet risus porta nec. Ut porta ante ultricies augue suscipit fringilla. Mauris porta faucibus mauris at semper. Duis sed volutpat dolor. Pellentesque ullamcorper consectetur tortor, eget mollis nunc tincidunt a.</p>
+    </div>
+    <div class="col-xs c-event-illu--large">
+      {{ readFile "/static/images/illustrations/JH-Illustration-Robot.svg" | safeHTML  }}
+    </div>
+  </div>
+  <div class="c-page-section white pb-2 mt-2">
+    <ul class="c-list-displayitems pt-2">
+      <li class="c-displayitem">
+        <img src="https://placekitten.com/200/106" alt="">
+        <p class="c-displayitem-title">1 Preis</p>
+      </li>
+      <li class="c-displayitem">
+        <img src="https://placekitten.com/200/106" alt="">
+        <p class="c-displayitem-title"><a href="#">1 Preis</a></p>
+      </li>
+      <li class="c-displayitem">
+        <img src="https://placekitten.com/200/106" alt="">
+        <p class="c-displayitem-title">1 Preis sdof sdoifus odifusodifu </p>
+      </li>
+      <li class="c-displayitem">
+        <img src="https://placekitten.com/200/106" alt="">
+        <p class="c-displayitem-title">1 Preis</p>
+      </li>
+      <li class="c-displayitem">
+        <img src="https://placekitten.com/200/106" alt="">
+        <p class="c-displayitem-title">1 Preis</p>
+      </li>
+      <li class="c-displayitem">
+        <img src="https://placekitten.com/200/106" alt="">
+        <p class="c-displayitem-title">1 Preis</p>
+      </li>
+    </ul>
+  </div>
+</section>
+{{ partial "freundeskreis.html" }}
+
+
+
+<script>
+ var mymap = L.map('map').setView([51.505, -0.09], 15);
+ //https://api.mapbox.com/styles/v1/okfn/{id}/tiles/256/{z}/{x}/{y}?access_token={accessToken}
+
+ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+   attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+   maxZoom: 18,
+   id: 'mapbox.streets',
+   accessToken: 'pk.eyJ1Ijoib2tmZGUiLCJhIjoiY2syMzZjazFrMDZpejNtcW11Mm5pMnozNSJ9.6QaPMbeUg3k8fcVUmvvpxA'
+ }).addTo(mymap);
+ var customMarker = L.icon({
+   iconUrl: '/images/events/Pin-x1.png',
+   iconRetinaUrl: '/images/events/Pin-x2.png',
+   iconSize:     [17, 23],
+   iconAnchor:   [9, 22],
+ });
+ var marker = L.marker([51.5, -0.09], {icon: customMarker}).addTo(mymap);
+</script>
+{{ end }}

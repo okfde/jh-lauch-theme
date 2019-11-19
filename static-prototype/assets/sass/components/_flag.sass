@@ -1,0 +1,60 @@
+=flag-base
+  display: inline-block
+  padding: 0.2em 0.4em
+  color: $color-white
+  position: relative
+  z-index: 1
+  &:before
+    color: currentColor
+    content: ""
+    display: block
+    width: 0
+    height: 0
+    z-index: -1
+    position: absolute
+
+=flag-point-down
+  &:before
+    border-top: 1em solid transparent
+    border-bottom: 1em solid transparent
+    border-left: 1em solid currentColor
+    left: 0
+    bottom: -0.7em
+
+=flag-point-up
+  &:before
+    border-top: 1em solid transparent
+    border-bottom: 1em solid transparent
+    border-left: 1em solid currentColor
+    left: 0
+    top: -0.7em
+
+.c-flag
+  +flag-base
+
+  &.upper
+    text-transform: uppercase
+
+  &.mini
+    font-size: 0.9rem
+
+  &.softblue
+    background-color: $color-softblue
+    &:before
+      color: $color-softblue
+
+  &.orange
+    background-color: $color-deeporange
+    &:before
+      color: $color-deeporange
+
+  &.points-bottom
+    +flag-point-down
+
+  &.points-top
+    +flag-point-up
+
+  &.c-flag--eventsingle
+    background-color: var(--event-single-color)
+    &:before
+      color: var(--event-single-color)

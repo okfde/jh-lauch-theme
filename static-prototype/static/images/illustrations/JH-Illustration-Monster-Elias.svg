@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Elias" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 210.4 250" style="enable-background:new 0 0 210.4 250;" xml:space="preserve">
+<style type="text/css">
+	.changecolor{fill:#4C2582;}
+	.st1{fill:#FFFFFF;}
+</style>
+<g>
+	<g id="Body">
+		<path class="changecolor" d="M197.3,236.9v-13.1h-13.1v-13.1v-13.1v-13.1v-13.3V158v-13.1v-13.1v-13.1v-13.1V92.3V79.2V65.8h-13.1V52.7
+			H158V39.5h-13.1V26.3h-13.1V13.1h-13.1V0h-13.1H92.3v13.1H79.2v13.1H65.8v13.1H52.7v13.1H39.5v13.1H26.3v13.1v13.1V105v13.1v13.1
+			v13.1v13.1v13.5V184v13.1v13.1v13.1H13.1v13.1H0V250h13.1h13.1h13.1h13.1h13.1v-13.1h-13v-13.1h-13v-13.1v-13.1v-13.1v-13.3V158
+			v-13.1v-13.1h13.1v13.1h13.1h13.1V158H92h13.1h13.1h13.1v-13.1h13.1h13.1v-13.1H171v13.1V158v13.1v13.1v13.1v13.1v13.1h-13v13.1
+			h-13.1V250H158h13.1h13.1h13.1h13.1v-13.1H197.3z"/>
+	</g>
+	<polygon id="Eye" class="st1" points="118.4,52.7 118.4,39.5 105.2,39.5 92.1,39.5 92.1,52.7 79,52.7 79,65.8 92.1,65.8 92.1,79 
+		105.2,79 118.4,79 118.4,65.8 131.6,65.8 131.6,52.7 	"/>
+	<g id="Eyes">
+		<g>
+			<rect x="98.7" y="52.7" width="13.1" height="13.1"/>
+			<rect x="79" y="105.2" width="13.1" height="13.1"/>
+			<rect x="119.4" y="105.2" width="13.1" height="13.1"/>
+		</g>
+		<rect x="92.1" y="118.4" width="27.5" height="13.1"/>
+		<rect x="65.8" y="92.1" width="13.1" height="13.1"/>
+		<rect x="132.6" y="92.1" width="13.1" height="13.1"/>
+	</g>
+</g>
+</svg>

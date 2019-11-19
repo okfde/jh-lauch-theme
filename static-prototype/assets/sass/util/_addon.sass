@@ -1,0 +1,77 @@
+.addon
+  &:after
+    content: ""
+    position: absolute
+    display: block
+    background-repeat: no-repeat
+    @media (max-width: $break-small)
+      transform: scale(0.8)
+
+  &.addon--large
+    @media (min-width: $break-medium)
+      &:after
+        transform: scale(1.6)
+
+  &.addon--right
+    &:after
+      right: -1rem
+
+  &.addon--left
+    &:after
+      left: 2rem
+
+  &.addon--top
+    &:after
+      top: -1rem
+
+  &.addon--bottom
+    &:after
+      bottom: -1rem
+
+  &.addon--wrestler
+    &:after
+      width: 5em
+      height: 7em
+      background-image: url(../images/JH-Illustration-Wrestler-RGB.svg)
+
+  &.addon--robot
+    &:after
+      width: 5em
+      height: 7em
+      background-image: url(../images/JH-Illustration-Robot-RGB.svg)
+
+  &.addon--octopus
+    &:after
+      width: 5em
+      height: 7em
+      background-image: url(../images/JH-Illustration-Octopus-RGB.svg)
+
+  &.addon--alpaka
+    &:after
+      width: 10em
+      height: 10em
+      background-image: url(../images/JH-Illustration-Alpaca-Blue-Soft-RGB.svg)
+
+  &.addon--alien
+    &:after
+      width: 5em
+      height: 8em
+      background-image: url(../images/JH-Illustration-Alien-RGB.svg)
+
+  &.addon--monster
+    &:after
+      width: 5em
+      height: 9em
+      background-image: url(../images/JH-Illustration-Monster-RGB.svg)
+
+  &.addon--glasses
+    &:after
+      width: 10em
+      height: 10em
+      background-image: url(../images/JH-Illustration-Look-Left-RGB.svg)
+
+  &.addon--catdog
+    &:after
+      width: 13em
+      height: 5em
+      background-image: url(../images/JH-Illustration-Katze-Hund.svg)

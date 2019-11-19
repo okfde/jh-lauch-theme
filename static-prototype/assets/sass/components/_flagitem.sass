@@ -1,0 +1,52 @@
+.c-list-flagitems
+  display: flex
+  align-items: flex-start
+  flex-wrap: wrap
+  justify-content: space-between
+  @media (min-width: $break-medium) and (max-width: $break-ml)
+    flex-flow: column
+
+.c-flagitem
+  margin-bottom: 5em
+  padding: .5em 1em
+  background-color: $color-deepblue
+
+  &:before
+    color: $color-deepblue
+  &:after
+    content: ""
+    position: absolute
+    bottom: -3.1em
+    left: -1em
+    display: block
+    width: 2em
+    height: 2em
+    background-image: url(../images/JH-Illustration-Alpaca-Blue-Deep-RGB.svg)
+  a
+    color: white
+    font-weight: normal
+    text-transform: uppercase
+    text-decoration: none
+
+  &:nth-of-type(3n+1)
+    background-color: $color-softblue
+    &:before
+      color: $color-softblue
+    &:after
+      background-image: url(../images/JH-Illustration-Alpaca-Blue-Soft-RGB.svg)
+  &:nth-of-type(3n-1)
+    background-color: $color-deeppurple
+    &:before
+      color: $color-deeppurple
+    &:after
+      background-image: url(../images/JH-Illustration-Alpaca-Purple-Deep-RGB.svg)
+  &:nth-of-type(5n-1)
+    background-color: $color-softgreen
+    &:before
+      color: $color-softgreen
+    &:after
+      background-image: url(../images/JH-Illustration-Alpaca-Green-Soft-RGB.svg)
+
+
+.c-flagitem-title
+  font-size: 1.25rem

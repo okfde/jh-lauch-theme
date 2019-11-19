@@ -1,0 +1,29 @@
+.c-program
+  h3
+    position: relative
+    top: 1.1em
+    margin-top: 1em
+  li
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    padding: .8rem 1rem
+    margin-bottom: .2rem
+    background-color: $color-white
+
+    img
+      flex: 0 0 3rem
+      max-height: 2rem
+    time
+      flex: 0 0 5rem
+      text-align: center
+      font-weight: $font-weight-semi
+
+    > div
+      flex: 1 1 45%
+      font-weight: $font-weight-bold
+
+.c-program-title
+  //max-width: 65rem
+  @media (min-width: $break-medium)
+    width: 60vw

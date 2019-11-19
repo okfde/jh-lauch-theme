@@ -1,0 +1,65 @@
+<aside class="c-breakbox">
+  <div class="c-breakbox-inner c-breakbox--pink">
+    <p>Hello tets</p>
+  </div>
+</aside>
+<footer class="l-footer c-footer">
+  <section class="c-footer-menu">
+    <h3>Das Programm</h3>
+    <nav>
+      <ul>
+        <li><a href="/about/">Über Jugend hackt</a></li>
+        <li><a href="/anmeldung/">Code of Conduct</a></li>
+        <li><a href="/anmeldung/">Presse</a></li>
+        <li><a href="/anmeldung/">Kontakt</a></li>
+        <li><a href="/anmeldung/">Newsletter</a></li>
+        <li><a href="/impressum/">Impressum und Datenschutz</a></li>
+      </ul>
+    </nav>
+  </section>
+  <section  class="c-footer-menu">
+    <h3>Für Mentor*innen</h3>
+    <nav>
+      <ul>
+        <li><a href="/anmeldung/">Mentor*in werden</a></li>
+        <li><a href="/anmeldung/">Ressourcen</a></li>
+      </ul>
+    </nav>
+  </section>
+  <section  class="c-footer-menu">
+    <h3>Für Teilnehmer*innen</h3>
+    <nav>
+      <ul>
+        <li><a href="/anmeldung/">Lernen</a></li>
+        <li><a href="/anmeldung/">Mitmachen</a></li>
+        <li><a href="/anmeldung/">Diversity</a></li>
+      </ul>
+    </nav>
+  </section>
+  <section  class="c-footer-support">
+    <div class="support-illustration">
+      {{ readFile "/static/images/Freundeskreis-Nyan.svg" | safeHTML  }}
+    </div>
+    <div class="support-cta">
+      <p>Werde Mitglied im Jugend hackt-Freundes und unterstütze junge Menschen dabei, mit Code die Welt zu verbessern.</p>
+      <p><a href="https://freundeskreis.jugendhackt.org" class="support-link--red">Jetzt unterstützen {{ readFile "/static/images/arrow-external-red.svg" | safeHTML  }}</a></p>
+    </div>
+  </section>
+  <section  class="c-footer-social">
+    <ul>
+      <li><a href="#">{{ readFile "/static/images/icons/youtube.svg" | safeHTML  }}</a></li>
+      <li><a href="#">{{ readFile "/static/images/icons/twitter.svg" | safeHTML  }}</a></li>
+      <li><a href="#">{{ readFile "/static/images/icons/facebook.svg" | safeHTML  }}</a></li>
+      <li><a href="#">{{ readFile "/static/images/icons/instagram.svg" | safeHTML  }}</a></li>
+    </ul>
+  </section>
+  <div  class="c-footer-partner">
+    <p class="">Jugend hackt ist ein Programm von</p>
+    <a href="#">{{ readFile "/static/images/okf-logo.svg" | safeHTML }}</a>
+    <a href="#"><img src="../images/mp.png" width="200" alt="Mediale Pfade"></a>
+  </div>
+  <aside class="c-footer-tracking">
+    <p>Wir verwenden die datenschutzfreundliche Technologie von <a href="#">Matomo</a>, um statistische Auswertungen der Seitennutzung zu erhalten. Wer das nicht möchte, kann <a href="#">hier</a> den Haken entfernen. Näheres in unserer <a href="#">Datenschutzerklärung</a>.<br> Die Inhalte dieser Webseite sind, sofern nicht anders angegeben, nach Creative Commons 4.0 Attribution lizenziert.</p>
+  </aside>
+
+</footer>

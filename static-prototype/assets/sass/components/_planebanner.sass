@@ -1,0 +1,42 @@
+.c-planebanner
+  width: 500vw
+  position: relative
+  top: -6.1rem
+  animation: slowpoke infinite 20s linear
+  svg
+    display: block
+    float: left
+    width: 90vw
+    margin-left: -6vw
+  @media (min-width: $break-medium)
+    //top: -2vw
+    animation: slowpoke2 infinite 12s linear
+    svg
+      width: 40vw
+      margin-left: -3vw
+
+  @media (min-width: $break-large)
+    top: -4vw
+    animation: slowpoke3 infinite 12s linear
+    svg
+      width: 30vw
+      margin-left: -2vw
+
+
+@keyframes slowpoke
+  0%
+    transform: translateX(-20vw)
+  100%
+    transform: translateX(-104vw)
+
+@keyframes slowpoke2
+  0%
+    transform: translateX(-10vw)
+  100%
+    transform: translateX(-47vw)
+
+@keyframes slowpoke3
+  0%
+    transform: translateX(-5vw)
+  100%
+    transform: translateX(-33vw)

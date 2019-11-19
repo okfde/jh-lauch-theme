@@ -1,0 +1,66 @@
+.image-right
+  position: relative
+  float: right
+  padding: 0em
+  margin: 1.2em 1em 4em 3em
+  @media (max-width: $break-small)
+    margin: 2em auto 4em
+    width: 100%
+    img
+      width: 100%
+      height: auto
+  @media (min-width: $break-medium)
+    right: -3rem
+    margin-left: 0
+  @media (min-width: $break-large)
+    right: -8rem
+    margin-left: 0
+
+.image-right--float
+  @media (min-width: ($break-ml + 40px))
+    position: absolute
+    right: 0
+
+.image-overflow
+  position: relative
+  img
+    width: 100%
+    height: auto
+  @media (min-width: $break-medium)
+    margin-left: -2em
+    margin-right: -2em
+    img
+      width: 105%
+  @media (min-width: $break-large)
+    margin-left: -6em
+    margin-right: -6em
+    img
+      width: 110%
+    &.addon--bottom:after
+      transform: scale(1.5) translate(3em, -1em)
+
+  &.wp-block-image
+    max-width: none
+
+.image-left
+  position: relative
+  float: left
+  padding: 0em
+  margin: 1.2em 3em 4em 0
+  @media (max-width: $break-small)
+    margin: 2em auto 4em
+    width: 100%
+    img
+      width: 100%
+      height: auto
+  @media (min-width: $break-medium)
+    left: -2rem
+    margin-right: 0
+  @media (min-width: $break-large)
+    left: -5rem
+
+
+.clip-alpaka
+  display: block
+  -webkit-clip-path: polygon(0% 10%, 0% 80%, 10% 80%, 10% 90%, 20% 90%, 20% 1000%, 80% 100%, 80% 90%, 90% 90%, 90% 80%, 100% 80%, 100% 10.00%, 90% 10%, 90% 0%, 70% 0%, 70% 10%, 60% 10%, 60% 20%, 40% 20%, 40% 10%, 30% 10%, 30% 0%,10% 0%, 10% 10%, 10% 10%)
+  clip-path: polygon(0% 10%, 0% 80%, 10% 80%, 10% 90%, 20% 90%, 20% 1000%, 80% 100%, 80% 90%, 90% 90%, 90% 80%, 100% 80%, 100% 10.00%, 90% 10%, 90% 0%, 70% 0%, 70% 10%, 60% 10%, 60% 20%, 40% 20%, 40% 10%, 30% 10%, 30% 0%,10% 0%, 10% 10%, 10% 10%)

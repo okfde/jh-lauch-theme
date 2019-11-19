@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1"
+	 id="svg3455" inkscape:version="0.91 r13725" sodipodi:docname="Map Pin.svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 22.9"
+	 style="enable-background:new 0 0 16 22.9;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.8;fill:#ACAFB2;}
+	.fillcolor{fill:#E6414A;}
+	.st2{fill:#FFFFFF;}
+</style>
+<sodipodi:namedview  bordercolor="#666666" borderopacity="1.0" fit-margin-bottom="0" fit-margin-left="0" fit-margin-right="0" fit-margin-top="0" id="base" inkscape:current-layer="layer1" inkscape:cx="8.4346812" inkscape:cy="14.715224" inkscape:document-units="px" inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:window-height="705" inkscape:window-maximized="1" inkscape:window-width="1024" inkscape:window-x="-4" inkscape:window-y="-4" inkscape:zoom="12.181359" pagecolor="#ffffff" showgrid="false">
+	</sodipodi:namedview>
+<g>
+	<ellipse class="st0" cx="8" cy="22.1" rx="2.2" ry="0.8"/>
+	<g>
+		<g>
+			<path class="fillcolor" d="M8,0C3.6,0,0,3.6,0,8c0,5.5,7.8,14.1,8,14.1c0.2,0,8-8.6,8-14.1C16,3.6,12.4,0,8,0z"/>
+		</g>
+	</g>
+	<circle class="st2" cx="8" cy="7.4" r="2.9"/>
+</g>
+</svg>

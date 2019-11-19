@@ -1,0 +1,98 @@
+{{ define "main" }}
+
+<div class="c-page-alpaca-header">
+  <div class="c-page-alpaca-featured as-s">
+    <img src="//placekitten.com/486/486" alt="" class="clip-alpaka">
+    <!-- <img src="//placekitten.com/150/190" alt="" class="addon bottom left"> -->
+  </div>
+  <div class="c-page-alpaca-title">
+    <nav class="c-breadcrumb" aria-label="breadcrumb">
+      <ol>
+        <li>
+          <a href="/blog">Blog</a>
+        </li>
+      </ol>
+    </nav>
+    <h1 class="c-page-title pt-1 pb-2 al-s">{{.Title}}</h1>
+    <div class="c-author">
+      <img src="https://placekitten.com/139/106" class="c-author-image">
+      <div class="c-author-text">
+        <p>von Birte Frische<br><time>11. Jul 2019</time></p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="c-page-section white pt-10">
+  <div class="c-page-standard wp-styles c-page-capital-first">
+    {{ .Content }}
+  </div>
+  <aside class=" c-page-slim">
+    <div class="c-contact">
+      <h4 class="c-contact-title">Du hast Fragen?</h4>
+      <div class="c-contact-body">
+        <img src="https://placekitten.com/139/106" class="c-contact-image">
+        <div class="c-contact-text">
+          <p><strong>Birte Frische</strong>,<br>
+            macht Orga bei Jugend hackt Hamburg</p>
+          <p>
+            <a href="mailto:#">{{ readFile "/static/images/icons/contact-twitter.svg" | safeHTML  }}</a>
+            <a href="mailto:#">{{ readFile "/static/images/icons/contact-instagram.svg" | safeHTML  }}</a>
+            <a href="mailto:#">{{ readFile "/static/images/icons/contact-mastodon.svg" | safeHTML  }}</a>
+            <a href="mailto:#">{{ readFile "/static/images/icons/contact-mail.svg" | safeHTML  }}</a></p>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="c-tags mt-2">
+      <h4 class="c-tag-title">Tags</h4>
+      <ul class="c-tag-list d-f mt-1">
+        <li><a href="#" class="c-tag">open source</a></li>
+        <li><a href="#" class="c-tag">Zulip</a></li>
+      </ul>
+    </div>
+</div>
+</div>
+
+<section class="c-blog-list is-grid pt-5">
+  <h2 class="ta-c pb-1 c-uppercase-title">Weitere Posts zum Thema</h2>
+  <ul>
+    <li>
+      <article class="c-compact-teaser">
+        <a href="{{.Permalink}}">
+          <div class="teaser-image"><img src="https://placekitten.com/320/200" alt=""></div>
+          <h2 class="teaser-title">{{ .Title }}</h2>
+          <div class="teaser-summary">{{ .Summary }}</div>
+          <div class="teaser-date">{{.Date.Format "28. July 2006"}}</div>
+        </a>
+      </article>
+    </li>
+
+    <li>
+      <article class="c-compact-teaser">
+        <a href="{{.Permalink}}">
+          <div class="teaser-image"><img src="https://placekitten.com/320/200" alt=""></div>
+          <h2 class="teaser-title">{{ .Title }}</h2>
+          <div class="teaser-summary">{{ .Summary }}</div>
+          <div class="teaser-date">{{.Date.Format "28. July 2006"}}</div>
+        </a>
+      </article>
+    </li>
+
+    <li>
+      <article class="c-compact-teaser">
+        <a href="{{.Permalink}}">
+          <div class="teaser-image"><img src="https://placekitten.com/320/200" alt=""></div>
+          <h2 class="teaser-title">{{ .Title }}</h2>
+          <div class="teaser-summary">{{ .Summary }}</div>
+          <div class="teaser-date">{{.Date.Format "28. July 2006"}}</div>
+        </a>
+      </article>
+    </li>
+
+
+  </ul>
+</section>
+
+{{ end }}

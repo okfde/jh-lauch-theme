@@ -1,0 +1,19 @@
+.c-breadcrumb
+  li
+    display: inline-block
+    &:after
+      content: ""
+      display: inline-block
+      margin-left: .2em
+      margin-right: .2em
+      height: 0
+      border-top: 5px solid transparent
+      border-bottom: 5px solid transparent
+      border-left: 5px solid $body-color
+  a
+    color: $body-color
+    font-weight: $font-weight-bold
+    text-decoration: none
+    &:hover,
+    &:active
+      text-decoration: underline

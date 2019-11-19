@@ -1,0 +1,82 @@
+// layout without JS
+.c-project-list
+  .fullwidth
+    flex: 1 0 100vw
+    margin-top: 3rem
+    margin-bottom: 8rem
+    margin-left: -$body-padding
+    margin-right: -$body-padding
+
+  .fullwidth--padding
+    flex: 1 0 100vw
+    margin-top: 3rem
+    margin-bottom: 8rem
+    margin-left: -$body-padding
+    margin-right: -$body-padding
+    padding: 0 $body-padding
+
+  @media (min-width: $break-small)
+    > ul
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+    li
+      flex: 0 1 45%
+  @media (min-width: $break-medium)
+    ul
+      justify-content: space-between
+    li
+      flex: 0 0 22%
+
+// layout with JS and isotope
+.js .c-project-list
+  .fullwidth,
+  .fullwidth--padding
+    width: 100vw
+    padding-left: 0
+    padding-right: 0
+
+  @media (min-width: $break-small)
+    .c-project-listitem
+      width: 50%
+      padding: 0 1rem
+
+  @media (min-width: $break-medium)
+    .c-project-listitem
+      width: 25%
+      padding: 0 1rem
+
+.c-project
+  iframe
+    min-height: 70vh
+
+
+.c-project-profile
+  dl
+    display: flex
+    flex-wrap: wrap
+  dt
+    flex: 0 0 20%
+    +uppercase-title
+    @media (min-width: $break-medium)
+      flex: 0 0 5rem
+  dd
+    flex: 1 0 70%
+    font-weight: $font-weight-bold
+    margin-bottom: .8rem
+    @media (min-width: $break-medium)
+      flex: 1 0 10rem
+  a
+    color: $color-white
+    text-decoration: none
+    display: block
+    svg
+      margin-left: 0.3em
+      transition: transform 120ms ease
+    &:hover,
+    &:active
+      svg
+        transform: translate(0.2em, -0.2em)
+
+  @media (min-width: $break-medium)
+    padding-left: 2rem

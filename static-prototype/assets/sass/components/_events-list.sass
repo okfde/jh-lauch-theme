@@ -1,0 +1,104 @@
+.c-events-list
+  @media (min-width: $break-medium)
+    margin-top: 3rem
+  @media (min-width: $break-ml)
+    margin-top: 8rem
+
+  .events-list-image
+    flex: 0 0 7rem
+    img
+      height: 60px
+    @media (min-width: $break-large)
+      flex: 0 0 14rem
+      img
+        height: 120px
+
+  .events-list-title
+    font-size: 1.4rem
+    margin-bottom: 0
+    white-space: nowrap
+    padding-right: 1rem
+    @media (min-width: $break-medium)
+      font-size: 2.4rem
+      padding-right: 2rem
+    @media (min-width: $break-large)
+      font-size: 2.6rem
+  .events-list-date
+    font-weight: $font-weight-bold
+    font-size: 1.4rem
+    margin-bottom: 0
+    line-height: 1.1
+    white-space: nowrap
+    @media (min-width: $break-medium)
+      font-size: 2.4rem
+    @media (min-width: $break-large)
+      font-size: 2.6rem
+  .events-list-actions
+    margin-top: .3em
+    @media (min-width: $break-small)
+      flex: 1 0 95%
+    a
+      font-weight: $font-weight-bold
+      text-transform: uppercase
+      color: currentColor
+      text-decoration: none
+      font-size: 0.85rem
+      margin-right: 1.5rem
+      @media (min-width: $break-medium)
+        font-size: 1rem
+    &.active
+      a:nth-of-type(2)
+        color: $color-primary
+  .events-list-sectionheader
+    font-weight: $font-weight-bold
+    text-transform: uppercase
+    color: currentColor
+    text-decoration: none
+    font-size: 1rem
+    @media (min-width: $break-medium)
+      margin-left: $body-padding
+    @media (min-width: $break-large)
+      font-size: 1.4rem
+
+.c-events-list + .c-events-list
+  margin-top: 8rem
+
+.events-list-item
+  display: flex
+  flex-wrap: wrap
+  align-items: flex-start
+  margin-left: -$body-padding
+  margin-right: -$body-padding
+  padding: 1.8em $body-padding 1.8em
+  transition: background-color 120ms ease-in-out
+  overflow: hidden
+  &:hover,
+  &:active
+    background-color: #2969b2
+    .events-list-hover
+      opacity: 1
+  @media (min-width: $break-medium)
+    padding: 1.8em $body-padding * 2 1.8em
+  @media (min-width: $break-large)
+    align-items: center
+
+.events-list-body
+  flex: 1 1 50%
+  @media (min-width: $break-small)
+    display: flex
+    flex-wrap: wrap
+
+.events-list-hover
+  flex: 0 1 3rem
+  align-self: center
+  @media (max-width: $break-small)
+    display: none
+  @media (min-width: $break-small)
+    opacity: 0
+    transition: opacity 120ms ease-in 100ms
+
+  svg
+    width: 100%
+    transform: scale(1.5)
+    @media (min-width: $break-large)
+      transform: scale(2.1)

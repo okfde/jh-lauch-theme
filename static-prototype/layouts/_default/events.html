@@ -1,0 +1,106 @@
+{{ define "bodyclass"}}
+page-template-event-overview
+{{ end }}
+
+{{ define "main" }}
+
+<div class="c-page-alpaca-header">
+  <div class="c-page-alpaca-featured addon addon--invader addon--large addon--right addon--bottom">
+    <img src="//placekitten.com/486/486" alt="" class="clip-alpaka">
+    <!-- <img src="//placekitten.com/150/190" alt="" class="addon bottom left"> -->
+  </div>
+  <div class="c-page-alpaca-title">
+    <h1 class="c-page-title">{{.Title}}</h1>
+    <div class="c-page-excerpt">
+      <p>Jugend hackt ist ein Programm für junge Menschen, die mit ihren technischen Fähigkeiten die Welt verbessern wollen. Unterstützt von ehrenamtlichen Mentor*innen entwickeln unsere Teilnehmer*innen digitale Werkzeuge, Prototypen und Konzepte für eine bessere Zukunft. Unser Angebot umfasst Hackathon-Events in vielen Städten, regionale Labs, eine Online Community und internationale Austauschprogramme.</p></div>
+  </div>
+
+  <div class="c-page-header-illustration right-top">
+    <img src="//placekitten.com/200/150" alt="">
+  </div>
+</div>
+
+<section class="c-events-list">
+  <ul>
+    <li>
+      <div class="events-list-item">
+        <picture class="events-list-image">
+          <source srcset="https://placekitten.com/90/60"
+                  media="(max-width: 1900px)">
+          <img src="https://placekitten.com/170/114">
+        </picture>
+        <div class="events-list-body">
+          <h2 class="events-list-title">Köln</h2>
+          <time class="events-list-date" datetime="">30.08 - 1.09.2019</time>
+          <div class="events-list-actions">
+            <a href="/events/hamburg/" title="Mehr Infos zu Jugend hackt in FFM">Mehr Infos</a>
+            <a href="#">Anmelden</a>
+          </div>
+        </div>
+        <div class="events-list-hover">{{ readFile "/static/images/illustrations/JH-Illustration-Robot.svg" | safeHTML  }}</div>
+      </div>
+
+    </li>
+    <li>
+      <div class="events-list-item">
+        <picture class="events-list-image">
+          <source srcset="https://placekitten.com/90/60"
+                  media="(max-width: 1900px)">
+          <img src="https://placekitten.com/170/114">
+        </picture>
+        <div class="events-list-body">
+          <h2 class="events-list-title">Frankfurt am Main</h2>
+          <time class="events-list-date" datetime="">30.08 - 1.09.2019</time>
+          <div class="events-list-actions">
+            <a href="/events/hamburg/" title="Mehr Infos zu Jugend hackt in FFM">Mehr Infos</a>
+            <a href="#">Anmelden</a>
+          </div>
+        </div>
+        <div class="events-list-hover">{{ readFile "/static/images/illustrations/JH-Illustration-Monster.svg" | safeHTML  }}</div>
+      </div>
+    </li>
+    <li>
+      <div class="events-list-item">
+        <picture class="events-list-image">
+          <source srcset="https://placekitten.com/90/60"
+                  media="(max-width: 1900px)">
+          <img src="https://placekitten.com/170/114">
+        </picture>
+        <div class="events-list-body">
+          <h2 class="events-list-title">Frankfurt am Main</h2>
+          <time class="events-list-date" datetime="">30.08 - 1.09.2019</time>
+          <div class="events-list-actions active">
+            <a href="/events/hamburg/" title="Mehr Infos zu Jugend hackt in FFM">Mehr Infos</a>
+            <a href="#">Anmelden</a>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<section class="c-events-list">
+  <h2 class="events-list-sectionheader">Vergangene Events</h2>
+  <ul>
+    <li>
+      <div class="events-list-item">
+        <picture class="events-list-image">
+          <source srcset="https://placekitten.com/90/60"
+                  media="(max-width: 1900px)">
+          <img src="https://placekitten.com/170/114">
+        </picture>
+        <div class="events-list-body">
+          <h2 class="events-list-title">foo</h2>
+          <div class="events-list-actions">
+            <a href="/berlin" title="Mehr Infos zu Jugend hackt in FFM">2018</a>
+            <a href="/berlin" title="Mehr Infos zu Jugend hackt in FFM">2017</a>
+            <a href="/berlin" title="Mehr Infos zu Jugend hackt in FFM">2016</a>
+          </div>
+        </div>
+      </div>
+
+    </li>
+  </ul>
+</section>
+
+{{ end }}

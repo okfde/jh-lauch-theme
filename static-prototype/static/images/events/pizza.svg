@@ -1,0 +1,46 @@
+<svg width="29px" height="40px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     viewBox="0 0 29 40" style="enable-background:new 0 0 29 40;" xml:space="preserve">
+     <style type="text/css">
+	 .st0{fill-rule:evenodd;clip-rule:evenodd;fill:#F3971B;}
+	 .st1{fill-rule:evenodd;clip-rule:evenodd;fill:#FFE713;}
+	 .st2{fill-rule:evenodd;clip-rule:evenodd;fill:#E52420;}
+	 .st3{fill-rule:evenodd;clip-rule:evenodd;}
+     </style>
+     <title>Pizza</title>
+     <g transform="translate(-77.000000, -3166.000000)">
+	 <g transform="translate(58.000000, 2693.000000)">
+	     <g transform="translate(0.000000, 316.000000)">
+		 <g transform="translate(19.000000, 157.000000)">
+		     <polygon class="st0" points="2,10 27,10 27,2 2,2"/>
+		     <polygon class="st1" points="12,11 24,11 24,7 12,7"/>
+		     <polygon class="st1" points="27,9 25,9 20,9 20,5 14,5 14,9 8,9 8,7 2,7 2,9 2,13 2,15 4,15 4,21 6,21 6,24 6,28 8,28 8,28 10,28 10,38 14,38 14,32 19,32 19,28 21,28 21,24 23,24 23,21 25,21 25,15 27,15"/>
+		     <polygon class="st2" points="7,14 7,12 4,12 4,14 2,14 2,18 4,18 4,20 7,20 7,18 9,18 9,14"/>
+		     <polygon class="st2" points="11,24 11,22 8,22 8,24 6,24 6,28 8,28 8,30 11,30 11,28 13,28 13,24"/>
+		     <polygon class="st2" points="20,11 20,9 17,9 17,11 15,11 15,15 17,15 17,17 20,17 20,15 22,15 22,11"/>
+		     <polygon class="st2" points="21,21 21,19 18,19 18,21 16,21 16,25 18,25 18,27 21,27 21,25 23,25 23,21"/>
+		     <polygon class="st3" points="6,2 22,2 22,0 6,0"/>
+		     <polygon class="st3" points="16,34 19,34 19,32 16,32"/>
+		     <polygon class="st3" points="22,4 27,4 27,2 22,2"/>
+		     <polygon class="st3" points="2,4 6,4 6,2 2,2"/>
+		     <polygon class="st3" points="8,11 12,11 12,9 8,9"/>
+		     <polygon class="st3" points="12,9 14,9 14,7 12,7"/>
+		     <polygon class="st3" points="14,7 20,7 20,5 14,5"/>
+		     <polygon class="st3" points="20,9 24,9 24,7 20,7"/>
+		     <polygon class="st3" points="25,21 27,21 27,15 25,15"/>
+		     <polygon class="st3" points="23,24 25,24 25,21 23,21"/>
+		     <polygon class="st3" points="21,28 23,28 23,24 21,24"/>
+		     <polygon class="st3" points="19,32 21,32 21,28 19,28"/>
+		     <polygon class="st3" points="14,38 16,38 16,32 14,32"/>
+		     <polygon class="st3" points="12,40 14,40 14,38 12,38"/>
+		     <polygon class="st3" points="10,38 12,38 12,34 10,34"/>
+		     <polygon class="st3" points="2,21 4,21 4,15 2,15"/>
+		     <polygon class="st3" points="4,24 6,24 6,21 4,21"/>
+		     <polygon class="st3" points="6,28 8,28 8,24 6,24"/>
+		     <polygon class="st3" points="8,34 10,34 10,28 8,28"/>
+		     <polygon class="st3" points="27,4 27,9 24,9 24,11 27,11 27,15 29,15 29,4"/>
+		     <polygon class="st3" points="8,7 2,7 2,4 0,4 0,15 2,15 2,9 8,9"/>
+		 </g>
+	     </g>
+	 </g>
+     </g>
+ </svg>

@@ -1,0 +1,44 @@
+// Blue background
+// white font
+
+
+=turn-font-white
+  main
+    color: $color-white
+  .c-nav-items
+    li:not(.c-nav-logo) a
+      color: $color-white
+      &:hover,
+      &:active,
+      &[aria-current="page"]
+        border-color: var(--event-single-color)
+    .current-page-ancestor a
+      color: $color-white
+  .c-search-label
+    background-image: url(../images/search-icon-white.svg)
+  .c-nav-label span
+    background-color: $color-white
+
+
+.current-page-ancestor a
+  border-bottom: 3px solid var(--event-single-color)
+  @media (min-width: $break-large)
+    border-width: 4px
+
+
+.page-template-event-overview,
+.page-template-pojects-overview,
+.single-project
+  +bg-pattern($color-deepblue, soft-light)
+  +turn-font-white
+
+.page-template-exchange-overview
+  +bg-pattern($color-deeppurple, soft-light)
+  +turn-font-white
+  .events-list-item
+    &:hover,
+    &:active
+      background-color: #7300a6
+  .events-list-actions
+    a:nth-of-type(2)
+      color: $color-pink

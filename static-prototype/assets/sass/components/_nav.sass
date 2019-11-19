@@ -1,0 +1,112 @@
+.c-nav
+  display: flex
+  align-items: center
+  @media (min-width: $break-medium)
+    margin-top: -1rem
+  @media (max-width: $break-medium)
+    align-items: flex-start
+
+.c-nav-items
+  display: flex
+  justify-content: center
+  white-space: nowrap
+  flex-wrap: wrap
+  align-content: center
+  @media (max-width: $break-medium)
+    transition: opacity 125ms ease-out
+    opacity: 0
+  li:not(.c-nav-logo)
+    margin-left: 1.6rem
+    line-height: 2.6
+    @media (max-width: $break-medium)
+      text-align: right
+      line-height: 1.5
+      display: none
+    a
+      transition: border 80ms ease
+      font-size: 1rem
+      font-weight: $font-weight-bold
+      color: $body-color
+      text-decoration: none
+      &:hover,
+      &:active,
+      &[aria-current="page"],
+        border-bottom: 3px solid var(--event-single-color)
+        @media (min-width: $break-large)
+          border-width: 4px
+
+      @media (max-width: $break-medium)
+        display: block
+        font-size: 3rem
+        transition: transform 120ms ease-in-out
+        &:hover,
+        &:active,
+        &:focus,
+        &[aria-current="page"]
+          border: none
+          transform: translateX(-4%)
+
+.c-nav-logo
+  flex-grow: 1
+  align-self: flex-start
+  a
+    display: block
+    width: 10.7rem
+    height: 3.7rem
+    background-size: 99%
+    background-repeat: no-repeat
+  @media (min-width: $break-medium)
+    margin-top: 1rem
+  @media (min-width: $break-small)
+    a
+      width: 15rem
+
+@media (max-width: $break-medium)
+  .c-nav-toggle:checked ~ .c-nav-items
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 19
+    padding: (2 * $body-padding) $body-padding $body-padding
+    width: 100vw
+    height: 100vh
+    flex-flow: column nowrap
+    align-items: flex-end
+    opacity: 1
+    background-color: $color-primary
+    background-image: url(../images/menu-bg.svg), url(../images/JH-Pattern.svg)
+    background-blend-mode: normal, soft-light
+    background-repeat: no-repeat, repeat
+    background-position: -8em 85%,top left
+
+    @media (min-width: 320px)
+      background-size: 40em, 45px
+    @media (min-width: 900px)
+      background-size: 40em, 55px
+    @media (min-width: 1200px)
+      background-size: 40em, 65px
+    @media (min-width: 1900px)
+      background-size: 40em, 85px
+
+    li
+      display: block
+    a
+      color: $color-white
+  .c-nav-toggle:checked ~ .c-nav-logo a
+    background-image: url(../images/JH_Logo_RGB-weiss.svg) !important
+
+  .c-nav-logo
+    position: absolute
+    z-index: 22
+
+@media (max-width: 840px)
+  .c-nav-toggle:checked ~ .c-nav-items
+    background-position: -16em 85%,top left
+
+@media (max-width: 720px)
+  .c-nav-toggle:checked ~ .c-nav-items
+    background-position: -24em 85%,top left
+
+@media (max-width: 560px)
+  .c-nav-toggle:checked ~ .c-nav-items
+    background-position: -31em 85%,top left

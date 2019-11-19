@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Monster" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 196 250" style="enable-background:new 0 0 196 250;" xml:space="preserve">
+<style type="text/css">
+	.changecolor{fill:#F3971B;}
+	.st1{fill:#FFFFFF;}
+</style>
+<g>
+	<g id="Body">
+		<g id="Ebene_1">
+		</g>
+		<path class="changecolor" d="M160.7,125h17.8v-17.8H196V89.3h-17.5h-17.8V71.5v-18h-17.8V35.7h-17.8V17.8h-17.8V0h-18v17.8H71.5v17.8h-18
+			v17.8H35.7v17.8V89H17.8H0v17.8h17.8v17.8h17.8v17.8v17.8H17.8v-8.9H0v17.8v17.8h17.8V178h17.8h17.8v18v17.8H35.7v18.4V250h17.8
+			v-17.8h17.8v-17.8h17.8v-17.8H107v17.8h17.8v17.8h17.8V250h17.8v-17.8v-17.8h-17.8v-17.8v-17.8h17.8h17.8v8.9H196v-17.8V152h-17.8
+			v8.9h-17.8v-17.8V125H160.7z M89.3,35.7h17.8v17.8H89.3V35.7z M89.3,71.5h17.8v17.8H89.3V71.5z M53.5,71.5h17.8v17.8H53.5V71.5z
+			 M142.8,89.3H125V71.5h17.8V89.3z"/>
+	</g>
+	<g id="Mouth">
+		<polygon class="st1" points="125,107.2 125,125 71.5,125 71.5,107.2 53.5,107.2 53.5,142.8 71.5,142.8 125,142.8 142.8,142.8 
+			142.8,107.2 		"/>
+	</g>
+	<g id="Eyes">
+		<g>
+			<rect x="89.3" y="35.7" width="17.8" height="17.8"/>
+			<rect x="53.5" y="71.5" width="17.8" height="17.8"/>
+			<rect x="89.3" y="71.5" width="17.8" height="17.8"/>
+			<rect x="125" y="71.5" width="17.8" height="17.8"/>
+		</g>
+	</g>
+</g>
+</svg>

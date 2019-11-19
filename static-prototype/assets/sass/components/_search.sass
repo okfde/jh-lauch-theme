@@ -1,0 +1,167 @@
+.c-search-label
+  margin-left: 1.6rem
+  width: 1.4rem
+  height: 1.4rem
+  cursor: pointer
+  background-image: url(../images/search-icon.svg)
+  background-repeat: no-repeat
+  background-position: center center
+  background-size: 1rem
+  @media (max-width: $break-medium)
+    top: 2.3rem
+    right: 4.5rem
+    position: absolute
+    z-index: 25
+    background-size: 1.3rem
+  @media (max-width: $break-small)
+    top: 1.7rem
+
+.c-search-toggle
+  &:focus + .c-search-label
+    outline: 1px dotted currentColor
+
+.c-search
+  +bg-pattern($color-primary, soft-light,)
+  position: absolute
+  top: 0
+  left: 0
+  z-index: -1
+  padding: (2 * $body-padding) $body-padding $body-padding
+  width: 100vw
+  height: 100vh
+  flex-flow: column nowrap
+  align-items: end
+  opacity: 0
+  transition: opacity 125ms ease-out
+
+.c-search-inner
+  display: flex
+  justify-content: flex-end
+  align-items: center
+  height: 60vh
+  flex-flow: column
+
+.c-search-input
+  width: 89%
+  padding-right: 2em
+  color: $color-white
+  background: none
+  border: none
+  font-family: inherit
+  font-size: 3.3rem
+  font-weight: $font-weight-bold
+  border-bottom: 4px solid $color-white
+  &::placeholder
+    color: $color-white
+    opacity: 1
+  @media (max-width: $break-medium)
+    max-width: 90vw
+    font-size: 2.1rem
+    border-bottom: 2px solid $color-white
+  @media (max-width: $break-small)
+    font-size: 1.5rem
+
+
+.c-search-submit
+  +bg-icon("../images/search-arrow.svg")
+  display: inline-block
+  width: 2.2rem
+  height: 2rem
+  border: none
+  text-indent: 99em
+  overflow: hidden
+  cursor: pointer
+  transform: translate(-7.5em, 0.3em)
+  @media (max-width: $break-medium)
+    width: 1.4rem
+    height: 1.2rem
+    transform: translateX(-10vw)
+
+.c-search-bottomline
+  display: flex
+  justify-content: space-between
+  align-items: center
+  flex-wrap: wrap
+  max-width: 90vw
+  padding-bottom: 0.05rem
+
+.c-search-illustration
+  margin: 5.7rem auto 0
+  width: 10rem
+  height: 13rem
+
+.c-nav-toggle:checked
+  ~ .c-search-label
+    z-index: -1
+
+.c-search-toggle:checked
+  ~ .c-search
+    opacity: 1
+    z-index: 22
+  ~ .c-search-label
+    position: absolute
+    top: 2.25rem
+    right: $body-padding
+    z-index: 25
+    background-image: url(../images/close.svg)
+
+.c-search-input:focus ~ .c-search-illustration .is-moving
+    .search-illustration-screen
+      animation: search-screen 1.8s steps(2, start) infinite
+    .search-illustration-lefthand
+      animation: search-lefthand 1.2s steps(1, end) infinite
+      .finger-ring,
+      .finger-pinky,
+      .finger-index
+        animation: search-left-finger 1.2s steps(2, end) infinite
+      .finger-ring
+        animation-delay: 1s
+    .search-illustration-righthand
+      animation: search-righthand 1.8s steps(2, start) infinite
+      .finger-index
+        animation: search-left-finger 1.2s steps(2, end) infinite
+        animation-delay: 1s
+      .finger-middle,
+      .finger-ring
+        animation: search-right-finger 1.2s steps(2, end) infinite
+      .finger-ring
+        animation-delay: 0.8s
+
+
+@keyframes search-screen
+  0%
+    fill: $color-deepblue
+  30%
+    fill: $color-deepblue
+  31%
+    fill: $color-primary
+  63%
+    fill: $color-primary
+  64%
+    fill: $color-deepblue
+  100%
+    fill: $color-deepblue
+
+@keyframes search-lefthand
+  0%
+    transform: translateY(-3em)
+  30%
+    transform: translateY(-1em)
+  31%
+    transform: translateY(-1em)
+  60%
+    transform: translateY(-2em)
+  61%
+    transform: translateY(-2em)
+
+@keyframes search-righthand
+  to
+    transform: translateY(-2em)
+
+@keyframes search-left-finger
+  to
+    transform: translateY(1.1em)
+
+@keyframes search-right-finger
+  to
+    transform: translateY(-2.1em)

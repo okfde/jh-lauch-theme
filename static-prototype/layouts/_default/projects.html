@@ -1,0 +1,219 @@
+{{ define "bodyclass"}}
+page-template-pojects-overview
+{{ end }}
+
+{{ define "main" }}
+
+<div class="p-r">
+  <header class="c-page-offcenter-header">
+    <h1 class="c-page-title">{{.Title}}</h1>
+    <div class="c-page-excerpt">{{ .Content }}</div>
+    <div class="c-page-header-illustration right-top">
+      <img src="/images/JH-Illustration-Monster-RGB.svg" alt="" width="120">
+    </div>
+  </header>
+</div>
+
+<section class="pt-5 pb-2 needs-js">
+  <h2 class="c-uppercase-title">Filtern nach</h2>
+  <div class="c-filter">
+    <label class="c-filter-item" for="filter-thema">
+      <span class="a11y-visuallyhidden">Thema</span>
+      <select id="filter-thema">
+        <option value="">Thema</option>
+        <option value="thema-1">Opt 1</option>
+        <option value="thema-2">Opt 2</option>
+      </select>
+    </label>
+    <label class="c-filter-item" for="form-two">
+      <span class="a11y-visuallyhidden">Technik</span>
+      <select id="form-two">
+        <option value="">Technik</option>
+        <option value="tech-1">Opt 1</option>
+        <option value="tech-2">Opt 2</option>
+      </select>
+    </label>
+    <label class="c-filter-item" for="form-three">
+      <span class="a11y-visuallyhidden">Stadt</span>
+      <select id="form-three">
+        <option>Stadt</option>
+        <option>Opt 1</option>
+      </select>
+    </label>
+    <label class="c-filter-item" for="form-four">
+      <span class="a11y-visuallyhidden">Jahr</span>
+      <select id="form-four">
+        <option>Jahr</option>
+        <option>Opt 1</option>
+      </select>
+    </label>
+  </div>
+</section>
+
+<section class="c-page-section c-project-list pb-0 pt-5">
+  <ul class="js-isotope">
+    {{ range .Pages }}
+    <li class="thema-1 tech-2 c-project-listitem">
+      <article class="c-compact-teaser">
+        <a href="{{.Permalink}}" class="hover-line-trigger">
+          <div class="teaser-image">
+            <picture><img src="https://placekitten.com/320/200" alt=""></picture></div>
+          <div class="teaser-meta">Rostock 2019</div>
+          <h2 class="teaser-title"><span class="hover-line">{{ .Title }}</span></h2>
+          <div class="teaser-summary">{{ .Summary }}</div>
+        </a>
+      </article>
+    </li>
+    <li  class="thema-2 tech-1  c-project-listitem">
+      <article class="c-compact-teaser">
+        <a href="{{.Permalink}}" class="hover-line-trigger">
+          <div class="teaser-image">
+            <picture><img src="https://placekitten.com/320/200" alt=""></picture></div>
+          <div class="teaser-meta">Rostock 2019</div>
+          <h2 class="teaser-title"><span class="hover-line">{{ .Title }}</span></h2>
+          <div class="teaser-summary">{{ .Summary }}</div>
+        </a>
+      </article>
+    </li>
+    <li  class="thema-1 tech-2  c-project-listitem">
+      <article class="c-compact-teaser">
+        <a href="{{.Permalink}}" class="hover-line-trigger">
+          <div class="teaser-image">
+            <picture><img src="https://placekitten.com/320/200" alt=""></picture></div>
+          <div class="teaser-meta">Rostock 2019</div>
+          <h2 class="teaser-title"><span class="hover-line">{{ .Title }}</span></h2>
+          <div class="teaser-summary">{{ .Summary }}</div>
+        </a>
+      </article>
+    </li>
+    <li  class="thema-2 tech-1  c-project-listitem">
+      <article class="c-compact-teaser">
+        <a href="{{.Permalink}}" class="hover-line-trigger">
+          <div class="teaser-image">
+            <picture><img src="https://placekitten.com/320/200" alt=""></picture></div>
+          <div class="teaser-meta">Rostock 2019</div>
+          <h2 class="teaser-title"><span class="hover-line">{{ .Title }}</span></h2>
+          <div class="teaser-summary">{{ .Summary }}</div>
+        </a>
+      </article>
+    </li>
+    {{ end }}
+    <li class="c-videoplayer fullwidth--padding needs-js">
+      {{ partial "videoplayer.html" }}
+    </li>
+    {{ range .Pages }}
+    <li>
+      <article class="c-compact-teaser">
+        <a href="{{.Permalink}}" class="hover-line-trigger">
+          <div class="teaser-image">
+            <picture><img src="https://placekitten.com/320/200" alt=""></picture></div>
+          <div class="teaser-meta">Rostock 2019</div>
+          <h2 class="teaser-title"><span class="hover-line">{{ .Title }}</span></h2>
+          <div class="teaser-summary">{{ .Summary }}</div>
+        </a>
+      </article>
+    </li><li>
+      <article class="c-compact-teaser">
+        <a href="{{.Permalink}}" class="hover-line-trigger">
+          <div class="teaser-image">
+            <picture><img src="https://placekitten.com/320/200" alt=""></picture></div>
+          <div class="teaser-meta">Rostock 2019</div>
+          <h2 class="teaser-title"><span class="hover-line">{{ .Title }}</span></h2>
+          <div class="teaser-summary">{{ .Summary }}</div>
+        </a>
+      </article>
+    </li><li>
+      <article class="c-compact-teaser">
+        <a href="{{.Permalink}}" class="hover-line-trigger">
+          <div class="teaser-image">
+            <picture><img src="https://placekitten.com/320/200" alt=""></picture></div>
+          <div class="teaser-meta">Rostock 2019</div>
+          <h2 class="teaser-title"><span class="hover-line">{{ .Title }}</span></h2>
+          <div class="teaser-summary">{{ .Summary }}</div>
+        </a>
+      </article>
+    </li><li>
+      <article class="c-compact-teaser">
+        <a href="{{.Permalink}}" class="hover-line-trigger">
+          <div class="teaser-image">
+            <picture><img src="https://placekitten.com/320/200" alt=""></picture></div>
+          <div class="teaser-meta">Rostock 2019</div>
+          <h2 class="teaser-title"><span class="hover-line">{{ .Title }}</span></h2>
+          <div class="teaser-summary">{{ .Summary }}</div>
+        </a>
+      </article>
+    </li><li>
+      <article class="c-compact-teaser">
+        <a href="{{.Permalink}}" class="hover-line-trigger">
+          <div class="teaser-image">
+            <picture><img src="https://placekitten.com/320/200" alt=""></picture></div>
+          <div class="teaser-meta">Rostock 2019</div>
+          <h2 class="teaser-title"><span class="hover-line">{{ .Title }}</span></h2>
+          <div class="teaser-summary">{{ .Summary }}</div>
+        </a>
+      </article>
+    </li>
+    {{ end }}
+    <li class="c-catnav fullwidth needs-js">
+      <h2 class="c-catnav-title">Spannende Themen</h2>
+      <nav>
+        <ul class="js-filter-parent">
+          <li class="c-catnav-item">
+            <a href="#" data-filter="thema-1" class="hover-line-trigger">
+              <h3><span class="hover-line">Unterwegs mit</span></h3>
+              <p>Lorem ipsum dolor sit amet</p>
+            </a>
+          </li>
+          <li class="c-catnav-item">
+            <a href="#" data-filter="thema-2">
+              <h3><span>Mit Code die Um:welt verbessern</span></h3>
+              <p>Lorem ipsum dolor sit amet</p>
+            </a>
+          </li>
+          <li class="c-catnav-item">
+            <a href="#">
+              <h3><span>Vernetzte Welten</span></h3>
+              <p>Lorem ipsum dolor sit amet</p>
+            </a>
+          </li>
+          <li class="c-catnav-item">
+            <a href="#">
+              <h3>Open data</h3>
+              <p>Lorem ipsum dolor sit amet</p>
+            </a>
+          </li>
+          <li class="c-catnav-item">
+            <a href="#">
+              <h3>Open data</h3>
+              <p>Lorem ipsum dolor sit amet</p>
+            </a>
+          </li>
+          <li class="c-catnav-item">
+            <a href="#">
+              <h3>Open data</h3>
+              <p>Lorem ipsum dolor sit amet</p>
+            </a>
+          </li>
+          <li class="c-catnav-item">
+            <a href="#">
+              <h3><span>Mit Code die Um:welt verbessern</span></h3>
+              <p>Lorem ipsum dolor sit amet</p>
+            </a>
+          </li>
+          <li class="c-catnav-item">
+            <a href="#">
+              <h3><span>Vernetzte Welten</span></h3>
+              <p>Lorem ipsum dolor sit amet</p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </li>
+
+  </ul>
+</section>
+
+
+
+
+{{ end }}

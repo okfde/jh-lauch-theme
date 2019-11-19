@@ -1,0 +1,11 @@
+<svg width="20px" height="20px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Schließen</title>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-836.000000, -47.000000)" fill="#FFFFFF">
+            <g transform="translate(836.000000, 47.000000)">
+                <polygon points="2.83325485 0 0 2.8332845 17.1667451 20 20 17.1667155 2.83367342 0"></polygon>
+                <polygon points="0 17.1665062 2.83346413 20 20 2.8332845 17.1665359 0"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

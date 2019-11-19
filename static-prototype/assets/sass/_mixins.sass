@@ -1,0 +1,46 @@
+=bg-pattern($color, $blendmode: normal, $size: 95px, $pattern: $pattern-bg)
+  background-color: $color
+  background-image: $pattern
+  background-size: $size
+  background-blend-mode: $blendmode
+  @media (min-width: 320px)
+    background-size: 45px
+  @media (min-width: 900px)
+    background-size: 55px
+  @media (min-width: 1200px)
+    background-size: 65px
+  @media (min-width: 1900px)
+    background-size: 85px
+
+=uppercase-title
+  font-weight: $font-weight-bold
+  font-size: 0.85rem
+  text-transform: uppercase
+
+=bg-icon($path)
+  background-image: url($path)
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center center
+  background-color: transparent
+
+=copy-link($color)
+  font-weight: $font-weight-semi
+  text-decoration: none
+  color: currentColor
+  border-bottom: 1px solid $color
+  transition: background-color 150ms linear, color 200ms linear
+  cursor: pointer
+  &:hover,
+  &:active
+    color: $color-white
+    background-color: $color
+  &:focus
+    outline: 1px dotted currentColor
+
+=scroll-x-hide-scrollbar
+  overflow-x: scroll
+  scrollbar-width: none
+  -ms-overflow-style: none
+  &::-webkit-scrollbar
+    display: none

@@ -1,0 +1,43 @@
+.c-blog-list
+  &.is-feature
+    @media (min-width: $break-small)
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+      > .c-compact-teaser
+        flex: 0 0 45%
+        a
+          display: flex
+          flex-wrap: wrap
+          align-items: baseline
+          justify-content: space-between
+        .teaser-image
+          flex-basis: 100%
+        .teaser-title
+          flex: 0 0 48%
+        .teaser-title + div
+          flex: 0 0 50%
+      ul
+        flex: 0 1 45%
+    @media (min-width: $break-small)
+      > .c-compact-teaser
+        flex: 0 0 64%
+      ul
+        flex: 0 1 29%
+  &.is-grid
+    @media (min-width: $break-small)
+      > ul
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+      li
+        flex: 0 1 45%
+    @media (min-width: $break-medium)
+      ul
+        justify-content: flex-start
+      li
+        flex: 1 1 29%
+        &:nth-of-type(3n+1)
+          margin-right: 3.5rem
+        &:nth-of-type(3n+3)
+          margin-left: 3.5rem

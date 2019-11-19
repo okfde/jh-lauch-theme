@@ -1,0 +1,99 @@
+.c-footer
+  display: flex
+  flex-wrap: wrap
+  background-color: $color-white
+  @media (max-width: $break-small)
+    flex-direction: column
+  @media (max-width: $break-medium)
+    section,
+    .c-footer-partner
+      margin-bottom: 3rem
+
+.c-footer-menu
+  @media (min-width: $break-small)
+    flex: 1 0 16vw
+  h3
+    margin-bottom: 2em
+    font-size: 0.9rem
+    text-transform: uppercase
+    font-weight: $font-weight-bold
+  li
+    margin-bottom: 0.5em
+  a
+    font-size: 0.9rem
+    font-weight: $font-weight-semi
+    color: $body-color
+    text-decoration: none
+    border-bottom: 1px solid transparent
+    &:hover,
+    &:active
+      border-bottom: 1px solid currentColor
+
+.c-footer-support
+  font-size: 0.85rem
+  @media (min-width: $break-small)
+    display: flex
+    justify-content: space-between
+    flex: 1 0 100%
+  @media (min-width: $break-medium)
+    flex: 1 1 30vw
+    align-self: flex-start
+
+
+.c-footer-social
+  margin: 3.5rem 0 3.3rem
+  @media (min-width: $break-small)
+    flex: 0 1 100vw
+  @media (max-width: $break-medium)
+    svg
+      transform: scale(1.7)
+  ul
+    display: flex
+    align-items: baseline
+    @media (max-width: $break-medium)
+      padding: 0 4rem
+      justify-content: space-between
+  a
+    display: block
+    width: 1.6rem
+    height: 1.6rem
+    padding: .3em
+    padding-left: 0
+    @media (min-width: $break-medium)
+      margin-right: 1em
+
+.c-footer-partner
+  @media (min-width: $break-small)
+    flex: 1 1 28vw
+  @media (min-width: $break-medium)
+    order: 3
+    margin-left: 10vw
+  p
+    margin-bottom: 1rem
+    font-size: 0.8rem
+  a
+    display: inline-block
+    height: 3.6rem
+    &:first-of-type
+      margin-right: 2em
+  svg
+    width: auto
+    height: 100%
+
+.c-footer-tracking
+  @media (min-width: $break-medium)
+    flex: 1 1 50%
+    order: 2
+    align-self: center
+  p
+    font-size: 0.8rem
+  a
+    color: currentColor
+    font-weight: $font-weight-bold
+    text-decoration: none
+
+.c-footer-partner,
+.c-footer-support,
+.c-footer-social
+  @media (max-width: $break-sm)
+    text-align: center

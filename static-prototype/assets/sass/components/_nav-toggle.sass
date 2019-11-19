@@ -1,0 +1,72 @@
+$toggle-height: 4px
+$toggle-double: $toggle-height * 2
+
+.c-nav-label,
+.c-nav-toggle
+  display: none
+  position: absolute
+  @media (max-width: $break-medium)
+    display: block
+
+.c-nav-label
+  z-index: 20
+  right: $body-padding
+  width: 1.6rem
+  height: 2.2rem
+  padding-top: 0.8em
+  cursor: pointer
+  @media (max-width: $break-small)
+    top: 1rem
+  span
+    display: block
+    height: $toggle-height
+    margin-bottom: $toggle-height
+    background-color: $color-black
+    transform-origin: center center
+  .c-nav-toggle:checked + &
+    span
+      background-color: $color-white
+    span:first-of-type
+      animation: 200ms first-line 0ms 1 ease-in forwards
+    span:nth-of-type(2)
+      animation: 200ms second-line 0ms 1 ease-in forwards
+    span:last-of-type
+      animation: 200ms last-line 0ms 1 ease-in forwards
+
+.c-nav-toggle
+  right: $body-padding
+  &:focus + .c-nav-label
+    outline: 1px dotted currentColor
+
+@keyframes first-line
+  0%
+    transform: translateY(0)
+  20%
+    transform: translateY($toggle-double)
+  60%
+    transform: translateY($toggle-double) rotate(45deg) scale(1.1)
+  100%
+    transform: translateY($toggle-double) rotate(45deg) scale(1.1)
+
+@keyframes last-line
+  0%
+    transform: translateY(0)
+  20%
+    transform: translateY(-$toggle-double)
+  60%
+    transform: translateY(-$toggle-double) rotate(-45deg) scale(1.1)
+  100%
+    transform: translateY(-$toggle-double) rotate(-45deg) scale(1.1)
+
+@keyframes second-line
+  0%
+    transform: scale(1)
+  20%
+    transform: scale(0.8)
+    opacity: 1
+  40%
+    transform: scale(0.8)
+    opacity: 0
+  100%
+    transform: scale(0.8)
+    opacity: 0

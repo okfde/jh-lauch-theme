@@ -1,0 +1,87 @@
+{{ define "main" }}
+
+<header class="c-page-offcenter-header">
+  <h1 class="c-page-title">{{.Title}}</h1>
+  <div class="c-page-excerpt">{{ .Content }}</div>
+</header>
+
+<section class="c-blog-list is-feature">
+  <div class="js-sticky-container c-compact-teaser">
+    <article class=" js-sticky">
+      <a href="{{.Permalink}}">
+        <div class="teaser-image"><picture><img src="https://placekitten.com/320/200" alt=""></picture></div>
+        <h2 class="teaser-title"><span>{{ .Title }}</span></h2>
+        <div>
+          <div class="teaser-summary">{{ .Summary }}</div>
+          <div class="teaser-date">{{.Date.Format "28. July 2006"}}</div>
+        </div>
+      </a>
+    </article>
+  </div>
+  <ul>
+    {{ range first 3 .Pages }}
+    <li>
+      <article class="c-compact-teaser">
+        <a href="{{.Permalink}}">
+          <div class="teaser-image"><picture><img src="https://placekitten.com/320/200" alt=""></picture></div>
+          <h2 class="teaser-title"><span>{{ .Title }}</span></h2>
+          <div class="teaser-summary">{{ .Summary }}</div>
+          <div class="teaser-date">{{.Date.Format "28. July 2006"}}</div>
+        </a>
+      </article>
+    </li>
+    {{ end }}
+  </ul>
+</section>
+
+<section class="c-catnav">
+  <h2 class="c-catnav-title">Alles zum Thema</h2>
+  <nav>
+    <ul>
+      <li class="c-catnav-item">
+        <a href="#">
+          <h3><span>Unterwegs mit</span></h3>
+          <p>Lorem ipsum dolor sit amet</p>
+        </a>
+      </li>
+      <li class="c-catnav-item">
+        <a href="#">
+          <h3><span>Mit Code die Um:welt verbessern</span></h3>
+          <p>Lorem ipsum dolor sit amet</p>
+        </a>
+      </li>
+      <li class="c-catnav-item">
+        <a href="#">
+          <h3><span>Vernetzte Welten</span></h3>
+          <p>Lorem ipsum dolor sit amet</p>
+        </a>
+      </li>
+      <li class="c-catnav-item">
+        <a href="#">
+          <h3>Open data</h3>
+          <p>Lorem ipsum dolor sit amet</p>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</section>
+
+<section class="c-blog-list is-grid">
+  <ul>
+    {{ range .Pages }}
+    <li>
+      <article class="c-compact-teaser">
+        <a href="{{.Permalink}}">
+          <div class="teaser-image"><img src="https://placekitten.com/320/200" alt=""></div>
+          <h2 class="teaser-title">{{ .Title }}</h2>
+          <div class="teaser-summary">{{ .Summary }}</div>
+          <div class="teaser-date">{{.Date.Format "28. July 2006"}}</div>
+        </a>
+      </article>
+    </li>
+    {{ end }}
+  </ul>
+</section>
+
+
+{{ end }}

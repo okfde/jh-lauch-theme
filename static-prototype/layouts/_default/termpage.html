@@ -1,0 +1,32 @@
+{{ define "main" }}
+
+<section class="c-blog-list is-grid">
+  <header class="d-f jc-fe">
+    <div class="c-bookmarklike">
+      <div class="bookmark-right">
+        <p class="bookmark-sub">Alles zum Thema</p>
+        <h1 class="bookmark-title">Vernetzte Welten</h1>
+      </div>
+      <div class="bookmark-left">
+        <a href="/blog/" title="Zurück zum Blog" class="bookmark-back no-text">X</a>
+      </div>
+    </div>
+  </header>
+  <ul>
+    {{ range $.Site.Pages }}
+    <li>
+      <article class="c-compact-teaser">
+        <a href="{{.Permalink}}">
+          <div class="teaser-image"><picture><img src="https://placekitten.com/320/200" alt=""></picture></div>
+          <h2 class="teaser-title">{{ .Title }}</h2>
+          <div class="teaser-summary">{{ .Summary }}</div>
+          <div class="teaser-date">{{.Date.Format "28. July 2006"}}</div>
+        </a>
+      </article>
+    </li>
+    {{ end }}
+  </ul>
+</section>
+
+
+{{ end }}

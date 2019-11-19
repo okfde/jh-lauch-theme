@@ -1,0 +1,17 @@
+.c-breakbox
+  position: relative
+  top: 9rem
+
+.c-breakbox-inner
+  height: 300px
+  margin-left: 3rem
+  margin-right: 3rem
+  @media (min-width: $break-medium)
+    margin-left: 10rem
+    margin-right: 10rem
+  @media (min-width: $break-large)
+    margin-left: 18rem
+    margin-right: 18rem
+
+.c-breakbox--pink
+  +bg-pattern($color-pink, $blend-bg-light)

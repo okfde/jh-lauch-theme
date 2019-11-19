@@ -1,0 +1,47 @@
+.c-list-displayitems
+  display: flex
+  width: 100%
+  overflow-x: scroll
+  &::-webkit-scrollbar
+    display: none
+  scrollbar-width: none
+  a
+    color: currentColor
+    text-decoration: none
+
+.c-grid-displayitems
+  display: flex
+  flex-wrap: wrap
+
+
+  //animation: carousel infinite 30s linear
+  //animation-direction: alternate
+
+.c-displayitem
+  flex: 0 0 50%
+  margin-right: 2rem
+  @media (min-width: $break-medium)
+    flex: 0 0 20%
+    margin-right: 5rem
+
+  img
+    width: 100%
+    height: auto
+    margin-bottom: 1em
+    @media (min-width: $break-medium)
+      width: 10rem
+      height: 10rem
+      object-fit: contain
+
+.c-displayitem-title
+  font-weight: $font-weight-bold
+
+.c-displayitem-text
+  font-size: 0.8rem
+
+
+/* @keyframes carousel
+/*   from
+/*     transform: translateX(-400%)
+/*   to
+/*     transform: translateX(20%)

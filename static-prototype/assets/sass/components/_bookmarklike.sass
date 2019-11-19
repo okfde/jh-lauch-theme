@@ -1,0 +1,38 @@
+.c-bookmarklike
+  display: flex
+  flex-wrap: wrap
+  padding: 1rem
+  margin-right: -$body-padding
+
+  background-color: $color-deepblue
+  margin-bottom: 3rem
+  @media (min-width: $break-medium)
+    width: 50vw
+    margin-top: -3rem
+  @media (min-width: $break-large)
+    width: 30vw
+
+  .bookmark-right
+    order: 2
+  .bookmark-left
+    order: 1
+    align-self: flex-end
+    padding: 0 2rem 0 .7rem
+
+  .bookmark-sub
+    color: $color-white
+    +uppercase-title
+
+  .bookmark-title
+    margin-bottom: 0
+    font-size: 2rem
+    color: $color-white
+
+  .bookmark-back
+    display: block
+    padding: 0 .5em
+    margin-bottom: .4rem
+    color: $color-white
+    width: 1.3rem
+    height: 1.3rem
+    +bg-icon("../images/close.svg")
