@@ -4,6 +4,16 @@ for Jugend hackt
 based on [_s](https://underscores.me/)
 
 
+## Wordpress Theme
+
+Inhalte über [Advanced Custom Fields](https://www.advancedcustomfields.com/) Plugin.
+
+
+## Statische Seite
+
+Prototyp liegt unter `/static-prototype`
+
+
 ----
 
 ``` php
