@@ -34,6 +34,12 @@
   opacity: 0
   transition: opacity 125ms ease-out
 
+.c-search--block
+  max-width: 70vw
+  label
+    display: block
+    margin-bottom: 2rem
+
 .c-search-inner
   display: flex
   justify-content: flex-end
@@ -61,6 +67,13 @@
   @media (max-width: $break-small)
     font-size: 1.5rem
 
+.c-search-input--black
+  @extend .c-search-input
+  color: $body-color
+  border-bottom: 4px solid #d1d6da
+  &::placeholder
+    color: $color-white
+    opacity: 1
 
 .c-search-submit
   +bg-icon("../images/search-arrow.svg")
@@ -76,6 +89,10 @@
     width: 1.4rem
     height: 1.2rem
     transform: translateX(-10vw)
+
+.c-search-submit--black
+  @extend .c-search-submit
+  transform: translate(-3em, 0)
 
 .c-search-bottomline
   display: flex
@@ -165,3 +182,20 @@
 @keyframes search-right-finger
   to
     transform: translateY(-2.1em)
+
+
+.c-search-counter
+  margin: 2rem 0 3rem
+  font-size: 1.4rem
+  font-weight: $font-weight-bold
+
+
+.c-search-results
+  list-style: none
+  padding: 0
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+
+  li
+    flex: 0 1 10.3rem

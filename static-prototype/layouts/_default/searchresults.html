@@ -1,0 +1,87 @@
+{{ define "main" }}
+
+<div class="c-page-searchheader">
+
+  <form action="/suche" class="c-search--block">
+    <label for="search-input" class="c-uppercase-title">Suche nach</label>
+    <input type="text" id="search-input" placeholder="Wonach suchst du?" class="c-search-input--black">
+    <input type="submit" value="Suche" class="c-search-submit--black">
+  </form>
+
+  <div class="c-page-header-illustration right-one">
+    <img src="/images/JH-Illustration-Katze-Hund.svg" alt="" width="300">
+  </div>
+</div>
+
+<div class="c-page-section white">
+  <p class="c-search-counter">15 von 192 Suchergebnissen</p>
+
+  <div>
+    <ul class="c-search-results">
+      <li>
+        <article class="c-compact-teaser">
+          <a href="{{.Permalink}}"  class="hover-line-trigger">
+            <div class="teaser-image">
+              <picture><img src="https://placekitten.com/320/200" alt=""></picture></div>
+            <div class="teaser-meta">Blog</div>
+            <h2 class="teaser-title"><span class="hover-line">{{ .Title }}</span></h2>
+            <div class="teaser-date">{{.Date.Format "28. July 2006"}}</div>
+          </a>
+        </article>
+      </li>
+      <li>
+        <article class="c-compact-teaser">
+          <a href="{{.Permalink}}" class="hover-line-trigger">
+            <div class="teaser-image">
+              <picture><img src="https://placekitten.com/320/200" alt=""></picture></div>
+            <div class="teaser-meta">Rostock 2019</div>
+            <h2 class="teaser-title"><span class="hover-line">{{ .Title }}</span></h2>
+          </a>
+        </article>
+      </li>
+      <li>
+        <article class="c-compact-teaser">
+          <a href="{{.Permalink}}"  class="hover-line-trigger">
+            <div class="teaser-image">
+              <picture><img src="https://placekitten.com/320/200" alt=""></picture></div>
+            <div class="teaser-meta">Blog</div>
+            <h2 class="teaser-title"><span class="hover-line">{{ .Title }}</span></h2>
+            <div class="teaser-date">{{.Date.Format "28. July 2006"}}</div>
+          </a>
+        </article>
+      </li>
+      <li>
+        <article class="c-compact-teaser">
+          <a href="{{.Permalink}}" class="hover-line-trigger">
+            <div class="teaser-image">
+              <picture><img src="https://placekitten.com/320/200" alt=""></picture></div>
+            <div class="teaser-meta">Event</div>
+            <h2 class="teaser-title"><span class="hover-line">{{ .Title }}</span></h2>
+          </a>
+        </article>
+      </li>
+      <li>
+        <article class="c-compact-teaser">
+          <a href="{{.Permalink}}"  class="hover-line-trigger">
+            <div class="teaser-image">
+              <picture><img src="https://placekitten.com/320/200" alt=""></picture></div>
+            <div class="teaser-meta">Blog</div>
+            <h2 class="teaser-title"><span class="hover-line">{{ .Title }}</span></h2>
+            <div class="teaser-date">{{.Date.Format "28. July 2006"}}</div>
+          </a>
+        </article>
+      </li>
+      <li>
+        <article class="c-compact-teaser">
+          <a href="{{.Permalink}}" class="hover-line-trigger">
+            <div class="teaser-image">
+              <picture><img src="https://placekitten.com/320/200" alt=""></picture></div>
+            <div class="teaser-meta">Projekt</div>
+            <h2 class="teaser-title"><span class="hover-line">{{ .Title }}</span></h2>
+          </a>
+        </article>
+      </li>
+    </ul>
+  </div>
+</div>
+{{ end }}
