@@ -10,20 +10,58 @@ body
   -moz-osx-font-smoothing: grayscale
   font-smooth: always
   overflow-x: hidden
+  @media (min-width: $break-ml)
+    font-size: 16px
+  @media (min-width: $break-large)
+    font-size: 20px
 
 body
   +bg-pattern($color-bg-grey)
   line-height: 1.47
 
 h1
-  font-size: 3.5rem
+  font-size: 3.25rem
   line-height: 1.1
-  margin-bottom: 0.9em
+  margin: 0.84em 0
+  @media (min-width: $break-ml)
+    font-size: 4.75rem
+    margin: 0.63em 0 0.89em
+  @media (min-width: $break-large)
+    margin: 0.75em 0
+    font-size: 7.25rem
 
 h2
-  font-size: 2rem
+  font-size: 2.375rem
   line-height: 1.1
-  margin-bottom: 0.8em
+  margin: 0.89em 0 1.05em
+  @media (min-width: $break-ml)
+    font-size: 2.625rem
+    margin: 0.79em 0 1em
+  @media (min-width: $break-large)
+    margin: 0.84em 0
+    font-size: 3.75rem
+
+h3
+  font-size: 2.125rem
+  line-height: 1.1
+  margin-bottom: 1.05em
+  @media (min-width: $break-ml)
+    font-size: 2rem
+    margin: 0.8125em 0 1.375em
+  @media (min-width: $break-large)
+    margin: 1.47em 0 1.625em
+    font-size: 3.5rem
+
+h4
+  line-height: 1.1
+  font-size: 1.125rem
+  margin: 1.7em 0
+  @media (min-width: $break-ml)
+    font-size: 1.25rem
+    margin: 1.5em 0
+  @media (min-width: $break-large)
+    margin: 0.92em 0 1.1em
+    font-size: 2rem
 
 h1, h2, h3, h4
   font-weight: $font-weight-bold
@@ -53,4 +91,4 @@ iframe
   min-height: 40vh
 
 hr
-  border-color: $color-softgrey;
+  border-color: $color-softgrey
