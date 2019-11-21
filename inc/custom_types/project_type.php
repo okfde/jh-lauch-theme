@@ -5,10 +5,10 @@
 
 function lauch_projects_init() {
     $labels = array(
-        'name'                  => _x( 'Projects', 'Post type general name', 'textdomain' ),
-        'singular_name'         => _x( 'Project', 'Post type singular name', 'textdomain' ),
-        'menu_name'             => _x( 'Projects', 'Admin Menu text', 'textdomain' ),
-        'name_admin_bar'        => _x( 'Project', 'Add New on Toolbar', 'textdomain' ),
+        'name'                  => _x( 'Projekte', 'Post type general name', 'textdomain' ),
+        'singular_name'         => _x( 'Projekt', 'Post type singular name', 'textdomain' ),
+        'menu_name'             => _x( 'Projekte', 'Admin Menu text', 'textdomain' ),
+        'name_admin_bar'        => _x( 'Projekt', 'Add New on Toolbar', 'textdomain' ),
         'add_new'               => __( 'Add New', 'textdomain' ),
         'add_new_item'          => __( 'Add New Project', 'textdomain' ),
         'new_item'              => __( 'New Project', 'textdomain' ),

@@ -294,6 +294,7 @@ require get_template_directory() . '/inc/custom_types/project_type.php';
 require get_template_directory() . '/inc/custom_types/person_type.php';
 require get_template_directory() . '/inc/custom_types/faq_type.php';
 require get_template_directory() . '/inc/custom_types/learning_type.php';
+require get_template_directory() . '/inc/custom_types/blog_type.php';
 
 require get_template_directory() . '/inc/taxonomies.php';
 
