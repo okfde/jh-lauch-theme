@@ -32,12 +32,15 @@ get_header();
   <div class="c-search-counter">
     <?php
     global $wp_query;
-    printf( esc_html__( '%s Suchergebnisse für %s', 'lauch' ), $wp_query->found_posts, '<span>' . get_search_query() . '</span>' ); ?>
+    printf( esc_html__( '%s Suchergebnisse für "%s"', 'lauch' ), $wp_query->found_posts, '<span>' . get_search_query() . '</span>' ); ?>
   </div>
   <div class="needs-js">
     <?php
-    $term = sanitize_text_field($_GET['s']);
-    echo do_shortcode('[ajax_load_more id="3352100625" loading_style="blue" search="'. $term .'" container_type="ul" post_type="any" button_label="Mehr Ergebnisse" container_type="ul" css_classes="c-search-results" scroll="false" transition_container="false" posts_per_page="15" destroy_after="3"]'); ?>
+    if (have_posts()) {
+      $term = sanitize_text_field($_GET['s']);
+      echo do_shortcode('[ajax_load_more id="3352100625" loading_style="blue" search="'. $term .'" container_type="ul" post_type="any" button_label="Mehr Ergebnisse" container_type="ul" css_classes="c-search-results" scroll="false" transition_container="false" posts_per_page="15" destroy_after="3"]');
+
+    } ?>
 
   </div>
   <noscript>

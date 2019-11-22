@@ -37,6 +37,7 @@
   transition: opacity 125ms ease-out
 
 .c-search--block
+  position: relative
   max-width: 70vw
   label
     display: block
@@ -89,7 +90,10 @@
 
 .c-search-submit--black
   @extend .c-search-submit
-  transform: translate(-3em, 0)
+  +bg-icon("../images/search-arrow-black.svg")
+  right: 0
+  bottom: 1rem
+  top: unset
 
 .c-search-bottomline
   display: flex
