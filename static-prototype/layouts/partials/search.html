@@ -5,16 +5,13 @@
        title="Suche öffnen"
        aria-label="Suche öffnen"></label>
 <div class="c-search">
-  <div class="c-search-inner">
-    <form action="/suche" class="c-search-bottomline">
-      <input type="text" id="search-input" placeholder="Wonach suchst du?" class="c-search-input">
-      <label for="search-input" class="a11y-visuallyhidden">Suche</label>
-      <input type="submit" value="Suche" class="c-search-submit">
+  <form action="/suche" class="c-search-bottomline">
+    <input type="text" id="search-input" placeholder="Wonach suchst du?" class="c-search-input">
+    <label for="search-input" class="a11y-visuallyhidden">Suche</label>
+    <input type="submit" value="Suche" class="c-search-submit">
 
-      <div class="c-search-illustration">
-        {{ readFile "static/images/animation-suche.svg" | safeHTML }}
-      </div>
-    </form>
-
-  </div>
+    <div class="c-search-illustration">
+      {{ readFile "static/images/animation-suche.svg" | safeHTML }}
+    </div>
+  </form>
 </div>
