@@ -33,8 +33,8 @@ get_header();
     <?php if ( have_posts() ) : ?>
       <p class="c-search-counter">
 	<?php
-	/* translators: %s: search query. */
 	printf( esc_html__( 'Suchergebnisse für: %s', 'lauch' ), '<span>' . get_search_query() . '</span>' );
+
 	?>
       </p>
       <ul class="c-search-results">
