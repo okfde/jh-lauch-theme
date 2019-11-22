@@ -29,8 +29,6 @@ endwhile; ?>
       <?php endwhile; ?>
       <?php wp_reset_postdata(); ?>
     </ul>
-  <?php else : ?>
-    <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
   <?php endif; ?>
 </section>
 
