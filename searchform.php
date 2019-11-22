@@ -3,7 +3,7 @@
     <form role="search" method="get" action="<?php echo home_url('/'); ?>" class="c-search-bottomline">
       <input type="text"
              id="search-input"
-             placeholder="Wonach suchst du?"
+             placeholder="Was suchst du?"
              class="c-search-input"
              name="s"
              value="<?php the_search_query(); ?>">
