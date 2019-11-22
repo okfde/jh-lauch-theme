@@ -21,14 +21,16 @@
     outline: 1px dotted currentColor
 
 .c-search
-  +bg-pattern($color-primary, soft-light,)
+  +bg-pattern($color-primary, soft-light)
   position: absolute
   top: 0
   left: 0
+  justify-content: center
   z-index: -1
   padding: (2 * $body-padding) $body-padding $body-padding
   width: 100vw
   height: 100vh
+  display: flex
   flex-flow: column nowrap
   align-items: end
   opacity: 0
@@ -40,19 +42,13 @@
     display: block
     margin-bottom: 2rem
 
-.c-search-inner
-  display: flex
-  justify-content: flex-end
-  align-items: center
-  height: 60vh
-  flex-flow: column
-
 .c-search-input
-  width: 89%
+  width: 100%
   padding-right: 2em
   color: $color-white
   background: none
   border: none
+  border-radius: 0
   font-family: inherit
   font-size: 3.3rem
   font-weight: $font-weight-bold
@@ -82,13 +78,14 @@
   height: 2rem
   border: none
   text-indent: 99em
+  right: 0.1em
+  top: 0.6em
+  position: absolute
   overflow: hidden
   cursor: pointer
-  transform: translate(-7.5em, 0.3em)
   @media (max-width: $break-medium)
     width: 1.4rem
     height: 1.2rem
-    transform: translateX(-10vw)
 
 .c-search-submit--black
   @extend .c-search-submit
@@ -99,8 +96,13 @@
   justify-content: space-between
   align-items: center
   flex-wrap: wrap
-  max-width: 90vw
+  position: relative
+  width: 100%
   padding-bottom: 0.05rem
+  @media (min-width: $break-ml)
+    width: 50%
+    margin: 0 auto
+
 
 .c-search-illustration
   margin: 5.7rem auto 0

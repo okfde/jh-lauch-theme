@@ -9,6 +9,8 @@
 .c-nav-items
   display: flex
   justify-content: center
+  overflow: auto
+  -webkit-overflow-scrolling: touch
   white-space: nowrap
   flex-wrap: wrap
   align-content: center
@@ -17,10 +19,8 @@
     opacity: 0
   li:not(.c-nav-logo)
     margin-left: 1.6rem
-    line-height: 2.6
     @media (max-width: $break-medium)
       text-align: right
-      line-height: 1.5
       display: none
     a
       transition: border 80ms ease
@@ -37,7 +37,7 @@
 
       @media (max-width: $break-medium)
         display: block
-        font-size: 3rem
+        font-size: 2.65rem
         transition: transform 120ms ease-in-out
         &:hover,
         &:active,
@@ -67,9 +67,9 @@
     top: 0
     left: 0
     z-index: 19
-    padding: (2 * $body-padding) $body-padding $body-padding
+    padding: 60px $body-padding $body-padding
     width: 100vw
-    height: 100vh
+    min-height: 100vh
     flex-flow: column nowrap
     align-items: flex-end
     opacity: 1
