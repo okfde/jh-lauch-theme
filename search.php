@@ -29,39 +29,28 @@ get_header();
 </div>
 
 <div class="c-page-section white">
-  <div>
-    <?php if ( have_posts() ) : ?>
-      <p class="c-search-counter">
-	<?php
-	printf( esc_html__( 'Suchergebnisse für: %s', 'lauch' ), '<span>' . get_search_query() . '</span>' );
-
-	?>
-      </p>
-      <ul class="c-search-results">
-        <?php
-        /* Start the Loop */
-        while ( have_posts() ) :
-        the_post();
-
-        /**
-         * Run the loop for the search to output the results.
-         * If you want to overload this in a child theme then include a file
-         * called content-search.php and that will be used instead.
-         */
-        get_template_part( 'template-parts/content', 'search' );
-
-        endwhile; ?>
-      </ul>
-      <?php
-      the_posts_navigation();
-
-      else :
-
-      echo "keine ergebnisse";
-      //get_template_part( 'template-parts/content', 'none' );
-
-      endif;
-      ?>
+  <div class="c-search-counter">
+    <?php
+    global $wp_query;
+    printf( esc_html__( '%s Suchergebnisse für %s', 'lauch' ), $wp_query->found_posts, '<span>' . get_search_query() . '</span>' ); ?>
+  </div>
+  <div class="needs-js">
+    <?php
+    $term = sanitize_text_field($_GET['s']);
+    echo do_shortcode('[ajax_load_more id="3352100625" loading_style="blue" search="'. $term .'" container_type="ul" post_type="any" button_label="Mehr Ergebnisse" container_type="ul" css_classes="c-search-results" scroll="false" transition_container="false" posts_per_page="15" destroy_after="3"]'); ?>
 
   </div>
+  <noscript>
+    <ul class="c-search-results">
+      <?php
+      while ( have_posts() ) :
+      the_post();
+      get_template_part( 'template-parts/content', 'search' );
+      endwhile; ?>
+    </ul>
+    <?php
+    the_posts_navigation(); ?>
+  </noscript>
 </div>
+<?php
+get_footer();
