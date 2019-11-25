@@ -12,9 +12,10 @@
   color: currentColor
   text-decoration: none
   background-color: $color-softgrey
+  transition: background-color 200ms
   &:hover,
   &:active
-    background-color: $color-deepgrey
+    background-color: lighten($color-bg-grey, 7%)
 
 .c-tag-list
   li

@@ -8,10 +8,15 @@
   margin-right: -$body-padding
   background-color: #002343
   color: $color-white
-  ul
+  body:not(.js) & ul
     +scroll-x-hide-scrollbar
     display: flex
     align-items: flex-end
+
+  &.c-catnav--light
+    background-color: #00498c
+    .c-catnav-item
+      border-right: 1px solid rgba($color-white, 0.4)
 
   .c-catnav-title
     position: absolute
@@ -21,11 +26,11 @@
 
   .c-catnav-item
     flex: 0 0 16rem
-    border-left: 1px solid $color-deepblue
+    border-right: 1px solid $color-deepblue
 
     a
       display: block
-      height: 16rem
+      height: 18.75rem
       padding: 1rem $catnav-space * 2 2em $catnav-space
       display: flex
       flex-flow: column
@@ -34,11 +39,11 @@
       text-decoration: none
     h3
       margin-top: 0
+      margin-bottom: 2rem
       font-size: 2rem
       line-height: 1.1
 
     p
-      margin-top: 1.5rem
       font-weight: $font-weight-semi
       font-size: 0.85rem
       color: #d2e3f3
