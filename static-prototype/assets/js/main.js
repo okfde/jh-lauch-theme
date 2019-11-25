@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   new Sticky().init('.js-sticky', '.js-sticky-container');
+  new Slider().init('.js-slider');
 
   new IsoManagement().init('.js-isotope',
                          '.js-isotope > li',
@@ -92,6 +93,18 @@ function Sticky() {
       this.sticky.style.width = '100%';
 
     }
+  };
+}
+
+function Slider() {
+  this.init = function (elemSelector) {
+    tns({
+      container: elemSelector,
+      slideBy: 'page',
+      fixedWidth: 270,
+      nav: false,
+      controlsContainer: '.tns-controls'
+    });
   };
 }
 

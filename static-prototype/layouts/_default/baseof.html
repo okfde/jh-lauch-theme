@@ -9,8 +9,12 @@
     {{ $script := resources.Get "js/isotope.min.js" }}
     <script src="{{$script.RelPermalink}}" defer></script>
 
+    {{ $script := resources.Get "js/tiny-slider.min.js" }}
+    <script src="{{$script.RelPermalink}}" defer></script>
+
     {{ $script := resources.Get "js/main.js" | resources.Minify }}
     <script src="{{$script.RelPermalink}}"></script>
+
 
     <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
