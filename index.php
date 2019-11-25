@@ -59,10 +59,14 @@ $blog = get_option( 'page_for_posts' ); ?>
 </section>
 
 
-<section class="c-catnav" id="kategorien">
+<section class="c-catnav c-catnav--light" id="kategorien">
   <h2 class="c-catnav-title"><?php echo _('Alles zum Thema', 'lauch'); ?></h2>
   <nav>
-    <ul>
+    <div class="tns-controls">
+      <button class="tns-prev" title="Nach links"><?php render_svg('/images/icons/arrow-left.svg'); ?></button>
+      <button class="tns-next" title="Nach rechts"><?php render_svg('/images/icons/arrow-right.svg') ?></button>
+    </div>
+    <ul class="js-slider">
       <?php $terms = get_terms( array(
         'taxonomy' => 'category',
         'hide_empty' => true,
