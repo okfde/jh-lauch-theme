@@ -44,8 +44,6 @@
       text-decoration: none
       font-size: 0.85rem
       margin-right: 1.5rem
-      @media (min-width: $break-medium)
-        font-size: 1rem
     &.active
       a:nth-of-type(2)
         color: $color-primary
@@ -64,13 +62,11 @@
   margin-top: 8rem
 
 .events-list-item
-  display: flex
-  flex-wrap: wrap
-  align-items: flex-start
+  position: relative
   margin-left: -$body-padding
   margin-right: -$body-padding
   padding: 1.8em $body-padding 1.8em
-  transition: background-color 120ms ease-in-out
+  transition: background-color 200ms ease-in-out 50ms
   overflow: hidden
   &:hover,
   &:active
@@ -89,16 +85,16 @@
     flex-wrap: wrap
 
 .events-list-hover
-  flex: 0 1 3rem
-  align-self: center
+  position: absolute
+  top: 0
+  bottom: 0
+  right: 10vw
   @media (max-width: $break-small)
     display: none
   @media (min-width: $break-small)
     opacity: 0
-    transition: opacity 120ms ease-in 100ms
+    transition: opacity 170ms ease-in 200ms
 
   svg
-    width: 100%
-    transform: scale(1.5)
-    @media (min-width: $break-large)
-      transform: scale(2.1)
+    height: 100%
+    width: 9rem

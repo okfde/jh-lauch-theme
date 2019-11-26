@@ -4,7 +4,7 @@
     </style>
     <defs>
     <filter id="shadow">
-      <feDropShadow dx="1" dy="1" stdDeviation="1.6"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="1.4"/>
     </filter>
   </defs>
     <title>Anmelden</title>
