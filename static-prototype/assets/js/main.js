@@ -8,8 +8,12 @@ document.addEventListener('DOMContentLoaded', function () {
     new Toc().init(toc);
   }
 
-  new Sticky().init('.js-sticky', '.js-sticky-container');
-  new Slider().init('.js-slider');
+  new Sticky().init('.js-sticky', '.js-sticky-container')
+
+  let slider = document.querySelector('.js-slider');
+  if (slider) {
+    new Slider().init('.js-slider');
+  }
 
   new IsoManagement().init('.js-isotope',
                          '.js-isotope > li',
