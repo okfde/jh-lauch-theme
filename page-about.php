@@ -55,7 +55,7 @@ the_post();
     </div>
 
     <div class="c-page-video-bottom">
-      <h2 class="c-page-video-banner c-flag orange points-top"><img src="" alt="Unterwegs mit Jugend hackt"></h2>
+      <h2 class="c-page-video-banner"><img src="<?php echo get_template_directory_uri() . '/images/unterwegsmit.svg' ?>" alt="Unterwegs mit Jugend hackt"></h2>
       <div class="c-page-video-meta">
         <p><?php the_field('about_video_meta') ?></p>
       </div>
@@ -68,7 +68,7 @@ the_post();
     </div>
     <div class="white c-page-section pb-2">
       <?php if( have_rows('prices') ): ?>
-        <ul class="c-list-displayitems">
+        <ul class="c-list-displayitems js-slider" data-slider-preset="auto">
           <?php while ( have_rows('prices') ): the_row(); ?>
             <li class="c-displayitem">
               <img src="<?php print_r(get_sub_field('price_image')['sizes']['medium']); ?>" alt="Bild von <?php the_sub_field('price_title'); ?>">

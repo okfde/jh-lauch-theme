@@ -111,19 +111,25 @@ endwhile; ?>
 
   <li class="c-catnav fullwidth needs-js">
     <h2 class="c-catnav-title"><?php echo __('Spannende Themen', 'lauch') ?></h2>
-    <ul class="js-filter-parent">
-      <?php $terms = get_terms('topics', array('hide_empty' => true));
-      foreach ($terms as $t) : ?>
-        <li class="c-catnav-item">
-          <a href="<?php echo get_term_link($t->slug, $t->taxonomy ); ?>"
-             data-filter="<?php echo $t->slug; ?>"
-             class="hover-line-trigger">
-            <h3><span class="hover-line"><?php echo $t->name; ?></span></h3>
-            <p><?php echo $t->description; ?></p>
-          </a>
-        </li>
-      <?php endforeach; ?>
-    </ul>
+    <nav>
+      <div class="tns-controls">
+        <button class="tns-prev" title="Nach links"><?php render_svg('/images/icons/arrow-left.svg'); ?></button>
+        <button class="tns-next" title="Nach rechts"><?php render_svg('/images/icons/arrow-right.svg') ?></button>
+      </div>
+      <ul class="js-filter-parent js-slider">
+        <?php $terms = get_terms('topics', array('hide_empty' => true));
+        foreach ($terms as $t) : ?>
+          <li class="c-catnav-item">
+            <a href="<?php echo get_term_link($t->slug, $t->taxonomy ); ?>"
+               data-filter="<?php echo $t->slug; ?>"
+               class="hover-line-trigger">
+              <h3><span class="hover-line"><?php echo $t->name; ?></span></h3>
+              <p><?php echo $t->description; ?></p>
+            </a>
+          </li>
+        <?php endforeach; ?>
+      </ul>
+    </nav>
   </li>
 
   <?php
