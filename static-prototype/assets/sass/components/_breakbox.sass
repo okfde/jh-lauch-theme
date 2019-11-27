@@ -1,17 +1,28 @@
 .c-breakbox
-  position: relative
-  top: 9rem
+  padding: 4.375rem 5vw
+  text-align: center
 
-.c-breakbox-inner
-  height: 300px
-  margin-left: 3rem
-  margin-right: 3rem
+  @media (min-width: $break-sm)
+    padding: 4.375rem 8vw
   @media (min-width: $break-medium)
-    margin-left: 10rem
-    margin-right: 10rem
-  @media (min-width: $break-large)
-    margin-left: 18rem
-    margin-right: 18rem
+    padding: 4.375rem 25vw
+
+  h3
+    margin-bottom: 0.625rem
 
 .c-breakbox--pink
-  +bg-pattern($color-pink, $blend-bg-light)
+  background-color: $color-pink
+  color: $color-white
+  g
+    fill: $color-white
+  a
+    +copy-link(transparent)
+
+.c-breakbox-list
+  margin: 2.4rem 0 2rem
+  li
+    display: inline-block
+    margin: 0 0.84375rem
+  svg
+    height: 0.9375rem
+    width: auto

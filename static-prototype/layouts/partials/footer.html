@@ -1,7 +1,13 @@
-<aside class="c-breakbox">
-  <div class="c-breakbox-inner c-breakbox--pink">
-    <p>Hello tets</p>
-  </div>
+<aside class="c-breakbox c-breakbox--pink">
+  <h3>Mit Code die Welt verbessern</h3>
+  <p>Jugend hackt will Jugendliche im verantwortungsbewussten Umgang mit Technik bestärken, um damit Lösungen für gesellschaftspolitische Fragen zu finden. Regelmäßige Updates bekommt ihr </p>
+  <ul class="c-breakbox-list">
+    <li><a href="#">{{ readFile "/static/images/icons/youtube.svg" | safeHTML  }}</a></li>
+    <li><a href="#">{{ readFile "/static/images/icons/twitter.svg" | safeHTML  }}</a></li>
+    <li><a href="#">{{ readFile "/static/images/icons/facebook.svg" | safeHTML  }}</a></li>
+    <li><a href="#">{{ readFile "/static/images/icons/instagram.svg" | safeHTML  }}</a></li>
+  </ul>
+  <p>oder in unserem <a href="/anmeldung/">Newsletter</a></p>
 </aside>
 <footer class="l-footer c-footer">
   <section class="c-footer-menu">
@@ -44,14 +50,6 @@
       <p>Werde Mitglied im Jugend hackt-Freundes und unterstütze junge Menschen dabei, mit Code die Welt zu verbessern.</p>
       <p><a href="https://freundeskreis.jugendhackt.org" class="support-link--red">Jetzt unterstützen {{ readFile "/static/images/arrow-external-red.svg" | safeHTML  }}</a></p>
     </div>
-  </section>
-  <section  class="c-footer-social">
-    <ul>
-      <li><a href="#">{{ readFile "/static/images/icons/youtube.svg" | safeHTML  }}</a></li>
-      <li><a href="#">{{ readFile "/static/images/icons/twitter.svg" | safeHTML  }}</a></li>
-      <li><a href="#">{{ readFile "/static/images/icons/facebook.svg" | safeHTML  }}</a></li>
-      <li><a href="#">{{ readFile "/static/images/icons/instagram.svg" | safeHTML  }}</a></li>
-    </ul>
   </section>
   <div  class="c-footer-partner">
     <p class="">Jugend hackt ist ein Programm von</p>
