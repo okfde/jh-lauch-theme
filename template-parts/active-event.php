@@ -196,7 +196,7 @@ if ((get_field('next_event'))) {
                     <div class="teaser-image">
                       <picture><?php echo get_the_post_thumbnail($l->ID, 'blog-large'); ?></picture></div>
                     <h3 class="teaser-title"><span class="hover-line"><?php echo $l->post_title; ?></span></h3>
-                    <div class="teaser-summary"><?php echo $l->post_content;?></div>
+                    <div class="teaser-summary"><?php echo wp_trim_words($l->post_content, 55);?></div>
                   </a>
                 </li>
               <?php endforeach; ?>

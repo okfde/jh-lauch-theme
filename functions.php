@@ -202,9 +202,9 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 add_image_size( 'blog-alpaka-small', 300, 300, true );
 add_image_size( 'blog-alpaka', 560, 560, true );
 add_image_size( 'blog-alpaka-highdpi', 1120, 1120, true );
-add_image_size( 'blog-large', 715, 590 );
+add_image_size( 'blog-large', 715, 590, true );
 //add_image_size( 'blog-small', 320, 200, true );
-add_image_size( 'blog-large-highdpi', 1430, 1180 );
+add_image_size( 'blog-large-highdpi', 1430, 1180, true );
 //add_image_size( 'blog-small-highdpi', 640, 400, true);
 add_image_size( 'events-teaser-s', 90, 60, true);
 add_image_size( 'events-teaser-m', 170, 120, true);
