@@ -56,10 +56,10 @@ the_post(); ?>
 
       <aside class="c-page-slim">
         <?php echo do_shortcode("[contactperson person='". get_field('contact_person') ."']"); ?>
-        <hr>
         <?php $terms = wp_get_post_tags($post->ID);
         if ($terms) : ?>
-        <div class="c-tags mt-2">
+          <hr>
+          <div class="c-tags mt-2">
           <h4 class="c-tag-title"><?php echo _("Tags", "lauch"); ?></h4>
           <ul class="c-tag-list d-f mt-1">
             <?php
