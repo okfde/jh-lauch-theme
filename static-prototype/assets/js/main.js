@@ -98,7 +98,6 @@ function Sticky() {
     } else {
       this.sticky.style.position = 'static';
       this.sticky.style.width = '100%';
-
     }
   };
 }

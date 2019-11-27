@@ -260,7 +260,7 @@ function contactperson_handle_shortcode($atts = '') {
 
   $out = '<div class="c-contact">';
   if ($value['title']) {
-    $out .= '<h4 class="c-contact-title">'. $value[title] .'</h4>';
+    $out .= '<h4 class="c-contact-title">'. $value['title'] .'</h4>';
   }
   $out .= '<div class="c-contact-body">';
   $out .= '<img src="'. $img .'" alt="" class="c-contact-image" width="100">';

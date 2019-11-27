@@ -4,9 +4,11 @@ if ((get_field('next_event'))) {
 ?>
 
   <div class="js-sticky-container c-page-alpaca-header">
-    <div class="c-page-alpaca-featured as-s addon addon--<?php the_field('illustration_class'); ?> addon--large addon--<?php the_field('illustration_xaxis'); ?> addon--<?php the_field('illustration_yaxis'); ?>">
-      <img src="<?php echo get_the_post_thumbnail_url($post->ID, 'blog-alpaka'); ?>"
-           alt="" class="clip-alpaka js-sticky" >
+    <div class="c-page-alpaca-featured as-s">
+      <div class=" js-sticky addon addon--<?php the_field('illustration_class'); ?> addon--large addon--<?php the_field('illustration_xaxis'); ?> addon--<?php the_field('illustration_yaxis'); ?>">
+        <img src="<?php echo get_the_post_thumbnail_url($post->ID, 'blog-alpaka'); ?>"
+             alt="" class="clip-alpaka">
+      </div>
     </div>
     <div class="c-page-alpaca-title">
       <nav class="c-breadcrumb" aria-label="breadcrumb">
@@ -196,7 +198,7 @@ if ((get_field('next_event'))) {
                     <div class="teaser-image">
                       <picture><?php echo get_the_post_thumbnail($l->ID, 'blog-large'); ?></picture></div>
                     <h3 class="teaser-title"><span class="hover-line"><?php echo $l->post_title; ?></span></h3>
-                    <div class="teaser-summary"><?php echo wp_trim_words($l->post_content, 55);?></div>
+                    <div class="teaser-summary"><?php echo wp_trim_words($l->post_content, 55); ?></div>
                   </a>
                 </li>
               <?php endforeach; ?>
