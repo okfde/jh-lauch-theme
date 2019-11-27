@@ -157,7 +157,8 @@ page-template-pojects-overview
     <li class="c-catnav fullwidth needs-js">
       <h2 class="c-catnav-title">Spannende Themen</h2>
       <nav>
-        <ul class="js-filter-parent">
+        {{ partial "slider-nav.html"}}
+        <ul class="js-filter-parent js-slider">
           <li class="c-catnav-item">
             <a href="#" data-filter="thema-1" class="hover-line-trigger">
               <h3><span class="hover-line">Unterwegs mit</span></h3>

@@ -8,8 +8,12 @@ document.addEventListener('DOMContentLoaded', function () {
     new Toc().init(toc);
   }
 
-  new Sticky().init('.js-sticky', '.js-sticky-container');
-  new Slider().init('.js-slider');
+  new Sticky().init('.js-sticky', '.js-sticky-container')
+
+  let slider = document.querySelectorAll('.js-slider');
+  if (slider.length) {
+    new Slider().init(slider);
+  }
 
   new IsoManagement().init('.js-isotope',
                          '.js-isotope > li',
@@ -97,13 +101,32 @@ function Sticky() {
 }
 
 function Slider() {
-  this.init = function (elemSelector) {
-    tns({
-      container: elemSelector,
-      slideBy: 'page',
-      fixedWidth: 270,
-      nav: false,
-      controlsContainer: '.tns-controls'
+  this.init = function (sliders) {
+    sliders.forEach(item => {
+      let options = {};
+
+      if (item.dataset.sliderPreset === "auto") {
+        options = {
+          container: item,
+          autoWidth: true,
+          controls: false,
+          autoplay: true,
+          autoplayButtonOutput: false,
+          gutter: 90,
+          nav: false,
+          autoplayTimeout: 3000
+        }
+      } else {
+        options = {
+          container: item,
+          slideBy: 'page',
+          fixedWidth: 270,
+          nav: false,
+          controlsContainer: '.tns-controls',
+        }
+      }
+      console.log(options)
+      tns(options);
     });
   };
 }
