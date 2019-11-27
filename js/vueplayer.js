@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
             <input type="radio"
                    :id="videoItem.youtubeid"
                    class="a11y-visuallyhidden"
-                   :name="videoItem.title"
+                   name="playqueue"
                    :value="videoItem.youtubeid"
                    @change="$emit('chooseVideo', videoItem.youtubeid)">
             <label :for="videoItem.youtubeid">
@@ -69,7 +69,6 @@ document.addEventListener('DOMContentLoaded', function () {
       },
       methods: {
         onVideoChoose (vidId) {
-          debugger
           this.activeVideo = vidId;
         },
         constructUrl () {
@@ -126,9 +125,9 @@ document.addEventListener('DOMContentLoaded', function () {
         }).then((data)=>{
           this.videos = data;
           this.activeVideo = data[0].youtubeid;
-          if (data.length <= 0) {
-            console.log('Playliste enthält keine Videos');
-          }
+          //if (data.length <= 0) {
+          //  console.log('Playliste enthält keine Videos');
+          //}
         });
       }
     });

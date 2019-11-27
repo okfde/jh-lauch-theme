@@ -40,6 +40,9 @@ function IsoManagement() {
       this.cats.forEach((v, i) => {
         v.addEventListener('click', this.topicEventWrapper.bind(this));
       });
+
+      // fix layout issues by running this a bit later
+      window.setTimeout(() => { this.iso.arrange({filter: ''}); console.log('test'); }, 1000);
     }
   };
 
