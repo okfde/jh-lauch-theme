@@ -12,9 +12,8 @@
 ?>
 
 	</main><!-- #content -->
-        <aside class="c-breakbox">
-          <?php get_template_part( 'template-parts/newsletter-footer', get_post_type() ); ?>
-        </aside>
+
+        <?php get_template_part( 'template-parts/newsletter-footer', get_post_type() ); ?>
 
         <footer class="l-footer c-footer">
           <section class="c-footer-menu">
@@ -53,10 +52,6 @@
 
           <section  class="c-footer-support">
             <?php get_template_part( 'template-parts/support-cta-footer', get_post_type() ); ?>
-          </section>
-
-          <section  class="c-footer-social">
-            <?php get_template_part( 'template-parts/social-media-list', get_post_type() ); ?>
           </section>
 
           <div  class="c-footer-partner">
