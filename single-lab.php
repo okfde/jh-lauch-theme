@@ -56,8 +56,9 @@ endwhile; ?>
 </section>
 
 <script>
- document.querySelector('html').style.setProperty("--event-single-color", "#e95197");
+ document.querySelector('html').style.setProperty("--event-single-color", "<?php echo the_field('event_color'); ?>");
 </script>
+
 
 <?php
 get_footer();

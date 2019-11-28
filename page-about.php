@@ -83,7 +83,7 @@ the_post();
 
   <section class="c-page-section pt-1">
     <h2 class="c-flag mini softblue points-bottom upper"><?php the_field('blog_title'); ?></h2>
-    <div class="c-page-2col col-break-small jc-sb pt-1">
+    <div class="c-page-2col col-break-small jc-sb pt-1  c-page-copy">
       <?php $post1 = get_field('post_1'); ?>
       <article class="col-l c-page-blog fg fs">
         <div class="p-r addon addon--alpaka addon--bottom addon--left">
