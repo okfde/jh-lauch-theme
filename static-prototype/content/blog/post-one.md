@@ -65,6 +65,9 @@ Berlin ist unerreichbar? Zu viele Menschen? Dann von der Couch aus dabei sein un
 
 <p>Den Text des Verhaltenskodex könnt ihr gerne als Basis für einen eigenen Aushang verwenden:</p>
 
-
+<div class="c-breakbox c-breakbox--grey">
+    <p class="c-breakbox-head">Ihr wollt keine Events, Termine und Infos zu neuen Blogposts mehr verpassen? Abonniert unseren Newsletter!</p>
+    <a href="#" class="button button--simple button--blue">Jetzt anmelden</a>
+</div> 
 
 <ol><li>Du hast das Recht, Deine eigene Meinung und Deine Vorschläge einzubringen.</li><li>Du hast das Recht, selbst zu bestimmen, wann, wo und von wem Du fotografiert oder gefilmt werden willst.</li><li>Du hast das Recht, fair behandelt zu werden. Niemand hat das Recht, Dir zu drohen oder Dir Angst zu machen. Egal ob mit Blicken, Worten, Bildern, Spielanleitungen oder Taten! Niemand darf Dich erpressen, Dich ausgrenzen, abwertend behandeln oder schlagen.</li><li>Du hast das Recht, selbst zu bestimmen, wie nahe Dir jemand wann, wie und wo kommt. Niemand darf Dich gegen Deinen Willen berühren, massieren, streicheln, küssen, Deine Geschlechtsteile berühren und drängen, das mit jemand anderen zu tun.</li><li>Du hast das Recht, NEIN zu sagen und Dich zu wehren, wenn jemand Deine Gefühle oder die von jemand anderen verletzt! Du kannst NEIN sagen mit Blicken, Worten oder durch Deine Körperhaltung.</li><li>Du hast das Recht, nicht mit zu machen, wenn Dir ein Spiel Angst macht, Du etwas eklig findest oder Du Dich unwohl dabei fühlst. Das können Mutproben, Überfälle oder erniedrigende oder angstmachende Traditionen sein.</li><li>Du hast das Recht, Dir Unterstützung bei Anderen zu holen. Wenn Du Dich unwohl fühlst oder es Dir schlecht geht, ist Hilfe holen kein Petzen und kein Verrat.</li></ol>
