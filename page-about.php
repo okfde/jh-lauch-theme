@@ -159,6 +159,4 @@ the_post();
   </section>
 <?php
 endwhile;
-
-get_sidebar();
 get_footer();
