@@ -51,7 +51,10 @@ Berlin ist unerreichbar? Zu viele Menschen? Dann von der Couch aus dabei sein un
 
 <p>Uns erreichten in den vergangenen Monaten des Öfteren Anfragen, ob dieser Aushang für andere Veranstaltungen genutzt werden kann. Unsere Antwort: <strong>unbedingt!</strong> Es ist uns ein großes Anliegen, diese eigentlich doch ganz normalen Grundlagen des guten Miteinanders mit der Welt zu teilen. Wir verdanken den Text dem Netzwerk <a href="https://www.tabubruch.org/verhaltenskodex/" target="_blank" rel="noopener noreferrer">Tabubruch.org</a> – vielen Dank an Holger Specht für die perfekte Vorlage.</p>
 
-
+<div class="c-breakbox c-breakbox--bg">
+    <p class="c-breakbox-head">Unterstütze junge Menschen dabei mit Code die Welt zu verbessern und werde Mitglied im Freundeskreis von Jugend hackt.</p>
+    <a href="#" class="button">Jetzt Mitglied werden</a>
+</div> 
 
 <p>Den Text des Verhaltenskodex könnt ihr gerne als Basis für einen eigenen Aushang verwenden:</p>
 

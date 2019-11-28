@@ -7,8 +7,23 @@
   @media (min-width: $break-medium)
     padding: 4.375rem 25vw
 
+  .c-page-standard &
+    padding-left: 5.375rem
+    padding-right: 5.375rem
+    margin: 4.5rem -5vw
+
+    @media (min-width: $break-medium)
+      margin: 4.5rem -5.375rem
+
   h3
     margin-bottom: 0.625rem
+
+.c-breakbox-head
+  font-size: 1.1rem
+  font-weight: $font-weight-bold
+
+  @media (min-width: $break-medium)
+    font-size: 1.4375rem
 
 .c-breakbox--pink
   background-color: $color-pink
@@ -17,6 +32,18 @@
     fill: $color-white
   a
     +copy-link(transparent)
+
+.c-breakbox--bg
+  background: $color-bg-pale-grey url(../images/fkr-teaser-transparent.svg) 50% 50% / contain no-repeat
+  .button
+    background: $color-softred
+    color: $color-white
+    border-bottom: 0
+    font-size: 0.875rem
+    font-weight: $font-weight-bold
+
+    &:hover
+      background: $color-deepred
 
 .c-breakbox-list
   margin: 2.4rem 0 2rem
