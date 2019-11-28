@@ -146,11 +146,13 @@
     <ul class="c-list-displayitems pt-2">
       <?php if( have_rows('event_supporters') ):
       while( have_rows('event_supporters') ): the_row(); ?>
+        <?php
+        $image = wp_get_attachment_image_src(get_sub_field('partner_img'), 'events-teaser-highdpi'); ?>
         <li class="c-displayitem">
           <a href="<?php the_sub_field('link'); ?>"
              title="Zur Website von <?php the_sub_field('name'); ?> "
              class="hover-line-trigger">
-            <img src="<?php the_sub_field('image'); ?>" alt="" class="white">
+            <img src="<?php echo $image[0] ?>" alt="" class="white">
             <h3 class="c-displayitem-title">
               <span class="hover-line"><?php the_sub_field('name'); ?></span>
             </h3>

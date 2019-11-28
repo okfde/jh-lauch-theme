@@ -44,10 +44,10 @@ get_template_part( 'template-parts/header-alpaka', get_post_type() );
         <a href="<?php the_sub_field('partner_link'); ?>"
            title="Zur Website von <?php the_sub_field('partner_name'); ?>">
           <?php
-          $foo = wp_get_attachment_image_src(get_sub_field('partner_img'), 'events-teaser-highdpi'); ?>
-          <img src="<?php echo $foo[0] ?>"
+          $image = wp_get_attachment_image_src(get_sub_field('partner_img'), 'events-teaser-highdpi'); ?>
+          <img src="<?php echo $image[0] ?>"
                alt="Logo von <?php the_sub_field('partner_name'); ?>"
-               height="180">
+               height="80">
         </a>
       </li>
     <?php endwhile; ?>
