@@ -1,0 +1,26 @@
+.button
+  display: inline-block
+  padding: 0.6em 1em 0.5em
+  text-transform: uppercase
+  color: $color-white
+  font-weight: $font-weight-bold
+  text-decoration: none
+  border: none
+  cursor: pointer
+  line-height: 2
+
+a.button--simple
+  color: $color-white
+  border-bottom: 0
+  font-size: 0.875rem
+  font-weight: $font-weight-bold
+
+a.button--red
+  background: $color-softred
+  &:hover, &:active
+    background: $color-deepred
+
+a.button--orange
+  background: $color-softorange
+  &:hover, &:active
+    background: $color-deeporange

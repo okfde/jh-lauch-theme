@@ -11,12 +11,19 @@ Ein paar Zahlen: 120 Teilnehmer*innen sind dieses Jahr bei Jugend hackt in Berli
 
 Unsere neue Location ist das Silent Green: Das ehemalige Krematorium Wedding ist nach dem Umbau zum Kulturquartier geworden und hat genug Platz sowohl für den Hackathon als auch die große Abschlusspräsentation. Eine tolle Chance, sich diese interessante Location im Wedding anzuschauen.
 
+<div class="float-box float-box--orange float-box--right">
+    <img src="/images/JH-Illustration-Alpaca-Orange-Deep-RGB.svg" alt="" class="float-box-head">
+    <img src="//placekitten.com/236/157" alt="">
+    <h2 class="float-box-title">Komm zum Event in Ulm</h2>
+    <p>Das Event in Ulm findet vom XX.XX-XX.XX statt. Die Anmeldung ist bis zum 15.11. geöffnet. </p>
+    <a href="#" class="button button--simple button--orange">Jetzt anmelden</a>
+</div>
+
 Wir erwarten euch ab 11 Uhr. Die Abschlusspräsentation geht von 11:30 Uhr bis etwa 14 Uhr. Zwischen den Projektpräsentationen gibt’s auch noch ein Rahmenprogramm mit Musik, die Bar des Silent Green versorgt euch dazu mit Getränken. Der Veranstaltungssaal ist nicht ebenerdig, aber über Aufzüge rollstuhlgerecht erreichbar.
 
 Berlin ist unerreichbar? Zu viele Menschen? Dann von der Couch aus dabei sein und unseren Livestream schauen.
 
 <p>Mit unserem Claim “Mit Code die Welt verbessern” machen wir bereits auf unseren Veranstaltungen sehr deutlich, in welche Richtung wir gemeinsam mit euch denken und gehen wollen. Diese Vision einer <strong>besseren Gesellschaft</strong> zeigt sich deutlich in den von euch entwickelten Projekten und Prototypen, in vielen Keynotes und Lightning Talks und auch in unserem gemeinsamen Umgang miteinander – auf den Events und im Leben allgemein.</p>
-
 
 
 <p>Als Grundlage dafür haben wir uns einen Verhaltenskodex, einen sogenannten <a href="https://jugendhackt.org/code-of-conduct/">Code of Conduct</a> gegeben, der unter anderem folgendes enthält:</p>
@@ -53,7 +60,7 @@ Berlin ist unerreichbar? Zu viele Menschen? Dann von der Couch aus dabei sein un
 
 <div class="c-breakbox c-breakbox--bg">
     <p class="c-breakbox-head">Unterstütze junge Menschen dabei mit Code die Welt zu verbessern und werde Mitglied im Freundeskreis von Jugend hackt.</p>
-    <a href="#" class="button">Jetzt Mitglied werden</a>
+    <a href="#" class="button button--simple button--red">Jetzt Mitglied werden</a>
 </div> 
 
 <p>Den Text des Verhaltenskodex könnt ihr gerne als Basis für einen eigenen Aushang verwenden:</p>
