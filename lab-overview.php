@@ -40,14 +40,14 @@ get_template_part( 'template-parts/header-alpaka', get_post_type() );
   <ul class="d-f jc-c fw-w mt-3">
     <?php
     while( have_rows('partner')): the_row(); ?>
-      <li class="ml-2">
+      <li class="ml-3">
         <a href="<?php the_sub_field('partner_link'); ?>"
            title="Zur Website von <?php the_sub_field('partner_name'); ?>">
           <?php
           $image = wp_get_attachment_image_src(get_sub_field('partner_img'), 'events-teaser-highdpi'); ?>
           <img src="<?php echo $image[0] ?>"
                alt="Logo von <?php the_sub_field('partner_name'); ?>"
-               height="80">
+               height="50">
         </a>
       </li>
     <?php endwhile; ?>
