@@ -48,12 +48,28 @@
             <span></span>
           </label>
 
-          <p class="c-nav-logo">
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"
-               title="<?php bloginfo( 'name' ); ?>">
-              <?php render_svg('/images/JH_Logo_RGB.svg'); ?>
-            </a>
-          </p>
+          <?php
+	  if ( is_front_page() && is_home() ) :
+	  ?>
+	    <h1 class="c-nav-logo">
+              <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"
+                 class="no-text"
+                 style="background-image: url(<?php echo get_header_image(); ?>)">
+                <?php bloginfo( 'name' ); ?>
+              </a>
+            </h1>
+	  <?php
+	  else :
+	  ?>
+             <p class="c-nav-logo">
+                  <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"
+                     class="no-text"
+                     style="background-image: url(<?php echo get_header_image(); ?>)">
+                    <?php bloginfo( 'name' ); ?>
+                  </a>
+             </p>
+	  <?php
+	  endif; ?>
 
             <?php
 	    wp_nav_menu( array(
