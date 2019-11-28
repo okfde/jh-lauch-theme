@@ -55,7 +55,6 @@
       <img src="<?php the_field('illustration_right'); ?>" alt="" width="200">
     </div>
   <?php endif; ?>
-
 </div>
 
 <section class="c-page-section c-page-center">
