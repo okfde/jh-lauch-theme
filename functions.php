@@ -287,6 +287,64 @@ function contactperson_handle_shortcode($atts = '') {
 add_shortcode('contactperson', 'contactperson_handle_shortcode');
 
 
+
+function frkr_handle_shortcode($atts = "") {
+  $value = shortcode_atts( array(
+    'text' => null,
+    'button' => 'Jetzt Mitglied werden',
+    'link' => 'https://freundeskreis.jugendhackt.org',
+  ), $atts );
+
+  $out = '<div class="c-breakbox c-breakbox--bg">';
+  $out .= '<p class="c-breakbox-head">'. $value['text'] .'</p>';
+  $out .= '<a href="'. $value['link'] .'" class="button button--simple button--red">'. $value['button'] .'</a></div> ';
+  return $out;
+}
+add_shortcode('frkr', 'frkr_handle_shortcode');
+
+
+
+function buttonbox_handle_shortcode($atts = "") {
+  $value = shortcode_atts( array(
+    'text' => null,
+    'button' => null,
+    'link' => null,
+  ), $atts );
+
+  $out = '<div class="c-breakbox c-breakbox--grey">';
+  $out .= '<p class="c-breakbox-head">'. $value['text'] .'</p>';
+  $out .= '<a href="'. $value['link'] .'" class="button button--simple button--blue">'. $value['button'] .'</a></div> ';
+  return $out;
+}
+add_shortcode('buttonbox', 'buttonbox_handle_shortcode');
+
+
+function floatbox_handle_shortcode($atts = "") {
+  $value = shortcode_atts( array(
+    'color' => 'softblue',
+    'text' => null,
+    'title' => null,
+    'button' => null,
+    'link' => null,
+    'image' => null,
+  ), $atts );
+
+  $out = '<div class="float-box float-box--'. $value['color'] .' float-box--right">';
+  $out .= '<img src="'. get_template_directory_uri() .'/images/alpaca-'. $value['color'] .'.svg" alt="" class="float-box-head">';
+  if ($value['image']) {
+    $out .= '<img src="'. $value['image']  .'" alt="">';
+  }
+  $out .= '<h2 class="float-box-title">'. $value['title'] .'</h2>';
+  $out .= '<p>'. $value['text'] .'</p>';
+  $out .= '<a href="'. $value['link'] .'" class="button button--simple button--'. $value['color'] .'">'. $value['button'] .'</a></div>';
+  return $out;
+}
+add_shortcode('floatbox', 'floatbox_handle_shortcode');
+
+
+
+
+
 require get_template_directory() . '/inc/custom_types/event_type.php';
 require get_template_directory() . '/inc/custom_types/lab_type.php';
 require get_template_directory() . '/inc/custom_types/exchange_type.php';
