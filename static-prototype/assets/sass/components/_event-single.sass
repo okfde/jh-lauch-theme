@@ -38,6 +38,9 @@ h2.c-event-title
     background-color: var(--event-single-color)
     &:before
       color: var(--event-single-color)
+    @media (max-width: $break-medium)
+      &:first-child
+        margin-top: 0
   a
     +copy-link(var(--event-single-color))
     svg, img

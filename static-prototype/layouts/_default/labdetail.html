@@ -1,19 +1,81 @@
 {{ define "main" }}
 
-<div class="c-page-alpaca-header">
-  <div class="c-page-alpaca-featured addon addon--invader addon--large addon--right addon--bottom">
+<script>
+ document.querySelector('html').style.setProperty("--event-single-color", "#ea680c");
+</script>
+
+<div class="c-page-alpaca-header right-top">
+  <div class="addon addon--glasses addon--large addon--right addon--t-0 medium-up"></div>
+  <div class="c-page-alpaca-featured addon addon--large addon--right addon--bottom addon--octopus ">
     <img src="//placekitten.com/486/486" alt="" class="clip-alpaka">
-     <img src="//placekitten.com/150/190" alt="" class="addon addon--bottom left addon--glasses">
   </div>
   <div class="c-page-alpaca-title">
-    <h1 class="c-page-title">{{.Title}}</h1>
+    <nav class="c-breadcrumb" aria-label="breadcrumb">
+      <ol>
+        <li><a href="#">Events</a></li>
+      </ol>
+    </nav>
+    <h1 class="c-page-title mb-1">{{.Title}}</h1>
     <div class="c-page-excerpt">
-      <p>{{.Content}}</p></div>
+      {{.Content}}
+    </div>
   </div>
 
-  <div class="c-page-header-illustration right-top">
-    <img src="//placekitten.com/200/150" alt="">
-  </div>
 </div>
 
+<section class="c-page-section pb-2 mt-2 white addon--relative">
+  <span class="addon addon--small addon--right addon--top addon--catdog sm-only"></span>
+  <div class="event-teaser-list">
+    <h2 class="event-teaser-list-title addon--relative">Die nächsten Termine <span class="d-b mt-2 addon addon--small addon--catdog sm-up"></span></h2>
+    <div class="event-teaser-list-wrapper">
+      {{ range after 1 (seq 4)}}
+      <div class="event-teaser-list-item">
+        <div class="accordion" data-accordion>
+          <div class="accordion__title" data-title>
+            <img src="//placekitten.com/290/357" alt="" class="event-teaser-list-img">
+            <div class="event-teaser-list-meta">
+              <p class="c-flag mini orange points-bottom mb-1">Di. 03.09. – 17:00 - 19:30</p>
+              <h3 class="mb-0">Offenes Coden, Tüfteln und Weltverbessern</h3>
+              {{ readFile "/static/images/icons/arrow-right.svg" | safeHTML }}
+            </div>
+          </div>
+          <div class="accordion__content" data-content>
+            <p>Unter dem Motto „Offenes Coden, Tüfteln und Weltverbessern“
+              eröffnet euch das Jugend hackt Lab:Ulm einen eigenen Space zum
+              Experimentieren. Kommt mit euren Ideen ins Verschwörhaus und stellt sie im Lab vor.
+              Habt ihr kein konkretes Projekt und seid auf der Suche nach
+              Inspiration?</p>
+            <p>Don’t worry! Lasst euch von den anderen inspirieren oder fragt im Lab
+              nach kleinen Herausforderungen. Wie bei den Workshops begleiten euch
+              auch im Lab unsere tollen Mentor*innen. Das Angebot ist kostenlos und
+              offen für alle von 12 bis 18 Jahren. Einfach vorkommen 😉</p>
+            <p><strong>Bleib auf dem Laufenden</strong></p>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+      <a href="#" class="event-teaser-list-button button button">
+
+      </a>
+    </div>
+  </div>
+</section>
+<section class="c-page-section c-page-center addon--relative addon addon--large addon--l-0 addon--top addon--octopus">
+  <h2 class="c-event-title mb-1 mt-3">Wissenswertes zum Ort</h2>
+  <div class="c-page-2col ai-c c-event-info">
+    <div class="col-m fg c-event-overview">
+      <h3>Das Verschwörhaus</h3>
+      <p>Das Verschwörhaus in Ulm ist ein städtisch betriebener Make- und Hackspace, der mit seinem großen Angebot an Geräten und Werkstätten der perfekte Ort ist um neues zu Lernen und eigene Ideen Wirklichkeit werden zu lassen.</p>
+      <h3>Adresse</h3>
+      <p>Verschwörhaus<br>Weinhof 9<br>89073 Ulm</p>
+      <h3>Anfahrt</h3>
+      <p>Das Verschwörhaus befindet sich im ehemaligen Sparkassenkomplex zwischen Synagoge und Schwörhaus. Zugang ist über das Ladenlokal im Weinhof 9.</p>
+      <h3>Kontakt</h3>
+      <p>Etiam ut mi quam. Mauris viverra hendrerit dui id lobortis. Pellentesque ullamcorper consectetur tortor, eget mollis nunc tincidunt a.</p>
+    </div>
+    <div class="col-s fg c-event-map">
+      <div id="map" class="c-map"></div>
+      <noscript>Kein JavaScript? Hier sollte eine Karte mit der Event Location dargestellt werden.</noscript></div>
+  </div>
+</section>
 {{ end }}
