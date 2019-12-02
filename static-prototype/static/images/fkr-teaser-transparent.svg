@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 769 286" style="enable-background:new 0 0 769 286;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#F5F7F8;}
+	.st1{filter:url(#Adobe_OpacityMaskFilter);}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+	.st3{mask:url(#mask-2_1_);}
+	.st4{fill-rule:evenodd;clip-rule:evenodd;fill:#2969B2;}
+	.st5{fill-rule:evenodd;clip-rule:evenodd;fill:#FFD003;}
+	.st6{fill-rule:evenodd;clip-rule:evenodd;fill:#E6414A;}
+	.st7{fill-rule:evenodd;clip-rule:evenodd;fill:#00B48D;}
+	.st8{fill-rule:evenodd;clip-rule:evenodd;fill:#D1D6DA;}
+
+	.sparkle-change-1{
+		fill:#E6414A;
+		animation: a1 3s steps(1) infinite;
+	}
+	.sparkle-change-2{
+		fill: #00B48D;
+		animation: a2 3s steps(1) infinite;
+	}
+	.sparkle-change-3{
+		fill:#2969B2;
+		animation: a3 3s steps(1) infinite;
+	}
+	.sparkle-change-4{
+		fill:#FFD003;
+		animation: a4 3s steps(1) infinite;
+	}
+	.sparkle-change-5{
+		fill:#D1D6DA;
+		animation: a5 3s steps(1) infinite;
+	}
+
+	@keyframes a1 {
+	  0% {
+	    fill:  #E6414A;
+	  }
+	  25% {
+	    fill: #2969B2;
+	  }
+	  50% {
+	    fill: #00B48D;
+	  }
+	  75% {
+	    fill:  #D1D6DA;
+	  }
+	  100% {
+	    fill:  #E6414A;
+	  }
+	}
+	@keyframes a2 {
+	  0% {
+	    fill:  #00B48D;
+
+	  }
+	  25% {
+	    fill:  #D1D6DA;
+	  }
+	  50% {
+	    fill: #FFD003;
+	  }
+	  75% {
+	    fill: #E6414A;
+	  }
+	  100% {
+	    fill:  #00B48D;
+	  }
+	}
+
+
+	@keyframes a3 {
+	  0% {
+	    fill: #2969B2;
+
+	  }
+	  25% {
+	    fill:  #2969B2;
+	  }
+	  50% {
+	    fill:  #00B48D;
+	  }
+	  75% {
+	    fill: #D1D6DA;
+	  }
+	  100% {
+	    fill: #2969B2;
+	  }
+	}
+
+
+	@keyframes a4 {
+	  0% {
+	    fill: #D1D6DA;
+	  }
+	  25% {
+	    fill: #E6414A;
+	  }
+	  50% {
+	    fill:  #2969B2;
+	  }
+	  75% {
+	    fill:  #FFD003;
+	  }
+	  100% {
+	    fill: #D1D6DA;
+	  }
+	}
+
+
+	@keyframes a5 {
+	  0% {
+	    fill: #D1D6DA;
+	  }
+	  25% {
+	    fill: #FFD003;
+	  }
+	  50% {
+	    fill:  #E6414A;
+	  }
+	  75% {
+	    fill:  #00B48D;
+	  }
+	  100% {
+	    fill: #D1D6DA;
+	  }
+	}
+
+</style>
+<g id="Sparkles">
+	<g id="Freundeskreis" transform="translate(216.000000, 314.000000)">
+		<defs>
+			<filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="-204" y="-314" width="733.6" height="286">
+				<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+			</filter>
+		</defs>
+		<mask maskUnits="userSpaceOnUse" x="-204" y="-314" width="733.6" height="286" id="mask-2_1_">
+			<g class="st1">
+				<rect id="path-1_2_" x="-216" y="-314" class="st2" width="769" height="286"/>
+			</g>
+		</mask>
+		<g id="Group-6" class="st3">
+			<g transform="translate(12.000000, -2.000000)">
+				<polygon id="Fill-1" class="st4" points="484,-135.5 506.2,-135.5 506.2,-158 484,-158 				"/>
+				<polygon id="Fill-1_1_" class="st5" points="375,-83.5 397.2,-83.5 397.2,-106 375,-106 				"/>
+				<polygon id="Fill-1_2_" class="st6" points="-65,-291.5 -42.8,-291.5 -42.8,-312 -65,-312 				"/>
+				<polygon id="Fill-1_3_" class="sparkle-change-2" points="440,-26 462.2,-26 462.2,-39 440,-39 				"/>
+				<polygon id="Fill-1_4_" class="st7" points="-167.1,-269.5 -144.9,-269.5 -144.9,-292 -167.1,-292 				"/>
+				<polygon id="Fill-1_5_" class="sparkle-change-5" points="-167.1,-269.5 -144.9,-269.5 -144.9,-292 -167.1,-292 				"/>
+				<polygon id="Fill-1_6_" class="st4" points="-216,-147.1 -193.8,-147.1 -193.8,-169.6 -216,-169.6 				"/>
+				<g id="Group-5" transform="translate(38.000000, 208.000000)">
+					<polygon id="Fill-1_7_" class="sparkle-change-5" points="-193.8,-246.5 -171.6,-246.5 -171.6,-269 -193.8,-269 					"/>
+					<polygon id="Fill-2" class="sparkle-change-4" points="-193.8,-291.5 -171.6,-291.5 -171.6,-314 -193.8,-314 					"/>
+					<polygon id="Fill-3" class="sparkle-change-2" points="-216,-269 -193.8,-269 -193.8,-291.5 -216,-291.5 					"/>
+					<polygon id="Fill-4" class="sparkle-change-3" points="-171.6,-269 -149.4,-269 -149.4,-291.5 -171.6,-291.5 					"/>
+				</g>
+				
+					<g id="Group-5_1_" transform="translate(700.321871, 33.739554) scale(1, -1) translate(-700.321871, -33.739554) translate(667.000000, 0.000000)">
+					<polygon id="Fill-1_8_" class="sparkle-change-2" points="-193.8,379.5 -171.6,379.5 -171.6,359 -193.8,359 					"/>
+					<polygon id="Fill-2_1_" class="sparkle-change-3" points="-193.8,336.5 -171.6,336.5 -171.6,314 -193.8,314 					"/>
+					<polygon id="Fill-3_1_" class="sparkle-change-4" points="-216,359 -193.8,359 -193.8,336.5 -216,336.5 					"/>
+					<polygon id="Fill-4_1_" class="sparkle-change-5" points="-171.6,359 -149.4,359 -149.4,336.5 -171.6,336.5 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>
