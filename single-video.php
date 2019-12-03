@@ -17,16 +17,7 @@ the_post(); ?>
       <div class="c-page-excerpt"><?php the_content(); ?></div>
     </header>
 
-    <?php if (have_rows('videos')):
-    $videos = get_field('videos');
-    $first_video = array_slice($videos, 0, 1);
-    $rest_videos = array_slice($videos, 1);
-
-    foreach ($first_video as $video) {
-      $post = $video['video'][0];
-      get_template_part('template-parts/video', 'project');
-    }
-    endif; ?>
+    <?php get_template_part('template-parts/video', 'project'); ?>
   </section>
 
 
@@ -72,17 +63,6 @@ the_post(); ?>
     </nav>
   </section>
 
-  <?php if ($rest_videos): ?>
-  <section class="c-page-section pt-5">
-    <h2>Das Projekt bei anderen Events</h2>
-    <?php
-    foreach ($rest_videos as $video) {
-      $post = $video['video'][0];
-      get_template_part('template-parts/video', 'project');
-    }
-    ?>
-  </section>
-  <?php endif; ?>
 
 <?php
 endwhile; ?>

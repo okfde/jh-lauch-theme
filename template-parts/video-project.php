@@ -6,38 +6,38 @@
   <div class="col-s c-project-profile">
     <dl>
       <dt>von</dt>
-      <dd><?php the_field('attendees', $post) ?></dd>
+      <dd><?php the_field('attendees') ?></dd>
 
-      <?php if (wp_get_post_terms($post, 'location')): ?>
+      <?php if (wp_get_post_terms(get_the_ID(), 'location')): ?>
         <dt>Ort</dt>
-        <dd><?php echo wp_get_post_terms($post, 'location')[0]->name; ?></dd>
+        <dd><?php echo wp_get_post_terms(get_the_ID(), 'location')[0]->name; ?></dd>
       <?php endif ?>
 
-      <?php if (wp_get_post_terms($post, 'year')): ?>
+      <?php if (wp_get_post_terms(get_the_ID(), 'year')): ?>
         <dt>Jahr</dt>
-        <dd><?php echo wp_get_post_terms($post, 'year')[0]->name; ?></dd>
+        <dd><?php echo wp_get_post_terms(get_the_ID(), 'year')[0]->name; ?></dd>
       <?php endif ?>
 
-      <?php if (wp_get_post_terms($post, 'topics')): ?>
+      <?php if (wp_get_post_terms(get_the_ID(), 'topics')): ?>
         <dt>Thema</dt>
-        <dd><?php echo wp_get_post_terms($post, 'topics')[0]->name; ?></dd>
+        <dd><?php echo wp_get_post_terms(get_the_ID(), 'topics')[0]->name; ?></dd>
       <?php endif ?>
 
-      <?php if (wp_get_post_terms($post, 'tech')): ?>
+      <?php if (wp_get_post_terms(get_the_ID(), 'tech')): ?>
         <dt>Technik</dt>
-        <dd><?php echo wp_get_post_terms($post, 'tech')[0]->name; ?></dd>
+        <dd><?php echo wp_get_post_terms(get_the_ID(), 'tech')[0]->name; ?></dd>
       <?php endif ?>
 
       <dt>Links</dt>
       <dd>
-        <?php if (get_field('github', $post)): ?>
-          <a href="<?php the_field('github', $post); ?>">Git-Repository <?php echo render_svg('/images/arrow-external-white.svg'); ?></a>
+        <?php if (get_field('github')): ?>
+          <a href="<?php the_field('github'); ?>">Git-Repository <?php echo render_svg('/images/arrow-external-white.svg'); ?></a>
         <?php endif ?>
-        <?php if (get_field('mediaccc', $post)): ?>
-          <a href="<?php the_field('mediaccc', $post)?>">Media.CCC <?php echo render_svg('/images/arrow-external-white.svg'); ?></a>
+        <?php if (get_field('mediaccc')): ?>
+          <a href="<?php the_field('mediaccc')?>">Media.CCC <?php echo render_svg('/images/arrow-external-white.svg'); ?></a>
         <?php endif ?>
-        <?php if (get_field('hackdashurl', $post)): ?>
-          <a href="<?php the_field('hackdashurl', $post)?>">HackDash <?php echo render_svg('/images/arrow-external-white.svg'); ?></a>
+        <?php if (get_field('hackdashurl')): ?>
+          <a href="<?php the_field('hackdashurl')?>">HackDash <?php echo render_svg('/images/arrow-external-white.svg'); ?></a>
         <?php endif ?>
       </dd>
     </dl>
