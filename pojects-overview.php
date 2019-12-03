@@ -96,7 +96,14 @@ endwhile; ?>
   <?php
   $args = array('post_type' => 'video',
                 'posts_per_page' => 8,
-                'post__not_in' => $arr_collect_ids);
+                'post__not_in' => $arr_collect_ids,
+                'tax_query' => array(
+                  array(
+                    'taxonomy' => 'year',
+                    'field'    => 'slug',
+                    'terms'    => date("Y"),
+                  ),
+                ));
   $the_query = new WP_Query( $args ); ?>
   <?php if ( $the_query->have_posts() ) : ?>
       <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
@@ -135,7 +142,8 @@ endwhile; ?>
   <?php
   $args = array('post_type' => 'video',
                 'posts_per_page' => -1,
-                'post__not_in' => $arr_collect_ids);
+                'post__not_in' => $arr_collect_ids,
+                'order' => 'ASC');
   $the_query = new WP_Query( $args ); ?>
   <?php if ( $the_query->have_posts() ) : ?>
       <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
