@@ -46,7 +46,7 @@ endwhile; ?>
 <section class="c-page-section c-project-list pb-0 pt-5">
   <ul class="js-isotope">
   <?php
-  $args = array('post_type' => 'project',
+  $args = array('post_type' => 'video',
                 'posts_per_page' => 4,
                 'tax_query' => array(
                   array(
@@ -94,7 +94,7 @@ endwhile; ?>
   </li>
 
   <?php
-  $args = array('post_type' => 'project',
+  $args = array('post_type' => 'video',
                 'posts_per_page' => 8,
                 'post__not_in' => $arr_collect_ids);
   $the_query = new WP_Query( $args ); ?>
@@ -133,7 +133,7 @@ endwhile; ?>
   </li>
 
   <?php
-  $args = array('post_type' => 'project',
+  $args = array('post_type' => 'video',
                 'posts_per_page' => -1,
                 'post__not_in' => $arr_collect_ids);
   $the_query = new WP_Query( $args ); ?>
