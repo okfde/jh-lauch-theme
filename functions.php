@@ -198,6 +198,9 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  */
 
 
+// project teaser medium 240x135
+// project teaser small 290x162
+
 
 add_image_size( 'blog-alpaka-small', 300, 300, true );
 add_image_size( 'blog-alpaka', 560, 560, true );
@@ -349,7 +352,7 @@ require get_template_directory() . '/inc/custom_types/event_type.php';
 require get_template_directory() . '/inc/custom_types/lab_type.php';
 require get_template_directory() . '/inc/custom_types/exchange_type.php';
 require get_template_directory() . '/inc/custom_types/video_type.php';
-require get_template_directory() . '/inc/custom_types/project_type.php';
+//require get_template_directory() . '/inc/custom_types/project_type.php';
 require get_template_directory() . '/inc/custom_types/person_type.php';
 require get_template_directory() . '/inc/custom_types/faq_type.php';
 require get_template_directory() . '/inc/custom_types/learning_type.php';
