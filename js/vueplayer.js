@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
             <label :for="videoItem.youtubeid">
               <div class="thumbnail-img">
                 <img :src="thumbnailSrc" alt="Video thumbnail" width="75" height="50">
-                <h3>{{ videoItem.title }}</h3>
+                <p class="thumbnail-body">{{ videoItem.title }}</p>
               </div>
             </label>
           </li>`

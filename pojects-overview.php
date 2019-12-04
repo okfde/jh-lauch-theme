@@ -137,7 +137,7 @@ endwhile; ?>
         <?php $terms = get_terms('topics', array('hide_empty' => true));
         foreach ($terms as $t) : ?>
           <li class="c-catnav-item">
-            <a href="<?php echo get_term_link($t->slug, $t->taxonomy ); ?>"
+            <a href="#"
                data-filter="<?php echo $t->slug; ?>"
                class="hover-line-trigger">
               <h3><span class="hover-line"><?php echo $t->name; ?></span></h3>

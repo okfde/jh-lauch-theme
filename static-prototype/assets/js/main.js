@@ -54,11 +54,13 @@ function IsoManagement() {
   };
 
   this.addToFilterValuesAndFilter = function (key, value) {
+    //debugger
     if (value !== '' && value !== undefined) {
       this.filterValues[key] = '.'+ value;
     } else {
       this.filterValues[key] = undefined;
     }
+    //debugger
     let filterString = Object.values(this.filterValues).join("");
     this.iso.arrange({filter: filterString});
   };
@@ -70,8 +72,18 @@ function IsoManagement() {
   this.topicEventWrapper = function (e) {
     e.preventDefault();
     let topicFilter = document.getElementById('filter-topics');
-    let value = e.target.dataset.filter;
+    let value;
+
+    if (e.target.dataset.filter) {
+      value = e.target.dataset.filter;
+    } else if (e.target.parentElement.dataset.filter) {
+      value = e.target.parentElement.dataset.filter;
+    } else if (e.target.parentElement.parentElement.dataset.filter) {
+      value = e.target.parentElement.parentElement.dataset.filter;
+    }
+
     if (value) {
+      value = 'topics-' + value;
       topicFilter.value = value;
       this.addToFilterValuesAndFilter('filter-topics', value);
       //window.scrollTo(0, 300);
