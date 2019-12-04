@@ -49,18 +49,17 @@ function IsoManagement() {
       });
 
       // fix layout issues by running this a bit later
-      window.setTimeout(() => { this.iso.arrange({filter: ''}); console.log('test'); }, 1000);
+      window.setTimeout(() => { this.iso.arrange(); }, 1000);
+      window.setTimeout(() => { this.iso.arrange(); }, 5000);
     }
   };
 
   this.addToFilterValuesAndFilter = function (key, value) {
-    //debugger
     if (value !== '' && value !== undefined) {
       this.filterValues[key] = '.'+ value;
     } else {
       this.filterValues[key] = undefined;
     }
-    //debugger
     let filterString = Object.values(this.filterValues).join("");
     this.iso.arrange({filter: filterString});
   };

@@ -14,9 +14,17 @@ the_post(); ?>
 endwhile; ?>
 
 <header class="c-page-alpaca-header">
-  <div class="c-page-alpaca-featured medium-up as-s addon addon--<?php the_field('illustration_class'); ?> addon--large addon--<?php the_field('illustration_xaxis'); ?> addon--<?php the_field('illustration_yaxis'); ?>">
+  <div class="c-page-alpaca-featured medium-up as-s p-r">
     <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'blog-alpaka'); ?>"
          alt="" class="clip-alpaka" >
+    <div class="c-page-alpaca-friend">
+      <?php
+      $svg = get_random_illustration();
+      echo replace_svg_css_class_fill(get_svg_content($svg),
+                                      "changecolor",
+                                      "event-". get_the_ID() ."-" . $svg,
+                                      get_field('event_color')); ?>
+    </div>
   </div>
   <div class="c-page-alpaca-title">
     <nav class="c-breadcrumb" aria-label="breadcrumb">
