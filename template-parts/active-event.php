@@ -188,7 +188,7 @@ if ((get_field('next_event'))) {
                    title="Zum Lernmaterial <?php echo $l->post_title; ?>"
                    class="hover-line-trigger">
                   <div class="teaser-image">
-                    <picture><?php echo get_the_post_thumbnail($l->ID, 'blog-large'); ?></picture></div>
+                    <picture><?php echo get_the_post_thumbnail($l->ID, 'learning-teaser'); ?></picture></div>
                   <h3 class="teaser-title"><span class="hover-line"><?php echo $l->post_title; ?></span></h3>
                   <div class="teaser-summary"><?php echo wp_trim_words($l->post_content, 55); ?></div>
                 </a>

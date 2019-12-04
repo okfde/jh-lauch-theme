@@ -203,6 +203,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 
 
 add_image_size( 'lab-event-teaser', 182, 224, true );
+add_image_size( 'learning-teaser', 620, 304, true );
 
 add_image_size( 'blog-alpaka-small', 300, 300, true );
 add_image_size( 'blog-alpaka', 560, 560, true );
