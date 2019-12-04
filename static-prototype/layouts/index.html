@@ -1,4 +1,68 @@
 {{ define "main" }}
-<h1>{{.Title}}</h1>
+
+<header class="c-page-home-header pb-10">
+  <h1>Mit <span class="js-scramle">Code</span> die<br> Welt verbessern</h1>
+  <div class="c-page-content">{{ .Content }}</div>
+</header>
+
+<section class="c-page-section white">
+  <div class="c-page-2col jc-sb">
+    <div class="col-s">
+      <div class="float-box float-box--softblue">
+        <div class="c-flag softblue mini points-bottom float-box-head">Hallo Hier steht was</div>
+        <img src="//placekitten.com/236/157" alt="">
+        <h2 class="float-box-title">Komm zum Event in Ulm</h2>
+        <p>Das Event in Ulm findet vom XX.XX-XX.XX statt. Die Anmeldung ist bis zum 15.11. geöffnet. </p>
+        <a href="#" class="button button--simple button--softblue">Jetzt anmelden</a>
+      </div>
+
+    </div>
+    <div class="col-l fg c-page-copy ml-10">
+      <h2>Die Nächsten Termine</h2>
+
+      <div class="c-toc c-toc--horizontal">
+        <ul class="c-toc-nav">
+          <li><a href="#events">Events</a></li>
+          <li><a href="#labs">Labs</a></li>
+        </ul>
+        <div class="c-toc-content">
+          <section id="events">
+            {{ range after 1 (seq 4)}}
+            <div class="event-teaser-list-item">
+              <div class="d-f ai-s">
+                <img src="//placekitten.com/290/357" alt="" class="event-teaser-list-img">
+                <div class="event-teaser-list-meta fg">
+                  <p class="c-flag mini softblue c-flag--events points-bottom mb-1">Hamburg</p>
+                  <h3 class="mb-0 mt-0">Jugend hackt HH</h3>
+                  <p class="mt-1 fw-b">Sa. 07.12   –   13:00 - 17:00</p>
+                </div>
+
+              </div>
+            </div>
+            {{ end }}
+          </section>
+          <section id="labs">
+            {{ range after 1 (seq 4)}}
+            <div class="event-teaser-list-item">
+              <div class="d-f ai-s">
+                <img src="//placekitten.com/290/357" alt="" class="event-teaser-list-img">
+                <div class="event-teaser-list-meta fg">
+                  <p class="c-flag mini orange c-flag--events points-bottom mb-1">Lab Ulm</p>
+                  <h3 class="mb-0 mt-0">Offenes Coden, Tüfteln und Weltverbessern</h3>
+                  <p class="mt-1 fw-b">Sa. 07.12   –   13:00 - 17:00</p>
+                </div>
+
+              </div>
+            </div>
+            {{ end }}
+          </section>
+        </div>
+
+      </div>
+    </div>
+</section>
+
+
+
 {{.Content}}
 {{ end }}

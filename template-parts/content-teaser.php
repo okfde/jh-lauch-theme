@@ -9,7 +9,7 @@ $s = get_option( 'sticky_posts' ); ?>
         <?php echo get_the_post_thumbnail(get_the_ID(), 'blog-large'); ?>
       </picture>
 
-      <?php if (get_field('illustration')): ?><img src="<?php echo the_field('illustration') ?>" alt=""><?php endif; ?>
+      <?php if (get_field('illustration')): ?><img src="<?php echo the_field('illustration') ?>" alt="" loading="lazy"><?php endif; ?>
     </div>
     <h2 class="teaser-title"><span class="hover-line"><?php the_title(); ?></span></h2>
     <div>

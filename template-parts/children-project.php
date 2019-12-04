@@ -41,10 +41,10 @@ foreach ($all_location as $t) {
       <div class="teaser-image">
         <picture>
           <?php if (get_the_post_thumbnail_url($post->ID, 'events-teaser-highdpi')):  ?>
-            <img src="<?php echo get_the_post_thumbnail_url($post->ID, 'events-teaser-highdpi'); ?>" alt="">
+            <img src="<?php echo get_the_post_thumbnail_url($post->ID, 'events-teaser-highdpi'); ?>" alt="" loading="lazy">
           <?php else : ?>
             <source srcset="https://img.youtube.com/vi/<?php echo the_field('youtubeid') ?>/maxresdefault.jpg" media="(min-width: 960px)">
-            <img src="https://img.youtube.com/vi/<?php echo the_field('youtubeid') ?>/default.jpg">
+            <img src="https://img.youtube.com/vi/<?php echo the_field('youtubeid') ?>/default.jpg" loading="lazy">
           <?php endif; ?>
         </picture>
       </div>
