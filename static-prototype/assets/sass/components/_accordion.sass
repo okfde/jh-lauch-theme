@@ -1,0 +1,16 @@
+.accordion
+  position: relative
+
+  &__title 
+    cursor: pointer
+    user-select: none
+
+  &__content 
+    overflow: hidden
+    transition: .2s max-height
+    will-change: max-height
+
+  &.is-hidden &__content 
+    position: absolute
+    opacity: 0
+    visibility: hidden

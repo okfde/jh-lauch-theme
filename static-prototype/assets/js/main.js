@@ -15,6 +15,13 @@ document.addEventListener('DOMContentLoaded', function () {
     new Slider().init(slider);
   }
 
+  let accordion = document.querySelectorAll('[data-accordion]');
+  if (accordion.length) {
+    accordion.forEach(function(item) {
+      new Accordion().init(item);
+    })
+  }
+
   new IsoManagement().init('.js-isotope',
                          '.js-isotope > li',
                          '.c-filter select',
@@ -166,5 +173,62 @@ function Toc(selector) {
 
     [navItem, contentItem]
       .forEach(x => x.classList.add('is-active'));
+  };
+}
+
+function Accordion() {
+  this.init = function ($el) {
+    this.$el = $el;
+    this.$title = this.$el.querySelector('[data-title]');
+    this.$content = this.$el.querySelector('[data-content]');
+    this.isOpen = false;
+    this.height = 0;
+
+    this.events();
+    this.close();
+  };
+
+  this.events = function() {
+    this.$title.addEventListener('click', this.handleClick.bind(this));
+    this.$content.addEventListener('transitionend', this.handleTransition.bind(this));
+  };
+
+  this.handleClick = function() {
+    this.height = this.$content.scrollHeight;
+
+    if (this.isOpen) {
+      this.close();
+    } else {
+      this.open();
+    }
+  };
+
+  this.close = function() {
+    this.isOpen = false;
+    this.$el.classList.remove('is-active');
+    this.$content.style.maxHeight = `${this.height}px`;
+
+    setTimeout(() => {
+      this.$content.style.maxHeight = `${0}px`;
+    }, 50);
+  };
+
+  this.open = function() {
+    this.isOpen = true;
+    this.$el.classList.add('is-active');
+    this.$el.classList.remove('is-hidden');
+    this.$content.style.maxHeight = `${0}px`;
+
+    setTimeout(() => {
+      this.$content.style.maxHeight = `${this.height}px`;
+    }, 50);
+  };
+
+  this.handleTransition = function() {
+    if (!this.isOpen) {
+      this.$el.classList.add('is-hidden');
+    }
+
+    this.$content.style.maxHeight = '';
   };
 }

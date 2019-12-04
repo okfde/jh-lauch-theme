@@ -13,6 +13,9 @@
 .d-f
   display: flex
 
+.d-b
+  display: block
+
 .jc-sb
   justify-content: space-between
 
@@ -104,6 +107,26 @@
 .small-only
   display: none
   @media (max-width: $break-small)
+    display: block
+
+.sm-only
+  display: none
+  @media (max-width: $break-sm)
+    display: block
+
+.medium-only
+  display: none
+  @media (max-width: $break-medium)
+    display: block
+
+.sm-up
+  display: none
+  @media (min-width: $break-sm)
+    display: block
+
+.medium-up
+  display: none
+  @media (min-width: $break-medium)
     display: block
 
 .ta-c
