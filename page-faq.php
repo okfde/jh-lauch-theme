@@ -56,6 +56,4 @@ the_post();
 
 <?php
 endwhile;
-
-get_sidebar();
 get_footer();

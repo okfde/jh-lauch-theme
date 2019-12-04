@@ -22,47 +22,59 @@ the_post(); ?>
 
 
   <section class="c-catnav c-catnav--slider p-r">
-    <h2 class="c-catnav-title--rot">Weiter geht's</h2>
+    <h2 class="c-catnav-title--rot"><?php echo __("Weiter geht's", 'lauch') ?></h2>
     <nav>
-      <ul>
-        <li class="c-catnav-slide">
-          <a href="#" class="c-page-2col ai-c">
-            <img src="//placekitten.com/300/200" alt="" width="400" height="200">
-            <div class="">
-              <p class="c-catnav-meta">Rostock 2019</p>
-              <h3><span>Unterwegs mit</span></h3>
-              <p>Lorem ipsum dolor sit amet ipsum dolor sit amet.</p>
-            </div>
-          </a>
-        </li>
-        <li class="c-catnav-slide">
-          <a href="#" class="c-page-2col ai-c">
-            <img src="//placekitten.com/300/200" alt="" width="400" height="200">
-            <div class="">
-              <p class="c-catnav-meta">Rostock 2019</p>
-              <h3><span>Unterwegs mit</span></h3>
-              <p>Lorem ipsum dolor sit amet ipsum dolor sit amet.</p>
-            </div>
-          </a>
-        </li>
-        <li class="c-catnav-slide">
-          <a href="#" class="c-page-2col ai-c">
-            <img src="//placekitten.com/300/200" alt="" width="400" height="200">
-            <div class="">
-              <p>Rostock 2019</p>
-              <h3><span>Unterwegs mit</span></h3>
-              <p>Lorem ipsum dolor sit amet ipsum dolor sit amet.</p>
-            </div>
-          </a>
-        </li>
-      </ul>
-      <!-- <div class="c-catnav-nav p-a">
-           <button type="button">back</button>
-           <button type="button">next</button>
-           </div> -->
+      <div class="tns-controls">
+        <button class="tns-prev" title="Nach links"><?php render_svg('/images/icons/arrow-left.svg'); ?></button>
+        <button class="tns-next" title="Nach rechts"><?php render_svg('/images/icons/arrow-right.svg') ?></button>
+      </div>
+      <?php
+      $args = array('post_type' => 'video',
+                    'posts_per_page' => 10,
+                    'post__not_in' => array(get_the_ID()),
+                    'tax_query' => array(
+                      array(
+                        'taxonomy' => 'tech',
+                        'field'    => 'slug',
+                        'terms'    => wp_get_post_terms(get_the_ID(), 'tech')[0]->slug,
+                      ),
+                      array(
+                        'taxonomy' => 'type',
+                        'field'    => 'slug',
+                        'terms'    => 'project-presentation',
+                      )
+                    ));
+      $the_query = new WP_Query( $args ); ?>
+
+      <?php if ( $the_query->have_posts() ) : ?>
+        <ul class="js-slider">
+        <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+          <li class="c-catnav-slide">
+            <a href="<?php the_permalink() ?>" class="c-page-2col ai-c">
+              <?php if (get_the_post_thumbnail_url(get_the_ID(), 'events-teaser-highdpi')):  ?>
+                <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'events-teaser-highdpi'); ?>" alt="">
+              <?php else : ?>
+                <img src="https://img.youtube.com/vi/<?php echo the_field('youtubeid') ?>/default.jpg" alt="">
+              <?php endif; ?>
+              <div class="">
+                <?php if(wp_get_post_terms(get_the_ID(), 'location') &&
+                         wp_get_post_terms(get_the_ID(), 'year')) : ?>
+                  <p class="c-catnav-meta">
+                    <?php echo wp_get_post_terms(get_the_ID(), 'location')[0]->name; ?>
+                    <?php echo wp_get_post_terms(get_the_ID(), 'year')[0]->name; ?>
+                  </p>
+                <?php endif; ?>
+                <h3><span><?php the_title(); ?></span></h3>
+              </div>
+            </a>
+          </li>
+
+        <?php endwhile; ?>
+        </ul>
+        <?php wp_reset_postdata(); ?>
+      <?php endif; ?>
     </nav>
   </section>
-
 
 <?php
 endwhile; ?>

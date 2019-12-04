@@ -140,12 +140,12 @@ function Slider() {
         options = {
           container: item,
           slideBy: 'page',
-          fixedWidth: 270,
+          fixedWidth: 350,
           nav: false,
           controlsContainer: '.tns-controls',
         }
       }
-      console.log(options)
+      //console.log(options)
       tns(options);
     });
   };
