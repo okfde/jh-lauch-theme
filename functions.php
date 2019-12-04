@@ -202,6 +202,8 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 // project teaser small 290x162
 
 
+add_image_size( 'lab-event-teaser', 182, 224, true );
+
 add_image_size( 'blog-alpaka-small', 300, 300, true );
 add_image_size( 'blog-alpaka', 560, 560, true );
 add_image_size( 'blog-alpaka-highdpi', 1120, 1120, true );
