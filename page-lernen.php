@@ -119,7 +119,7 @@ while ( have_posts() ) : the_post() ?>
         $topic_term = get_field('term_topics');
         $tech_term = get_field('term_tech');
 
-        $out = "[vuevideo type='project-presentation' ";
+        $out = "[vuevideo type='lightning-talk' ";
         if ($loc_term) {
           $out .= "location='". $loc_term->slug ."' ";
         }
