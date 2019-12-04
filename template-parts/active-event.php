@@ -31,20 +31,12 @@ if ((get_field('next_event'))) {
         <?php endif; ?>
       </div>
 
-      <?php
-      $query = new WP_Query(array('post_type' => 'event',
-                                  'p' => $next->ID));
-      if ($query->have_posts()):
-               while ($query->have_posts()): $query->the_post(); ?>
-        <div class="pt-1 c-page-header-copy">
-          <?php the_field('event_longform'); ?>
-        </div>
-        <?php get_template_part( 'template-parts/contact-person', get_post_type() ); ?>
-
-      <?php
-      endwhile;
-      wp_reset_postdata();
-      endif;?>
+      <div class="pt-1 c-page-header-copy">
+        <?php the_field('event_longform', $next->ID); ?>
+      </div>
+      <?php if (get_field('contact_person', $next->ID)): ?>
+        <?php echo do_shortcode('[contactperson person="'. get_field('contact_person', $next->ID) .'", title="'. _("Du hast Fragen?", 'lauch') .'"]'); ?>
+      <?php endif; ?>
     </div>
 
 
@@ -187,24 +179,24 @@ if ((get_field('next_event'))) {
       </div>
     </div>
     <div class="c-page-3col c-blog-list is-grid">
-        <?php if( have_rows('learnings', $next->ID) ): ?>
-          <ul>
-            <?php while( have_rows('learnings', $next->ID) ): the_row(); ?>
-              <?php foreach (get_sub_field('learning') as $l): ?>
-                <li class="c-compact-teaser">
-                  <a href="<?php echo get_permalink($l->ID); ?>"
-                     title="Zum Lernmaterial <?php echo $l->post_title; ?>"
-                     class="hover-line-trigger">
-                    <div class="teaser-image">
-                      <picture><?php echo get_the_post_thumbnail($l->ID, 'blog-large'); ?></picture></div>
-                    <h3 class="teaser-title"><span class="hover-line"><?php echo $l->post_title; ?></span></h3>
-                    <div class="teaser-summary"><?php echo wp_trim_words($l->post_content, 55); ?></div>
-                  </a>
-                </li>
-              <?php endforeach; ?>
-            <?php endwhile; ?>
-          </ul>
-        <?php endif; ?>
+      <?php if( have_rows('learnings', $next->ID) ): ?>
+        <ul>
+          <?php while( have_rows('learnings', $next->ID) ): the_row(); ?>
+            <?php foreach (get_sub_field('learning') as $l): ?>
+              <li class="c-compact-teaser">
+                <a href="<?php echo get_permalink($l->ID); ?>"
+                   title="Zum Lernmaterial <?php echo $l->post_title; ?>"
+                   class="hover-line-trigger">
+                  <div class="teaser-image">
+                    <picture><?php echo get_the_post_thumbnail($l->ID, 'blog-large'); ?></picture></div>
+                  <h3 class="teaser-title"><span class="hover-line"><?php echo $l->post_title; ?></span></h3>
+                  <div class="teaser-summary"><?php echo wp_trim_words($l->post_content, 55); ?></div>
+                </a>
+              </li>
+            <?php endforeach; ?>
+          <?php endwhile; ?>
+        </ul>
+      <?php endif; ?>
     </div>
   </section>
 
@@ -243,7 +235,7 @@ if ((get_field('next_event'))) {
   <script>
    var mymap = L.map('map').setView([<?php the_field('event_lat', $next->ID); ?>,
                                      <?php the_field('event_lon', $next->ID); ?>], 15);
-    //https://api.mapbox.com/styles/v1/okfn/{id}/tiles/256/{z}/{x}/{y}?access_token={accessToken}
+   //https://api.mapbox.com/styles/v1/okfn/{id}/tiles/256/{z}/{x}/{y}?access_token={accessToken}
 
    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -258,7 +250,7 @@ if ((get_field('next_event'))) {
      iconAnchor:   [9, 22],
    });
    var marker = L.marker([<?php the_field('event_lat', $next->ID); ?>,
-                         <?php the_field('event_lon', $next->ID); ?>], {icon: customMarker})
+                          <?php the_field('event_lon', $next->ID); ?>], {icon: customMarker})
                  .addTo(mymap);
   </script>
 

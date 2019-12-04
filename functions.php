@@ -246,18 +246,18 @@ add_shortcode('vuevideo', 'vuevideo_handle_shortcode');
 
 function contactperson_handle_shortcode($atts = '') {
   $value = shortcode_atts( array(
-    'person' => null,
-    'title' => null
+      'person' => null,
+      'title' => null,
   ), $atts );
 
-  $person = get_posts(array( 'post_type' => 'person',
-                             'p' => $value['person']))[0];
-  $img = get_the_post_thumbnail_url( $person->ID, array(139, 106) );
-  $description = get_field('person_description', $person->ID);
-  $twitter = get_field('person_twitter', $person->ID);
-  $mastodon = get_field('person_mastodon', $person->ID);
-  $instagram = get_field('person_instagram', $person->ID);
-  $email = get_field('person_email', $person->ID);
+  $post = $value['person'];
+
+  $img = get_the_post_thumbnail_url( $post, array(139, 106) );
+  $description = get_field('person_description', $post);
+  $twitter = get_field('person_twitter', $post);
+  $mastodon = get_field('person_mastodon', $post);
+  $instagram = get_field('person_instagram', $post);
+  $email = get_field('person_email', $post);
 
   $out = '<div class="c-contact">';
   if ($value['title']) {
@@ -265,7 +265,7 @@ function contactperson_handle_shortcode($atts = '') {
   }
   $out .= '<div class="c-contact-body">';
   $out .= '<img src="'. $img .'" alt="" class="c-contact-image" width="100">';
-  $out .= '<div class="c-contact-text"><p><strong>'. $person->post_title .'</strong>,<br>'. $description.'</p><p>';
+  $out .= '<div class="c-contact-text"><p><strong>'. get_the_title($post) .'</strong>,<br>'. $description.'</p><p>';
 
   if ($twitter != "") {
     $out .= '<a href="'. $twitter .'" title="'. _('Bei Twitter', 'lauch') .'">'. get_svg('/images/icons/contact-twitter.svg') .'</a>';
