@@ -36,6 +36,7 @@ function lauch_event_retro_videos( $data ) {
   $payload = [];
 
   foreach ($posts as $post) {
+    print_r(get_field('youtubeid', $post));
     //$meta = get_post_meta($post->ID);
     $item = array(
       'title' => $post->post_title,

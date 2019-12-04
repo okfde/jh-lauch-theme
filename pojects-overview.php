@@ -54,6 +54,11 @@ endwhile; ?>
                     'field'    => 'slug',
                     'terms'    => date("Y"),
                   ),
+                  array(
+                    'taxonomy' => 'type',
+                    'field'    => 'slug',
+                    'terms'    => 'project-presentation',
+                  )
                 ),);
   $the_query = new WP_Query( $args );
   $arr_collect_ids = []; ?>
@@ -103,6 +108,11 @@ endwhile; ?>
                     'field'    => 'slug',
                     'terms'    => date("Y"),
                   ),
+                  array(
+                    'taxonomy' => 'type',
+                    'field'    => 'slug',
+                    'terms'    => 'project-presentation',
+                  )
                 ));
   $the_query = new WP_Query( $args ); ?>
   <?php if ( $the_query->have_posts() ) : ?>
@@ -143,7 +153,13 @@ endwhile; ?>
   $args = array('post_type' => 'video',
                 'posts_per_page' => -1,
                 'post__not_in' => $arr_collect_ids,
-                'order' => 'ASC');
+                'order' => 'ASC',
+                'tax_query' => array(
+                  array(
+                    'taxonomy' => 'type',
+                    'field'    => 'slug',
+                    'terms'    => 'project-presentation',
+                  )));
   $the_query = new WP_Query( $args ); ?>
   <?php if ( $the_query->have_posts() ) : ?>
       <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>

@@ -40,13 +40,21 @@ foreach ($all_location as $t) {
     <a href="<?php the_permalink() ?>" class="hover-line-trigger">
       <div class="teaser-image">
         <picture>
-          <img src="<?php echo get_the_post_thumbnail_url($post->ID, 'events-teaser-highdpi'); ?>" alt="">
+          <?php if (get_the_post_thumbnail_url($post->ID, 'events-teaser-highdpi')):  ?>
+            <img src="<?php echo get_the_post_thumbnail_url($post->ID, 'events-teaser-highdpi'); ?>" alt="">
+          <?php else : ?>
+            <source srcset="https://img.youtube.com/vi/<?php echo the_field('youtubeid') ?>/maxresdefault.jpg" media="(min-width: 960px)">
+            <img src="https://img.youtube.com/vi/<?php echo the_field('youtubeid') ?>/default.jpg">
+          <?php endif; ?>
         </picture>
       </div>
+      <?php if(wp_get_post_terms(get_the_ID(), 'location') &&
+               wp_get_post_terms(get_the_ID(), 'year')) : ?>
       <div class="teaser-meta">
         <?php echo wp_get_post_terms(get_the_ID(), 'location')[0]->name; ?>
         <?php echo wp_get_post_terms(get_the_ID(), 'year')[0]->name; ?>
       </div>
+      <?php endif; ?>
       <h2 class="teaser-title"><span class="hover-line"><?php the_title() ?></span></h2>
       <div class="teaser-summary"><?php the_excerpt() ?></div>
     </a>

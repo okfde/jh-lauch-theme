@@ -222,10 +222,6 @@ function lauch_custom_sizes( $sizes ) {
   ) );
 }
 
-#function lauch_hide_admin_barr(){ return false; }
-#add_filter( 'show_admin_bar' , 'lauch_hide_admin_bar');
-
-
 function vuevideo_handle_shortcode($atts = '') {
   $value = shortcode_atts( array(
     'location' => null,
