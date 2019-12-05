@@ -27,11 +27,11 @@ endwhile;
     <div class="col-s">
 
       <div class="float-box float-box--softblue">
-        <div class="c-flag softblue mini points-bottom float-box-head">Hallo Hier steht was</div>
-        <img src="//placekitten.com/236/157" alt="">
-        <h2 class="float-box-title">Komm zum Event in Ulm</h2>
-        <p>Das Event in Ulm findet vom XX.XX-XX.XX statt. Die Anmeldung ist bis zum 15.11. geöffnet. </p>
-        <a href="#" class="button button--simple button--softblue">Jetzt anmelden</a>
+        <div class="c-flag softblue mini points-bottom float-box-head"><?php the_field('left_box_flag'); ?></div>
+        <img src="<?php echo get_the_post_thumbnail_url(get_field('left_box_post')[0]->ID, 'events-teaser-highdpi') ?>" alt="">
+        <h2 class="float-box-title"><?php the_field('left_box_title'); ?></h2>
+        <p><?php the_field('left_box_text'); ?> </p>
+        <a href="<?php echo get_permalink(get_field('left_box_post')[0]->ID); ?>" class="button button--simple button--softblue"><?php the_field('left_box_button'); ?></a>
       </div>
 
     </div>
@@ -177,7 +177,7 @@ endwhile;
   $topic_term = get_field('term_topics');
   $tech_term = get_field('term_tech');
 
-  $out = "[vuevideo type='project-presentation' color='white'";
+  $out = "[vuevideo type='project-presentation' color='white' ";
   if ($loc_term) {
     $out .= "location='". $loc_term->slug ."' ";
   }
