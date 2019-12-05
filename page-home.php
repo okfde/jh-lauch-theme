@@ -35,7 +35,7 @@ endwhile;
       </div>
 
     </div>
-    <div class="col-l fg c-page-copy ml-10">
+    <div class="col-l fg ml-10">
       <h2><?php echo __('Die nächsten Termine', 'lauch'); ?></h2>
 
       <div class="c-toc c-toc--horizontal">
@@ -125,7 +125,8 @@ endwhile;
             sort($all_dates);
 
             foreach ($all_dates as $d) : ?>
-            <div class="event-teaser-list-item">
+            <div class="event-teaser-list-item no-hover">
+              <a href="<?php echo $d['link']?>" title="Zur Seite von Lab: <?php echo $d['lab']; ?>">
               <div class="d-f ai-s">
                 <img src="<?php echo wp_get_attachment_image_src($d['img']['ID'], 'lab-event-teaser')[0] ?>" alt="" class="event-teaser-list-img">
                 <div class="event-teaser-list-meta fg">
@@ -138,6 +139,7 @@ endwhile;
                   </p>
                 </div>
               </div>
+              </a>
             </div>
             <?php endforeach; ?>
           </section>
