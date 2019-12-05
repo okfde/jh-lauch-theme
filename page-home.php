@@ -121,8 +121,8 @@ endwhile;
             wp_reset_postdata();
             endif;
 
-            array_slice($all_dates, 0, 3);
             sort($all_dates);
+            $all_dates = array_slice($all_dates, 0, 3);
 
             foreach ($all_dates as $d) : ?>
             <div class="event-teaser-list-item no-hover">
