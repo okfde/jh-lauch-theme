@@ -121,7 +121,9 @@ endwhile;
             wp_reset_postdata();
             endif;
 
-            sort($all_dates);
+            usort($all_dates, function($a, $b) {
+              return $a['date_technical'] <=> $b['date_technical'];
+            });
             $all_dates = array_slice($all_dates, 0, 3);
 
             foreach ($all_dates as $d) : ?>
