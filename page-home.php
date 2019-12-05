@@ -130,7 +130,9 @@ endwhile;
             <div class="event-teaser-list-item no-hover">
               <a href="<?php echo $d['link']?>" title="Zur Seite von Lab: <?php echo $d['lab']; ?>">
               <div class="d-f ai-s">
-                <img src="<?php echo wp_get_attachment_image_src($d['img']['ID'], 'lab-event-teaser')[0] ?>" alt="" class="event-teaser-list-img">
+                <picture class="events-list-image-2">
+                <img src="<?php echo wp_get_attachment_image_src($d['img']['ID'], 'lab-event-teaser')[0] ?>" alt="" width="90">
+                </picture>
                 <div class="event-teaser-list-meta fg">
                   <div class="c-uppercase-title mb-1">Lab: <?php echo $d['lab']; ?></div>
                   <h3 class="events-list-title mb-0 mt-0"><?php echo $d['title']; ?></h3>
