@@ -1,12 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 700 500" style="enable-background:new 0 0 500 370;" xml:space="preserve">
 <style type="text/css">
-	.frkr0{fill:#E6414A;}
-	.frkr1{fill:#FFFFFF;}
-	.frkr2{fill:#2969B2;}
-	.frkr3{fill:#FFD003;}
-	.frkr4{fill:#00B48D;}
-	.frkr5{fill:#D1D6DA;}
+	.st0{fill:#E6414A;}
+	.st1{fill:#FFFFFF;}
+	.st2{fill:#2969B2;}
+	.st3{fill:#FFD003;}
+	.st4{fill:#00B48D;}
+	.st5{fill:#D1D6DA;}
 
 	.sparkle-change-1{
 		fill:#E6414A;
@@ -136,79 +137,79 @@
 </style>
 <g class="wave">
 	<g>
-		<rect x="60" y="140" class="frkr0" width="20" height="20"/>
-		<rect x="140" y="180" class="frkr0" width="20" height="20"/>
-		<rect x="40" y="160" class="frkr0" width="20" height="20"/>
-		<rect x="180" y="180" class="frkr0" width="20" height="20"/>
-		<rect x="80" y="160" class="frkr0" width="20" height="20"/>
-		<rect x="200" y="200" class="frkr0" width="20" height="20"/>
-		<rect x="120" y="200" class="frkr0" width="20" height="20"/>
-		<rect y="200" class="frkr0" width="20" height="20"/>
-		<rect x="100" y="180" class="frkr0" width="20" height="20"/>
-		<rect x="20" y="180" class="frkr0" width="20" height="20"/>
-		<rect x="160" y="160" class="frkr0" width="20" height="20"/>
+		<rect x="60" y="140" class="st0" width="20" height="20"/>
+		<rect x="140" y="180" class="st0" width="20" height="20"/>
+		<rect x="40" y="160" class="st0" width="20" height="20"/>
+		<rect x="180" y="180" class="st0" width="20" height="20"/>
+		<rect x="80" y="160" class="st0" width="20" height="20"/>
+		<rect x="200" y="200" class="st0" width="20" height="20"/>
+		<rect x="120" y="200" class="st0" width="20" height="20"/>
+		<rect y="200" class="st0" width="20" height="20"/>
+		<rect x="100" y="180" class="st0" width="20" height="20"/>
+		<rect x="20" y="180" class="st0" width="20" height="20"/>
+		<rect x="160" y="160" class="st0" width="20" height="20"/>
 
-		<rect x="140" y="135" class="frkr2" width="20" height="20"/>
-		<rect x="40" y="115" class="frkr2" width="20" height="20"/>
-		<rect x="180" y="135" class="frkr2" width="20" height="20"/>
-		<rect x="80" y="115" class="frkr2" width="20" height="20"/>
-		<rect x="200" y="155" class="frkr2" width="20" height="20"/>
-		<rect x="120" y="155" class="frkr2" width="20" height="20"/>
-		<rect x="0" y="155" class="frkr2" width="20" height="20"/>
-		<rect x="100" y="135" class="frkr2" width="20" height="20"/>
-		<rect x="20" y="135" class="frkr2" width="20" height="20"/>
-		<rect x="160" y="115" class="frkr2" width="20" height="20"/>
-		<rect x="60" y="95" class="frkr2" width="20" height="20"/>
+		<rect x="140" y="135" class="st2" width="20" height="20"/>
+		<rect x="40" y="115" class="st2" width="20" height="20"/>
+		<rect x="180" y="135" class="st2" width="20" height="20"/>
+		<rect x="80" y="115" class="st2" width="20" height="20"/>
+		<rect x="200" y="155" class="st2" width="20" height="20"/>
+		<rect x="120" y="155" class="st2" width="20" height="20"/>
+		<rect x="0" y="155" class="st2" width="20" height="20"/>
+		<rect x="100" y="135" class="st2" width="20" height="20"/>
+		<rect x="20" y="135" class="st2" width="20" height="20"/>
+		<rect x="160" y="115" class="st2" width="20" height="20"/>
+		<rect x="60" y="95" class="st2" width="20" height="20"/>
 
-		<rect x="140" y="225" class="frkr3" width="20" height="20"/>
-		<rect x="40" y="205" class="frkr3" width="20" height="20"/>
-		<rect x="180" y="225" class="frkr3" width="20" height="20"/>
-		<rect x="80" y="205" class="frkr3" width="20" height="20"/>
-		<rect x="200" y="245" class="frkr3" width="20" height="20"/>
-		<rect x="120" y="245" class="frkr3" width="20" height="20"/>
-		<rect x="0" y="245" class="frkr3" width="20" height="20"/>
-		<rect x="100" y="225" class="frkr3" width="20" height="20"/>
-		<rect x="20" y="225" class="frkr3" width="20" height="20"/>
-		<rect x="160" y="205" class="frkr3" width="20" height="20"/>
-		<rect x="60" y="185" class="frkr3" width="20" height="20"/>
+		<rect x="140" y="225" class="st3" width="20" height="20"/>
+		<rect x="40" y="205" class="st3" width="20" height="20"/>
+		<rect x="180" y="225" class="st3" width="20" height="20"/>
+		<rect x="80" y="205" class="st3" width="20" height="20"/>
+		<rect x="200" y="245" class="st3" width="20" height="20"/>
+		<rect x="120" y="245" class="st3" width="20" height="20"/>
+		<rect x="0" y="245" class="st3" width="20" height="20"/>
+		<rect x="100" y="225" class="st3" width="20" height="20"/>
+		<rect x="20" y="225" class="st3" width="20" height="20"/>
+		<rect x="160" y="205" class="st3" width="20" height="20"/>
+		<rect x="60" y="185" class="st3" width="20" height="20"/>
 	</g>
 
 	<g>
-		<rect x="260" y="140" class="frkr0" width="20" height="20"/>
-		<rect x="340" y="180" class="frkr0" width="20" height="20"/>
-		<rect x="240" y="160" class="frkr0" width="20" height="20"/>
-		<rect x="380" y="180" class="frkr0" width="20" height="20"/>
-		<rect x="280" y="160" class="frkr0" width="20" height="20"/>
-		<rect x="400" y="200" class="frkr0" width="20" height="20"/>
-		<rect x="320" y="200" class="frkr0" width="20" height="20"/>
-		<rect x="200" y="200" class="frkr0" width="20" height="20"/>
-		<rect x="300" y="180" class="frkr0" width="20" height="20"/>
-		<rect x="220" y="180" class="frkr0" width="20" height="20"/>
-		<rect x="360" y="160" class="frkr0" width="20" height="20"/>
+		<rect x="260" y="140" class="st0" width="20" height="20"/>
+		<rect x="340" y="180" class="st0" width="20" height="20"/>
+		<rect x="240" y="160" class="st0" width="20" height="20"/>
+		<rect x="380" y="180" class="st0" width="20" height="20"/>
+		<rect x="280" y="160" class="st0" width="20" height="20"/>
+		<rect x="400" y="200" class="st0" width="20" height="20"/>
+		<rect x="320" y="200" class="st0" width="20" height="20"/>
+		<rect x="200" y="200" class="st0" width="20" height="20"/>
+		<rect x="300" y="180" class="st0" width="20" height="20"/>
+		<rect x="220" y="180" class="st0" width="20" height="20"/>
+		<rect x="360" y="160" class="st0" width="20" height="20"/>
 
-		<rect x="340" y="135" class="frkr2" width="20" height="20"/>
-		<rect x="240" y="115" class="frkr2" width="20" height="20"/>
-		<rect x="380" y="135" class="frkr2" width="20" height="20"/>
-		<rect x="280" y="115" class="frkr2" width="20" height="20"/>
-		<rect x="400" y="155" class="frkr2" width="20" height="20"/>
-		<rect x="320" y="155" class="frkr2" width="20" height="20"/>
-		<rect x="200" y="155" class="frkr2" width="20" height="20"/>
-		<rect x="300" y="135" class="frkr2" width="20" height="20"/>
-		<rect x="220" y="135" class="frkr2" width="20" height="20"/>
-		<rect x="360" y="115" class="frkr2" width="20" height="20"/>
-		<rect x="260" y="95" class="frkr2" width="20" height="20"/>
+		<rect x="340" y="135" class="st2" width="20" height="20"/>
+		<rect x="240" y="115" class="st2" width="20" height="20"/>
+		<rect x="380" y="135" class="st2" width="20" height="20"/>
+		<rect x="280" y="115" class="st2" width="20" height="20"/>
+		<rect x="400" y="155" class="st2" width="20" height="20"/>
+		<rect x="320" y="155" class="st2" width="20" height="20"/>
+		<rect x="200" y="155" class="st2" width="20" height="20"/>
+		<rect x="300" y="135" class="st2" width="20" height="20"/>
+		<rect x="220" y="135" class="st2" width="20" height="20"/>
+		<rect x="360" y="115" class="st2" width="20" height="20"/>
+		<rect x="260" y="95" class="st2" width="20" height="20"/>
 
-		<rect x="340" y="225" class="frkr3" width="20" height="20"/>
-		<rect x="240" y="205" class="frkr3" width="20" height="20"/>
-		<rect x="380" y="225" class="frkr3" width="20" height="20"/>
-		<rect x="280" y="205" class="frkr3" width="20" height="20"/>
-		<rect x="400" y="245" class="frkr3" width="20" height="20"/>
-		<rect x="320" y="245" class="frkr3" width="20" height="20"/>
-		<rect x="200" y="245" class="frkr3" width="20" height="20"/>
-		<rect x="300" y="225" class="frkr3" width="20" height="20"/>
-		<rect x="220" y="225" class="frkr3" width="20" height="20"/>
-		<rect x="360" y="205" class="frkr3" width="20" height="20"/>
-		<rect x="260" y="185" class="frkr3" width="20" height="20"/>
+		<rect x="340" y="225" class="st3" width="20" height="20"/>
+		<rect x="240" y="205" class="st3" width="20" height="20"/>
+		<rect x="380" y="225" class="st3" width="20" height="20"/>
+		<rect x="280" y="205" class="st3" width="20" height="20"/>
+		<rect x="400" y="245" class="st3" width="20" height="20"/>
+		<rect x="320" y="245" class="st3" width="20" height="20"/>
+		<rect x="200" y="245" class="st3" width="20" height="20"/>
+		<rect x="300" y="225" class="st3" width="20" height="20"/>
+		<rect x="220" y="225" class="st3" width="20" height="20"/>
+		<rect x="360" y="205" class="st3" width="20" height="20"/>
+		<rect x="260" y="185" class="st3" width="20" height="20"/>
 	</g>
 
 
@@ -217,13 +218,13 @@
 <g id="Head">
 	<g id="Alpaka-BG" transform="translate(200.000000, 85.000000)">
 		<g id="Gruppe_228">
-			<polygon id="Pfad_1128" class="frkr0" points="237.2,-42 237.2,-13.1 208.2,-13.1 208.2,15.9 128.6,15.9 128.6,-13.1 99.6,-13.1
-				99.6,-42 49,-42 49,-13.1 20,-13.1 20,204.1 49,204.1 49,233.1 77.9,233.1 77.9,262 266.2,262 266.2,233.1 295.1,233.1
+			<polygon id="Pfad_1128" class="st0" points="237.2,-42 237.2,-13.1 208.2,-13.1 208.2,15.9 128.6,15.9 128.6,-13.1 99.6,-13.1 
+				99.6,-42 49,-42 49,-13.1 20,-13.1 20,204.1 49,204.1 49,233.1 77.9,233.1 77.9,262 266.2,262 266.2,233.1 295.1,233.1 
 				295.1,204.1 324.1,204.1 324.1,-13.1 295.1,-13.1 295.1,-42 			"/>
 		</g>
 	</g>
 	<g>
-		<path class="frkr1" d="M250.9,193h2.8v-2.8h-2.8V193z M254.5,193h2.8v-2.8h-2.8V193z M258.2,193h2.8v-2.8h-2.8V193z M272.7,193h2.8
+		<path class="st1" d="M250.9,193h2.8v-2.8h-2.8V193z M254.5,193h2.8v-2.8h-2.8V193z M258.2,193h2.8v-2.8h-2.8V193z M272.7,193h2.8
 			v-2.8h-2.8V193z M276.3,193h2.8v-2.8h-2.8V193z M280,193h2.8v-2.8H280V193z M294.4,193h2.8v-2.8h-2.8V193z M298.1,193h2.8v-2.8
 			h-2.8V193z M301.8,193h2.8v-2.8h-2.8V193z M316.2,193h2.8v-2.8h-2.8V193z M319.9,193h2.8v-2.8h-2.8V193z M323.4,193h2.8v-2.8h-2.8
 			V193z M327,193h2.8v-2.8H327V193z M334.4,193h2.8v-2.8h-2.8V193z M348.9,193h2.8v-2.8h-2.8V193z M356.1,193h2.8v-2.8h-2.8V193z
@@ -270,7 +271,7 @@
 			 M403.5,171h2.8v-2.8h-2.8V171z M418.1,171h2.8v-2.8h-2.8V171z M436.2,171h2.8v-2.8h-2.8V171z M440,171h2.8v-2.8H440V171z
 			 M443.4,171h2.8v-2.8h-2.8V171z M454.3,171h2.8v-2.8h-2.8V171z M468.8,171h2.8v-2.8h-2.8V171z M476.2,171h2.8v-2.8h-2.8V171z
 			 M479.8,171h2.8v-2.8h-2.8V171z M483.3,171h2.8v-2.8h-2.8V171z M487,171h2.8v-2.8H487V171z M490.6,171h2.8v-2.8h-2.8V171z"/>
-		<path class="frkr1" d="M477.3,221.1c2.2,2,4.9,3.2,8.1,3.2c4.9,0,8.1-3,8.1-6.5c0-3.2-1.9-4.9-4.5-5.9l-3-1.3
+		<path class="st1" d="M477.3,221.1c2.2,2,4.9,3.2,8.1,3.2c4.9,0,8.1-3,8.1-6.5c0-3.2-1.9-4.9-4.5-5.9l-3-1.3
 			c-1.9-0.7-3.5-1.4-3.5-3.2c0-1.6,1.3-2.6,3.5-2.6c1.7,0,3.5,0.7,4.8,1.9l2-2.5c-1.9-1.7-4.3-2.8-7-2.8c-4.3,0-7.4,2.8-7.4,6.2
 			c0,3.2,2.3,4.9,4.5,5.9l3,1.3c2,0.9,3.5,1.4,3.5,3.2c0,1.7-1.4,2.9-3.9,2.9c-2.2-0.1-4.2-1-5.8-2.5L477.3,221.1z M468.8,224h3.9
 			v-22.4h-3.9V224z M450.3,224H464v-3.3h-9.8v-6.5h8.1v-3.3h-8.1v-5.6h9.6v-3.6h-13.5L450.3,224L450.3,224z M446.2,224l-5.4-9.4
@@ -294,14 +295,14 @@
 
 <g id="Sparkles">
 	<rect id="Rechteck_133_1_" y="300" class="sparkle-change-5" width="20" height="20"/>
-	<rect id="Rechteck_135_1_" x="580" y="235" class="frkr2" width="20" height="20"/>
+	<rect id="Rechteck_135_1_" x="580" y="235" class="st2" width="20" height="20"/>
 	<rect id="Rechteck_129_1_" y="25" class="sparkle-change-4" width="20" height="20"/>
-	<rect x="235" y="335" class="frkr0" width="20" height="20"/>
+	<rect x="235" y="335" class="st0" width="20" height="20"/>
 	<rect id="Rechteck_131_1_" x="145" y="270" class="sparkle-change-2" width="20" height="20"/>
-	<rect x="380" y="0" class="frkr3" width="20" height="20"/>
+	<rect x="380" y="0" class="st3" width="20" height="20"/>
 	<rect x="560" y="130" class="sparkle-change-5" width="20" height="20"/>
-	<rect id="Rechteck_132_1_" x="200" y="15" class="frkr2" width="20" height="20"/>
-	<rect id="Rechteck_130_1_" x="545" y="50" class="frkr4" width="20" height="20"/>
+	<rect id="Rechteck_132_1_" x="200" y="15" class="st2" width="20" height="20"/>
+	<rect id="Rechteck_130_1_" x="545" y="50" class="st4" width="20" height="20"/>
 </g>
 <g id="Cross-2">
 	<rect x="400" y="410" class="sparkle-change-4" width="20" height="20"/>
