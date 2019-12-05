@@ -101,47 +101,6 @@ endwhile;
           </section>
           <section id="labs">
 
-            <?php
-            $all_dates = array();
-            $args = array('post_type' => 'lab');
-            $the_query = new WP_Query( $args ); ?>
-
-            <?php if ( $the_query->have_posts() ) :
-              while ( $the_query->have_posts() ) : $the_query->the_post();
-                while( have_rows('lab_events') ): the_row();
-                  $info = array('lab' => $post->post_title,
-                               'link' => get_post_permalink(),
-                                'img' => get_sub_field('image'),
-                               'title' => get_sub_field('title'),
-                               'date_technical' => get_sub_field('date_technical'),
-                               'date' => get_sub_field('date'));
-                  array_push($all_dates, $info);
-                endwhile;
-              endwhile;
-            wp_reset_postdata();
-            endif;
-
-            array_slice($all_dates, 0, 3);
-            sort($all_dates);
-
-            foreach ($all_dates as $d) : ?>
-            <div class="event-teaser-list-item no-hover">
-              <a href="<?php echo $d['link']?>" title="Zur Seite von Lab: <?php echo $d['lab']; ?>">
-              <div class="d-f ai-s">
-                <img src="<?php echo wp_get_attachment_image_src($d['img']['ID'], 'lab-event-teaser')[0] ?>" alt="" class="event-teaser-list-img">
-                <div class="event-teaser-list-meta fg">
-                  <div class="c-uppercase-title mb-1">Lab: <?php echo $d['lab']; ?></div>
-                  <h3 class="events-list-title mb-0 mt-0"><?php echo $d['title']; ?></h3>
-                  <p class="mt-1 fw-b">
-                    <time datetime="<?php echo DateTime::createFromFormat('j/m/Y', $d['date_technical'])->format('Y-m-d'); ?>">
-                      <?php echo $d['date']; ?>
-                      <time>
-                  </p>
-                </div>
-              </div>
-              </a>
-            </div>
-            <?php endforeach; ?>
           </section>
         </div>
       </div>
