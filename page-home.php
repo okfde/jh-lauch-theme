@@ -60,7 +60,7 @@ endwhile;
   $topic_term = get_field('term_topics');
   $tech_term = get_field('term_tech');
 
-  $out = "[vuevideo type='project-presentation' ";
+  $out = "[vuevideo type='project-presentation' color='white'";
   if ($loc_term) {
     $out .= "location='". $loc_term->slug ."' ";
   }

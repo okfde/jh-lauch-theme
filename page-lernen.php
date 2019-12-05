@@ -19,7 +19,7 @@ while ( have_posts() ) : the_post() ?>
   </div>
 
   <section class="c-page-section">
-    <div class="c-page-3col c-blog-list is-grid">
+    <div class="c-page-3col c-blog-list is-grid pt-5">
       <?php $args = array('post_type' => 'learning',
                           'posts_per_page' => -1,
       );
@@ -47,13 +47,13 @@ while ( have_posts() ) : the_post() ?>
 
   <section class="c-page-section">
     <div class="c-page-2col jc-sb">
-      <div class="col-m">
+      <div class="col-50">
         <h2><?php echo the_field('lightning_talks_title', get_the_ID()) ?></h2>
         <div>
           <?php the_field('lightning_talks_text') ?>
         </div>
       </div>
-      <div class="col-m">
+      <div class="col-50 d-f ai-c"">
         <?php render_svg('/images/JH-Illustration-Look-Left-RGB.svg'); ?>
       </div>
     </div>
@@ -61,7 +61,7 @@ while ( have_posts() ) : the_post() ?>
 
   <section class="pt-5 pb-2 needs-js">
     <h2 class="c-uppercase-title"><?php echo __('Filtern nach', 'lauch') ?></h2>
-    <div class="c-filter">
+    <div class="c-filter c-filter--white"">
       <?php $taxonomies = array(array('Ort', 'location'),
                                 array('Jahr', 'year'),
                                 array('Thema', 'topics'),
@@ -119,7 +119,7 @@ while ( have_posts() ) : the_post() ?>
         $topic_term = get_field('term_topics');
         $tech_term = get_field('term_tech');
 
-        $out = "[vuevideo type='lightning-talk' ";
+        $out = "[vuevideo type='lightning-talk' color='white' ";
         if ($loc_term) {
           $out .= "location='". $loc_term->slug ."' ";
         }

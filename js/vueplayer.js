@@ -65,6 +65,13 @@ document.addEventListener('DOMContentLoaded', function () {
       computed: {
         playerSrc () {
           return 'https://www.youtube-nocookie.com/embed/' + this.activeVideo + '?enablejsapi=1';
+        },
+        colorClass () {
+          let cl = 'c-videoplayer';
+          if (window.v.color) {
+            cl +=  ' c-videoplayer--' + window.v.color;
+          }
+          return cl;
         }
       },
       methods: {
@@ -96,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       },
       template: `
-      <div class="c-videoplayer">
+      <div :class="this.colorClass">
       <div class="video-player">
         <VideoHeader :taxonomies=taxonomies
                      :isLarge=false></VideoHeader>
@@ -115,9 +122,9 @@ document.addEventListener('DOMContentLoaded', function () {
                :video-item="video"
                :active="activeVideo"></VideoPrev>
         </ul>
-       </div
+       </div>
       </div>
-      </div`,
+      </div>`,
       mounted: function(){
         const url = this.constructUrl();
         fetch(url).then((response)=>{
@@ -125,9 +132,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }).then((data)=>{
           this.videos = data;
           this.activeVideo = data[0].youtubeid;
-          //if (data.length <= 0) {
-          //  console.log('Playliste enthält keine Videos');
-          //}
         });
       }
     });

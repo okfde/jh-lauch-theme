@@ -227,6 +227,7 @@ function lauch_custom_sizes( $sizes ) {
 
 function vuevideo_handle_shortcode($atts = '') {
   $value = shortcode_atts( array(
+    'color' => null,
     'location' => null,
     'year' => null,
     'type' => null,
@@ -235,6 +236,7 @@ function vuevideo_handle_shortcode($atts = '') {
   ), $atts );
 
   $data_str = 'window.v = {}; window.v.location = "'. $value['location'] .'"; ';
+  $data_str .= 'window.v.color = "'. $value['color'] .'"; ';
   $data_str .= 'window.v.year = "'. $value['year'] .'"; ';
   $data_str .= 'window.v.type = "'. $value['type'] .'";';
   $data_str .= 'window.v.tech = "'. $value['tech'] .'";';
