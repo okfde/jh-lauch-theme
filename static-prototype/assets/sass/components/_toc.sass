@@ -3,9 +3,6 @@
     display: flex
     align-items: baseline
 
-  @media (min-width: $break-medium)
-    //margin-left: $body-padding * 2
-
 .c-toc-nav
   display: flex
   flex: 0 1 17.5rem
@@ -32,6 +29,30 @@
       display: block
       padding: .1em 0
       margin-right: 2rem
+
+.c-toc--horizontal
+  @media (min-width: $break-small)
+    display: block
+
+  .c-toc-nav
+    flex-base: 0 1 0
+    border-bottom: 1px solid $color-softgrey
+    margin-bottom: 2rem
+    @media (min-width: $break-small)
+      flex-flow: row wrap
+    a
+      margin-right: 1rem
+      border: none
+      &:hover,
+      &:active
+        color: $color-black
+        background-color: transparent
+      &.is-active
+        .hover-line
+          background-size: 100% 2px
+
+  .c-events-list
+    margin-top: 0
 
 
 .c-toc-content

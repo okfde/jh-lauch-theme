@@ -22,19 +22,24 @@
 
       <div class="c-toc c-toc--horizontal">
         <ul class="c-toc-nav">
-          <li><a href="#events">Events</a></li>
-          <li><a href="#labs">Labs</a></li>
+          <li><a href="#events" class="hover-line-trigger"><span class="hover-line">Events</span></a></li>
+          <li><a href="#labs"  class="hover-line-trigger"><span class="hover-line">Labs</span></a></li>
         </ul>
-        <div class="c-toc-content">
+        <div class="c-toc-content c-events-list">
           <section id="events">
             {{ range after 1 (seq 4)}}
             <div class="event-teaser-list-item">
               <div class="d-f ai-s">
-                <img src="//placekitten.com/290/357" alt="" class="event-teaser-list-img">
-                <div class="event-teaser-list-meta fg">
-                  <p class="c-flag mini softblue c-flag--events points-bottom mb-1">Hamburg</p>
-                  <h3 class="mb-0 mt-0">Jugend hackt HH</h3>
-                  <p class="mt-1 fw-b">Sa. 07.12   –   13:00 - 17:00</p>
+                <img src="//placekitten.com/180/120" alt="" width="90" class="event-teaser-list-img">
+                <div class=" ">
+                  <h3 class="mb-0 mt-0">Hamburg 12.12.2020</h3>
+                  <div class="events-list-actions active">
+                    <a
+                      href="#"
+                       title="Mehr Infos zu Jugend hackt in">Mehr Infos</a>
+                    <a href="#"
+                       title="">Anmelden</a>
+                  </div>
                 </div>
 
               </div>
@@ -63,6 +68,26 @@
 </section>
 
 
+<section class="c-page-section c-blog-list is-grid">
+  <h2 class="c-flag mini softblue points-bottom upper mb-3">Aus dem Blog</h2>
+  <ul>
 
-{{.Content}}
+    {{ range after 1 (seq 4)}}
+    <li>
+      <article class="c-compact-teaser">
+        <a href="#">
+          <div class="teaser-image"><picture><img src="https://placekitten.com/320/200" alt=""></picture></div>
+          <h2 class="teaser-title">POst POst</h2>
+          <div class="teaser-summary">foo bar</div>
+          <div class="teaser-date">28. July 2006</div>
+        </a>
+      </article>
+    </li>
+    {{ end }}
+
+  </ul>
+  <div class="ta-c">
+    <a class="button">Mehr</a>
+  </div>
+</section>
 {{ end }}

@@ -212,7 +212,7 @@ add_image_size( 'blog-large', 715, 590, true );
 //add_image_size( 'blog-small', 320, 200, true );
 add_image_size( 'blog-large-highdpi', 1430, 1180, true );
 //add_image_size( 'blog-small-highdpi', 640, 400, true);
-add_image_size( 'events-teaser-s', 90, 60, true);
+add_image_size( 'events-teaser-s', 180, 120, true);
 add_image_size( 'events-teaser-m', 170, 120, true);
 add_image_size( 'events-teaser-highdpi', 340, 240, true);
 

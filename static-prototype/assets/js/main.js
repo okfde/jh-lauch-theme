@@ -145,7 +145,6 @@ function Slider() {
           controlsContainer: '.tns-controls',
         }
       }
-      //console.log(options)
       tns(options);
     });
   };
@@ -168,7 +167,12 @@ function Toc(selector) {
   this.toggleEvent = function (ev) {
     ev.preventDefault();
     this.deactivateAll();
-    let activeId = ev.target.attributes['href']['nodeValue'];
+    let activeId;
+    if (ev.target.attributes.href) {
+      activeId = ev.target.attributes['href']['nodeValue'];
+    } else {
+      activeId = ev.target.parentNode.attributes['href']['nodeValue'];
+    }
     this.activateSingle(activeId);
   };
 
