@@ -24,6 +24,15 @@ select
   background-position: right .7em top 50%, 0 0
   background-size: .9em auto, 100%
 
+.c-filter--white select
+  color: $color-black
+  background-color: $color-white
+  background-image: url(../images/icons/plus-black.svg)
+  background-repeat: no-repeat, repeat
+
+  &:focus
+    color: $color-deepgrey
+
 select::-ms-expand
   display: none
 

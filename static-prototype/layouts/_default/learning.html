@@ -1,0 +1,197 @@
+{{ define "main" }}
+
+<div class="p-r">
+  <header class="c-page-offcenter-header">
+    <h1 class="c-page-title">{{.Title}}</h1>
+    <div class="c-page-excerpt">{{ .Content }}</div>
+    <div class="c-page-header-illustration right-top">
+      <img src="/images/JH-Illustration-Monster-RGB.svg" alt="" width="120">
+    </div>
+  </header>
+</div>
+
+<section class="c-blog-list is-grid pt-5">
+  <ul>
+    <li>
+      <div class="c-compact-teaser ">
+        <div class="teaser-image">
+          <picture>
+            <img src="https://placekitten.com/310/150" class="attachment-blog-large size-blog-large wp-post-image" alt="" >
+          </picture>
+        </div>
+        <h2 class="teaser-title">Github-Einführung</h2>
+        <div class="teaser-summary"><p>Um gemeinsam an Code zu arbeiten, benutzen wir bei Jugend hackt meistens GitHub. Wenn du GitHub noch nicht kennst, kannst du auf unserer Lernen-Seite eine Einführung bekommen. Wir erklären es aber auch nochmal auf dem Event. Alle anderen können gerne schon in unserer Jugend hackt GitHub-Gruppe vorbeischauen.</p></div>
+      </div>
+    </li>
+    <li>
+      <div class="c-compact-teaser ">
+        <div class="teaser-image">
+          <picture>
+            <img src="https://placekitten.com/310/150" class="attachment-blog-large size-blog-large wp-post-image" alt="">
+          </picture>
+        </div>
+        <h2 class="teaser-title">Offene Daten</h2>
+        <div class="teaser-summary"><p>Offene Daten können eine super spannende Basis für eure Projekte sein. Warum das so ist und wo ihr offene Daten findet, erfahrt ihr hier.</p></div>
+      </div>
+    </li>
+    <li>
+      <div class="c-compact-teaser ">
+        <div class="teaser-image">
+          <picture>
+            <img src="https://placekitten.com/310/150" class="attachment-blog-large size-blog-large wp-post-image" alt="">
+          </picture>
+        </div>
+        <h2 class="teaser-title">Online-Community</h2>
+        <div class="teaser-summary"><p>Schon vor dem Event laden wir alle neuen Teilnehmer*innen, wenn sie das möchten, in unsere Online-Community ein, die auf Zulip basiert. Dort könnt ihr dann in den Streams #alle und #berlin mit den anderen Teilnehmer*innen und Mentor*innen chatten und euch vernetzen.</p></div>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<section class="c-page-2col">
+  <div class="col-50">
+    <h2>Lightning Talks</h2>
+    <p>Die Forderung nach mehr Input ist ein ständiger Begleiter von Jugend hackt. Dem versuchen wir bei unseren Labs und Events gerecht zu werden, in dem wir  tolle und spannende Hackerinnen, Aktivistinnen und Organisationen einladen, um Inputs und Impulse zu geben. Diese können als Einstiegspunkte dienen, um euch weiter in neue Themen einzuarbeiten. Falls ihr nicht live dabei sein konntet oder die Zeit lieber eurem Projekt widmen wolltet, könnt ihr hier die Lightning Talks nachschauen. </p>
+  </div>
+  <div class="col-50 d-f ai-c">
+    {{ readFile "/static/images/JH-Illustration-Look-Left-RGB.svg" | safeHTML  }}
+  </div>
+</section>
+
+<section class="pt-5 pb-2 needs-js">
+  <div class="c-filter c-filter--white">
+    <label class="c-filter-item" for="filter-thema">
+      <span class="a11y-visuallyhidden">Ort</span>
+      <select id="filter-thema">
+        <option value="">Ort</option>
+        <option value="thema-1">Opt 1</option>
+        <option value="thema-2">Opt 2</option>
+      </select>
+    </label>
+    <label class="c-filter-item" for="form-two">
+      <span class="a11y-visuallyhidden">Jahr</span>
+      <select id="form-two">
+        <option value="">Jahr</option>
+        <option value="tech-1">Opt 1</option>
+        <option value="tech-2">Opt 2</option>
+      </select>
+    </label>
+    <label class="c-filter-item" for="form-three">
+      <span class="a11y-visuallyhidden">Thema</span>
+      <select id="form-three">
+        <option>Thema</option>
+        <option>Opt 1</option>
+      </select>
+    </label>
+    <label class="c-filter-item" for="form-four">
+      <span class="a11y-visuallyhidden">Technik</span>
+      <select id="form-four">
+        <option>Technik</option>
+        <option>Opt 1</option>
+      </select>
+    </label>
+  </div>
+</section>
+
+<section class="c-page-section c-project-list pb-0 pt-5">
+  <ul class="js-isotope">
+    {{ range .Pages }}
+    <li class="thema-1 tech-2 c-project-listitem">
+      <article class="c-compact-teaser">
+        <a href="{{.Permalink}}" class="hover-line-trigger">
+          <div class="teaser-image">
+            <picture><img src="https://placekitten.com/320/200" alt=""></picture></div>
+          <div class="teaser-meta">Rostock 2019</div>
+          <h2 class="teaser-title"><span class="hover-line">{{ .Title }}</span></h2>
+        </a>
+      </article>
+    </li>
+    <li  class="thema-2 tech-1  c-project-listitem">
+      <article class="c-compact-teaser">
+        <a href="{{.Permalink}}" class="hover-line-trigger">
+          <div class="teaser-image">
+            <picture><img src="https://placekitten.com/320/200" alt=""></picture></div>
+          <div class="teaser-meta">Rostock 2019</div>
+          <h2 class="teaser-title"><span class="hover-line">{{ .Title }}</span></h2>
+        </a>
+      </article>
+    </li>
+    <li  class="thema-1 tech-2  c-project-listitem">
+      <article class="c-compact-teaser">
+        <a href="{{.Permalink}}" class="hover-line-trigger">
+          <div class="teaser-image">
+            <picture><img src="https://placekitten.com/320/200" alt=""></picture></div>
+          <div class="teaser-meta">Rostock 2019</div>
+          <h2 class="teaser-title"><span class="hover-line">{{ .Title }}</span></h2>
+        </a>
+      </article>
+    </li>
+    <li  class="thema-2 tech-1  c-project-listitem">
+      <article class="c-compact-teaser">
+        <a href="{{.Permalink}}" class="hover-line-trigger">
+          <div class="teaser-image">
+            <picture><img src="https://placekitten.com/320/200" alt=""></picture></div>
+          <div class="teaser-meta">Rostock 2019</div>
+          <h2 class="teaser-title"><span class="hover-line">{{ .Title }}</span></h2>
+        </a>
+      </article>
+    </li>
+    {{ end }}
+    <li class="c-videoplayer c-videoplayer--white fullwidth--padding needs-js">
+      {{ partial "videoplayer.html" }}
+    </li>
+    {{ range .Pages }}
+    <li class="c-project-listitem">
+      <article class="c-compact-teaser">
+        <a href="{{.Permalink}}" class="hover-line-trigger">
+          <div class="teaser-image">
+            <picture><img src="https://placekitten.com/320/200" alt=""></picture></div>
+          <div class="teaser-meta">Rostock 2019</div>
+          <h2 class="teaser-title"><span class="hover-line">{{ .Title }}</span></h2>
+        </a>
+      </article>
+    </li><li class="c-project-listitem">
+      <article class="c-compact-teaser">
+        <a href="{{.Permalink}}" class="hover-line-trigger">
+          <div class="teaser-image">
+            <picture><img src="https://placekitten.com/320/200" alt=""></picture></div>
+          <div class="teaser-meta">Rostock 2019</div>
+          <h2 class="teaser-title"><span class="hover-line">{{ .Title }}</span></h2>
+        </a>
+      </article>
+    </li><li class="c-project-listitem">
+      <article class="c-compact-teaser">
+        <a href="{{.Permalink}}" class="hover-line-trigger">
+          <div class="teaser-image">
+            <picture><img src="https://placekitten.com/320/200" alt=""></picture></div>
+          <div class="teaser-meta">Rostock 2019</div>
+          <h2 class="teaser-title"><span class="hover-line">{{ .Title }}</span></h2>
+        </a>
+      </article>
+    </li><li class="c-project-listitem">
+      <article class="c-compact-teaser">
+        <a href="{{.Permalink}}" class="hover-line-trigger">
+          <div class="teaser-image">
+            <picture><img src="https://placekitten.com/320/200" alt=""></picture></div>
+          <div class="teaser-meta">Rostock 2019</div>
+          <h2 class="teaser-title"><span class="hover-line">{{ .Title }}</span></h2>
+        </a>
+      </article>
+    </li><li class="c-project-listitem">
+      <article class="c-compact-teaser">
+        <a href="{{.Permalink}}" class="hover-line-trigger">
+          <div class="teaser-image">
+            <picture><img src="https://placekitten.com/320/200" alt=""></picture></div>
+          <div class="teaser-meta">Rostock 2019</div>
+          <h2 class="teaser-title"><span class="hover-line">{{ .Title }}</span></h2>
+        </a>
+      </article>
+    </li>
+    {{ end }}
+  </ul>
+</section>
+
+
+
+
+{{ end }}

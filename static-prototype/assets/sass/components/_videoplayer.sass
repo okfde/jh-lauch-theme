@@ -28,6 +28,7 @@ $left-side-pad: 2.6rem
     @media (min-width: $break-medium)
       font-size: 3.5rem
       margin-bottom: .2em
+      margin-top: -2rem
   .video-header
     margin-bottom: 2rem
     &.large
@@ -97,3 +98,14 @@ $left-side-pad: 2.6rem
       img
         flex: 0 0 5.3rem
         margin-right: 1rem
+
+.c-videoplayer--white
+  background: $color-white
+  box-shadow: none
+  color: $color-black
+
+  .thumbnail
+    &:hover,
+    &.active
+      img
+        border-color: $color-softgrey
