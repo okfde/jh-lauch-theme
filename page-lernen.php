@@ -54,7 +54,7 @@ while ( have_posts() ) : the_post() ?>
         </div>
       </div>
       <div class="col-50 d-f ai-c"">
-        <?php render_svg('/images/JH-Illustration-Look-Left-RGB.svg'); ?>
+        <?php render_svg('/images/JH-Illustration-Bus-Left-Green-Soft-RGB.svg'); ?>
       </div>
     </div>
   </section>
