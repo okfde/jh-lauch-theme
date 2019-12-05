@@ -1,11 +1,21 @@
+{{ define "bodyclass"}}
+page-template-page-home
+{{ end }}
+
+
 {{ define "main" }}
 
-<header class="c-page-home-header pb-10">
-  <h1>Mit <span class="js-scramle">Code</span> die<br> Welt verbessern</h1>
-  <div class="c-page-content">{{ .Content }}</div>
+<header class="c-page-home-header pb-10 c-index-header p-r">
+  <div class="c-index-wrapper">
+    <h1 class="c-index-title">Mit <span class="js-scramle">Code</span> die<br> Welt verbessern</h1>
+    <div class="c-page-content">{{ .Content }}</div>
+    <div class="c-index-illu">
+      {{ readFile "/static/images/index/Illustration-Mashup-Start-02-1200-02.svg" | safeHTML  }}
+    </div>
+  </div>
 </header>
 
-<section class="c-page-section white">
+<section class="c-page-section white pt-10">
   <div class="c-page-2col jc-sb">
     <div class="col-s">
       <div class="float-box float-box--softblue">
@@ -18,7 +28,7 @@
 
     </div>
     <div class="col-l fg c-page-copy ml-10">
-      <h2>Die Nächsten Termine</h2>
+      <h2 class="c-index-subtitle mt-1">Die Nächsten Termine</h2>
 
       <div class="c-toc c-toc--horizontal">
         <ul class="c-toc-nav">

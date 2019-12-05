@@ -16,13 +16,19 @@ the_post();
 endwhile;
 ?>
 
-<header class="c-page-home-header pb-10">
-  <h1>Mit <span class="js-scramle">Code</span> die<br> Welt verbessern</h1>
-  <div class="c-page-content"><?php the_content(); ?></div>
+<header class="c-page-home-header pb-10 c-index-header p-r">
+  <div class="c-index-wrapper">
+    <h1 class="c-index-title">Mit <span class="js-scramle">Code</span> die<br> Welt verbessern</h1>
+    <div class="c-page-content"><?php the_content(); ?></div>
+    <div class="c-index-illu">
+      <?php render_svg("/images/index/Illustration-Mashup-Start-02-1200-02.svg") ?>
+    </div>
+  </div>
 </header>
 
 
-<section class="c-page-section white">
+
+<section class="c-page-section white pt-10">
   <div class="c-page-2col">
     <div class="col-s mr-10">
 
@@ -36,7 +42,7 @@ endwhile;
 
     </div>
     <div class="col-l">
-      <h2><?php echo __('Die nächsten Termine', 'lauch'); ?></h2>
+      <h2 class="c-index-subtitle mt-1"><?php echo __('Die nächsten Termine', 'lauch'); ?></h2>
 
       <div class="c-toc c-toc--horizontal">
         <ul class="c-toc-nav">

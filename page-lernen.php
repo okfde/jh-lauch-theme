@@ -53,7 +53,7 @@ while ( have_posts() ) : the_post() ?>
           <?php the_field('lightning_talks_text') ?>
         </div>
       </div>
-      <div class="col-50 d-f ai-c"">
+      <div class="col-50">
         <?php render_svg('/images/JH-Illustration-Bus-Left-Green-Soft-RGB.svg'); ?>
       </div>
     </div>

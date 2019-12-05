@@ -1,0 +1,2433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 596 507" style="enable-background:new 0 0 596 507;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;}
+	.st1{display:inline;}
+	.st2{clip-path:url(#SVGID_2_);}
+	.st3{clip-path:url(#SVGID_4_);fill:#BE8E67;}
+	.st4{clip-path:url(#SVGID_6_);}
+	.st5{clip-path:url(#SVGID_8_);fill:#BE8E67;}
+	.st6{clip-path:url(#SVGID_10_);}
+	.st7{clip-path:url(#SVGID_12_);fill:#BE8E67;}
+	.st8{clip-path:url(#SVGID_14_);}
+	.st9{clip-path:url(#SVGID_16_);fill:#1D1D1B;}
+	.st10{clip-path:url(#SVGID_18_);}
+	.st11{clip-path:url(#SVGID_20_);}
+	.st12{clip-path:url(#SVGID_22_);}
+	.st13{clip-path:url(#SVGID_24_);fill:#1D1D1B;}
+	.st14{clip-path:url(#SVGID_26_);}
+	.st15{clip-path:url(#SVGID_28_);fill:#1D1D1B;}
+	.st16{clip-path:url(#SVGID_30_);}
+	.st17{clip-path:url(#SVGID_32_);fill:#FFD003;}
+	.st18{clip-path:url(#SVGID_34_);}
+	.st19{clip-path:url(#SVGID_36_);fill:#4C2582;}
+	.st20{clip-path:url(#SVGID_38_);}
+	.st21{clip-path:url(#SVGID_40_);fill:#00498C;}
+	.st22{clip-path:url(#SVGID_42_);}
+	.st23{clip-path:url(#SVGID_44_);fill:#1D1D1B;}
+	.st24{clip-path:url(#SVGID_46_);}
+	.st25{clip-path:url(#SVGID_48_);fill:#1D1D1B;}
+	.st26{clip-path:url(#SVGID_50_);}
+	.st27{clip-path:url(#SVGID_52_);fill:#4C2582;}
+	.st28{clip-path:url(#SVGID_54_);}
+	.st29{clip-path:url(#SVGID_56_);}
+	.st30{clip-path:url(#SVGID_58_);}
+	.st31{clip-path:url(#SVGID_60_);}
+	.st32{clip-path:url(#SVGID_62_);}
+	.st33{clip-path:url(#SVGID_64_);fill:#4C2582;}
+	.st34{clip-path:url(#SVGID_66_);}
+	.st35{clip-path:url(#SVGID_68_);fill:#EA6800;}
+	.st36{clip-path:url(#SVGID_70_);}
+	.st37{clip-path:url(#SVGID_72_);fill:#F8DBBA;}
+	.st38{clip-path:url(#SVGID_74_);}
+	.st39{clip-path:url(#SVGID_76_);fill:#BE8E67;}
+	.st40{clip-path:url(#SVGID_78_);}
+	.st41{clip-path:url(#SVGID_80_);fill:#F8DBBA;}
+	.st42{clip-path:url(#SVGID_82_);}
+	.st43{clip-path:url(#SVGID_84_);fill:#F8DBBA;}
+	.st44{clip-path:url(#SVGID_86_);}
+	.st45{clip-path:url(#SVGID_88_);fill:#2DABE2;}
+	.st46{clip-path:url(#SVGID_90_);}
+	.st47{clip-path:url(#SVGID_92_);fill:#2DABE2;}
+	.st48{clip-path:url(#SVGID_94_);}
+	.st49{clip-path:url(#SVGID_96_);fill:#74C09C;}
+	.st50{clip-path:url(#SVGID_98_);}
+	.st51{clip-path:url(#SVGID_100_);fill:#74C09C;}
+	.st52{clip-path:url(#SVGID_102_);}
+	.st53{clip-path:url(#SVGID_104_);fill:#FEFEFE;}
+	.st54{clip-path:url(#SVGID_106_);}
+	.st55{clip-path:url(#SVGID_108_);fill:#1D1D1B;}
+	.st56{clip-path:url(#SVGID_110_);}
+	.st57{clip-path:url(#SVGID_112_);fill:#FEFEFE;}
+	.st58{clip-path:url(#SVGID_114_);}
+	.st59{clip-path:url(#SVGID_116_);fill:#1D1D1B;}
+	.st60{clip-path:url(#SVGID_118_);}
+	.st61{clip-path:url(#SVGID_120_);}
+	.st62{clip-path:url(#SVGID_122_);}
+	.st63{clip-path:url(#SVGID_124_);}
+	.st64{clip-path:url(#SVGID_126_);}
+	.st65{clip-path:url(#SVGID_128_);fill:#00498C;}
+	.st66{clip-path:url(#SVGID_130_);}
+	.st67{clip-path:url(#SVGID_132_);fill:#EB680C;}
+	.st68{clip-path:url(#SVGID_134_);}
+	.st69{clip-path:url(#SVGID_136_);fill:#1D1D1B;}
+	.st70{clip-path:url(#SVGID_138_);}
+	.st71{clip-path:url(#SVGID_140_);fill:#1D1D1B;}
+	.st72{clip-path:url(#SVGID_142_);}
+	.st73{clip-path:url(#SVGID_144_);fill:#1D1D1B;}
+	.st74{clip-path:url(#SVGID_146_);}
+	.st75{clip-path:url(#SVGID_148_);fill:#1D1D1B;}
+	.st76{clip-path:url(#SVGID_150_);}
+	.st77{clip-path:url(#SVGID_152_);fill:#FEFEFE;}
+	.st78{clip-path:url(#SVGID_154_);}
+	.st79{clip-path:url(#SVGID_156_);fill:#FEFEFE;}
+	.st80{clip-path:url(#SVGID_158_);}
+	.st81{clip-path:url(#SVGID_160_);fill:#A0673E;}
+	.st82{clip-path:url(#SVGID_162_);}
+	.st83{clip-path:url(#SVGID_166_);}
+	.st84{clip-path:url(#SVGID_168_);fill:#00A6DE;}
+	.st85{clip-path:url(#SVGID_170_);}
+	.st86{clip-path:url(#SVGID_172_);fill:#E95197;}
+	.st87{clip-path:url(#SVGID_174_);}
+	.st88{clip-path:url(#SVGID_176_);fill:#E95197;}
+	.st89{clip-path:url(#SVGID_178_);}
+	.st90{clip-path:url(#SVGID_180_);fill:#E95197;}
+	.st91{clip-path:url(#SVGID_182_);}
+	.st92{clip-path:url(#SVGID_184_);fill:#E95197;}
+	.st93{clip-path:url(#SVGID_186_);}
+	.st94{clip-path:url(#SVGID_188_);fill:#E95197;}
+	.st95{clip-path:url(#SVGID_190_);}
+	.st96{clip-path:url(#SVGID_192_);fill:#E95197;}
+	.st97{clip-path:url(#SVGID_194_);}
+	.st98{clip-path:url(#SVGID_196_);fill:#E95197;}
+	.st99{clip-path:url(#SVGID_198_);}
+	.st100{clip-path:url(#SVGID_200_);fill:#E95197;}
+	.st101{clip-path:url(#SVGID_202_);}
+	.st102{clip-path:url(#SVGID_204_);fill:#E95197;}
+	.st103{clip-path:url(#SVGID_206_);}
+	.st104{clip-path:url(#SVGID_208_);fill:#E95197;}
+	.st105{clip-path:url(#SVGID_210_);}
+	.st106{clip-path:url(#SVGID_212_);fill:#E95197;}
+	.st107{clip-path:url(#SVGID_214_);}
+	.st108{clip-path:url(#SVGID_216_);fill:#E95197;}
+	.st109{clip-path:url(#SVGID_218_);}
+	.st110{clip-path:url(#SVGID_220_);fill:#E95197;}
+	.st111{clip-path:url(#SVGID_222_);}
+	.st112{clip-path:url(#SVGID_224_);fill:#E95197;}
+	.st113{clip-path:url(#SVGID_226_);}
+	.st114{clip-path:url(#SVGID_228_);fill:#E95197;}
+	.st115{clip-path:url(#SVGID_230_);}
+	.st116{clip-path:url(#SVGID_232_);fill:#E95197;}
+	.st117{clip-path:url(#SVGID_234_);}
+	.st118{clip-path:url(#SVGID_236_);fill:#E95197;}
+	.st119{clip-path:url(#SVGID_238_);}
+	.st120{clip-path:url(#SVGID_240_);fill:#E95197;}
+	.st121{clip-path:url(#SVGID_242_);}
+	.st122{clip-path:url(#SVGID_244_);fill:#E95197;}
+	.st123{clip-path:url(#SVGID_246_);}
+	.st124{clip-path:url(#SVGID_248_);fill:#E95197;}
+	.st125{clip-path:url(#SVGID_250_);}
+	.st126{clip-path:url(#SVGID_252_);fill:#E95197;}
+	.st127{clip-path:url(#SVGID_254_);}
+	.st128{clip-path:url(#SVGID_256_);fill:#E95197;}
+	.st129{clip-path:url(#SVGID_258_);}
+	.st130{clip-path:url(#SVGID_260_);fill:#E95197;}
+	.st131{clip-path:url(#SVGID_262_);}
+	.st132{clip-path:url(#SVGID_264_);fill:#E95197;}
+	.st133{clip-path:url(#SVGID_266_);}
+	.st134{clip-path:url(#SVGID_268_);fill:#E95197;}
+	.st135{clip-path:url(#SVGID_270_);}
+	.st136{clip-path:url(#SVGID_272_);fill:#E95197;}
+	.st137{clip-path:url(#SVGID_274_);}
+	.st138{clip-path:url(#SVGID_276_);fill:#E95197;}
+	.st139{clip-path:url(#SVGID_278_);}
+	.st140{clip-path:url(#SVGID_280_);fill:#E95197;}
+	.st141{clip-path:url(#SVGID_282_);}
+	.st142{clip-path:url(#SVGID_284_);fill:#E95197;}
+	.st143{clip-path:url(#SVGID_286_);}
+	.st144{clip-path:url(#SVGID_288_);fill:#E95197;}
+	.st145{clip-path:url(#SVGID_290_);}
+	.st146{clip-path:url(#SVGID_292_);fill:#E95197;}
+	.st147{clip-path:url(#SVGID_294_);}
+	.st148{clip-path:url(#SVGID_296_);fill:#E95197;}
+	.st149{clip-path:url(#SVGID_298_);}
+	.st150{clip-path:url(#SVGID_300_);fill:#E95197;}
+	.st151{clip-path:url(#SVGID_302_);}
+	.st152{clip-path:url(#SVGID_304_);fill:#E95197;}
+	.st153{clip-path:url(#SVGID_306_);}
+	.st154{clip-path:url(#SVGID_308_);fill:#E95197;}
+	.st155{clip-path:url(#SVGID_310_);}
+	.st156{clip-path:url(#SVGID_312_);fill:#FFFFFF;}
+	.st157{clip-path:url(#SVGID_314_);}
+	.st158{clip-path:url(#SVGID_316_);fill:#FFFFFF;}
+	.st159{clip-path:url(#SVGID_318_);}
+	.st160{clip-path:url(#SVGID_320_);fill:#FFFFFF;}
+	.st161{clip-path:url(#SVGID_322_);}
+	.st162{clip-path:url(#SVGID_324_);fill:#FFFFFF;}
+	.st163{clip-path:url(#SVGID_326_);}
+	.st164{clip-path:url(#SVGID_328_);fill:#FFFFFF;}
+	.st165{clip-path:url(#SVGID_330_);}
+	.st166{clip-path:url(#SVGID_332_);fill:#FFFFFF;}
+	.st167{clip-path:url(#SVGID_334_);}
+	.st168{clip-path:url(#SVGID_336_);fill:#FFFFFF;}
+	.st169{clip-path:url(#SVGID_338_);}
+	.st170{clip-path:url(#SVGID_340_);}
+	.st171{clip-path:url(#SVGID_342_);}
+	.st172{clip-path:url(#SVGID_344_);fill:#FFFFFF;}
+	.st173{clip-path:url(#SVGID_346_);}
+	.st174{clip-path:url(#SVGID_348_);fill:#FFFFFE;}
+	.st175{clip-path:url(#SVGID_350_);}
+	.st176{clip-path:url(#SVGID_352_);fill:#FFFFFE;}
+	.st177{clip-path:url(#SVGID_354_);}
+	.st178{clip-path:url(#SVGID_356_);fill:#FFFFFE;}
+	.st179{clip-path:url(#SVGID_358_);}
+	.st180{clip-path:url(#SVGID_360_);}
+	.st181{clip-path:url(#SVGID_362_);}
+	.st182{clip-path:url(#SVGID_364_);fill:#FFFFFE;}
+	.st183{clip-path:url(#SVGID_366_);}
+	.st184{clip-path:url(#SVGID_368_);fill:#FFFFFE;}
+	.st185{clip-path:url(#SVGID_370_);}
+	.st186{clip-path:url(#SVGID_372_);fill:#FFFFFE;}
+	.st187{clip-path:url(#SVGID_374_);}
+	.st188{clip-path:url(#SVGID_376_);fill:#FFFFFE;}
+	.st189{clip-path:url(#SVGID_378_);}
+	.st190{clip-path:url(#SVGID_380_);fill:#FFFFFE;}
+	.st191{clip-path:url(#SVGID_382_);}
+	.st192{clip-path:url(#SVGID_384_);fill:#FFFFFE;}
+	.st193{clip-path:url(#SVGID_386_);}
+	.st194{clip-path:url(#SVGID_388_);fill:#D1D6DA;}
+	.st195{clip-path:url(#SVGID_390_);}
+	.st196{clip-path:url(#SVGID_392_);fill:#D1D6DA;}
+	.st197{clip-path:url(#SVGID_394_);}
+	.st198{clip-path:url(#SVGID_396_);}
+	.st199{clip-path:url(#SVGID_398_);}
+	.st200{clip-path:url(#SVGID_400_);fill:#00A6DE;}
+	.st201{clip-path:url(#SVGID_402_);}
+	.st202{clip-path:url(#SVGID_404_);fill:#FFFFFF;}
+	.st203{clip-path:url(#SVGID_406_);}
+	.st204{clip-path:url(#SVGID_408_);fill:#00A6DE;}
+	.st205{clip-path:url(#SVGID_410_);}
+	.st206{clip-path:url(#SVGID_412_);fill:#FFFFFF;}
+	.st207{clip-path:url(#SVGID_414_);}
+	.st208{clip-path:url(#SVGID_416_);enable-background:new    ;}
+	.st209{clip-path:url(#SVGID_418_);}
+	.st210{clip-path:url(#SVGID_420_);}
+	.st211{clip-path:url(#SVGID_422_);fill:#F3971B;}
+	.st212{clip-path:url(#SVGID_424_);}
+	.st213{clip-path:url(#SVGID_426_);fill:#FFFFFF;}
+	.st214{clip-path:url(#SVGID_428_);}
+	.st215{clip-path:url(#SVGID_430_);fill:#1A1919;}
+	.st216{clip-path:url(#SVGID_432_);}
+	.st217{clip-path:url(#SVGID_434_);fill:#E95197;}
+	.st218{fill:#BF8E67;}
+	.st219{fill:#FFD000;}
+	.st220{fill:#FFD003;}
+	.st221{fill:#4C2582;}
+	.st222{fill:#EA680C;}
+	.st223{fill:#F9DBB9;}
+	.st224{fill:#2BAAE2;}
+	.st225{fill:#73BF9B;}
+	.st226{fill:#FFFFFF;}
+	.st227{fill:#00498D;}
+	.st228{fill:#EB690B;}
+	.st229{fill:#A0673E;}
+	.st230{fill:#D1D6DA;}
+	.st231{fill:#00A6DE;}
+	.st232{fill:#1D1D1B;}
+	.st233{fill:#E95197;}
+	.st234{fill:#F3971B;}
+	.st235{fill:#FCFCFC;}
+</style>
+<g id="Layer_1" class="st0">
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_1_" x="233.5" y="76.9" width="28" height="21"/>
+		</defs>
+		<clipPath id="SVGID_2_">
+			<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st2">
+			<defs>
+				<rect id="SVGID_3_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_4_">
+				<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="228.5" y="71.9" class="st3" width="38" height="31"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_5_" x="285.5" y="111.9" width="7" height="7"/>
+		</defs>
+		<clipPath id="SVGID_6_">
+			<use xlink:href="#SVGID_5_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st4">
+			<defs>
+				<rect id="SVGID_7_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_8_">
+				<use xlink:href="#SVGID_7_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="280.5" y="106.9" class="st5" width="17" height="17"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_9_" x="288.5" y="102.9" width="7" height="7"/>
+		</defs>
+		<clipPath id="SVGID_10_">
+			<use xlink:href="#SVGID_9_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st6">
+			<defs>
+				<rect id="SVGID_11_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_12_">
+				<use xlink:href="#SVGID_11_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="283.5" y="97.9" class="st7" width="17" height="17"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_13_" x="226.5" y="69.9" width="7" height="21"/>
+		</defs>
+		<clipPath id="SVGID_14_">
+			<use xlink:href="#SVGID_13_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st8">
+			<defs>
+				<rect id="SVGID_15_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_16_">
+				<use xlink:href="#SVGID_15_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="221.5" y="64.9" class="st9" width="17" height="31"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<polygon id="SVGID_17_" points="260.7,70.4 260.7,63.9 233.5,63.9 233.5,70.4 233.5,76.9 267.5,76.9 267.5,70.4 			"/>
+		</defs>
+		<clipPath id="SVGID_18_">
+			<use xlink:href="#SVGID_17_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st10">
+			<defs>
+				<rect id="SVGID_19_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_20_">
+				<use xlink:href="#SVGID_19_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="228.5" y="58.9" class="st11" width="44" height="23"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_21_" x="261.5" y="76.9" width="7" height="13"/>
+		</defs>
+		<clipPath id="SVGID_22_">
+			<use xlink:href="#SVGID_21_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st12">
+			<defs>
+				<rect id="SVGID_23_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_24_">
+				<use xlink:href="#SVGID_23_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="256.5" y="71.9" class="st13" width="17" height="23"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<polygon id="SVGID_25_" points="285.5,90.9 285.5,104.9 285.5,111.9 288.8,111.9 288.8,104.9 295.3,104.9 295.3,111.9 
+				298.5,111.9 298.5,90.9 			"/>
+		</defs>
+		<clipPath id="SVGID_26_">
+			<use xlink:href="#SVGID_25_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st14">
+			<defs>
+				<rect id="SVGID_27_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_28_">
+				<use xlink:href="#SVGID_27_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="280.5" y="85.9" class="st15" width="23" height="31"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<polygon id="SVGID_29_" points="229.3,153.9 229.3,167.6 229.3,174.5 215.5,174.5 215.5,188.3 236.1,188.3 236.1,181.4 
+				243,181.4 243,167.6 256.8,167.6 256.8,188.3 249.9,188.3 249.9,195.1 243,195.1 243,208.9 256.8,208.9 256.8,202 263.6,202 
+				263.6,195.1 270.5,195.1 270.5,167.6 270.5,153.9 			"/>
+		</defs>
+		<clipPath id="SVGID_30_">
+			<use xlink:href="#SVGID_29_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st16">
+			<defs>
+				<rect id="SVGID_31_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_32_">
+				<use xlink:href="#SVGID_31_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="210.5" y="148.9" class="st17" width="65" height="65"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<polygon id="SVGID_33_" points="222.4,103.9 222.4,111.3 214.9,111.3 214.9,117.7 208.5,117.7 208.5,125.2 202.1,125.2 
+				202.1,131.7 194.5,131.7 194.5,139 208.4,139 208.4,131.5 215,131.5 215,125.1 222.3,124.9 222.3,117.9 229.2,117.9 229.2,152.9 
+				270.8,152.9 270.8,117.9 277.7,117.9 277.7,124.9 284.7,124.9 284.7,131.9 291.6,131.9 291.6,124.9 298.5,124.9 298.5,117.9 
+				284.7,117.9 284.7,110.9 277.7,110.9 277.7,103.9 			"/>
+		</defs>
+		<clipPath id="SVGID_34_">
+			<use xlink:href="#SVGID_33_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st18">
+			<defs>
+				<rect id="SVGID_35_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_36_">
+				<use xlink:href="#SVGID_35_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="189.5" y="98.9" class="st19" width="114" height="59"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_37_" x="291.5" y="111.9" width="7" height="7"/>
+		</defs>
+		<clipPath id="SVGID_38_">
+			<use xlink:href="#SVGID_37_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st20">
+			<defs>
+				<rect id="SVGID_39_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_40_">
+				<use xlink:href="#SVGID_39_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="286.5" y="106.9" class="st21" width="17" height="17"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<polygon id="SVGID_41_" points="153.5,70.9 153.5,63.9 146.5,63.9 146.5,56.9 132.5,56.9 132.5,63.9 125.5,63.9 125.5,70.9 
+				118.5,70.9 118.5,84.9 125.5,84.9 125.5,77.9 153.5,77.9 153.5,84.9 160.5,84.9 160.5,70.9 			"/>
+		</defs>
+		<clipPath id="SVGID_42_">
+			<use xlink:href="#SVGID_41_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st22">
+			<defs>
+				<rect id="SVGID_43_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_44_">
+				<use xlink:href="#SVGID_43_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="113.5" y="51.9" class="st23" width="52" height="38"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_45_" x="87.5" y="144.9" width="13" height="13"/>
+		</defs>
+		<clipPath id="SVGID_46_">
+			<use xlink:href="#SVGID_45_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st24">
+			<defs>
+				<rect id="SVGID_47_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_48_">
+				<use xlink:href="#SVGID_47_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="82.5" y="139.9" class="st25" width="23" height="23"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<polygon id="SVGID_49_" points="132.5,173.9 125.5,173.9 122,173.9 111.5,173.9 111.5,186.9 125.5,186.9 125.5,180.4 
+				132.5,180.4 			"/>
+		</defs>
+		<clipPath id="SVGID_50_">
+			<use xlink:href="#SVGID_49_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st26">
+			<defs>
+				<rect id="SVGID_51_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_52_">
+				<use xlink:href="#SVGID_51_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="106.5" y="168.9" class="st27" width="31" height="23"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<polygon id="SVGID_53_" points="111.5,173.9 105,173.9 101.8,173.9 98.5,173.9 98.5,194.9 105,194.9 105,187.9 111.5,187.9 			
+				"/>
+		</defs>
+		<clipPath id="SVGID_54_">
+			<use xlink:href="#SVGID_53_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st28">
+			<defs>
+				<rect id="SVGID_55_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_56_">
+				<use xlink:href="#SVGID_55_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="93.5" y="168.9" class="st29" width="23" height="31"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<polygon id="SVGID_57_" points="126.5,194.9 126.5,201.9 126.5,208.9 126.5,215.9 133,215.9 133,208.9 139.5,208.9 139.5,194.9 
+							"/>
+		</defs>
+		<clipPath id="SVGID_58_">
+			<use xlink:href="#SVGID_57_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st30">
+			<defs>
+				<rect id="SVGID_59_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_60_">
+				<use xlink:href="#SVGID_59_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="121.5" y="189.9" class="st31" width="23" height="31"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<polygon id="SVGID_61_" points="160.5,173.9 146.5,173.9 146.5,187.5 139.5,187.5 139.5,194.3 139.5,201.1 139.5,207.9 
+				146.5,207.9 146.5,201.1 153.5,201.1 153.5,194.3 160.5,194.3 			"/>
+		</defs>
+		<clipPath id="SVGID_62_">
+			<use xlink:href="#SVGID_61_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st32">
+			<defs>
+				<rect id="SVGID_63_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_64_">
+				<use xlink:href="#SVGID_63_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="134.5" y="168.9" class="st33" width="31" height="44"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<polygon id="SVGID_65_" points="186.6,131.9 186.6,124.9 179.7,124.9 179.7,117.9 172.9,117.9 172.9,110.9 166,110.9 166,103.9 
+				111.1,103.9 111.1,110.9 104.2,110.9 104.2,117.9 97.4,117.9 97.4,124.9 90.5,124.9 90.5,131.9 90.5,138.4 97,138.4 97,131.9 
+				104.2,131.9 104.2,124.9 111.1,124.9 111.1,117.9 118,117.9 118,173.9 159.1,173.9 159.1,117.9 166,117.9 166,124.9 172.9,124.9 
+				172.9,131.9 179.7,131.9 179.7,139.4 194.5,139.4 194.5,132 			"/>
+		</defs>
+		<clipPath id="SVGID_66_">
+			<use xlink:href="#SVGID_65_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st34">
+			<defs>
+				<rect id="SVGID_67_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_68_">
+				<use xlink:href="#SVGID_67_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="85.5" y="98.9" class="st35" width="114" height="80"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<polygon id="SVGID_69_" points="124.5,76.9 124.5,101.4 131.5,101.4 131.5,104.9 145.5,104.9 145.5,101.4 152.5,101.4 
+				152.5,76.9 			"/>
+		</defs>
+		<clipPath id="SVGID_70_">
+			<use xlink:href="#SVGID_69_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st36">
+			<defs>
+				<rect id="SVGID_71_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_72_">
+				<use xlink:href="#SVGID_71_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="119.5" y="71.9" class="st37" width="38" height="38"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_73_" x="240.5" y="97.9" width="13" height="7"/>
+		</defs>
+		<clipPath id="SVGID_74_">
+			<use xlink:href="#SVGID_73_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st38">
+			<defs>
+				<rect id="SVGID_75_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_76_">
+				<use xlink:href="#SVGID_75_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="235.5" y="92.9" class="st39" width="23" height="17"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<polygon id="SVGID_77_" points="90.5,144.9 97.5,144.9 97.5,137.9 90.5,137.9 			"/>
+		</defs>
+		<clipPath id="SVGID_78_">
+			<use xlink:href="#SVGID_77_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st40">
+			<defs>
+				<rect id="SVGID_79_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_80_">
+				<use xlink:href="#SVGID_79_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="85.5" y="132.9" class="st41" width="17" height="17"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<polygon id="SVGID_81_" points="192.6,138.9 191.5,138.9 191.5,145.9 192.6,145.9 193.4,145.9 194.5,145.9 194.5,138.9 
+				193.4,138.9 			"/>
+		</defs>
+		<clipPath id="SVGID_82_">
+			<use xlink:href="#SVGID_81_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st42">
+			<defs>
+				<rect id="SVGID_83_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_84_">
+				<use xlink:href="#SVGID_83_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="186.5" y="133.9" class="st43" width="13" height="17"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<polygon id="SVGID_85_" points="234.5,202.9 234.5,209.4 234.5,215.9 241.5,215.9 241.5,209.4 241.5,202.9 			"/>
+		</defs>
+		<clipPath id="SVGID_86_">
+			<use xlink:href="#SVGID_85_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st44">
+			<defs>
+				<rect id="SVGID_87_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_88_">
+				<use xlink:href="#SVGID_87_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="229.5" y="197.9" class="st45" width="17" height="23"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<polygon id="SVGID_89_" points="209.5,188.4 209.5,194.9 216.5,194.9 216.5,188.4 216.5,181.9 209.5,181.9 			"/>
+		</defs>
+		<clipPath id="SVGID_90_">
+			<use xlink:href="#SVGID_89_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st46">
+			<defs>
+				<rect id="SVGID_91_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_92_">
+				<use xlink:href="#SVGID_91_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="204.5" y="176.9" class="st47" width="17" height="23"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_93_" x="145.5" y="84.9" width="3" height="3"/>
+		</defs>
+		<clipPath id="SVGID_94_">
+			<use xlink:href="#SVGID_93_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st48">
+			<defs>
+				<rect id="SVGID_95_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_96_">
+				<use xlink:href="#SVGID_95_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="140.5" y="79.9" class="st49" width="13" height="13"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_97_" x="142.5" y="84.9" width="3" height="3"/>
+		</defs>
+		<clipPath id="SVGID_98_">
+			<use xlink:href="#SVGID_97_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st50">
+			<defs>
+				<rect id="SVGID_99_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_100_">
+				<use xlink:href="#SVGID_99_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="137.5" y="79.9" class="st51" width="13" height="13"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_101_" x="129.5" y="84.9" width="3" height="3"/>
+		</defs>
+		<clipPath id="SVGID_102_">
+			<use xlink:href="#SVGID_101_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st52">
+			<defs>
+				<rect id="SVGID_103_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_104_">
+				<use xlink:href="#SVGID_103_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="124.5" y="79.9" class="st53" width="13" height="13"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_105_" x="131.5" y="84.9" width="3" height="3"/>
+		</defs>
+		<clipPath id="SVGID_106_">
+			<use xlink:href="#SVGID_105_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st54">
+			<defs>
+				<rect id="SVGID_107_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_108_">
+				<use xlink:href="#SVGID_107_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="126.5" y="79.9" class="st55" width="13" height="13"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_109_" x="142.5" y="84.9" width="3" height="3"/>
+		</defs>
+		<clipPath id="SVGID_110_">
+			<use xlink:href="#SVGID_109_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st56">
+			<defs>
+				<rect id="SVGID_111_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_112_">
+				<use xlink:href="#SVGID_111_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="137.5" y="79.9" class="st57" width="13" height="13"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_113_" x="145.5" y="84.9" width="3" height="3"/>
+		</defs>
+		<clipPath id="SVGID_114_">
+			<use xlink:href="#SVGID_113_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st58">
+			<defs>
+				<rect id="SVGID_115_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_116_">
+				<use xlink:href="#SVGID_115_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="140.5" y="79.9" class="st59" width="13" height="13"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_117_" x="234.5" y="202.9" width="7" height="13"/>
+		</defs>
+		<clipPath id="SVGID_118_">
+			<use xlink:href="#SVGID_117_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st60">
+			<defs>
+				<rect id="SVGID_119_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_120_">
+				<use xlink:href="#SVGID_119_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="229.5" y="197.9" class="st61" width="17" height="23"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_121_" x="209.5" y="181.9" width="7" height="13"/>
+		</defs>
+		<clipPath id="SVGID_122_">
+			<use xlink:href="#SVGID_121_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st62">
+			<defs>
+				<rect id="SVGID_123_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_124_">
+				<use xlink:href="#SVGID_123_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="204.5" y="176.9" class="st63" width="17" height="23"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_125_" x="244.5" y="90.9" width="7" height="3"/>
+		</defs>
+		<clipPath id="SVGID_126_">
+			<use xlink:href="#SVGID_125_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st64">
+			<defs>
+				<rect id="SVGID_127_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_128_">
+				<use xlink:href="#SVGID_127_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="239.5" y="85.9" class="st65" width="17" height="13"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_129_" x="134.5" y="93.9" width="7" height="3"/>
+		</defs>
+		<clipPath id="SVGID_130_">
+			<use xlink:href="#SVGID_129_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st66">
+			<defs>
+				<rect id="SVGID_131_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_132_">
+				<use xlink:href="#SVGID_131_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="129.5" y="88.9" class="st67" width="17" height="13"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_133_" x="97.5" y="137.9" width="3" height="7"/>
+		</defs>
+		<clipPath id="SVGID_134_">
+			<use xlink:href="#SVGID_133_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st68">
+			<defs>
+				<rect id="SVGID_135_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_136_">
+				<use xlink:href="#SVGID_135_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="92.5" y="132.9" class="st69" width="13" height="17"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_137_" x="87.5" y="137.9" width="3" height="7"/>
+		</defs>
+		<clipPath id="SVGID_138_">
+			<use xlink:href="#SVGID_137_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st70">
+			<defs>
+				<rect id="SVGID_139_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_140_">
+				<use xlink:href="#SVGID_139_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="82.5" y="132.9" class="st71" width="13" height="17"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_141_" x="240.5" y="81.9" width="3" height="3"/>
+		</defs>
+		<clipPath id="SVGID_142_">
+			<use xlink:href="#SVGID_141_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st72">
+			<defs>
+				<rect id="SVGID_143_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_144_">
+				<use xlink:href="#SVGID_143_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="235.5" y="76.9" class="st73" width="13" height="13"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_145_" x="253.5" y="81.9" width="3" height="3"/>
+		</defs>
+		<clipPath id="SVGID_146_">
+			<use xlink:href="#SVGID_145_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st74">
+			<defs>
+				<rect id="SVGID_147_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_148_">
+				<use xlink:href="#SVGID_147_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="248.5" y="76.9" class="st75" width="13" height="13"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_149_" x="251.5" y="81.9" width="3" height="3"/>
+		</defs>
+		<clipPath id="SVGID_150_">
+			<use xlink:href="#SVGID_149_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st76">
+			<defs>
+				<rect id="SVGID_151_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_152_">
+				<use xlink:href="#SVGID_151_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="246.5" y="76.9" class="st77" width="13" height="13"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_153_" x="237.5" y="81.9" width="3" height="3"/>
+		</defs>
+		<clipPath id="SVGID_154_">
+			<use xlink:href="#SVGID_153_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st78">
+			<defs>
+				<rect id="SVGID_155_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_156_">
+				<use xlink:href="#SVGID_155_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="232.5" y="76.9" class="st79" width="13" height="13"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<polygon id="SVGID_157_" points="195.6,138.9 194.5,138.9 194.5,145.9 195.6,145.9 196.4,145.9 197.5,145.9 197.5,138.9 
+				196.4,138.9 			"/>
+		</defs>
+		<clipPath id="SVGID_158_">
+			<use xlink:href="#SVGID_157_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st80">
+			<defs>
+				<rect id="SVGID_159_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_160_">
+				<use xlink:href="#SVGID_159_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="189.5" y="133.9" class="st81" width="13" height="17"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_161_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+		</defs>
+		<clipPath id="SVGID_162_">
+			<use xlink:href="#SVGID_161_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st82">
+			<defs>
+				<rect id="SVGID_163_" x="388.5" y="189.9" width="126" height="162"/>
+			</defs>
+			<clipPath id="SVGID_164_">
+				<use xlink:href="#SVGID_163_"  style="overflow:visible;"/>
+			</clipPath>
+			<g style="clip-path:url(#SVGID_164_);">
+				
+					<image style="overflow:visible;" width="576" height="735" xlink:href="AE318A83F50DC464.png"  transform="matrix(0.2188 0 0 0.2204 388.5172 189.8965)">
+				</image>
+			</g>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_165_" x="414.5" y="192.9" width="66" height="36"/>
+		</defs>
+		<clipPath id="SVGID_166_">
+			<use xlink:href="#SVGID_165_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st83">
+			<defs>
+				<rect id="SVGID_167_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_168_">
+				<use xlink:href="#SVGID_167_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="409.5" y="187.9" class="st84" width="76" height="46"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_169_" x="86.8" y="364.5" width="5.7" height="5.7"/>
+		</defs>
+		<clipPath id="SVGID_170_">
+			<use xlink:href="#SVGID_169_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st85">
+			<defs>
+				<rect id="SVGID_171_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_172_">
+				<use xlink:href="#SVGID_171_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="81.8" y="359.5" class="st86" width="15.7" height="15.7"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_173_" x="81" y="370.2" width="5.7" height="5.7"/>
+		</defs>
+		<clipPath id="SVGID_174_">
+			<use xlink:href="#SVGID_173_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st87">
+			<defs>
+				<rect id="SVGID_175_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_176_">
+				<use xlink:href="#SVGID_175_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="76" y="365.2" class="st88" width="15.7" height="15.7"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_177_" x="92.5" y="370.2" width="5.7" height="5.7"/>
+		</defs>
+		<clipPath id="SVGID_178_">
+			<use xlink:href="#SVGID_177_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st89">
+			<defs>
+				<rect id="SVGID_179_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_180_">
+				<use xlink:href="#SVGID_179_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="87.5" y="365.2" class="st90" width="15.7" height="15.7"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_181_" x="86.8" y="376" width="5.7" height="5.7"/>
+		</defs>
+		<clipPath id="SVGID_182_">
+			<use xlink:href="#SVGID_181_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st91">
+			<defs>
+				<rect id="SVGID_183_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_184_">
+				<use xlink:href="#SVGID_183_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="81.8" y="371" class="st92" width="15.7" height="15.7"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_185_" x="81" y="381.7" width="5.7" height="5.7"/>
+		</defs>
+		<clipPath id="SVGID_186_">
+			<use xlink:href="#SVGID_185_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st93">
+			<defs>
+				<rect id="SVGID_187_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_188_">
+				<use xlink:href="#SVGID_187_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="76" y="376.7" class="st94" width="15.7" height="15.7"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_189_" x="86.8" y="387.4" width="5.7" height="5.7"/>
+		</defs>
+		<clipPath id="SVGID_190_">
+			<use xlink:href="#SVGID_189_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st95">
+			<defs>
+				<rect id="SVGID_191_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_192_">
+				<use xlink:href="#SVGID_191_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="81.8" y="382.4" class="st96" width="15.7" height="15.7"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_193_" x="75.3" y="387.4" width="5.7" height="5.7"/>
+		</defs>
+		<clipPath id="SVGID_194_">
+			<use xlink:href="#SVGID_193_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st97">
+			<defs>
+				<rect id="SVGID_195_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_196_">
+				<use xlink:href="#SVGID_195_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="70.3" y="382.4" class="st98" width="15.7" height="15.7"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_197_" x="92.5" y="381.7" width="5.7" height="5.7"/>
+		</defs>
+		<clipPath id="SVGID_198_">
+			<use xlink:href="#SVGID_197_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st99">
+			<defs>
+				<rect id="SVGID_199_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_200_">
+				<use xlink:href="#SVGID_199_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="87.5" y="376.7" class="st100" width="15.7" height="15.7"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<polyline id="SVGID_201_" points="104,387.4 98.2,387.4 98.2,393.2 109.7,393.2 109.7,387.4 104,387.4 			"/>
+		</defs>
+		<clipPath id="SVGID_202_">
+			<use xlink:href="#SVGID_201_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st101">
+			<defs>
+				<rect id="SVGID_203_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_204_">
+				<use xlink:href="#SVGID_203_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="93.2" y="382.4" class="st102" width="21.5" height="15.7"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_205_" x="109.7" y="381.7" width="5.7" height="5.7"/>
+		</defs>
+		<clipPath id="SVGID_206_">
+			<use xlink:href="#SVGID_205_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st103">
+			<defs>
+				<rect id="SVGID_207_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_208_">
+				<use xlink:href="#SVGID_207_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="104.7" y="376.7" class="st104" width="15.7" height="15.7"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_209_" x="115.5" y="387.4" width="5.7" height="5.7"/>
+		</defs>
+		<clipPath id="SVGID_210_">
+			<use xlink:href="#SVGID_209_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st105">
+			<defs>
+				<rect id="SVGID_211_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_212_">
+				<use xlink:href="#SVGID_211_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="110.5" y="382.4" class="st106" width="15.7" height="15.7"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_213_" x="121.2" y="381.7" width="5.7" height="5.7"/>
+		</defs>
+		<clipPath id="SVGID_214_">
+			<use xlink:href="#SVGID_213_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st107">
+			<defs>
+				<rect id="SVGID_215_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_216_">
+				<use xlink:href="#SVGID_215_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="116.2" y="376.7" class="st108" width="15.7" height="15.7"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_217_" x="127" y="387.4" width="5.7" height="5.7"/>
+		</defs>
+		<clipPath id="SVGID_218_">
+			<use xlink:href="#SVGID_217_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st109">
+			<defs>
+				<rect id="SVGID_219_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_220_">
+				<use xlink:href="#SVGID_219_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="122" y="382.4" class="st110" width="15.7" height="15.7"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_221_" x="121.2" y="393.2" width="5.7" height="5.7"/>
+		</defs>
+		<clipPath id="SVGID_222_">
+			<use xlink:href="#SVGID_221_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st111">
+			<defs>
+				<rect id="SVGID_223_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_224_">
+				<use xlink:href="#SVGID_223_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="116.2" y="388.2" class="st112" width="15.7" height="15.7"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_225_" x="109.7" y="393.2" width="5.7" height="5.7"/>
+		</defs>
+		<clipPath id="SVGID_226_">
+			<use xlink:href="#SVGID_225_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st113">
+			<defs>
+				<rect id="SVGID_227_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_228_">
+				<use xlink:href="#SVGID_227_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="104.7" y="388.2" class="st114" width="15.7" height="15.7"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_229_" x="92.5" y="393.2" width="5.7" height="5.7"/>
+		</defs>
+		<clipPath id="SVGID_230_">
+			<use xlink:href="#SVGID_229_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st115">
+			<defs>
+				<rect id="SVGID_231_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_232_">
+				<use xlink:href="#SVGID_231_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="87.5" y="388.2" class="st116" width="15.7" height="15.7"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_233_" x="81" y="393.2" width="5.7" height="5.7"/>
+		</defs>
+		<clipPath id="SVGID_234_">
+			<use xlink:href="#SVGID_233_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st117">
+			<defs>
+				<rect id="SVGID_235_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_236_">
+				<use xlink:href="#SVGID_235_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="76" y="388.2" class="st118" width="15.7" height="15.7"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_237_" x="75.3" y="398.9" width="5.7" height="5.7"/>
+		</defs>
+		<clipPath id="SVGID_238_">
+			<use xlink:href="#SVGID_237_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st119">
+			<defs>
+				<rect id="SVGID_239_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_240_">
+				<use xlink:href="#SVGID_239_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="70.3" y="393.9" class="st120" width="15.7" height="15.7"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_241_" x="86.8" y="398.9" width="5.7" height="5.7"/>
+		</defs>
+		<clipPath id="SVGID_242_">
+			<use xlink:href="#SVGID_241_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st121">
+			<defs>
+				<rect id="SVGID_243_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_244_">
+				<use xlink:href="#SVGID_243_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="81.8" y="393.9" class="st122" width="15.7" height="15.7"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_245_" x="98.2" y="398.9" width="11.5" height="5.7"/>
+		</defs>
+		<clipPath id="SVGID_246_">
+			<use xlink:href="#SVGID_245_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st123">
+			<defs>
+				<rect id="SVGID_247_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_248_">
+				<use xlink:href="#SVGID_247_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="93.2" y="393.9" class="st124" width="21.5" height="15.7"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_249_" x="115.5" y="398.9" width="5.7" height="5.7"/>
+		</defs>
+		<clipPath id="SVGID_250_">
+			<use xlink:href="#SVGID_249_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st125">
+			<defs>
+				<rect id="SVGID_251_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_252_">
+				<use xlink:href="#SVGID_251_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="110.5" y="393.9" class="st126" width="15.7" height="15.7"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_253_" x="127" y="398.9" width="5.7" height="5.7"/>
+		</defs>
+		<clipPath id="SVGID_254_">
+			<use xlink:href="#SVGID_253_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st127">
+			<defs>
+				<rect id="SVGID_255_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_256_">
+				<use xlink:href="#SVGID_255_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="122" y="393.9" class="st128" width="15.7" height="15.7"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_257_" x="132.7" y="393.2" width="5.7" height="5.7"/>
+		</defs>
+		<clipPath id="SVGID_258_">
+			<use xlink:href="#SVGID_257_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st129">
+			<defs>
+				<rect id="SVGID_259_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_260_">
+				<use xlink:href="#SVGID_259_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="127.7" y="388.2" class="st130" width="15.7" height="15.7"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_261_" x="69.5" y="393.2" width="5.7" height="5.7"/>
+		</defs>
+		<clipPath id="SVGID_262_">
+			<use xlink:href="#SVGID_261_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st131">
+			<defs>
+				<rect id="SVGID_263_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_264_">
+				<use xlink:href="#SVGID_263_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="64.5" y="388.2" class="st132" width="15.7" height="15.7"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_265_" x="63.8" y="387.4" width="5.7" height="5.7"/>
+		</defs>
+		<clipPath id="SVGID_266_">
+			<use xlink:href="#SVGID_265_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st133">
+			<defs>
+				<rect id="SVGID_267_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_268_">
+				<use xlink:href="#SVGID_267_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="58.8" y="382.4" class="st134" width="15.7" height="15.7"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_269_" x="58" y="381.7" width="5.7" height="5.7"/>
+		</defs>
+		<clipPath id="SVGID_270_">
+			<use xlink:href="#SVGID_269_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st135">
+			<defs>
+				<rect id="SVGID_271_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_272_">
+				<use xlink:href="#SVGID_271_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="53" y="376.7" class="st136" width="15.7" height="15.7"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_273_" x="52.3" y="376" width="5.7" height="5.7"/>
+		</defs>
+		<clipPath id="SVGID_274_">
+			<use xlink:href="#SVGID_273_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st137">
+			<defs>
+				<rect id="SVGID_275_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_276_">
+				<use xlink:href="#SVGID_275_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="47.3" y="371" class="st138" width="15.7" height="15.7"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_277_" x="138.5" y="387.4" width="5.7" height="5.7"/>
+		</defs>
+		<clipPath id="SVGID_278_">
+			<use xlink:href="#SVGID_277_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st139">
+			<defs>
+				<rect id="SVGID_279_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_280_">
+				<use xlink:href="#SVGID_279_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="133.5" y="382.4" class="st140" width="15.7" height="15.7"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_281_" x="144.2" y="381.7" width="5.7" height="5.7"/>
+		</defs>
+		<clipPath id="SVGID_282_">
+			<use xlink:href="#SVGID_281_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st141">
+			<defs>
+				<rect id="SVGID_283_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_284_">
+				<use xlink:href="#SVGID_283_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="139.2" y="376.7" class="st142" width="15.7" height="15.7"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_285_" x="150" y="376" width="5.7" height="5.7"/>
+		</defs>
+		<clipPath id="SVGID_286_">
+			<use xlink:href="#SVGID_285_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st143">
+			<defs>
+				<rect id="SVGID_287_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_288_">
+				<use xlink:href="#SVGID_287_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="145" y="371" class="st144" width="15.7" height="15.7"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_289_" x="109.7" y="370.2" width="5.7" height="5.7"/>
+		</defs>
+		<clipPath id="SVGID_290_">
+			<use xlink:href="#SVGID_289_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st145">
+			<defs>
+				<rect id="SVGID_291_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_292_">
+				<use xlink:href="#SVGID_291_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="104.7" y="365.2" class="st146" width="15.7" height="15.7"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_293_" x="121.2" y="370.2" width="5.7" height="5.7"/>
+		</defs>
+		<clipPath id="SVGID_294_">
+			<use xlink:href="#SVGID_293_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st147">
+			<defs>
+				<rect id="SVGID_295_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_296_">
+				<use xlink:href="#SVGID_295_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="116.2" y="365.2" class="st148" width="15.7" height="15.7"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_297_" x="115.5" y="376" width="5.7" height="5.7"/>
+		</defs>
+		<clipPath id="SVGID_298_">
+			<use xlink:href="#SVGID_297_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st149">
+			<defs>
+				<rect id="SVGID_299_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_300_">
+				<use xlink:href="#SVGID_299_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="110.5" y="371" class="st150" width="15.7" height="15.7"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<polyline id="SVGID_301_" points="104,381.7 109.7,381.7 109.7,376 98.2,376 98.2,381.7 104,381.7 			"/>
+		</defs>
+		<clipPath id="SVGID_302_">
+			<use xlink:href="#SVGID_301_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st151">
+			<defs>
+				<rect id="SVGID_303_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_304_">
+				<use xlink:href="#SVGID_303_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="93.2" y="371" class="st152" width="21.5" height="15.7"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_305_" x="115.5" y="364.5" width="5.7" height="5.7"/>
+		</defs>
+		<clipPath id="SVGID_306_">
+			<use xlink:href="#SVGID_305_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st153">
+			<defs>
+				<rect id="SVGID_307_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_308_">
+				<use xlink:href="#SVGID_307_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="110.5" y="359.5" class="st154" width="15.7" height="15.7"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_309_" x="112.6" y="310.1" width="2.9" height="2.9"/>
+		</defs>
+		<clipPath id="SVGID_310_">
+			<use xlink:href="#SVGID_309_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st155">
+			<defs>
+				<rect id="SVGID_311_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_312_">
+				<use xlink:href="#SVGID_311_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="107.6" y="305.1" class="st156" width="12.9" height="12.9"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_313_" x="72.4" y="310.1" width="2.9" height="2.9"/>
+		</defs>
+		<clipPath id="SVGID_314_">
+			<use xlink:href="#SVGID_313_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st157">
+			<defs>
+				<rect id="SVGID_315_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_316_">
+				<use xlink:href="#SVGID_315_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="67.4" y="305.1" class="st158" width="12.9" height="12.9"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_317_" x="115.5" y="307.2" width="17.2" height="2.9"/>
+		</defs>
+		<clipPath id="SVGID_318_">
+			<use xlink:href="#SVGID_317_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st159">
+			<defs>
+				<rect id="SVGID_319_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_320_">
+				<use xlink:href="#SVGID_319_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="110.5" y="302.2" class="st160" width="27.2" height="12.9"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_321_" x="75.3" y="307.2" width="17.2" height="2.9"/>
+		</defs>
+		<clipPath id="SVGID_322_">
+			<use xlink:href="#SVGID_321_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st161">
+			<defs>
+				<rect id="SVGID_323_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_324_">
+				<use xlink:href="#SVGID_323_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="70.3" y="302.2" class="st162" width="27.2" height="12.9"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_325_" x="132.7" y="310.1" width="2.9" height="2.9"/>
+		</defs>
+		<clipPath id="SVGID_326_">
+			<use xlink:href="#SVGID_325_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st163">
+			<defs>
+				<rect id="SVGID_327_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_328_">
+				<use xlink:href="#SVGID_327_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="127.7" y="305.1" class="st164" width="12.9" height="12.9"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_329_" x="92.5" y="310.1" width="2.9" height="2.9"/>
+		</defs>
+		<clipPath id="SVGID_330_">
+			<use xlink:href="#SVGID_329_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st165">
+			<defs>
+				<rect id="SVGID_331_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_332_">
+				<use xlink:href="#SVGID_331_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="87.5" y="305.1" class="st166" width="12.9" height="12.9"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<polygon id="SVGID_333_" points="115.5,318.7 115.5,323 112.6,323 112.6,325.8 115.5,325.8 115.5,330.1 132.7,330.1 132.7,325.8 
+				135.6,325.8 135.6,323 132.7,323 132.7,318.7 			"/>
+		</defs>
+		<clipPath id="SVGID_334_">
+			<use xlink:href="#SVGID_333_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st167">
+			<defs>
+				<rect id="SVGID_335_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_336_">
+				<use xlink:href="#SVGID_335_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="107.6" y="313.7" class="st168" width="33" height="21.5"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_337_" x="124.7" y="322.3" width="4.3" height="4.3"/>
+		</defs>
+		<clipPath id="SVGID_338_">
+			<use xlink:href="#SVGID_337_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st169">
+			<defs>
+				<rect id="SVGID_339_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_340_">
+				<use xlink:href="#SVGID_339_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="119.7" y="317.3" class="st170" width="14.3" height="14.3"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<polyline id="SVGID_341_" points="92.5,318.7 75.3,318.7 75.3,323 72.4,323 72.4,325.8 75.3,325.8 75.3,330.1 92.5,330.1 
+				92.5,325.8 95.4,325.8 95.4,323 92.5,323 92.5,318.7 			"/>
+		</defs>
+		<clipPath id="SVGID_342_">
+			<use xlink:href="#SVGID_341_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st171">
+			<defs>
+				<rect id="SVGID_343_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_344_">
+				<use xlink:href="#SVGID_343_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="67.4" y="313.7" class="st172" width="33" height="21.5"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<polyline id="SVGID_345_" points="104,267.1 98.2,267.1 98.2,272.7 92.5,272.7 92.5,278.5 98.2,278.5 98.2,272.9 109.7,272.9 
+				109.7,267.1 104,267.1 			"/>
+		</defs>
+		<clipPath id="SVGID_346_">
+			<use xlink:href="#SVGID_345_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st173">
+			<defs>
+				<rect id="SVGID_347_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_348_">
+				<use xlink:href="#SVGID_347_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="87.5" y="262.1" class="st174" width="27.2" height="21.4"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_349_" x="98.2" y="341.6" width="11.5" height="5.7"/>
+		</defs>
+		<clipPath id="SVGID_350_">
+			<use xlink:href="#SVGID_349_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st175">
+			<defs>
+				<rect id="SVGID_351_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_352_">
+				<use xlink:href="#SVGID_351_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="93.2" y="336.6" class="st176" width="21.5" height="15.7"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_353_" x="109.7" y="272.9" width="5.7" height="5.7"/>
+		</defs>
+		<clipPath id="SVGID_354_">
+			<use xlink:href="#SVGID_353_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st177">
+			<defs>
+				<rect id="SVGID_355_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_356_">
+				<use xlink:href="#SVGID_355_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="104.7" y="267.9" class="st178" width="15.7" height="15.7"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_357_" x="85" y="322.3" width="4.3" height="4.3"/>
+		</defs>
+		<clipPath id="SVGID_358_">
+			<use xlink:href="#SVGID_357_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st179">
+			<defs>
+				<rect id="SVGID_359_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_360_">
+				<use xlink:href="#SVGID_359_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="80" y="317.3" class="st180" width="14.3" height="14.3"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_361_" x="86.8" y="278.5" width="5.7" height="5.7"/>
+		</defs>
+		<clipPath id="SVGID_362_">
+			<use xlink:href="#SVGID_361_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st181">
+			<defs>
+				<rect id="SVGID_363_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_364_">
+				<use xlink:href="#SVGID_363_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="81.8" y="273.5" class="st182" width="15.7" height="15.7"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_365_" x="81" y="284.2" width="5.7" height="5.7"/>
+		</defs>
+		<clipPath id="SVGID_366_">
+			<use xlink:href="#SVGID_365_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st183">
+			<defs>
+				<rect id="SVGID_367_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_368_">
+				<use xlink:href="#SVGID_367_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="76" y="279.2" class="st184" width="15.7" height="15.7"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_369_" x="75.3" y="289.9" width="5.7" height="5.7"/>
+		</defs>
+		<clipPath id="SVGID_370_">
+			<use xlink:href="#SVGID_369_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st185">
+			<defs>
+				<rect id="SVGID_371_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_372_">
+				<use xlink:href="#SVGID_371_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="70.3" y="284.9" class="st186" width="15.7" height="15.7"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_373_" x="115.5" y="278.6" width="5.7" height="5.7"/>
+		</defs>
+		<clipPath id="SVGID_374_">
+			<use xlink:href="#SVGID_373_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st187">
+			<defs>
+				<rect id="SVGID_375_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_376_">
+				<use xlink:href="#SVGID_375_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="110.5" y="273.6" class="st188" width="15.7" height="15.7"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_377_" x="121.2" y="284.3" width="5.7" height="5.7"/>
+		</defs>
+		<clipPath id="SVGID_378_">
+			<use xlink:href="#SVGID_377_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st189">
+			<defs>
+				<rect id="SVGID_379_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_380_">
+				<use xlink:href="#SVGID_379_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="116.2" y="279.3" class="st190" width="15.7" height="15.7"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_381_" x="127" y="290" width="5.7" height="5.7"/>
+		</defs>
+		<clipPath id="SVGID_382_">
+			<use xlink:href="#SVGID_381_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st191">
+			<defs>
+				<rect id="SVGID_383_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_384_">
+				<use xlink:href="#SVGID_383_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="122" y="285" class="st192" width="15.7" height="15.7"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<polygon id="SVGID_385_" points="487.5,54.9 487.5,20.9 567.5,20.9 567.5,54.9 558.6,54.9 558.6,63.4 549.7,63.4 549.7,71.9 
+				505.3,71.9 505.3,63.4 496.4,63.4 496.4,54.9 			"/>
+		</defs>
+		<clipPath id="SVGID_386_">
+			<use xlink:href="#SVGID_385_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st193">
+			<defs>
+				<rect id="SVGID_387_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_388_">
+				<use xlink:href="#SVGID_387_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="482.5" y="15.9" class="st194" width="90" height="61"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<polygon id="SVGID_389_" points="363.5,54.9 363.5,20.9 443.5,20.9 443.5,54.9 434.6,54.9 434.6,63.4 425.7,63.4 425.7,71.9 
+				381.3,71.9 381.3,63.4 372.4,63.4 372.4,54.9 			"/>
+		</defs>
+		<clipPath id="SVGID_390_">
+			<use xlink:href="#SVGID_389_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st195">
+			<defs>
+				<rect id="SVGID_391_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_392_">
+				<use xlink:href="#SVGID_391_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="358.5" y="15.9" class="st196" width="90" height="61"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<path id="SVGID_393_" d="M452.2,2.9v17.8h26.7V2.9h106.7v26.7h-8.9v35.6h-8.9V74h-8.9v8.9h-62.2V74h-8.9v-8.9h-8.9V47.3H470v-8.9
+				h-8.9v8.9h-8.9v17.8h-8.9V74h-8.9v8.9h-62.2V74h-8.9v-8.9h-8.9V29.6h-8.9V2.9H452.2z M443.3,20.7h-80v35.6h8.9v8.9h8.9V74h44.4
+				v-8.9h8.9v-8.9h8.9V20.7z M567.7,20.7h-80v35.6h8.9v8.9h8.9V74H550v-8.9h8.9v-8.9h8.9V20.7z"/>
+		</defs>
+		<clipPath id="SVGID_394_">
+			<use xlink:href="#SVGID_393_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st197">
+			<defs>
+				<rect id="SVGID_395_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_396_">
+				<use xlink:href="#SVGID_395_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="340.5" y="-2.1" class="st198" width="250" height="90"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<polygon id="SVGID_397_" points="536.5,46.9 536.5,33.9 540.9,33.9 549.5,33.9 549.5,38.2 549.5,46.9 540.9,46.9 			"/>
+		</defs>
+		<clipPath id="SVGID_398_">
+			<use xlink:href="#SVGID_397_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st199">
+			<defs>
+				<rect id="SVGID_399_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_400_">
+				<use xlink:href="#SVGID_399_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="531.5" y="28.9" class="st200" width="23" height="23"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<polygon id="SVGID_401_" points="521.5,46.9 521.5,33.9 525.9,33.9 534.5,33.9 534.5,38.2 534.5,46.9 525.9,46.9 			"/>
+		</defs>
+		<clipPath id="SVGID_402_">
+			<use xlink:href="#SVGID_401_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st201">
+			<defs>
+				<rect id="SVGID_403_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_404_">
+				<use xlink:href="#SVGID_403_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="516.5" y="28.9" class="st202" width="23" height="23"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<polygon id="SVGID_405_" points="412.5,46.9 412.5,33.9 416.9,33.9 425.5,33.9 425.5,38.2 425.5,46.9 416.9,46.9 			"/>
+		</defs>
+		<clipPath id="SVGID_406_">
+			<use xlink:href="#SVGID_405_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st203">
+			<defs>
+				<rect id="SVGID_407_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_408_">
+				<use xlink:href="#SVGID_407_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="407.5" y="28.9" class="st204" width="23" height="23"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<polygon id="SVGID_409_" points="399.5,46.9 399.5,33.9 403.9,33.9 412.5,33.9 412.5,38.2 412.5,46.9 403.9,46.9 			"/>
+		</defs>
+		<clipPath id="SVGID_410_">
+			<use xlink:href="#SVGID_409_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st205">
+			<defs>
+				<rect id="SVGID_411_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_412_">
+				<use xlink:href="#SVGID_411_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="394.5" y="28.9" class="st206" width="23" height="23"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<rect id="SVGID_413_" x="230.5" y="334.2" width="114.8" height="172.7"/>
+		</defs>
+		<clipPath id="SVGID_414_">
+			<use xlink:href="#SVGID_413_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st207">
+			<defs>
+				<rect id="SVGID_415_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_416_">
+				<use xlink:href="#SVGID_415_"  style="overflow:visible;"/>
+			</clipPath>
+			<g class="st208">
+				<g>
+					<defs>
+						<rect id="SVGID_417_" x="230.5" y="333.9" width="115" height="173"/>
+					</defs>
+					<clipPath id="SVGID_418_">
+						<use xlink:href="#SVGID_417_"  style="overflow:visible;"/>
+					</clipPath>
+					<g class="st209">
+						<defs>
+							<polyline id="SVGID_419_" points="338.2,363 338.2,355.8 331,355.8 331,348.6 323.8,348.6 323.8,341.4 316.6,341.4 
+								316.6,334.2 259.2,334.2 259.2,341.4 252,341.4 252,348.6 244.9,348.6 244.9,355.8 237.7,355.8 237.7,363 230.5,363 
+								230.5,470.9 237.7,470.9 237.7,478.1 244.9,478.1 244.9,485.3 259.2,485.3 259.2,499.7 266.4,499.7 266.4,506.9 309.5,506.9 
+								309.5,499.7 316.6,499.7 316.6,485.3 331,485.3 331,478.1 338.2,478.1 338.2,470.9 345.3,470.9 345.3,363 338.2,363 							
+								"/>
+						</defs>
+						<clipPath id="SVGID_420_">
+							<use xlink:href="#SVGID_419_"  style="overflow:visible;"/>
+						</clipPath>
+						<g class="st210">
+							<defs>
+								<rect id="SVGID_421_" x="230.5" y="333.9" width="115" height="173"/>
+							</defs>
+							<clipPath id="SVGID_422_">
+								<use xlink:href="#SVGID_421_"  style="overflow:visible;"/>
+							</clipPath>
+							<rect x="225.5" y="329.2" class="st211" width="124.8" height="182.7"/>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<path id="SVGID_423_" d="M280.4,435.1h14.3v-7.2h-14.3V435.1z M337.5,413.6v-28.7h-42.9v7.2h-14.3v-7.2h-42.9v28.7h7.1v7.2h7.1
+				v7.2h21.4v14.3h-14.3v28.7h57.1v-28.7h-14.3v-14.3h21.4v-7.2h7.1v-7.2H337.5z"/>
+		</defs>
+		<clipPath id="SVGID_424_">
+			<use xlink:href="#SVGID_423_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st212">
+			<defs>
+				<rect id="SVGID_425_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_426_">
+				<use xlink:href="#SVGID_425_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="232.5" y="379.9" class="st213" width="110" height="96"/>
+		</g>
+	</g>
+	<g class="st1">
+		<defs>
+			<path id="SVGID_427_" d="M273.2,409.6h3.6v-7.2h-7.2v-3.6h-25.1v3.6h3.6v3.6h3.6v3.6h3.6v3.6h17.9V409.6z M298.3,456.2h-3.6v-3.6
+				h-14.3v3.6h-3.6v7.2h3.6v3.6h14.3v-3.6h3.6V456.2z M330.5,402.5v-3.6h-25.1v3.6h-7.2v7.2h3.6v3.6h17.9v-3.6h3.6v-3.6h3.6v-3.6
+				H330.5z"/>
+		</defs>
+		<clipPath id="SVGID_428_">
+			<use xlink:href="#SVGID_427_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st214">
+			<defs>
+				<rect id="SVGID_429_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+			</defs>
+			<clipPath id="SVGID_430_">
+				<use xlink:href="#SVGID_429_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="239.5" y="393.9" class="st215" width="96" height="78"/>
+		</g>
+	</g>
+	<g class="st1">
+		<g>
+			<defs>
+				<polygon id="SVGID_431_" points="155.7,295.8 150,295.8 150,290 144.2,290 144.2,284.3 138.5,284.3 138.5,278.6 132.7,278.6 
+					132.7,272.9 127,272.9 127,267.1 115.5,267.1 109.7,267.1 109.7,272.9 115.5,272.9 115.5,278.6 121.2,278.6 121.2,284.3 
+					127,284.3 127,290 132.7,290 132.7,295.8 127,295.8 127,290 121.2,290 121.2,284.3 115.5,284.3 115.5,278.6 109.7,278.6 
+					109.7,272.9 98.2,272.9 98.2,278.6 92.5,278.6 92.5,284.3 86.8,284.3 86.8,290 81,290 81,295.8 75.3,295.8 75.3,290 81,290 
+					81,284.3 86.8,284.3 86.8,278.6 92.5,278.6 92.5,272.9 98.2,272.9 98.2,267.1 81,267.1 81,272.9 75.3,272.9 75.3,278.6 
+					69.5,278.6 69.5,284.3 63.8,284.3 63.8,290 58,290 58,295.8 52.3,295.8 52.3,301.5 46.5,301.5 46.5,330.1 52.3,330.1 
+					52.3,335.9 63.8,335.9 63.8,347.3 69.5,347.3 69.5,353.1 81,353.1 81,364.5 86.8,364.5 86.8,358.8 92.5,358.8 92.5,364.5 
+					98.2,364.5 98.2,370.2 109.7,370.2 109.7,364.5 115.5,364.5 115.5,358.8 121.2,358.8 121.2,364.5 127,364.5 127,353.1 
+					138.5,353.1 138.5,347.3 144.2,347.3 144.2,335.9 155.7,335.9 155.7,330.1 161.5,330.1 161.5,301.5 155.7,301.5 				"/>
+			</defs>
+			<clipPath id="SVGID_432_">
+				<use xlink:href="#SVGID_431_"  style="overflow:visible;"/>
+			</clipPath>
+			<g class="st216">
+				<defs>
+					<rect id="SVGID_433_" x="-643.5" y="-154.1" width="1200" height="5926"/>
+				</defs>
+				<clipPath id="SVGID_434_">
+					<use xlink:href="#SVGID_433_"  style="overflow:visible;"/>
+				</clipPath>
+				<rect x="41.5" y="262.1" class="st217" width="125" height="113.1"/>
+			</g>
+		</g>
+		<polygon class="st218" points="28.2,17.1 28.2,36.9 18.3,36.9 18.3,56.8 38.1,56.8 38.1,36.9 48.1,36.9 48.1,17.1 		"/>
+		<rect x="-150.4" y="-82.1" width="19.8" height="59.5"/>
+		<polygon class="st219" points="-51.2,-82.1 -51.2,-102 -130.5,-102 -130.5,-82.1 -130.5,-62.3 -31.3,-62.3 -31.3,-82.1 		"/>
+		<rect x="-51.2" y="-62.3" width="19.8" height="39.7"/>
+		<polygon points="18.3,-22.6 18.3,17.1 18.3,36.9 28.2,36.9 28.2,17.1 48.1,17.1 48.1,36.9 58,36.9 58,17.1 58,17.1 58,-22.6 		"/>
+		<polygon class="st220" points="-140.4,156 -140.4,195.7 -140.4,215.5 -180.1,215.5 -180.1,255.2 -120.6,255.2 -120.6,235.4 
+			-100.8,235.4 -100.8,195.7 -61.1,195.7 -61.1,255.2 -80.9,255.2 -80.9,275 -100.8,275 -100.8,314.7 -61.1,314.7 -61.1,294.9 
+			-41.2,294.9 -41.2,275 -21.4,275 -21.4,195.7 -21.4,156 		"/>
+		<polygon class="st221" points="38.1,36.9 38.1,56.8 18.3,56.8 18.3,36.9 -1.6,36.9 -1.6,17.1 -160.3,17.1 -160.3,36.9 
+			-180.1,36.9 -180.1,56.8 -200,56.8 -200,76.6 -219.8,76.6 -219.8,96.5 -239.7,96.5 -239.7,116.3 -200,116.3 -200,96.5 
+			-180.1,96.5 -180.1,76.6 -160.3,76.6 -160.3,56.8 -140.4,56.8 -140.4,156 -21.4,156 -21.4,56.8 -1.6,56.8 -1.6,76.6 18.3,76.6 
+			18.3,96.5 38.1,96.5 38.1,76.6 58,76.6 58,64.8 58,56.8 58,36.9 		"/>
+		<polygon points="-358.7,-82.1 -358.7,-102 -378.6,-102 -378.6,-121.8 -418.2,-121.8 -418.2,-102 -438.1,-102 -438.1,-82.1 
+			-457.9,-82.1 -457.9,-42.4 -438.1,-42.4 -438.1,-62.3 -358.7,-62.3 -358.7,-42.4 -338.9,-42.4 -338.9,-82.1 		"/>
+		<polygon class="st221" points="-418.2,215.5 -438.1,215.5 -448,215.5 -477.8,215.5 -477.8,255.2 -438.1,255.2 -438.1,235.4 
+			-418.2,235.4 		"/>
+		<polygon points="-477.8,215.5 -497.6,215.5 -507.5,215.5 -517.5,215.5 -517.5,275 -497.6,275 -497.6,255.2 -477.8,255.2 		"/>
+		<polygon points="-398.4,275 -438.1,275 -438.1,294.9 -438.1,314.7 -438.1,334.6 -418.2,334.6 -418.2,314.7 -398.4,314.7 		"/>
+		<polygon class="st221" points="-338.9,215.5 -378.6,215.5 -378.6,255.2 -398.4,255.2 -398.4,275 -398.4,294.9 -398.4,314.7 
+			-378.6,314.7 -378.6,294.9 -358.7,294.9 -358.7,275 -338.9,275 		"/>
+		<polygon class="st222" points="-259.5,96.5 -259.5,76.6 -279.3,76.6 -279.3,56.8 -299.2,56.8 -299.2,36.9 -319,36.9 -319,17.1 
+			-477.8,17.1 -477.8,36.9 -497.6,36.9 -497.6,56.8 -517.5,56.8 -517.5,76.6 -537.3,76.6 -537.3,96.5 -537.3,116.3 -517.5,116.3 
+			-517.5,96.5 -497.6,96.5 -497.6,76.6 -477.8,76.6 -477.8,56.8 -457.9,56.8 -457.9,215.5 -338.9,215.5 -338.9,56.8 -319,56.8 
+			-319,76.6 -299.2,76.6 -299.2,96.5 -279.3,96.5 -279.3,116.3 -239.7,116.3 -239.7,96.5 		"/>
+		<polygon class="st223" points="-438.1,-62.3 -438.1,7.2 -418.2,7.2 -418.2,17.1 -378.6,17.1 -378.6,7.2 -358.7,7.2 -358.7,-62.3 
+					"/>
+		<polygon class="st218" points="-130.5,-62.3 -130.5,-2.8 -110.7,-2.8 -110.7,17.1 -71,17.1 -71,-2.8 -51.2,-2.8 -51.2,-62.3 		"/>
+		<rect x="-537.3" y="116.3" class="st223" width="19.8" height="20.2"/>
+		<polygon class="st223" points="-246,116.3 -249.6,116.3 -249.6,136.1 -246,136.1 -243.2,136.1 -239.7,136.1 -239.7,116.3 
+			-243.2,116.3 		"/>
+		<polygon class="st224" points="-120.8,295 -120.8,314.8 -120.8,334.6 -100.9,334.6 -100.9,314.8 -100.9,295 		"/>
+		<polygon class="st224" points="-200,255.3 -200,275.1 -180.2,275.1 -180.2,255.3 -180.2,235.5 -200,235.5 		"/>
+		<rect x="-378.6" y="-42.4" class="st225" width="9.9" height="9.9"/>
+		<rect x="-388.5" y="-42.4" class="st225" width="9.9" height="9.9"/>
+		<rect x="-428.2" y="-42.4" class="st226" width="9.9" height="9.9"/>
+		<rect x="-418.2" y="-42.4" width="9.9" height="9.9"/>
+		<rect x="-388.5" y="-42.4" class="st226" width="9.9" height="9.9"/>
+		<rect x="-378.6" y="-42.4" width="9.9" height="9.9"/>
+		<rect x="-120.6" y="294.9" width="19.5" height="39.7"/>
+		<rect x="-200" y="235.4" width="19.5" height="39.7"/>
+		<rect x="-100.8" y="-22.6" class="st227" width="19.8" height="9.9"/>
+		<rect x="-408.3" y="-12.7" class="st228" width="19.8" height="9.9"/>
+		<polygon points="-517.5,116.3 -517.5,136.5 -537.3,136.5 -537.3,116.3 -547.2,116.3 -547.2,136.5 -547.2,142.1 -547.2,175.8 
+			-507.5,175.8 -507.5,144.1 -507.5,136.5 -507.5,116.3 		"/>
+		<rect x="-110.7" y="-52.4" width="9.9" height="9.9"/>
+		<rect x="-71" y="-52.4" width="9.9" height="9.9"/>
+		<rect x="-80.9" y="-52.4" class="st226" width="9.9" height="9.9"/>
+		<rect x="-120.6" y="-52.4" class="st226" width="9.9" height="9.9"/>
+		<polygon class="st229" points="-236.1,116.3 -239.7,116.3 -239.7,136.1 -236.1,136.1 -233.3,136.1 -229.7,136.1 -229.7,116.3 
+			-233.3,116.3 		"/>
+	</g>
+</g>
+<g id="Layer_2">
+	<polygon class="st218" points="286.6,104.5 286.6,111.5 283.1,111.5 283.1,118.4 290.1,118.4 290.1,111.5 293.5,111.5 293.5,104.5 
+			"/>
+	<rect x="224.2" y="69.9" width="6.9" height="20.8"/>
+	<polygon class="st219" points="258.9,69.9 258.9,62.9 231.1,62.9 231.1,69.9 231.1,76.8 265.8,76.8 265.8,69.9 	"/>
+	<rect x="258.9" y="76.8" width="6.9" height="13.9"/>
+	<polygon points="283.1,90.7 283.1,104.5 283.1,111.5 286.6,111.5 286.6,104.5 293.5,104.5 293.5,111.4 297,111.4 297,104.5 
+		297,104.5 297,90.7 	"/>
+	<polygon class="st220" points="227.7,153.1 227.7,166.9 227.7,173.9 213.8,173.9 213.8,187.7 234.6,187.7 234.6,180.8 241.5,180.8 
+		241.5,166.9 255.4,166.9 255.4,187.7 248.5,187.7 248.5,194.7 241.5,194.7 241.5,208.5 255.4,208.5 255.4,201.6 262.3,201.6 
+		262.3,194.7 269.3,194.7 269.3,166.9 269.3,153.1 	"/>
+	<polygon class="st221" points="290.1,111.5 290.1,118.4 283.1,118.4 283.1,111.5 276.2,111.5 276.2,104.5 220.7,104.5 220.7,111.5 
+		213.8,111.5 213.8,118.4 206.9,118.4 206.9,125.3 199.9,125.3 199.9,132.3 193,132.3 193,139.2 206.9,139.2 206.9,132.3 
+		213.8,132.3 213.8,125.3 220.7,125.3 220.7,118.4 227.7,118.4 227.7,153.1 269.3,153.1 269.3,118.4 276.2,118.4 276.2,125.3 
+		283.1,125.3 283.1,132.3 290.1,132.3 290.1,125.3 297,125.3 297,121.2 297,118.4 297,111.5 	"/>
+	<polygon points="151.4,69.9 151.4,62.9 144.5,62.9 144.5,56 130.6,56 130.6,62.9 123.7,62.9 123.7,69.9 116.8,69.9 116.8,83.7 
+		123.7,83.7 123.7,76.8 151.4,76.8 151.4,83.7 158.3,83.7 158.3,69.9 	"/>
+	<polygon class="st221" points="130.6,173.9 123.7,173.9 120.2,173.9 109.8,173.9 109.8,187.7 123.7,187.7 123.7,180.8 130.6,180.8 
+			"/>
+	<polygon points="109.8,173.9 102.9,173.9 99.4,173.9 96,173.9 96,194.7 102.9,194.7 102.9,187.7 109.8,187.7 	"/>
+	<polygon points="137.6,194.7 123.7,194.7 123.7,201.6 123.7,208.5 123.7,215.4 130.6,215.4 130.6,208.5 137.6,208.5 	"/>
+	<polygon class="st221" points="158.3,173.9 144.5,173.9 144.5,187.7 137.6,187.7 137.6,194.7 137.6,201.6 137.6,208.5 144.5,208.5 
+		144.5,201.6 151.4,201.6 151.4,194.7 158.3,194.7 	"/>
+	<polygon class="st222" points="186.1,132.3 186.1,125.3 179.1,125.3 179.1,118.4 172.2,118.4 172.2,111.5 165.3,111.5 165.3,104.5 
+		109.8,104.5 109.8,111.5 102.9,111.5 102.9,118.4 96,118.4 96,125.3 89,125.3 89,132.3 89,139.2 96,139.2 96,132.3 102.9,132.3 
+		102.9,125.3 109.8,125.3 109.8,118.4 116.8,118.4 116.8,173.9 158.3,173.9 158.3,118.4 165.3,118.4 165.3,125.3 172.2,125.3 
+		172.2,132.3 179.1,132.3 179.1,139.2 193,139.2 193,132.3 	"/>
+	<polygon class="st223" points="123.7,76.8 123.7,101.1 130.6,101.1 130.6,104.5 144.5,104.5 144.5,101.1 151.4,101.1 151.4,76.8 	
+		"/>
+	<polygon class="st218" points="231.1,76.8 231.1,97.6 238.1,97.6 238.1,104.5 251.9,104.5 251.9,97.6 258.9,97.6 258.9,76.8 	"/>
+	<rect x="89" y="139.2" class="st223" width="6.9" height="7"/>
+	<polygon class="st223" points="190.8,139.2 189.5,139.2 189.5,146.1 190.8,146.1 191.8,146.1 193,146.1 193,139.2 191.8,139.2 	"/>
+	<polygon class="st224" points="234.6,201.6 234.6,208.5 234.6,215.4 241.5,215.4 241.5,208.5 241.5,201.6 	"/>
+	<polygon class="st224" points="206.9,187.8 206.9,194.7 213.8,194.7 213.8,187.8 213.8,180.8 206.9,180.8 	"/>
+	<rect x="144.5" y="83.7" class="st225" width="3.5" height="3.5"/>
+	<rect x="141" y="83.7" class="st225" width="3.5" height="3.5"/>
+	<rect x="127.2" y="83.7" class="st226" width="3.5" height="3.5"/>
+	<rect x="130.6" y="83.7" width="3.5" height="3.5"/>
+	<rect x="141" y="83.7" class="st226" width="3.5" height="3.5"/>
+	<rect x="144.5" y="83.7" width="3.5" height="3.5"/>
+	<rect x="234.6" y="201.6" width="6.8" height="13.9"/>
+	<rect x="206.9" y="180.8" width="6.8" height="13.9"/>
+	<rect x="241.5" y="90.7" class="st227" width="6.9" height="3.5"/>
+	<rect x="134.1" y="94.1" class="st228" width="6.9" height="3.5"/>
+	<polygon points="96,139.2 96,146.2 89,146.2 89,139.2 85.6,139.2 85.6,146.2 85.6,148.2 85.6,160 99.4,160 99.4,148.9 99.4,146.2 
+		99.4,139.2 	"/>
+	<rect x="238.1" y="80.3" width="3.5" height="3.5"/>
+	<rect x="251.9" y="80.3" width="3.5" height="3.5"/>
+	<rect x="248.5" y="80.3" class="st226" width="3.5" height="3.5"/>
+	<rect x="234.6" y="80.3" class="st226" width="3.5" height="3.5"/>
+	<polygon class="st229" points="194.2,139.2 193,139.2 193,146.1 194.2,146.1 195.2,146.1 196.5,146.1 196.5,139.2 195.2,139.2 	"/>
+	<polygon class="st230" points="448.7,55.3 448.7,18.4 365.7,18.4 365.7,55.3 374.9,55.3 374.9,64.6 384.1,64.6 384.1,73.8 
+		430.2,73.8 430.2,64.6 439.4,64.6 439.4,55.3 	"/>
+	<polygon class="st230" points="577.8,55.3 577.8,18.4 494.8,18.4 494.8,55.3 504,55.3 504,64.6 513.2,64.6 513.2,73.8 559.3,73.8 
+		559.3,64.6 568.6,64.6 568.6,55.3 	"/>
+	<path d="M365.7,18.4h83v36.9h-9.2v9.2h-9.2v9.2h-46.1v-9.2h-9.2v-9.2h-9.2V18.4z M494.8,18.4h83v36.9h-9.2v9.2h-9.2v9.2h-46.1v-9.2
+		H504v-9.2h-9.2V18.4z M485.6,0v18.4h-27.7V0H347.2v18.4v9.2h9.2v36.9h9.2v9.2h9.2V83h9.2h46.1h9.2v-9.2h9.2v-9.2h9.2V46.1h9.2v-9.2
+		h9.2v9.2h9.2v18.4h9.2v9.2h9.2V83h9.2h46.1h9.2v-9.2h9.2v-9.2h9.2V27.7h9.2V0H485.6z"/>
+	<polygon class="st226" points="416.5,46.1 416.5,32.3 411.9,32.3 402.7,32.3 402.7,36.9 402.7,46.1 411.9,46.1 	"/>
+	<polygon class="st231" points="430.4,46.1 430.4,32.3 425.8,32.3 416.5,32.3 416.5,36.9 416.5,46.1 425.8,46.1 	"/>
+	<polygon class="st226" points="545.6,46.1 545.6,32.3 541,32.3 531.8,32.3 531.8,36.9 531.8,46.1 541,46.1 	"/>
+	<polygon class="st231" points="559.5,46.1 559.5,32.3 554.9,32.3 545.6,32.3 545.6,36.9 545.6,46.1 554.9,46.1 	"/>
+	<polygon class="st219" points="485.4,243.5 485.4,234.8 406.5,234.8 406.5,247.9 406.5,252.3 424,252.3 424,256.7 489.7,256.7 
+		489.7,243.5 	"/>
+	<rect x="415.3" y="191" class="st232" width="65.7" height="4.4"/>
+	<rect x="415.3" y="195.3" class="st231" width="65.7" height="35"/>
+	<rect x="415.3" y="239.1" class="st232" width="4.4" height="4.4"/>
+	<rect x="424" y="239.1" class="st232" width="4.4" height="4.4"/>
+	<rect x="432.8" y="239.1" class="st232" width="4.4" height="4.4"/>
+	<rect x="441.6" y="239.1" class="st232" width="4.3" height="4.4"/>
+	<rect x="450.3" y="239.1" class="st232" width="4.4" height="4.4"/>
+	<rect x="459" y="239.1" class="st232" width="4.4" height="4.4"/>
+	<rect x="467.8" y="239.1" class="st232" width="4.4" height="4.4"/>
+	<rect x="428.4" y="247.9" class="st232" width="39.4" height="4.4"/>
+	<rect x="472.2" y="247.9" class="st232" width="4.2" height="4.4"/>
+	<rect x="472.5" y="247.9" class="st232" width="4.1" height="4.4"/>
+	<rect x="485.4" y="234.8" width="4.4" height="8.7"/>
+	<rect x="424" y="256.6" class="st232" width="4.4" height="4.4"/>
+	<g>
+		<rect x="459" y="265.4" class="st232" width="4.4" height="4.4"/>
+		<rect x="463.5" y="269.8" class="st232" width="4.4" height="4.4"/>
+		<polygon class="st232" points="459,269.8 454.7,269.8 454.7,278.5 459,278.5 459,296.1 454.7,296.1 454.7,300.4 459,300.4 
+			459,304.8 463.4,304.8 463.4,300.4 463.4,296.1 463.4,278.5 459,278.5 		"/>
+		<rect x="502.9" y="322.3" class="st232" width="4.4" height="4.4"/>
+		<rect x="507.2" y="326.7" class="st232" width="4.4" height="4.4"/>
+		<rect x="511.6" y="331.1" class="st232" width="4.4" height="4.4"/>
+		<rect x="507.2" y="335.5" class="st232" width="4.4" height="4.4"/>
+		<rect x="502.9" y="339.8" class="st232" width="4.4" height="4.4"/>
+		<polygon class="st232" points="489.7,278.5 485.4,278.5 480.9,278.5 476.6,278.5 472.2,278.5 472.2,274.2 467.8,274.2 
+			467.8,296.1 472.2,296.1 472.2,282.9 476.6,282.9 476.6,296.1 480.9,296.1 480.9,282.9 485.4,282.9 485.4,296.1 489.7,296.1 
+			489.7,282.9 494.1,282.9 494.1,278.5 		"/>
+		<rect x="494.1" y="282.9" class="st232" width="4.4" height="17.5"/>
+		<rect x="498.5" y="300.4" class="st232" width="4.4" height="21.9"/>
+		<rect x="498.5" y="344.2" class="st232" width="4.4" height="4.4"/>
+		<rect x="485.4" y="348.6" class="st232" width="13.2" height="4.4"/>
+		<rect x="480.9" y="344.2" class="st232" width="4.4" height="4.4"/>
+		<rect x="476.6" y="335.5" class="st232" width="4.4" height="8.7"/>
+		<rect x="472.2" y="331.1" class="st232" width="4.4" height="4.4"/>
+		<rect x="463.5" y="326.7" class="st232" width="8.7" height="4.4"/>
+		<polygon class="st232" points="459,313.6 454.7,313.6 454.7,326.7 459,326.7 459,326.7 463.4,326.7 463.4,322.3 459,322.3 		"/>
+		<rect x="450.3" y="304.8" class="st232" width="4.4" height="8.7"/>
+		<rect x="445.9" y="296.1" class="st232" width="4.4" height="8.7"/>
+		<rect x="450.3" y="291.7" class="st232" width="4.4" height="4.4"/>
+	</g>
+	<rect x="480.9" y="247.9" class="st232" width="4.4" height="4.4"/>
+	<rect x="476.6" y="239.1" class="st232" width="4.4" height="4.4"/>
+	<g>
+		<polygon class="st232" points="485.4,234.8 485.4,230.3 485.4,195.4 480.9,195.4 480.9,230.3 415.3,230.3 415.3,195.4 
+			410.9,195.4 410.9,230.3 410.9,234.8 480.9,234.8 		"/>
+		<rect x="406.5" y="234.8" class="st232" width="4.4" height="8.7"/>
+		<rect x="402.2" y="243.5" class="st232" width="4.4" height="8.7"/>
+		<rect x="410.9" y="247.9" class="st232" width="4.4" height="4.4"/>
+		<polygon class="st232" points="489.7,243.5 489.7,256.7 428.4,256.7 428.4,252.3 424,252.3 424,256.7 424,261 424,287.3 
+			424,291.7 424,296.1 428.4,296.1 428.4,291.7 432.8,291.7 432.8,287.3 428.4,287.3 428.4,261 494.1,261 494.1,256.7 494.1,243.5 
+					"/>
+		<rect x="393.4" y="296.1" class="st232" width="4.4" height="13.2"/>
+		<rect x="397.7" y="309.2" class="st232" width="4.4" height="21.9"/>
+		<polygon class="st232" points="424,326.7 402.2,326.7 402.2,331.1 424,331.1 428.4,331.1 428.4,313.6 424,313.6 		"/>
+		<rect x="428.4" y="304.8" class="st232" width="4.4" height="8.7"/>
+		<rect x="432.8" y="296.1" class="st232" width="4.4" height="8.7"/>
+		<rect x="437.2" y="287.3" class="st232" width="4.4" height="8.7"/>
+		<rect x="432.8" y="282.9" class="st232" width="4.4" height="4.4"/>
+		<polygon class="st232" points="419.6,278.5 419.6,252.3 424,252.3 424,247.9 419.6,247.9 419.6,252.3 415.3,252.3 415.3,278.5 		
+			"/>
+		<rect x="406.5" y="252.3" class="st232" width="4.4" height="26.3"/>
+		<polygon points="397.7,269.8 397.7,278.5 402.2,278.5 402.2,269.8 402.2,265.4 402.2,252.3 397.7,252.3 397.7,265.4 389,265.4 
+			389,269.8 389,296.1 393.4,296.1 393.4,269.8 		"/>
+	</g>
+	<polygon class="st226" points="432.8,287.3 432.8,291.7 428.4,291.7 428.4,296.1 424,296.1 424,252.3 419.6,252.3 419.6,278.5 
+		415.3,278.5 415.3,252.3 410.9,252.3 410.9,278.5 406.5,278.5 406.5,252.3 402.2,252.3 402.2,278.5 397.7,278.5 397.7,269.8 
+		393.4,269.8 393.4,296.1 397.7,296.1 397.7,309.2 402.2,309.2 402.2,326.7 406.5,326.7 410.9,326.7 415.3,326.7 419.6,326.7 
+		424,326.7 424,313.6 428.4,313.6 428.4,304.8 432.8,304.8 432.8,296.1 437.2,296.1 437.2,287.3 	"/>
+	<polygon class="st226" points="507.2,331.1 507.2,326.7 502.9,326.7 502.9,322.3 498.5,322.3 498.5,300.4 494.1,300.4 494.1,282.9 
+		489.7,282.9 489.7,296.1 485.4,296.1 485.4,282.9 480.9,282.9 480.9,296.1 476.6,296.1 476.6,282.9 472.2,282.9 472.2,296.1 
+		467.8,296.1 467.8,274.2 463.5,274.2 463.5,269.8 459,269.8 459,278.5 463.5,278.5 463.5,304.8 459,304.8 459,300.4 454.7,300.4 
+		454.7,296.1 450.3,296.1 450.3,304.8 454.7,304.8 454.7,313.6 459,313.6 459,322.3 463.5,322.3 463.5,326.7 467.8,326.7 
+		472.2,326.7 472.2,331.1 476.6,331.1 476.6,335.5 480.9,335.5 480.9,344.2 485.4,344.2 485.4,348.6 489.7,348.6 494.1,348.6 
+		498.5,348.6 498.5,344.2 502.9,344.2 502.9,339.8 507.2,339.8 507.2,335.5 511.6,335.5 511.6,331.1 	"/>
+	<g>
+		<rect x="84.9" y="362.1" class="st233" width="5.8" height="5.8"/>
+		<rect x="79" y="368" class="st233" width="5.8" height="5.8"/>
+		<rect x="90.7" y="368" class="st233" width="5.8" height="5.8"/>
+		<rect x="84.9" y="373.8" class="st233" width="5.8" height="5.8"/>
+		<rect x="79" y="379.6" class="st233" width="5.8" height="5.8"/>
+		<rect x="84.9" y="385.5" class="st233" width="5.8" height="5.8"/>
+		<rect x="73.2" y="385.5" class="st233" width="5.8" height="5.8"/>
+		<rect x="90.7" y="379.6" class="st233" width="5.8" height="5.8"/>
+		<polygon class="st233" points="102.4,385.5 96.5,385.5 96.5,391.3 102.4,391.3 108.2,391.3 108.2,385.5 		"/>
+		<rect x="108.2" y="379.6" class="st233" width="5.8" height="5.8"/>
+		<rect x="114.1" y="385.5" class="st233" width="5.8" height="5.8"/>
+		<rect x="119.9" y="379.6" class="st233" width="5.8" height="5.8"/>
+		<rect x="125.7" y="385.5" class="st233" width="5.8" height="5.8"/>
+		<rect x="119.9" y="391.3" class="st233" width="5.8" height="5.8"/>
+		<rect x="108.2" y="391.3" class="st233" width="5.8" height="5.8"/>
+		<rect x="90.7" y="391.3" class="st233" width="5.8" height="5.8"/>
+		<rect x="79" y="391.3" class="st233" width="5.8" height="5.8"/>
+		<rect x="73.2" y="397.2" class="st233" width="5.8" height="5.8"/>
+		<rect x="84.9" y="397.2" class="st233" width="5.8" height="5.8"/>
+		<polygon class="st233" points="96.5,397.2 96.5,403 102.4,403 108.2,403 108.2,397.2 102.4,397.2 		"/>
+		<rect x="114.1" y="397.2" class="st233" width="5.8" height="5.8"/>
+		<rect x="125.7" y="397.2" class="st233" width="5.8" height="5.8"/>
+		<rect x="131.6" y="391.3" class="st233" width="5.8" height="5.8"/>
+		<rect x="67.4" y="391.3" class="st233" width="5.8" height="5.8"/>
+		<rect x="61.5" y="385.5" class="st233" width="5.8" height="5.8"/>
+		<rect x="55.7" y="379.6" class="st233" width="5.8" height="5.8"/>
+		<rect x="49.8" y="373.8" class="st233" width="5.8" height="5.8"/>
+		<rect x="137.4" y="385.5" class="st233" width="5.8" height="5.8"/>
+		<rect x="143.3" y="379.6" class="st233" width="5.8" height="5.8"/>
+		<rect x="149.1" y="373.8" class="st233" width="5.8" height="5.8"/>
+		<rect x="108.2" y="368" class="st233" width="5.8" height="5.8"/>
+		<rect x="119.9" y="368" class="st233" width="5.8" height="5.8"/>
+		<rect x="114.1" y="373.8" class="st233" width="5.8" height="5.8"/>
+		<rect x="114.1" y="362.1" class="st233" width="5.8" height="5.8"/>
+		<polygon class="st233" points="154.9,297.9 154.9,292.1 149.1,292.1 149.1,286.2 143.3,286.2 143.3,280.4 137.4,280.4 
+			137.4,274.5 131.6,274.5 131.6,268.7 125.7,268.7 125.7,262.9 119.9,262.9 114.1,262.9 114.1,262.9 114.1,262.9 108.2,262.9 
+			108.2,268.7 114.1,268.7 114.1,274.5 119.9,274.5 119.9,280.4 125.7,280.4 125.7,286.2 131.6,286.2 131.6,292.1 125.7,292.1 
+			125.7,286.2 119.9,286.2 119.9,280.4 114.1,280.4 114.1,274.5 108.2,274.5 108.2,268.7 102.4,268.7 96.5,268.7 96.5,274.5 
+			90.7,274.5 90.7,280.4 84.9,280.4 84.9,286.2 79,286.2 79,292.1 73.2,292.1 73.2,286.2 79,286.2 79,280.4 84.9,280.4 84.9,274.5 
+			90.7,274.5 90.7,268.7 96.5,268.7 96.5,262.9 90.7,262.9 84.9,262.9 84.9,262.9 79,262.9 79,268.7 73.2,268.7 73.2,274.5 
+			67.4,274.5 67.4,280.4 61.5,280.4 61.5,286.2 55.7,286.2 55.7,292.1 49.8,292.1 49.8,297.9 44,297.9 44,303.7 44,309.6 44,309.6 
+			44,315.4 44,321.3 44,327.1 49.8,327.1 49.8,332.9 55.7,332.9 61.5,332.9 61.5,338.8 61.5,344.6 67.4,344.6 67.4,350.4 
+			73.2,350.4 79,350.4 79,356.3 79,362.1 84.9,362.1 84.9,356.3 90.7,356.3 90.7,362.1 96.5,362.1 96.5,368 102.4,368 108.2,368 
+			108.2,362.1 114.1,362.1 114.1,356.3 119.9,356.3 119.9,362.1 125.7,362.1 125.7,356.3 125.7,350.4 131.6,350.4 137.4,350.4 
+			137.4,344.6 143.3,344.6 143.3,338.8 143.3,332.9 149.1,332.9 154.9,332.9 154.9,327.1 160.8,327.1 160.8,321.3 160.8,315.4 
+			160.8,309.6 160.8,309.6 160.8,303.7 160.8,297.9 		"/>
+		<polygon class="st233" points="102.4,379.6 108.2,379.6 108.2,373.8 102.4,373.8 96.5,373.8 96.5,379.6 		"/>
+	</g>
+	<g>
+		<rect x="111.1" y="306.7" class="st226" width="2.9" height="2.9"/>
+		<rect x="70.3" y="306.7" class="st226" width="2.9" height="2.9"/>
+		<rect x="114.1" y="303.7" class="st226" width="17.5" height="2.9"/>
+		<rect x="73.2" y="303.7" class="st226" width="17.5" height="2.9"/>
+		<rect x="131.6" y="306.7" class="st226" width="2.9" height="2.9"/>
+		<rect x="90.7" y="306.7" class="st226" width="2.9" height="2.9"/>
+		<polygon class="st226" points="131.6,315.4 125.7,315.4 119.9,315.4 114.1,315.4 114.1,319.8 111.1,319.8 111.1,322.7 
+			114.1,322.7 114.1,327.1 119.9,327.1 125.7,327.1 131.6,327.1 131.6,322.7 134.5,322.7 134.5,319.8 131.6,319.8 		"/>
+		<polygon class="st226" points="90.7,315.4 84.9,315.4 79,315.4 73.2,315.4 73.2,319.8 70.3,319.8 70.3,322.7 73.2,322.7 
+			73.2,327.1 79,327.1 84.9,327.1 90.7,327.1 90.7,322.7 93.6,322.7 93.6,319.8 90.7,319.8 		"/>
+	</g>
+	<polygon class="st226" points="102.4,262.9 96.5,262.9 96.5,268.6 90.7,268.6 90.7,274.4 96.5,274.4 96.5,268.7 102.4,268.7 
+		108.2,268.7 108.2,262.9 	"/>
+	<polygon class="st226" points="108.2,344.6 108.2,338.8 102.4,338.8 96.5,338.8 96.5,344.6 102.4,344.6 	"/>
+	<rect x="108.2" y="268.7" class="st226" width="5.8" height="5.8"/>
+	<rect x="84.9" y="274.4" class="st226" width="5.8" height="5.8"/>
+	<rect x="79" y="280.3" class="st226" width="5.8" height="5.8"/>
+	<rect x="73.2" y="286.1" class="st226" width="5.8" height="5.8"/>
+	<rect x="114.1" y="274.5" class="st226" width="5.8" height="5.8"/>
+	<rect x="119.9" y="280.4" class="st226" width="5.8" height="5.8"/>
+	<rect x="125.7" y="286.2" class="st226" width="5.8" height="5.8"/>
+	<rect x="114.1" y="356.3" class="st226" width="5.8" height="5.8"/>
+	<rect x="114.1" y="368" class="st226" width="5.8" height="5.8"/>
+	<polygon class="st226" points="102.4,373.8 108.2,373.8 108.2,368 102.4,368 96.5,368 96.5,373.8 	"/>
+	<polygon class="st226" points="96.5,391.3 96.5,397.2 102.4,397.2 108.2,397.2 108.2,391.3 102.4,391.3 	"/>
+	<polygon class="st226" points="102.4,379.6 96.5,379.6 96.5,385.5 102.4,385.5 108.2,385.5 108.2,379.6 	"/>
+	<rect x="114.1" y="379.6" class="st226" width="5.8" height="5.8"/>
+	<rect x="114.1" y="391.3" class="st226" width="5.8" height="5.8"/>
+	<rect x="84.9" y="356.3" class="st226" width="5.8" height="5.8"/>
+	<rect x="84.9" y="368" class="st226" width="5.8" height="5.8"/>
+	<rect x="84.9" y="379.6" class="st226" width="5.8" height="5.8"/>
+	<rect x="84.9" y="391.3" class="st226" width="5.8" height="5.8"/>
+	<rect x="108.2" y="362.1" class="st226" width="5.8" height="5.8"/>
+	<rect x="108.2" y="373.8" class="st226" width="5.8" height="5.8"/>
+	<rect x="108.2" y="385.5" class="st226" width="5.8" height="5.8"/>
+	<rect x="108.2" y="397.2" class="st226" width="5.8" height="5.8"/>
+	<rect x="119.9" y="397.2" class="st226" width="5.8" height="5.8"/>
+	<rect x="119.9" y="385.5" class="st226" width="5.8" height="5.8"/>
+	<rect x="119.9" y="373.8" class="st226" width="5.8" height="5.8"/>
+	<rect x="119.9" y="362.1" class="st226" width="5.8" height="5.8"/>
+	<rect x="90.7" y="362.1" class="st226" width="5.8" height="5.8"/>
+	<rect x="90.7" y="373.8" class="st226" width="5.8" height="5.8"/>
+	<rect x="90.7" y="385.5" class="st226" width="5.8" height="5.8"/>
+	<rect x="90.7" y="397.2" class="st226" width="5.8" height="5.8"/>
+	<rect x="79" y="397.2" class="st226" width="5.8" height="5.8"/>
+	<rect x="79" y="385.5" class="st226" width="5.8" height="5.8"/>
+	<rect x="79" y="373.8" class="st226" width="5.8" height="5.8"/>
+	<rect x="79" y="362.1" class="st226" width="5.8" height="5.8"/>
+	<rect x="73.2" y="391.3" class="st226" width="5.8" height="5.8"/>
+	<rect x="125.7" y="391.3" class="st226" width="5.8" height="5.8"/>
+	<rect x="122.4" y="318.6" class="st232" width="5.8" height="5.8"/>
+	<rect x="82.1" y="318.4" class="st232" width="5.8" height="5.8"/>
+	<polygon class="st234" points="337.7,362 337.7,354.7 330.4,354.7 330.4,347.4 323.2,347.4 323.2,340.2 315.9,340.2 315.9,332.9 
+		257.9,332.9 257.9,340.2 250.6,340.2 250.6,347.4 243.4,347.4 243.4,354.7 236.1,354.7 236.1,362 228.9,362 228.9,470.7 
+		236.1,470.7 236.1,478 243.4,478 243.4,485.2 257.9,485.2 257.9,499.7 265.1,499.7 265.1,507 308.7,507 308.7,499.7 315.9,499.7 
+		315.9,485.2 330.4,485.2 330.4,478 337.7,478 337.7,470.7 344.9,470.7 344.9,362 	"/>
+	<path class="st235" d="M295.9,430.9h-14v-7h14V430.9z M337.9,409.9v-28h-42v7h-14v-7h-42v28h7v7h7v7h21v14h-14v28h56v-28h-14v-14
+		h21v-7h7v-7H337.9z"/>
+	<path d="M274.9,406.4h3.5v-7h-7v-3.5h-24.5v3.5h3.5v3.5h3.5v3.5h3.5v3.5h17.5V406.4z M299.4,451.9h-3.5v-3.5h-14v3.5h-3.5v7h3.5
+		v3.5h14v-3.5h3.5V451.9z M330.9,399.4v-3.5h-24.5v3.5h-7v7h3.5v3.5h17.5v-3.5h3.5v-3.5h3.5v-3.5H330.9z"/>
+</g>
+</svg>
