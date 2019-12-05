@@ -24,6 +24,7 @@ function lauch_event_retro_videos( $data ) {
 
   $posts = get_posts(array(
     'post_type' => 'video',
+    'posts_per_page' => -1,
     'tax_query' => array(
       $loc_param,
       $year_param,
