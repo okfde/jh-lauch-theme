@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: 1 Anmeldung Test
+ * Template Name: Pretix Anmeldung
  */
 
 $pretix_event_link = get_field("link_pretix_event");
@@ -16,7 +16,7 @@ get_header();
 
 <div id="primary" class="content-area page-signup">
 
-    <div class="c-copy">
+    <div class="c-page-copy">
       <?php
       while ( have_posts() ) :
       the_post();

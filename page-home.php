@@ -23,8 +23,8 @@ endwhile;
 
 
 <section class="c-page-section white">
-  <div class="c-page-2col jc-sb">
-    <div class="col-s">
+  <div class="c-page-2col">
+    <div class="col-s mr-10">
 
       <div class="float-box float-box--softblue">
         <div class="c-flag softblue mini points-bottom float-box-head"><?php the_field('left_box_flag'); ?></div>
@@ -35,7 +35,7 @@ endwhile;
       </div>
 
     </div>
-    <div class="col-l fg ml-10">
+    <div class="col-l">
       <h2><?php echo __('Die nächsten Termine', 'lauch'); ?></h2>
 
       <div class="c-toc c-toc--horizontal">
