@@ -48,7 +48,7 @@
   </div>
 
   <div class="c-page-section white c-page-cpital-first">
-    <div class="c-page-standard wp-styles">
+    <div class="c-page-standard wp-styles mb-5">
       <?php echo apply_filters( 'the_content', get_field('retro_text')); ?>
     </div>
 
