@@ -42,7 +42,7 @@ $event_color = get_field('event_color', get_the_ID());
             <?php echo __('Anmelden', 'lauch'); ?></a>
         </div>
       <?php else: ?>
-        <div class="events-list-actions">
+        <div class="events-list-actions events-list-actions--overview">
           <?php
           $the_query = new WP_Query( array(
             'post_type' => 'event',
