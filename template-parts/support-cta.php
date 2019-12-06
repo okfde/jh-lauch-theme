@@ -1,4 +1,4 @@
-<div class="c-page-2col c-support col-break-small ai-c">
+<div class="c-page-2col c-support col-break-small ai-c mt-10">
   <div class="c-page-2col col-m fg">
     <?php get_template_part('images/illustrations', 'freundeskreis.svg' ); ?>
   </div>
