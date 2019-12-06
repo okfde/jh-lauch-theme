@@ -18,7 +18,7 @@ endwhile;
 
 <header class="c-page-home-header pb-10 c-index-header p-r">
   <div class="c-index-wrapper">
-    <h1 class="c-index-title">Mit <span class="js-scramle">Code</span> die<br> Welt verbessern</h1>
+    <h1 class="c-index-title">Mit <span id="revolving-claims">Code</span> die<br> Welt verbessern</h1>
     <div class="c-page-content"><?php the_content(); ?></div>
     <div class="c-index-illu">
       <?php render_svg("/images/index/Illustration-Mashup-Start-02-1200-02.svg") ?>

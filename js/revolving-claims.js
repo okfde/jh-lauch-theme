@@ -5,43 +5,70 @@ document.addEventListener('DOMContentLoaded', function () {
       data: {
         baseUrl: '/wp-json/lauch/v1/revolving_claims',
         claims: [],
-        waiter: 0,
-        distance: 100
+        current_word: '',
+        next_word: '',
+        display_text: '',
+        counter: 0,
+        counter_stay: 20,
+        scramble_counter: 0,
+        scramble_stay: 10,
+        stringset: 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!?@#$%&*{}<>[]',
       },
       methods: {
+        scrambleText() {
+          let strs = this.stringset.split('');
+          return this.display_text.split('')
+            .map(x => strs[Math.floor(Math.random()*strs.length)] )
+            .join("");
+        },
+        newWord() {
+          this.current_word = this.next_word;
+          let idx = Math.floor(Math.random()*this.claims.length);
+          this.next_word = this.claims[idx];
+          this.display_text = this.current_word;
+        },
+        increaseDecreaseLetters() {
+          if (this.display_text.length < this.next_word.length) {
+            this.display_text = this.display_text + 'x';
+          } else if (this.display_text.length > this.next_word.length) {
+            this.display_text = this.display_text.substring(0, this.display_text.length -1);
+          }
+        },
         onCaroussel () {
-          this.waiter = this.waiter + 1;
-          this.distance = this.distance + 100;
+          if (this.counter == 0) {
+            this.newWord();
+            this.counter += 1;
+          } else if (this.counter > this.counter_stay) { // main wait time
+            this.increaseDecreaseLetters();
 
-          if (this.waiter > this.claims.length) {
-            this.waiter = 0;
-            this.distance = this.claims.length * 100 * (-1) + 100;
+            this.scramble_counter += 1;
+            this.counter += 1;
+            this.display_text = this.scrambleText();
+
+            if (this.scramble_counter == this.scramble_stay // ensure there is at least a bit pf scramble
+                && this.display_text.length == this.next_word.length) {
+              this.counter = 0;
+              this.scramble_counter = 0;
+            }
+          } else {
+            this.counter += 1;
           }
         }
       },
-      computed: {
-        caroussel () {
-          return this.distance;
-        }
-      },
+      computed: {},
       template: `
-  <span class="container" style="position: relative; width: 100px; overflow: hidden; display: inline-block; height: 2em; border: 1px solid gold; ">
-    <span class="slider"
-          style="position: absolute; width: 100vw"
-          v-bind:style="{ marginLeft: caroussel + 'px' }">
-      <span class="slide"
-            style="display: inline-block; width: 100px"
-            v-for="claim in claims">{{ claim }}</span>
-    </span>
-  </span>
-  `,
+  <span class="container">
+    {{ this.display_text }}
+  </span>`,
       mounted: function () {
         fetch(this.baseUrl).then((response) => {
           return response.json();
         }).then((data) => {
           this.claims = data.reverse();
-          this.distance = this.claims.length * 100 * (-1) + 100;
-          setInterval(this.onCaroussel, 3000);
+          this.current_word = this.claims[0];
+          this.next_word = this.claims[1];
+          this.onCaroussel();
+          setInterval(this.onCaroussel, 100);
         })
       }
     })
