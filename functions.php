@@ -208,7 +208,7 @@ add_image_size( 'learning-teaser', 620, 304, true );
 add_image_size( 'blog-alpaka-small', 300, 300, true );
 add_image_size( 'blog-alpaka', 560, 560, true );
 add_image_size( 'blog-alpaka-highdpi', 1120, 1120, true );
-add_image_size( 'blog-large', 715, 590, true );
+add_image_size( 'blog-large', 760, 500, true );
 //add_image_size( 'blog-small', 320, 200, true );
 add_image_size( 'blog-large-highdpi', 1430, 1180, true );
 //add_image_size( 'blog-small-highdpi', 640, 400, true);
