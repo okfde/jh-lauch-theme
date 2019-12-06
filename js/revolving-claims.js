@@ -5,10 +5,10 @@ document.addEventListener('DOMContentLoaded', function () {
       data: {
         baseUrl: '/wp-json/lauch/v1/revolving_claims',
         claims: [],
-        current_word: '',
-        next_word: '',
-        display_text: '',
-        counter: 0,
+        current_word: 'Code',
+        next_word: 'Code',
+        display_text: 'Code',
+        counter: 1,
         counter_stay: 20,
         scramble_counter: 0,
         scramble_stay: 10,
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
           return response.json();
         }).then((data) => {
           this.claims = data.reverse();
-          this.display_text = 'Code';
+          //this.display_text = 'Code';
           this.newWord();
           this.onCaroussel();
           setInterval(this.onCaroussel, 100);
