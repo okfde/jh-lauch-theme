@@ -85,7 +85,7 @@
     </div>
   </div>
   <div class="c-page-section pb-2 mt-2 white ">
-    <ul class="c-list-displayitems pt-2">
+    <ul class="c-list-displayitems pt-2 js-slider" data-slider-preset="auto">
       <?php
       while( have_rows('partner', $post->ID) ): the_row(); ?>
         <li class="c-displayitem">
