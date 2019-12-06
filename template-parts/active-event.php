@@ -222,9 +222,9 @@ if ((get_field('next_event'))) {
                title="Zur Website von <?php the_sub_field('partner_name'); ?> "
                class="hover-line-trigger">
               <img src="<?php echo $image[0] ?>" alt="" class="white">
-              <h3 class="c-displayitem-title">
+              <p class="c-displayitem-title">
                 <span class="hover-line"><?php the_sub_field('partner_name'); ?></span>
-              </h3>
+              </p>
             </a>
           </li>
         <?php endwhile; ?>
