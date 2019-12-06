@@ -203,10 +203,12 @@ endwhile;
   echo do_shortcode($out); ?>
 </section>
 
+
+<!--
 <section class="c-page-section">
   <h2><?php echo __('So war es in', 'lauch'); ?></h2>
 </section>
-
+-->
 
 <section class="">
   <?php get_template_part( 'template-parts/support-cta', get_post_type() ); ?>
