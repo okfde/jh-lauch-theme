@@ -52,16 +52,28 @@
       <?php echo apply_filters( 'the_content', get_field('retro_text')); ?>
     </div>
 
-      <?php
+    <?php
       $loc_term = wp_get_post_terms($post->ID, 'location');
       $year_term = wp_get_post_terms($post->ID, 'year');
-      if ($loc_term[0]->slug && $year_term[0]->slug) {
+
+    if ($loc_term[0]->slug && $year_term[0]->slug) {
+      $has_posts = get_posts(array(
+        'post_type' => 'video',
+        'posts_per_page' => -1,
+        'tax_query' => array(
+          $loc_term[0]->slug,
+          $year_term[0]->slug,
+          'project-presentation',
+        )
+      ));
+      if ($has_posts) {
         echo do_shortcode("[vuevideo type='project-presentation' location='". $loc_term[0]->slug ."' year='". $year_term[0]->slug ."']");
       }
-      ?>
+    } ?>
   </div>
 </section>
 
+<?php if( have_rows('partner', $post->ID) ): ?>
 <section class="c-page-section p-r">
   <div class="c-page-2col jc-sb ai-e">
     <div class="col-l">
@@ -74,7 +86,7 @@
   </div>
   <div class="c-page-section pb-2 mt-2 white ">
     <ul class="c-list-displayitems pt-2">
-      <?php if( have_rows('partner', $post->ID) ):
+      <?php
       while( have_rows('partner', $post->ID) ): the_row(); ?>
         <li class="c-displayitem">
           <a href="<?php the_sub_field('partner_link'); ?>"
@@ -86,8 +98,8 @@
             </h3>
           </a>
         </li>
-      <?php endwhile;
-      endif; ?>
+      <?php endwhile; ?>
     </ul>
   </div>
 </section>
+<?php endif; ?>

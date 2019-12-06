@@ -200,6 +200,7 @@ if ((get_field('next_event'))) {
     </div>
   </section>
 
+<?php  if( have_rows('partner', $next->ID) ): ?>
   <section class="c-page-section p-r">
     <div class="c-page-2col jc-sb ai-e">
       <div class="col-l">
@@ -212,7 +213,7 @@ if ((get_field('next_event'))) {
     </div>
     <div class="c-page-section pb-2 mt-2">
       <ul class="c-list-displayitems pt-2">
-        <?php if( have_rows('partner', $next->ID) ):
+        <?php
         while( have_rows('partner', $next->ID) ): the_row(); ?>
           <?php
           $image = wp_get_attachment_image_src(get_sub_field('partner_img'), 'events-teaser-highdpi'); ?>
@@ -226,11 +227,11 @@ if ((get_field('next_event'))) {
               </h3>
             </a>
           </li>
-        <?php endwhile;
-        endif; ?>
+        <?php endwhile; ?>
       </ul>
     </div>
   </section>
+<?php endif; ?>
 
   <script>
    var mymap = L.map('map').setView([<?php the_field('event_lat', $next->ID); ?>,
