@@ -79,7 +79,7 @@ if ((get_field('next_event'))) {
         <?php the_field('event_programm', $next->ID); ?>
       </div>
     </div>
-    <div class="c-page-3col c-program jc-sb mt-1">
+    <div class="c-page-3col c-program jc-sb mt-3">
       <div class="col-s">
         <h3><?php render_svg("/images/events/_freitag.svg"); ?></h3>
         <ol class="">
