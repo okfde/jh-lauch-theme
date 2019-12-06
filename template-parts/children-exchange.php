@@ -9,7 +9,7 @@
 ?>
 
 <li>
-  <div class="events-list-item">
+  <div class="events-list-item ai-c">
     <?php
     if (get_the_post_thumbnail(get_the_ID(), array(300, 200))) : ?>
       <picture class="events-list-image--overview">
