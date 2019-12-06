@@ -13,9 +13,6 @@ body:not(.js) .c-list-displayitems
   display: flex
   flex-wrap: wrap
 
-  //animation: carousel infinite 30s linear
-  //animation-direction: alternate
-
 .c-displayitem
   body:not(.js) &
     flex: 0 0 50%
@@ -33,15 +30,12 @@ body:not(.js) .c-list-displayitems
       height: 10rem
       object-fit: contain
 
+   a
+     text-decoration: none
+     color: currentColor
+
 .c-displayitem-title
   font-weight: $font-weight-bold
 
 .c-displayitem-text
   font-size: 0.8rem
-
-
-/* @keyframes carousel
-/*   from
-/*     transform: translateX(-400%)
-/*   to
-/*     transform: translateX(20%)
