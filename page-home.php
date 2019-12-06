@@ -29,9 +29,8 @@ endwhile;
 
 
 <section class="c-page-section white pt-10">
-  <div class="c-page-2col">
-    <div class="col-s mr-10">
-
+  <div class="c-page-2col jc-sb c-index-events">
+    <div class="col-s">
       <div class="float-box float-box--softblue">
         <div class="c-flag softblue mini points-bottom float-box-head"><?php the_field('left_box_flag'); ?></div>
         <img src="<?php echo get_the_post_thumbnail_url(get_field('left_box_post')[0]->ID, 'events-teaser-highdpi') ?>" alt="">
@@ -41,7 +40,7 @@ endwhile;
       </div>
 
     </div>
-    <div class="col-l">
+    <div class="col-l fg">
       <h2 class="c-index-subtitle mt-1"><?php echo __('Die nächsten Termine', 'lauch'); ?></h2>
 
       <div class="c-toc c-toc--horizontal">
