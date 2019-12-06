@@ -18,7 +18,7 @@ $event_color = get_field('event_color', get_the_ID());
                 media="(max-width: 1900px)">
         <source srcset="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'events-teaser-highdpi'); ?>"
                 media="(min-resolution: 192dpi)">
-        <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'events-teaser-m'); ?>">
+        <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'events-teaser-s'); ?>">
       </picture>
     <?php
     endif; ?>
@@ -33,7 +33,7 @@ $event_color = get_field('event_color', get_the_ID());
       endif; ?>
 
       <?php if (get_field('is_active') == 1): ?>
-        <div class="events-list-actions active">
+        <div class="events-list-actions events-list-actions--overview active">
           <a href="<?php the_permalink(); ?>"
              title="Mehr Infos zu Jugend hackt in <?php the_title() ?>">
             <?php echo __('Mehr Infos', 'lauch'); ?></a>

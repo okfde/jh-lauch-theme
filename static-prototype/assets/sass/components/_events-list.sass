@@ -9,9 +9,9 @@
     margin-right: 3em
     @media (min-width: $break-large)
       flex: 0 0 14rem
-    .events-list-actions
-      a
-        font-size: 1rem
+
+    img
+      width: 100%
 
   .events-list-image
     flex: 0 0 7rem
@@ -72,6 +72,11 @@
     @media (min-width: $break-large)
       font-size: 1.4rem
 
+  .events-list-actions--overview
+    a
+      font-size: 1rem
+
+
 .c-events-list + .c-events-list
   margin-top: 8rem
 
@@ -87,9 +92,9 @@
     background-color: #2969b2
     .events-list-hover
       opacity: 1
-  @media (min-width: $break-medium)
-    display: flex
-    padding: 1.8em $body-padding * 2 1.8em
+  display: flex
+  padding: 1.8em $body-padding * 2 1.8em
+
   @media (min-width: $break-large)
     align-items: center
 
