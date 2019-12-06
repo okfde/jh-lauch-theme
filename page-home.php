@@ -31,7 +31,7 @@ endwhile;
 <section class="c-page-section white pt-10">
   <div class="c-page-2col jc-sb c-index-events">
     <div class="col-s">
-      <div class="float-box float-box--softblue">
+      <div class="float-box float-box--softblue float-box--index">
         <div class="c-flag softblue mini points-bottom float-box-head"><?php the_field('left_box_flag'); ?></div>
         <img src="<?php echo get_the_post_thumbnail_url(get_field('left_box_post')[0]->ID, 'events-teaser-highdpi') ?>" alt="">
         <h2 class="float-box-title"><?php the_field('left_box_title'); ?></h2>

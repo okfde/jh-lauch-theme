@@ -65,8 +65,8 @@ document.addEventListener('DOMContentLoaded', function () {
           return response.json();
         }).then((data) => {
           this.claims = data.reverse();
-          this.current_word = this.claims[0];
-          this.next_word = this.claims[1];
+          this.display_text = 'Code';
+          this.newWord();
           this.onCaroussel();
           setInterval(this.onCaroussel, 100);
         })
