@@ -61,9 +61,9 @@
         'post_type' => 'video',
         'posts_per_page' => -1,
         'tax_query' => array(
-          $loc_term[0]->slug,
-          $year_term[0]->slug,
-          'project-presentation',
+          lauch_fill_tax_query('location', $loc_term[0]->slug),
+          lauch_fill_tax_query('year', $year_term[0]->slug),
+          lauch_fill_tax_query('type', 'project-presentation'),
         )
       ));
       if ($has_posts) {
