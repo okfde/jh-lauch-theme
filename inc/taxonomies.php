@@ -4,7 +4,7 @@
  */
 function lauch_register_tech_taxonomy() {
     $args = array(
-        'label'        => __( 'Technology', 'textdomain' ),
+        'label'        => __( 'Technologie', 'textdomain' ),
         'public'       => true,
         'rewrite'      => false,
         'hierarchical' => false,
@@ -17,7 +17,7 @@ add_action( 'init', 'lauch_register_tech_taxonomy', 0 );
 
 function lauch_register_topics_taxonomy() {
     $args = array(
-        'label'        => __( 'Topic', 'textdomain' ),
+        'label'        => __( 'Themenraum', 'textdomain' ),
         'public'       => true,
         'rewrite'      => false,
         'hierarchical' => false,
@@ -30,7 +30,7 @@ add_action( 'init', 'lauch_register_topics_taxonomy', 0 );
 
 function lauch_register_location_taxonomy() {
     $args = array(
-        'label'        => __( 'Location', 'textdomain' ),
+        'label'        => __( 'Ort', 'textdomain' ),
         'public'       => true,
         'rewrite'      => false,
         'hierarchical' => true,
@@ -43,7 +43,7 @@ add_action( 'init', 'lauch_register_location_taxonomy', 0 );
 
 function lauch_register_year_taxonomy() {
     $args = array(
-        'label'        => __( 'Year', 'textdomain' ),
+        'label'        => __( 'Jahr', 'textdomain' ),
         'public'       => true,
         'rewrite'      => false,
         'hierarchical' => true,
@@ -56,7 +56,7 @@ add_action( 'init', 'lauch_register_year_taxonomy', 0 );
 
 function lauch_register_type_taxonomy() {
     $args = array(
-        'label'        => __( 'Type', 'textdomain' ),
+        'label'        => __( 'Videotyp', 'textdomain' ),
         'public'       => true,
         'rewrite'      => false,
         'hierarchical' => true,
@@ -83,7 +83,7 @@ add_action( 'init', 'lauch_register_exchange_program_taxonomy', 0 );
 
 function lauch_register_labs_taxonomy() {
 $args = array(
-'label'        => __( 'Lab Location', 'textdomain' ),
+'label'        => __( 'Lab Ort', 'textdomain' ),
 'public'       => true,
 'rewrite'      => false,
 'hierarchical' => true,
