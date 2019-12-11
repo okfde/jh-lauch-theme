@@ -35,7 +35,7 @@ while ( have_posts() ) : the_post() ?>
                 <div class="teaser-image">
                   <picture><?php echo get_the_post_thumbnail(get_the_ID(), 'learning-teaser'); ?></picture></div>
                 <h3 class="teaser-title"><span class="hover-line"><?php the_title() ?></span></h3>
-                <div class="teaser-summary"><?php echo wp_trim_words($post->post_content, 45); ?></div>
+                <div class="teaser-summary"><?php echo get_the_excerpt($post->ID); ?></div>
               </a>
             </li>
           <?php endwhile;
