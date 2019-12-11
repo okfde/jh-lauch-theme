@@ -66,6 +66,9 @@ document.addEventListener('DOMContentLoaded', function () {
         playerSrc () {
           return 'https://www.youtube-nocookie.com/embed/' + this.activeVideo + '?enablejsapi=1';
         },
+        playerSrcdoc () {
+          return `<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube-nocookie.com/embed/${this.activeVideo}?autoplay=1><img src=https://img.youtube.com/vi/${this.activeVideo}/hqdefault.jpg alt=''><span>▶</span></a>`;
+        },
         colorClass () {
           let cl = 'c-videoplayer';
           if (window.v.color) {
@@ -109,7 +112,14 @@ document.addEventListener('DOMContentLoaded', function () {
                      :isLarge=false></VideoHeader>
 
         <div class="video-container" v-if="activeVideo">
-          <iframe width="640" height="360" :src="this.playerSrc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <iframe width="640"
+                  height="360"
+                  :srcdoc="this.playerSrcdoc"
+                  :src="this.playerSrc"
+                  frameborder="0"
+                  title="Videoplaylist - Aktives Video"
+                  loading="lazy"
+                  allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
 
       <div class="video-playlist">

@@ -79,8 +79,7 @@ the_post(); ?>
     <h2 class="ta-c pb-2 c-uppercase-title"><?php echo _('Weitere Posts zum Thema', 'lauch'); ?></h2>
     <?php
     $args = array('post_type' => 'post',
-                  'posts_per_page' => 3,
-                  'numberposts' => 3,
+                  'posts_per_page' => 2,
                   'post__not_in' => array($post->ID),
                   'orderby' => 'rand',
                   'tax-query' => array(
