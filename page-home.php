@@ -127,7 +127,9 @@ endwhile;
             endif;
 
             usort($all_dates, function($a, $b) {
-              return $a['date_technical'] <=> $b['date_technical'];
+              $da = date_create_from_format('d/m/Y', $a['date_technical']);
+              $db = date_create_from_format('d/m/Y', $b['date_technical']);
+              return $da <=> $db;
             });
             $all_dates = array_slice($all_dates, 0, 3);
 
