@@ -39,7 +39,7 @@ function lauch_faq_init() {
         'show_in_menu'       => true,
         'show_in_rest'       => false,
         'query_var'          => true,
-        'rewrite'            => array( 'slug' => 'faq' ),
+        'rewrite'            => array( 'slug' => 'faq', 'with_front' => false ),
         'capability_type'    => 'post',
         'has_archive'        => true,
         'hierarchical'       => false,

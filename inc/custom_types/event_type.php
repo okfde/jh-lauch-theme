@@ -39,7 +39,7 @@ function lauch_events_init() {
         'show_in_menu'       => true,
         'show_in_rest'       => true,
         'query_var'          => true,
-        'rewrite'            => array( 'slug' => 'event-rueckblick' ),
+        'rewrite'            => array( 'slug' => 'event-rueckblick', 'with_front' => false ),
         'capability_type'    => 'post',
         'has_archive'        => true,
         'hierarchical'       => false,

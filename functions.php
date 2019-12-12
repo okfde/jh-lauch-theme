@@ -353,13 +353,10 @@ require get_template_directory() . '/inc/custom_types/event_type.php';
 require get_template_directory() . '/inc/custom_types/lab_type.php';
 require get_template_directory() . '/inc/custom_types/exchange_type.php';
 require get_template_directory() . '/inc/custom_types/video_type.php';
-//require get_template_directory() . '/inc/custom_types/project_type.php';
 require get_template_directory() . '/inc/custom_types/person_type.php';
 require get_template_directory() . '/inc/custom_types/faq_type.php';
 require get_template_directory() . '/inc/custom_types/learning_type.php';
-require get_template_directory() . '/inc/custom_types/blog_type.php';
 
 require get_template_directory() . '/inc/taxonomies.php';
 
-//require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/api_endpoints.php';
