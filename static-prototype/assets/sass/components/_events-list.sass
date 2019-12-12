@@ -6,7 +6,9 @@
 
   .events-list-image--overview
     flex: 0 0 7rem
-    margin-right: 3em
+    margin-right: 1.5em
+    @media (min-width: $break-medium)
+      margin-right: 3em
     @media (min-width: $break-large)
       flex: 0 0 14rem
 
@@ -24,7 +26,7 @@
       height: 120px
 
   .events-list-title
-    font-size: 1.4rem
+    font-size: 1.17rem
     margin: 0
     //white-space: nowrap
     padding-right: 1rem
@@ -35,7 +37,7 @@
       font-size: 2.6rem
   .events-list-date
     font-weight: $font-weight-bold
-    font-size: 1.4rem
+    font-size: 1.17rem
     margin-bottom: 0
     line-height: 1.1
     //white-space: nowrap
@@ -53,11 +55,15 @@
       text-transform: uppercase
       color: currentColor
       text-decoration: none
-      font-size: 0.85rem
-      margin-right: 1.5rem
+      font-size: 0.65rem
+      margin-right: 1.12rem
+      @media (min-width: $break-medium)
+        font-size: 0.8125rem
       &:hover,
       &:active
         background-color: transparent
+      &:last-child
+        margin-right: 0
     &.active
       a:nth-of-type(2)
         color: $color-primary
@@ -84,7 +90,6 @@
   position: relative
   margin-left: -$body-padding
   margin-right: -$body-padding
-  padding: 1.8em $body-padding 1.8em
   transition: background-color 200ms ease-in-out 50ms
   overflow: hidden
   &:hover,
@@ -93,7 +98,7 @@
     .events-list-hover
       opacity: 1
   display: flex
-  padding: 1.8em $body-padding * 2 1.8em
+  padding: 1.8em $body-padding 1.8em
 
   @media (min-width: $break-large)
     align-items: center
