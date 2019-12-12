@@ -47,10 +47,10 @@ the_post(); ?>
       $the_query = new WP_Query( $args ); ?>
 
       <?php if ( $the_query->have_posts() ) : ?>
-        <ul class="js-slider">
+        <ul class="js-slider" data-slider-preset="projects">
         <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
           <li class="c-catnav-slide">
-            <a href="<?php the_permalink() ?>" class="c-page-2col ai-c">
+            <a href="<?php the_permalink() ?>" class="c-page-2col ai-s">
               <?php if (get_the_post_thumbnail_url(get_the_ID(), 'events-teaser-highdpi')):  ?>
                 <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'events-teaser-highdpi'); ?>" alt="">
               <?php else : ?>

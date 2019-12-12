@@ -136,6 +136,14 @@ function Slider() {
           nav: false,
           autoplayTimeout: 3000
         }
+      } else if (item.dataset.sliderPreset === "projects") {
+        options = {
+          container: item,
+          autoWidth: true,
+          gutter: 90,
+          nav: false,
+          controlsContainer: '.tns-controls',
+        }
       } else {
         options = {
           container: item,
