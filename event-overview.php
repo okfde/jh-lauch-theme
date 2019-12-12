@@ -15,6 +15,7 @@ endwhile; ?>
   <?php
   $args = array('post_type' => 'page',
                 'post_parent' => get_the_ID(),
+                'posts_per_page' => -1,
                 'meta_key' => 'is_active',
                 'meta_value' => 1);
   $the_query = new WP_Query( $args ); ?>
@@ -38,6 +39,7 @@ endwhile; ?>
   <?php
   $args = array('post_type' => 'page',
                 'post_parent' => get_the_ID(),
+                'posts_per_page' => -1,
                 'meta_key' => 'is_active',
                 'meta_value' => 0);
   $the_query = new WP_Query( $args ); ?>
