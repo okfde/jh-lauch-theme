@@ -11,17 +11,12 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-  <div class="c-page-header">
-    <?php the_title('<h1 class="c-page-title">', '</h1>')?>
-    <div class="c-page-header-illustration right-one">
-      <img src="<?php echo get_field('illustration_right'); ?>" alt="" width="120">
-    </div>
-
-    <div class="c-rando-illu">
-      <?php echo get_svg_content(get_random_illustration()); ?>
-    </div>
-  </div>
-
+  <header class="c-page-simpleheader p-r">
+      <h1 class="c-page-title"><?php the_title() ?></h1>
+      <div class="c-page-header-illustration">
+        <img src="<?php echo get_field('illustration_right'); ?>" alt="" width="120">
+      </div>
+  </header>
 
   <div class="entry-content">
     <?php

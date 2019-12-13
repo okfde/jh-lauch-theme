@@ -15,7 +15,7 @@
 get_header();
 ?>
 
-<div class="wp-styles c-page-standard p-r">
+<div class="wp-styles c-page-standard p-r"
   <?php
   while ( have_posts() ) :
   the_post();
