@@ -77,8 +77,8 @@ if ((get_field('next_event'))) {
   <section class="c-page-section">
     <div class="">
       <div class="c-program-title">
-        <h2><?php echo __("Das Program", "lauch"); ?></h2>
-        <?php the_field('event_programm', $next->ID); ?>
+        <h2><?php echo __("Das Programm", "lauch"); ?></h2>
+        <?php the_field('event_program', $next->ID); ?>
       </div>
     </div>
     <div class="c-page-3col c-program jc-sb mt-3">
