@@ -16,9 +16,6 @@ get_header();
 ?>
 
 <div class="wp-styles c-page-standard p-r">
-  <div class="c-rando-illu">
-    <?php echo get_svg_content(get_random_illustration()); ?>
-  </div>
   <?php
   while ( have_posts() ) :
   the_post();

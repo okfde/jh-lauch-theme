@@ -105,9 +105,12 @@
   display: block
 
 .c-rando-illu
-  position: absolute
-  width: 10em
-  right: 0
-  top: 0
+  display: none
   @media (min-width: $break-medium)
-    right: -10rem
+    display: block
+    position: absolute
+    width: 10em
+    top: 0
+    right: -15rem
+  @media (min-width: $break-large)
+    right: -20rem
