@@ -43,9 +43,6 @@ endwhile; ?>
         <li>
           <a href="<?php echo get_post_permalink($events_maybe[0]->ID); ?>"><?php echo get_the_title($events_maybe[0]->ID); ?></a>
         </li>
-        <li>
-          <a href="<?php echo get_post_permalink(); ?>"><?php echo get_the_title(); ?></a>
-        </li>
       </ol>
     </nav>
     <?php the_title('<h1 class="c-page-title pt-1">', '</h1>')?>
