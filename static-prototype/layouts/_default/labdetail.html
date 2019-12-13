@@ -28,28 +28,28 @@
   <div class="event-teaser-list">
     <h2 class="event-teaser-list-title addon--relative">Die nächsten Termine <span class="d-b mt-2 addon addon--small addon--catdog sm-up"></span></h2>
     <div class="event-teaser-list-wrapper">
-      {{ range after 1 (seq 4)}}
+      {{ range $index, $element := after 1 (seq 4)}}
       <div class="event-teaser-list-item">
-        <div class="accordion" data-accordion>
+        <div class="accordion" data-accordion {{ if (eq $index 0) }}data-is-open="true"{{ end }}>
           <div class="accordion__title" data-title>
             <img src="//placekitten.com/290/357" alt="" class="event-teaser-list-img">
             <div class="event-teaser-list-meta">
               <p class="c-flag mini orange points-bottom mb-1">Di. 03.09. – 17:00 - 19:30</p>
               <h3 class="mb-0">Offenes Coden, Tüfteln und Weltverbessern</h3>
               {{ readFile "/static/images/icons/arrow-right.svg" | safeHTML }}
+              <div class="accordion__content" data-content>
+                <p>Unter dem Motto „Offenes Coden, Tüfteln und Weltverbessern“
+                  eröffnet euch das Jugend hackt Lab:Ulm einen eigenen Space zum
+                  Experimentieren. Kommt mit euren Ideen ins Verschwörhaus und stellt sie im Lab vor.
+                  Habt ihr kein konkretes Projekt und seid auf der Suche nach
+                  Inspiration?</p>
+                <p>Don’t worry! Lasst euch von den anderen inspirieren oder fragt im Lab
+                  nach kleinen Herausforderungen. Wie bei den Workshops begleiten euch
+                  auch im Lab unsere tollen Mentor*innen. Das Angebot ist kostenlos und
+                  offen für alle von 12 bis 18 Jahren. Einfach vorkommen 😉</p>
+                <p><strong>Bleib auf dem Laufenden</strong></p>
+              </div>
             </div>
-          </div>
-          <div class="accordion__content" data-content>
-            <p>Unter dem Motto „Offenes Coden, Tüfteln und Weltverbessern“
-              eröffnet euch das Jugend hackt Lab:Ulm einen eigenen Space zum
-              Experimentieren. Kommt mit euren Ideen ins Verschwörhaus und stellt sie im Lab vor.
-              Habt ihr kein konkretes Projekt und seid auf der Suche nach
-              Inspiration?</p>
-            <p>Don’t worry! Lasst euch von den anderen inspirieren oder fragt im Lab
-              nach kleinen Herausforderungen. Wie bei den Workshops begleiten euch
-              auch im Lab unsere tollen Mentor*innen. Das Angebot ist kostenlos und
-              offen für alle von 12 bis 18 Jahren. Einfach vorkommen 😉</p>
-            <p><strong>Bleib auf dem Laufenden</strong></p>
           </div>
         </div>
       </div>
