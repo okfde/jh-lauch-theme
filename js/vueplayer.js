@@ -114,7 +114,6 @@ document.addEventListener('DOMContentLoaded', function () {
         <div class="video-container" v-if="activeVideo">
           <iframe width="640"
                   height="360"
-                  :srcdoc="this.playerSrcdoc"
                   :src="this.playerSrc"
                   frameborder="0"
                   title="Videoplaylist - Aktives Video"
