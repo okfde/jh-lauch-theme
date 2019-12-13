@@ -59,6 +59,7 @@ if ((get_field('next_event'))) {
     </div>
   </section>
 
+  <?php if (get_field('anmeldungslink', $next->ID)): ?>
   <div>
     <div class="c-planebanner">
       <a href="<?php the_field('anmeldungslink', $next->ID); ?>"
@@ -71,6 +72,7 @@ if ((get_field('next_event'))) {
       </a>
     </div>
   </div>
+  <?php endif; ?>
 
   <section class="c-page-section">
     <div class="">
