@@ -164,9 +164,11 @@ endwhile;
     </div>
 </section>
 
-<section class="c-page-section c-blog-list is-grid">
+<section class="c-page-section c-blog-list is-grid p-r">
+  <div class="p-a c-index-illu-news"><?php render_svg('/images/index/News-Illu.svg'); ?></div>
   <h2 class="c-flag mini softblue points-bottom upper mb-3"><?php echo __('Aus dem Blog', 'lauch'); ?></h2>
   <?php
+  setlocale(LC_TIME, "de_DE");
   $args2 = array('posts_per_page' => 3);
   $the_query2 = new WP_Query( $args2 ); ?>
 
@@ -184,7 +186,7 @@ endwhile;
     <a href="<?php echo get_permalink( get_option( 'page_for_posts' )) ?>" class="button event-button"><?php echo __('Alle Blogposts', 'lauch') ?></a></div>
 </section>
 
-<section class="c-page-section pb-0">
+<section class="c-page-section pb-0 pt-0 white">
   <?php
   $loc_term = get_field('term_location');
   $year_term = get_field('term_year');

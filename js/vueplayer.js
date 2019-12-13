@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
       template: `
         <div class="video-header" v-bind:class="sizeClass">
           <h2 class="video-title">Playlist</h2>
-          <p class="c-uppercase-title">{{ taxonomyString  }}</p>
+          <p class="c-uppercase-title video-tax">{{ taxonomyString  }}</p>
         </div>`
     });
 
