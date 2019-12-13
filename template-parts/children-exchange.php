@@ -23,8 +23,8 @@
     endif; ?>
 
     <div class="events-list-body">
-      <h2 class="events-list-title"><?php the_title() ?></h2>
-
+      <h2 class="events-list-title">
+        <a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
       <div class="events-list-actions events-list-actions--overview">
         <a href="<?php the_permalink() ?>"
            title="Mehr Infos zu <?php the_title() ?>">

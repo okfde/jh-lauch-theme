@@ -10,7 +10,7 @@
 $event_color = get_field('event_color', get_the_ID());
 ?>
 <li>
-  <div class="events-list-item ai-c">
+  <div class="events-list-item ai-c no-hover">
     <?php
     if (get_the_post_thumbnail(get_the_ID(), array(300, 200))) : ?>
       <picture class="events-list-image--overview">
@@ -23,12 +23,16 @@ $event_color = get_field('event_color', get_the_ID());
     <?php
     endif; ?>
     <div class="events-list-body">
-      <h2 class="events-list-title"><?php the_title() ?></h2>
+      <h2 class="events-list-title">
+        <a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
 
       <?php
       $event = get_field('next_event')[0];
       if ($event  && get_field('is_active', get_the_ID())) : ?>
-        <time class="events-list-date" datetime=""><?php the_field('datum', $event->ID); ?></time>
+        <time class="events-list-date" datetime="">
+          <a href="<?php the_permalink() ?>"
+             title="Mehr Infos zu <?php the_title() ?>">
+            <?php the_field('datum', $event->ID); ?></a></time>
       <?php
       endif; ?>
 

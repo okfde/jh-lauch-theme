@@ -72,7 +72,7 @@ endwhile;
                 <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
                   <?php $event = get_field('next_event')[0]; ?>
                   <li>
-                  <div class="event-teaser-list-item">
+                  <div class="event-teaser-list-item no-hover">
                     <div class="d-f ai-s">
                       <picture class="events-list-image">
                         <source srcset="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'events-teaser-s'); ?>"
@@ -83,9 +83,14 @@ endwhile;
                       </picture>
                       <div class="">
                         <div class="d-f">
-                        <h3 class="events-list-title mb-0 mt-0"><?php the_title() ?></h3>
-                        <time class="events-list-date" datetime="">
-                          <?php the_field('datum', $event->ID); ?></time>
+                          <h3 class="mb-0 mt-0">
+                            <a href="<?php the_permalink() ?>"
+                               title="Mehr Infos zu <?php the_title() ?>">
+                              <?php the_title() ?>
+                              <time class="" datetime="">
+                                <?php the_field('datum', $event->ID); ?></time>
+                            </a></h3>
+                          </a>
                         </div>
                         <div class="events-list-actions active">
                           <a
@@ -142,7 +147,7 @@ endwhile;
                 </picture>
                 <div class="event-teaser-list-meta fg">
                   <div class="c-uppercase-title mb-1">Lab: <?php echo $d['lab']; ?></div>
-                  <h3 class="events-list-title mb-0 mt-0"><?php echo $d['title']; ?></h3>
+                  <h3 class="mb-0 mt-0"><?php echo $d['title']; ?></h3>
                   <p class="mt-1 fw-b">
                     <time datetime="<?php echo DateTime::createFromFormat('j/m/Y', $d['date_technical'])->format('Y-m-d'); ?>">
                       <?php echo $d['date']; ?>
@@ -162,7 +167,7 @@ endwhile;
 <section class="c-page-section c-blog-list is-grid">
   <h2 class="c-flag mini softblue points-bottom upper mb-3"><?php echo __('Aus dem Blog', 'lauch'); ?></h2>
   <?php
-  $args2 = array('posts_per_page' => 2);
+  $args2 = array('posts_per_page' => 3);
   $the_query2 = new WP_Query( $args2 ); ?>
 
   <?php if ( $the_query2->have_posts() ) : ?>

@@ -27,7 +27,7 @@ page-template-page-home
       </div>
 
     </div>
-    <div class="col-l fg c-page-copy ml-10">
+    <div class="col-l fg ml-10">
       <h2 class="c-index-subtitle mt-1">Die Nächsten Termine</h2>
 
       <div class="c-toc c-toc--horizontal">
@@ -38,11 +38,11 @@ page-template-page-home
         <div class="c-toc-content c-events-list">
           <section id="events">
             {{ range after 1 (seq 4)}}
-            <div class="event-teaser-list-item">
+            <div class="event-teaser-list-item no-hover">
               <div class="d-f ai-s">
                 <img src="//placekitten.com/180/120" alt="" width="90" class="event-teaser-list-img">
-                <div class=" ">
-                  <h3 class="mb-0 mt-0">Hamburg 12.12.2020</h3>
+                <div class="">
+                  <h3 class="mb-0 mt-0"><a href="#">Hamburg 12.12.2020</a></h3>
                   <div class="events-list-actions active">
                     <a
                       href="#"
