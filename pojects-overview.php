@@ -12,7 +12,7 @@ while ( have_posts() ) : the_post(); ?>
       <h1 class="c-page-title"><?php the_title() ?></h1>
       <div class="c-page-excerpt"><?php the_content() ?></div>
       <div class="c-page-header-illustration">
-        <img src="<?php echo get_the_post_thumbnail_url($post->ID); ?>" alt="" width="120">
+        <img src="<?php echo get_field('illustration_right'); ?>" alt="" width="120">
       </div>
     </header>
   </div>
