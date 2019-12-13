@@ -203,7 +203,7 @@ if ((get_field('next_event'))) {
   </section>
 
 <?php  if( have_rows('partner', $next->ID) ): ?>
-  <section class="c-page-section p-r">
+  <section class="c-page-section p-r pb-0">
     <div class="c-page-2col jc-sb ai-e">
       <div class="col-l">
         <h2 class="mt-2"><?php the_field('event_support_title', $next->ID); ?></h2>
