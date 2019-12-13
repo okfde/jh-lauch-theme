@@ -70,7 +70,8 @@ endwhile; ?>
     <?php if( have_rows('lab_events') ): ?>
 
     <ul class="event-teaser-list-wrapper">
-        <?php while( have_rows('lab_events') ): the_row(); ?>
+      <?php while( have_rows('lab_events') ): the_row(); ?>
+
           <?php get_template_part('template-parts/event', 'lab') ?>
         <?php endwhile ?>
     </ul>

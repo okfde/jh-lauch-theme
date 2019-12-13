@@ -7,10 +7,10 @@
           <time><?php the_sub_field('date') ?></time></p>
         <h3 class="mb-0"><?php the_sub_field('title') ?></h3>
         <?php render_svg('/images/icons/arrow-right.svg'); ?>
+        <div class="accordion__content" data-content>
+          <?php the_sub_field('text') ?>
+        </div>
       </div>
-    </div>
-    <div class="accordion__content" data-content>
-      <?php the_sub_field('text') ?>
     </div>
   </div>
 </div>
