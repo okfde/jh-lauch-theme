@@ -184,7 +184,7 @@ endwhile;
     <a href="<?php echo get_permalink( get_option( 'page_for_posts' )) ?>" class="button event-button"><?php echo __('Alle Blogposts', 'lauch') ?></a></div>
 </section>
 
-<section class="c-page-section">
+<section class="c-page-section pb-0">
   <?php
   $loc_term = get_field('term_location');
   $year_term = get_field('term_year');
