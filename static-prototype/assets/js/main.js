@@ -200,7 +200,9 @@ function Accordion() {
     this.height = 0;
 
     this.events();
-    this.close();
+    if (!this.$el.dataset.isOpen) {
+      this.close();
+    }
   };
 
   this.events = function() {
