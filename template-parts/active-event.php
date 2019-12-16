@@ -78,7 +78,7 @@ if ((get_field('next_event'))) {
     <div class="">
       <div class="c-program-title">
         <h2><?php echo __("Das Programm", "lauch"); ?></h2>
-        <?php the_field('event_program', $next->ID); ?>
+        <?php the_field('event_programm', $next->ID); ?>
       </div>
     </div>
     <div class="c-page-3col c-program jc-sb mt-3">
