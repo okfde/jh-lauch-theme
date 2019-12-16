@@ -96,8 +96,11 @@ endwhile;
                           <a
                             href="<?php the_permalink() ?>"
                             title="Mehr Infos zu Jugend hackt in <?php the_title() ?>">Mehr Infos</a>
+                          <?php if(get_field('anmeldungslink', $event->ID)
+                                   && get_field('anmeldungslink', $event->ID) != ""): ?>
                           <a href="<?php the_field('anmeldungslink', $event->ID); ?>"
                              title=Anmeldung für Jugend hackt in <?php the_title() ?>">Anmelden</a>
+                          <?php endif ?>
                         </div>
                       </div>
                     </div>
