@@ -35,7 +35,7 @@ if ((get_field('next_event'))) {
         <?php the_field('event_longform', $next->ID); ?>
       </div>
       <?php if (get_field('contact_person', $next->ID)): ?>
-        <?php echo do_shortcode('[contactperson person="'. get_field('contact_person', $next->ID) .'", title="'. _("Du hast Fragen?", 'lauch') .'"]'); ?>
+        <?php #echo do_shortcode('[contactperson person="'. get_field('contact_person', $next->ID) .'", title="'. _("Du hast Fragen?", 'lauch') .'"]'); ?>
       <?php endif; ?>
     </div>
 

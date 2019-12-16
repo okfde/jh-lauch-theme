@@ -28,7 +28,7 @@
 	    ?>
           </section>
           <section  class="c-footer-menu">
-            <h3><?php echo __("Für Mentor*innen", "lauch"); ?></h3>
+            <h3><?php echo __("Für Teilnehmer*innen", "lauch"); ?></h3>
             <?php
 	    wp_nav_menu( array(
 	      'theme_location' => 'menu-footer-2',
@@ -39,7 +39,7 @@
 	    ?>
           </section>
           <section  class="c-footer-menu">
-            <h3><?php echo __("Für Teilnehmer*innen", "lauch"); ?></h3>
+            <h3><?php echo __("Für Mentor*innen", "lauch"); ?></h3>
             <?php
 	    wp_nav_menu( array(
 	      'theme_location' => 'menu-footer-3',

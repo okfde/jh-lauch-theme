@@ -49,7 +49,7 @@ the_post();
         <?php
         endforeach; ?>
 
-        <?php get_template_part( 'template-parts/contact-person', get_post_type() ); ?>
+        <?php # get_template_part( 'template-parts/contact-person', get_post_type() ); ?>
       </div>
     </div>
   </div>

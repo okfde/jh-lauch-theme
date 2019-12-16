@@ -41,9 +41,11 @@ $event_color = get_field('event_color', get_the_ID());
           <a href="<?php the_permalink(); ?>"
              title="Mehr Infos zu Jugend hackt in <?php the_title() ?>">
             <?php echo __('Mehr Infos', 'lauch'); ?></a>
-          <a href="<?php the_field('anmeldungslink', $event->ID); ?>"
-             title="Anmeldung für Jugend hackt in <?php the_title() ?>">
-            <?php echo __('Anmelden', 'lauch'); ?></a>
+          <?php if(get_field('anmeldungslink')): ?>
+            <a href="<?php the_field('anmeldungslink', $event->ID); ?>"
+               title="Anmeldung für Jugend hackt in <?php the_title() ?>">
+              <?php echo __('Anmelden', 'lauch'); ?></a>
+          <?php endif ?>
         </div>
       <?php else: ?>
         <div class="events-list-actions events-list-actions--overview">
