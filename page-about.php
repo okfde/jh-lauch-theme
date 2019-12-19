@@ -34,7 +34,7 @@ the_post();
             <h3 class="c-flagitem-title"><?php the_sub_field('pub_title'); ?></h3>
             <p>
               <?php if (get_sub_field('pub_pdf')) : ?>
-                <a href="<?php the_sub_field('pub_pdf'); ?>"><?php echo __('download>Download [PDF]', 'lauch'); ?></a>
+                <a href="<?php the_sub_field('pub_pdf'); ?>"><?php echo __('Download [PDF]', 'lauch'); ?></a>
               <?php endif ?>
               <?php if (get_sub_field('pub_link')) : ?>
                 <a href="<?php the_sub_field('pub_link'); ?>" target="_blank" rel="noopener"><?php echo __('Onlineversion', 'lauch'); ?></a>
