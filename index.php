@@ -66,7 +66,7 @@ $blog = get_option( 'page_for_posts' ); ?>
       <button class="tns-prev" title="Nach links"><?php render_svg('/images/icons/arrow-left.svg'); ?></button>
       <button class="tns-next" title="Nach rechts"><?php render_svg('/images/icons/arrow-right.svg') ?></button>
     </div>
-    <ul class="js-slider">
+    <ul class="js-slider" data-slider-preset="auto">
       <?php $terms = get_terms( array(
         'taxonomy' => 'category',
         'hide_empty' => true,
