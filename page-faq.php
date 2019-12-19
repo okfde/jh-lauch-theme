@@ -30,6 +30,7 @@ the_post();
           <section id="<?php echo $audience->slug; ?>">
             <?php
             $faqs = get_posts(array('post_type' => 'faq',
+                                    'posts_per_page' => -1,
                                     'tax_query' => array(
                                       array(
                                         'taxonomy' => 'audience',
