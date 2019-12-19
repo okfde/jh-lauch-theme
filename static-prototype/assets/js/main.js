@@ -125,6 +125,8 @@ function Slider() {
     sliders.forEach(item => {
       let options = {};
 
+      //debugger
+
       if (item.dataset.sliderPreset === "auto") {
         options = {
           container: item,
@@ -135,6 +137,15 @@ function Slider() {
           gutter: 90,
           nav: false,
           autoplayTimeout: 3000
+        }
+      } else if (item.dataset.sliderPreset === "price") {
+        options = {
+          container: item,
+          fixedWidth: 250,
+          autoplay: true,
+          autoplayButtonOutput: false,
+          slideBy: 3,
+          nav: false
         }
       } else if (item.dataset.sliderPreset === "projects") {
         options = {
