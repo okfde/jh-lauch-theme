@@ -105,7 +105,7 @@
           <a href="<?php the_sub_field('partner_link'); ?>"
              title="Zur Website von <?php the_sub_field('partner_name'); ?> "
              class="hover-line-trigger">
-            <?php $image = wp_get_attachment_image_src(get_sub_field('partner_img'), 'events-teaser-highdpi');  ?>
+            <?php $image = wp_get_attachment_image_src(get_sub_field('partner_img'), 'partner-teaser');  ?>
             <img src="<?php echo $image[0] ?>" alt="" class="white">
             <p class="c-displayitem-title">
               <span class="hover-line"><?php the_sub_field('partner_name'); ?></span>

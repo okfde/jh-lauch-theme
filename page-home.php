@@ -186,7 +186,7 @@ endwhile;
     </ul>
   <?php endif; ?>
   <div class="ta-c">
-    <a href="<?php echo get_permalink( get_option( 'page_for_posts' )) ?>" class="button event-button"><?php echo __('Alle Blogposts', 'lauch') ?></a></div>
+    <a href="<?php echo get_permalink( get_option( 'page_for_posts' )) ?>" class="button button--softblue"><?php echo __('Alle Blogposts', 'lauch') ?></a></div>
 </section>
 
 <section class="c-page-section pb-0 pt-0 white">

@@ -221,7 +221,7 @@ if ((get_field('next_event'))) {
           <ul class="c-list-displayitems">
             <?php while ( have_rows('partner', $next->ID) ): the_row(); ?>
               <?php
-              $image = wp_get_attachment_image_src(get_sub_field('partner_img'), 'events-teaser-highdpi'); ?>
+              $image = wp_get_attachment_image_src(get_sub_field('partner_img'), 'partner-teaser'); ?>
               <li class="c-displayitem mr-2">
                 <a href="<?php the_sub_field('partner_link'); ?>"
                    title="Zur Website von <?php the_sub_field('partner_name'); ?> "
