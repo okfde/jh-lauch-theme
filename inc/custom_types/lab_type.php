@@ -41,7 +41,7 @@ function lauch_labs_init() {
         'query_var'          => true,
         'rewrite'            => array( 'slug' => 'lab', 'with_front' => false ),
         'capability_type'    => 'post',
-        'has_archive'        => false,
+        'has_archive'        => true,
         'hierarchical'       => false,
         'menu_position'      => null,
         'supports'           => array( 'title', 'editor', 'custom-fields', 'page-attributes', 'thumbnail' ),

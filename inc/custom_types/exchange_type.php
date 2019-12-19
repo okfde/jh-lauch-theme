@@ -41,7 +41,7 @@ function lauch_exchanges_init() {
         'query_var'          => true,
         'rewrite'            => array( 'slug' => 'austausch', 'with_front' => false ),
         'capability_type'    => 'post',
-        'has_archive'        => false,
+        'has_archive'        => true,
         'hierarchical'       => false,
         'menu_position'      => null,
         'supports'           => array( 'title', 'editor', 'excerpt', 'custom-fields', 'page-attributes', 'thumbnail' ),
