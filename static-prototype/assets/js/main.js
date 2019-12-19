@@ -97,9 +97,14 @@ function Sticky() {
     if (elem && parent) {
       this.sticky = elem;
       this.parent = parent;
-      document.addEventListener('scroll', this.startScrollSpy.bind(this));
+
+      window.addEventListener('resize', this.startResizeSpy.bind(this));
+      if (window.innerWidth >= 560) {
+        document.addEventListener('scroll', this.scrollHelper);
+      }
     }
   };
+
   this.startScrollSpy = function (ev) {
     let pC = this.parent.getBoundingClientRect();
     let sC = this.sticky.getBoundingClientRect();
@@ -118,6 +123,15 @@ function Sticky() {
       this.sticky.style.width = '100%';
     }
   };
+  this.startResizeSpy = function (ev) {
+    if (window.innerWidth >= 560) {
+      document.addEventListener('scroll', this.scrollHelper);
+    } else {
+      console.log('rm');
+      document.removeEventListener('scroll', this.scrollHelper);
+    }
+  };
+  this.scrollHelper = this.startScrollSpy.bind(this);
 }
 
 function Slider() {
