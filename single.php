@@ -66,7 +66,7 @@ the_post(); ?>
             foreach ($terms as $t): ?>
               <li><a href="<?php echo get_term_link($t, 'tag'); ?>"
                      class="c-tag"
-                     title=""><?php echo $t->slug; ?></a></li>
+                     title=""><?php echo $t->name; ?></a></li>
             <?php endforeach; ?>
           </ul>
         </div>
