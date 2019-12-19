@@ -127,7 +127,6 @@ function Sticky() {
     if (window.innerWidth >= 560) {
       document.addEventListener('scroll', this.scrollHelper);
     } else {
-      console.log('rm');
       document.removeEventListener('scroll', this.scrollHelper);
     }
   };
@@ -138,8 +137,6 @@ function Slider() {
   this.init = function (sliders) {
     sliders.forEach(item => {
       let options = {};
-
-      //debugger
 
       if (item.dataset.sliderPreset === "auto") {
         options = {
