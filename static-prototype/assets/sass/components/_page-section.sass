@@ -67,7 +67,7 @@
 .c-page-video-bottom
   display: flex
   justify-content: space-between
-  @media (max-width: $break-small)
+  @media (max-width: $break-medium)
     flex-flow: column
 
 .c-page-video-label
@@ -87,6 +87,8 @@
   width: 33.125rem
   margin: -1.75rem 0 0
   position: relative
+  @media (min-width: $break-medium)
+    margin: 2.6rem 0 0
 
 .c-page-video-meta
   flex: 0 0 50%
