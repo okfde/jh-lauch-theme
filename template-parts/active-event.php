@@ -218,7 +218,7 @@ if ((get_field('next_event'))) {
     <div class="c-page-section pb-2 mt-2">
       <div class="white c-page-section pb-2">
         <?php if( have_rows('partner', $next->ID) ): ?>
-          <ul class="c-list-displayitems">
+          <ul class="c-list-displayitems js-slider" data-slider-preset="auto">
             <?php while ( have_rows('partner', $next->ID) ): the_row(); ?>
               <?php
               $image = wp_get_attachment_image_src(get_sub_field('partner_img'), 'partner-teaser'); ?>
