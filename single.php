@@ -15,7 +15,11 @@ the_post(); ?>
   <section>
     <div class="c-page-alpaca-header p-r">
       <div class="c-page-alpaca-featured addon addon--<?php the_field('illustration_class'); ?> addon--large addon--<?php the_field('illustration_xaxis'); ?> addon--<?php the_field('illustration_yaxis'); ?>">
+        <?php if (get_the_post_thumbnail_url($post->ID, 'blog-alpaka')):  ?>
         <img src="<?php echo get_the_post_thumbnail_url($post->ID, 'blog-alpaka'); ?>" alt="" class="clip-alpaka">
+        <?php else : ?>
+        <img src="https://jugendhackt.org/wp-content/uploads/2019/10/ueber-jh-560x560.jpg" alt="" class="clip-alpaka">
+        <?php endif ?>
       </div>
       <div class="c-page-alpaca-title large">
         <nav class="c-breadcrumb" aria-label="breadcrumb">
@@ -28,6 +32,7 @@ the_post(); ?>
         </nav>
         <?php the_title('<h1 class="c-page-title">', '</h1>')?>
 
+        <?php if (get_field('contact_person') && get_field('contact_person') != '') : ?>
         <div class="c-author">
           <?php
           $person = get_field('contact_person');
@@ -40,6 +45,7 @@ the_post(); ?>
                 <?php echo get_the_date('j. F Y'); ?></time></p>
           </div>
         </div>
+        <?php endif ?>
       </div>
 
       <?php if (get_field('illustration_right')) : ?>
@@ -55,7 +61,12 @@ the_post(); ?>
       </div>
 
       <aside class="c-page-slim">
-        <?php echo do_shortcode("[contactperson person='". get_field('contact_person') ."']"); ?>
+        <?php
+        if (get_field('contact_person') && get_field('contact_person') != '') {
+          echo do_shortcode("[contactperson person='". get_field('contact_person') ."']");
+        }
+
+        ?>
         <?php $terms = wp_get_post_tags($post->ID);
         if ($terms) : ?>
           <hr>
