@@ -1,8 +1,9 @@
 .c-list-displayitems
-  display: flex
-  width: 100%
-  overflow-x: scroll
-  +scroll-x-hide-scrollbar
+  body:not(.js) &
+    display: flex
+    width: 100%
+    overflow-x: scroll
+    +scroll-x-hide-scrollbar
   a
     color: currentColor
     text-decoration: none
