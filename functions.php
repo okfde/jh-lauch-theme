@@ -269,7 +269,7 @@ function contactperson_handle_shortcode($atts = '') {
   }
   $out .= '<div class="c-contact-body">';
   $out .= '<img src="'. $img .'" alt="" class="c-contact-image" width="100">';
-  $out .= '<div class="c-contact-text"><p><strong>'. get_the_title($person_id) .'</strong>,<br>'. $description.'</p><p>';
+  $out .= '<div class="c-contact-text"><p><strong>'. get_the_title($person_id) .'</strong><br>'. $description.'</p><p>';
 
   if ($twitter != "") {
     $out .= '<a href="'. $twitter .'" title="'. _('Bei Twitter', 'lauch') .'">'. get_svg('/images/icons/contact-twitter.svg') .'</a>';

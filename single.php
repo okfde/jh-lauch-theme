@@ -61,9 +61,7 @@ the_post(); ?>
       </div>
 
       <aside class="c-page-slim">
-        <?php print_r(get_field('contact_person')); ?>
         <?php
-
         if (get_field('contact_person') && get_field('contact_person') != '') {
           echo do_shortcode("[contactperson person='". get_field('contact_person') ."']");
         }
