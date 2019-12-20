@@ -15,7 +15,7 @@
             $image = wp_get_attachment_image_src(get_sub_field('partner_img'), 'partner-teaser'); ?>
             <img src="<?php echo $image[0] ?>"
                  alt="Logo von <?php the_sub_field('partner_name'); ?>"
-                 height="50">
+                 height="55">
           </a>
         </li>
       <?php endwhile; ?>

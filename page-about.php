@@ -62,7 +62,7 @@ the_post();
     </div>
   </section>
 
-  <section class="c-page-section pt-10 pb-2">
+  <section class="c-page-section pt-5 pb-2">
     <div class="c-page-2col">
       <h2 class="col-s"><?php the_field('price_title'); ?></h2>
     </div>
@@ -81,7 +81,7 @@ the_post();
     </div>
   </section>
 
-  <section class="c-page-section pt-1">
+  <section class=" pt-1">
     <h2 class="c-flag mini softblue points-bottom upper"><?php the_field('blog_title'); ?></h2>
     <div class="c-page-2col col-break-small jc-sb pt-1">
       <?php $post1 = get_field('post_1'); ?>
@@ -118,9 +118,7 @@ the_post();
       </article>
   </section>
 
-  <section class='c-page-section'>
-    <?php get_template_part( 'template-parts/support-cta', get_post_type() ); ?>
-  </section>
+  <?php get_template_part( 'template-parts/support-cta', get_post_type() ); ?>
 
   <section class="c-page-section white">
     <div class="c-page-2col">

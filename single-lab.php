@@ -76,7 +76,7 @@ endwhile; ?>
   </div>
 </section>
 
-<section class="c-page-section c-page-center addon--relative addon addon--large addon--l-0 addon--top addon--octopus">
+<section class="c-page-section pb-0 c-page-center addon--relative addon addon--large addon--l-0 addon--top addon--octopus">
   <h2 class="ta-c c-event-title"><?php echo __("Wissenswertes zum Ort", "lauch"); ?></h2>
   <div class="c-page-2col ai-c c-event-info">
     <div class="col-l c-event-overview">
@@ -89,7 +89,6 @@ endwhile; ?>
 </section>
 
 <?php get_template_part('template-parts/partner', 'lab') ?>
-
 
 <script>
  document.querySelector('html').style.setProperty("--event-single-color", "<?php echo the_field('event_color'); ?>");

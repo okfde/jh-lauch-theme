@@ -18,44 +18,40 @@ while ( have_posts() ) : the_post() ?>
     </header>
   </div>
 
-  <section class="c-page-section">
-    <div class="c-page-3col c-blog-list is-grid pt-5">
-      <?php $args = array('post_type' => 'learning',
-                          'posts_per_page' => -1,
-      );
-      $the_query = new WP_Query( $args ); ?>
-      <?php if ( $the_query->have_posts() ) : ?>
-        <ul>
-          <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+  <section class="c-blog-list is-grid pt-5">
+    <?php $args = array('post_type' => 'learning',
+                        'posts_per_page' => -1,
+    );
+    $the_query = new WP_Query( $args ); ?>
+    <?php if ( $the_query->have_posts() ) : ?>
+      <ul>
+        <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
-            <li class="c-compact-teaser">
-              <a href="<?php echo get_permalink(); ?>"
-                 title="Zum Lernmaterial <?php the_title() ?>"
-                 class="hover-line-trigger">
-                <div class="teaser-image">
-                  <picture><?php echo get_the_post_thumbnail(get_the_ID(), 'learning-teaser'); ?></picture></div>
-                <h3 class="teaser-title"><span class="hover-line"><?php the_title() ?></span></h3>
-                <div class="teaser-summary"><?php echo get_the_excerpt($post->ID); ?></div>
-              </a>
-            </li>
-          <?php endwhile;
-          wp_reset_postdata(); ?>
-        </ul>
-      <?php endif; ?>
-    </div>
+          <li class="c-compact-teaser">
+            <a href="<?php echo get_permalink(); ?>"
+               title="Zum Lernmaterial <?php the_title() ?>"
+               class="hover-line-trigger">
+              <div class="teaser-image">
+                <picture><?php echo get_the_post_thumbnail(get_the_ID(), 'learning-teaser'); ?></picture></div>
+              <h3 class="teaser-title"><span class="hover-line"><?php the_title() ?></span></h3>
+              <div class="teaser-summary"><?php echo get_the_excerpt($post->ID); ?></div>
+            </a>
+          </li>
+        <?php endwhile;
+        wp_reset_postdata(); ?>
+      </ul>
+    <?php endif; ?>
   </section>
 
-  <section class="c-page-section">
-    <div class="c-page-2col jc-sb">
-      <div class="col-50">
-        <h2><?php echo the_field('lightning_talks_title', get_the_ID()) ?></h2>
-        <div>
-          <?php the_field('lightning_talks_text') ?>
-        </div>
+  <section class="c-page-2col ">
+    <div class="col-50">
+      <h2><?php echo the_field('lightning_talks_title', get_the_ID()) ?></h2>
+      <div>
+        <?php the_field('lightning_talks_text') ?>
       </div>
-      <div class="col-50">
-        <?php render_svg('/images/JH-Illustration-Bus-Left-Green-Soft-RGB.svg'); ?>
-      </div>
+    </div>
+    <div class="col-50">
+      <?php render_svg('/images/JH-Illustration-Bus-Left-Green-Soft-RGB.svg'); ?>
     </div>
   </section>
 
