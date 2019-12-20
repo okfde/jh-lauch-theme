@@ -28,21 +28,21 @@ the_post();
       </div>
       <div class="col-l">
         <?php if( have_rows('publications') ): ?>
-        <ul class="c-list-flagitems">
-          <?php while ( have_rows('publications') ): the_row(); ?>
-          <li class="c-flagitem c-flag points-bottom">
-            <h3 class="c-flagitem-title"><?php the_sub_field('pub_title'); ?></h3>
-            <p>
-              <?php if (get_sub_field('pub_pdf')) : ?>
-                <a href="<?php the_sub_field('pub_pdf'); ?>"><?php echo __('Download [PDF]', 'lauch'); ?></a>
-              <?php endif ?>
-              <?php if (get_sub_field('pub_link')) : ?>
-                <a href="<?php the_sub_field('pub_link'); ?>" target="_blank" rel="noopener"><?php echo __('Onlineversion', 'lauch'); ?></a>
-              <?php endif ?>
-            </p>
-          </li>
-          <?php endwhile ?>
-        </ul>
+          <ul class="c-list-flagitems">
+            <?php while ( have_rows('publications') ): the_row(); ?>
+              <li class="c-flagitem c-flag points-bottom">
+                <h3 class="c-flagitem-title"><?php the_sub_field('pub_title'); ?></h3>
+                <p>
+                  <?php if (get_sub_field('pub_pdf')) : ?>
+                    <a href="<?php the_sub_field('pub_pdf'); ?>"><?php echo __('Download [PDF]', 'lauch'); ?></a>
+                  <?php endif ?>
+                  <?php if (get_sub_field('pub_link')) : ?>
+                    <a href="<?php the_sub_field('pub_link'); ?>" target="_blank" rel="noopener"><?php echo __('Onlineversion', 'lauch'); ?></a>
+                  <?php endif ?>
+                </p>
+              </li>
+            <?php endwhile ?>
+          </ul>
         <?php endif ?>
       </div>
     </div>
@@ -83,32 +83,38 @@ the_post();
 
   <section class="c-page-section pt-1">
     <h2 class="c-flag mini softblue points-bottom upper"><?php the_field('blog_title'); ?></h2>
-    <div class="c-page-2col col-break-small jc-sb pt-1  c-page-copy">
+    <div class="c-page-2col col-break-small jc-sb pt-1">
       <?php $post1 = get_field('post_1'); ?>
-      <article class="col-l c-page-blog fg fs">
-        <div class="p-r addon addon--alpaka addon--bottom addon--left">
-          <?php echo get_the_post_thumbnail($post1->ID, 'blog-large'); ?>
-        </div>
-        <div class="c-page-2col ai-b">
-          <h3 class="col-s fg"><?php echo $post1->post_title; ?></h3>
-          <div class="col-m fs">
-            <?php echo wp_trim_words(apply_filters('the_excerpt', $post1->post_content),80, '...'  ); ?>
-            <p><a href="<?php echo get_post_permalink($post1->ID); ?>" title="Mehr lesen über <?php echo $post1->post_title; ?>">Mehr lesen</a></p>
+      <article class="col-l c-page-blog fg fs c-compact-teaser">
+        <a href="<?php echo get_post_permalink($post1->ID); ?>"
+           title="Lies den ganzen Artikel zu <?php echo $post1->post_title ?>"
+           class="hover-line-trigger">
+          <div class="p-r addon addon--alpaka addon--bottom addon--left">
+            <?php echo get_the_post_thumbnail($post1->ID, 'blog-large'); ?>
           </div>
-        </div>
+          <div class="c-page-2col ai-b">
+            <h3 class="col-s fg mb-1 mt-1"><span class="hover-line"><?php echo $post1->post_title; ?></span></h3>
+            <div class="col-m fs">
+              <?php echo get_the_excerpt($post1) ?>
+            </div>
+          </div>
+        </a>
       </article>
 
       <?php $post2 = get_field('post_2'); ?>
-      <article class="col-s c-page-blog fg">
-        <div class="p-r addon addon--octopus addon--top addon--right">
-          <?php echo get_the_post_thumbnail($post2->ID, 'blog-small'); ?>
-        </div>
-        <div class="">
-          <h3><?php echo $post2->post_title; ?></h3>
-          <div>
-            <?php echo wp_trim_words(apply_filters('the_excerpt', $post2->post_content), 50, '...'); ?>
-            <p><a href="<?php echo get_post_permalink($post2->ID); ?>" title="Mehr lesen über <?php echo $post2->post_title; ?>">Mehr lesen</a></p>
+      <article class="col-s c-page-blog fg c-compact-teaser">
+        <a href="<?php echo get_post_permalink($post2->ID); ?>"
+           title="Lies den ganzen Artikel zu <?php echo $post2->post_title ?>"
+           class="hover-line-trigger">
+          <div class="p-r addon addon--octopus addon--top addon--right">
+            <?php echo get_the_post_thumbnail($post2->ID, 'blog-small'); ?>
           </div>
+          <div class="">
+            <h3 class="mt-1 mb-1"><span class="hover-line"><?php echo $post2->post_title; ?></span></h3>
+            <div>
+              <?php echo get_the_excerpt($post2); ?>
+            </div>
+        </a>
       </article>
   </section>
 

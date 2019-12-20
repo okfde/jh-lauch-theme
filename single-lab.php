@@ -66,7 +66,7 @@ endwhile; ?>
       <span class="d-b mt-2 addon addon--small addon--catdog sm-up"></span></h2>
     <?php if( have_rows('lab_events') ): ?>
 
-    <ul class="event-teaser-list-wrapper">
+    <ul class="event-teaser-list-wrapper c-page-content">
       <?php while( have_rows('lab_events') ): the_row(); ?>
 
           <?php get_template_part('template-parts/event', 'lab') ?>

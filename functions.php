@@ -361,3 +361,14 @@ require get_template_directory() . '/inc/custom_types/learning_type.php';
 require get_template_directory() . '/inc/taxonomies.php';
 
 require get_template_directory() . '/inc/api_endpoints.php';
+
+
+function atg_menu_classes($classes, $item, $args) {
+  if($args->theme_location == 'menu-footer-1' ||
+     $args->theme_location == 'menu-footer-2' ||
+     $args->theme_location == 'menu-footer-3') {
+    $classes[] = 'hover-line-trigger';
+  }
+  return $classes;
+}
+add_filter('nav_menu_css_class', 'atg_menu_classes', 1, 3);

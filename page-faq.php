@@ -24,7 +24,7 @@ the_post();
         endforeach ?>
       </ul>
 
-      <div class="c-toc-content">
+      <div class="c-toc-content c-page-copy">
         <?php
         foreach ($aud as $audience) : ?>
           <section id="<?php echo $audience->slug; ?>">

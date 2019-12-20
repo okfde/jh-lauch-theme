@@ -21,9 +21,11 @@
             <?php
 	    wp_nav_menu( array(
 	      'theme_location' => 'menu-footer-1',
-	      'menu_id'        => 'foote-menu-1',
+	      'menu_id'        => 'footer-menu-1',
               'menu_class'     => '',
-              'container'      => 'nav'
+              'container'      => 'nav',
+              'link_before'    => '<span class="hover-line">',
+              'link_after'     => '</span>'
 	    ) );
 	    ?>
           </section>
@@ -32,9 +34,11 @@
             <?php
 	    wp_nav_menu( array(
 	      'theme_location' => 'menu-footer-2',
-	      'menu_id'        => 'foote-menu-2',
+	      'menu_id'        => 'footer-menu-2',
               'menu_class'     => '',
-              'container'      => 'nav'
+              'container'      => 'nav',
+              'link_before'    => '<span class="hover-line">',
+              'link_after'     => '</span>'
 	    ) );
 	    ?>
           </section>
@@ -43,9 +47,11 @@
             <?php
 	    wp_nav_menu( array(
 	      'theme_location' => 'menu-footer-3',
-	      'menu_id'        => 'foote-menu-3',
+	      'menu_id'        => 'footer-menu-3',
               'menu_class'     => '',
-              'container'      => 'nav'
+              'container'      => 'nav',
+              'link_before'    => '<span class="hover-line">',
+              'link_after'     => '</span>'
 	    ) );
 	    ?>
           </section>
