@@ -31,6 +31,7 @@ the_post();
             <?php
             $faqs = get_posts(array('post_type' => 'faq',
                                     'posts_per_page' => -1,
+                                    'order' => 'ASC',
                                     'tax_query' => array(
                                       array(
                                         'taxonomy' => 'audience',
@@ -50,7 +51,7 @@ the_post();
         <?php
         endforeach; ?>
 
-        <?php # get_template_part( 'template-parts/contact-person', get_post_type() ); ?>
+        <?php get_template_part( 'template-parts/contact-person', get_post_type() ); ?>
       </div>
     </div>
   </div>

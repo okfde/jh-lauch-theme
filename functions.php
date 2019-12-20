@@ -254,14 +254,14 @@ function contactperson_handle_shortcode($atts = '') {
       'title' => null,
   ), $atts );
 
-  $post = $value['person'];
+  $person_id = $value['person'];
 
-  $img = get_the_post_thumbnail_url( $post, array(139, 106) );
-  $description = get_field('person_description', $post);
-  $twitter = get_field('person_twitter', $post);
-  $mastodon = get_field('person_mastodon', $post);
-  $instagram = get_field('person_instagram', $post);
-  $email = get_field('person_email', $post);
+  $img = get_the_post_thumbnail_url( $person_id, array(139, 106) );
+  $description = get_field('person_description', $person_id);
+  $twitter = get_field('person_twitter', $person_id);
+  $mastodon = get_field('person_mastodon', $person_id);
+  $instagram = get_field('person_instagram', $person_id);
+  $email = get_field('person_email', $person_id);
 
   $out = '<div class="c-contact">';
   if ($value['title']) {
@@ -269,7 +269,7 @@ function contactperson_handle_shortcode($atts = '') {
   }
   $out .= '<div class="c-contact-body">';
   $out .= '<img src="'. $img .'" alt="" class="c-contact-image" width="100">';
-  $out .= '<div class="c-contact-text"><p><strong>'. get_the_title($post) .'</strong>,<br>'. $description.'</p><p>';
+  $out .= '<div class="c-contact-text"><p><strong>'. get_the_title($person_id) .'</strong>,<br>'. $description.'</p><p>';
 
   if ($twitter != "") {
     $out .= '<a href="'. $twitter .'" title="'. _('Bei Twitter', 'lauch') .'">'. get_svg('/images/icons/contact-twitter.svg') .'</a>';
