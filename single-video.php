@@ -30,7 +30,7 @@ the_post(); ?>
       </div>
       <?php
       $args = array('post_type' => 'video',
-                    'posts_per_page' => 10,
+                    'posts_per_page' => 4,
                     'post__not_in' => array(get_the_ID()),
                     'tax_query' => array(
                       array(
