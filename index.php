@@ -23,8 +23,8 @@ $blog = get_option( 'page_for_posts' ); ?>
   <div class="c-page-excerpt"><?php echo get_post($blog)->post_content; ?></div>
 </header>
 
-<section class="c-blog-list is-feature">
-  <div class="js-sticky-container c-compact-teaser">
+<section class="c-blog-list is-feature js-sticky-container">
+  <div class="feature">
     <?php
     $sticky = get_option( 'sticky_posts' );
     $args_sticky = array('post__in' => $sticky,
@@ -39,25 +39,21 @@ $blog = get_option( 'page_for_posts' ); ?>
     <?php endif; ?>
   </div>
 
-  <?php
-  $args1 = array('post__not_in' => $sticky,
-                 'posts_per_page' => 3);
-  $the_query = new WP_Query( $args1 ); ?>
-
-  <?php if ( $the_query->have_posts() ) : ?>
-    <ul>
+  <ul>
+    <?php
+    $args1 = array('post__not_in' => $sticky,
+                   'posts_per_page' => 3);
+    $the_query = new WP_Query( $args1 ); ?>
+    <?php if ( $the_query->have_posts() ) : ?>
       <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
         <li>
           <?php get_template_part( 'template-parts/content', 'teaser'); ?>
         </li>
       <?php endwhile; ?>
       <?php wp_reset_postdata(); ?>
-    </ul>
-  <?php else : ?>
-    <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
-  <?php endif; ?>
+    <?php endif ?>
+  </ul>
 </section>
-
 
 <section class="c-catnav c-catnav--light" id="kategorien">
   <h2 class="c-catnav-title"><?php echo _('Alles zum Thema', 'lauch'); ?></h2>

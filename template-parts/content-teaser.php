@@ -1,6 +1,6 @@
 <?php
 $s = get_option( 'sticky_posts' ); ?>
-<article class="fc-compact-teaser <?php if (get_the_ID() == $s[0]) { echo 'js-sticky'; }  ?>">
+<article class="c-compact-teaser <?php if (get_the_ID() == $s[0]) { echo 'js-sticky'; }  ?>">
   <a href="<?php the_permalink(); ?>"
      title="Lies den ganzen Artikel zu <?php the_title(); ?>"
      class="hover-line-trigger">
