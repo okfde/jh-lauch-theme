@@ -13,4 +13,4 @@ Prototyp liegt unter `/static-prototype`
 
 ## Technische Doku
 
-Im Wiki liegen einige Informationen für Entwickler*innen und Interessierte.
+[Im Wiki](https://github.com/okfde/jh-lauch-theme/wiki) liegen einige Informationen für Entwickler*innen und Interessierte.
