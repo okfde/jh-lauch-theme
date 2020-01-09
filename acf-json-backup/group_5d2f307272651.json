@@ -1,0 +1,120 @@
+{
+    "key": "group_5d2f307272651",
+    "title": "Event Pages",
+    "fields": [
+        {
+            "key": "field_5d2f309126e43",
+            "label": "Ist aktiv?",
+            "name": "is_active",
+            "type": "true_false",
+            "instructions": "Setze einen Haken wenn hier ein Event ansteht",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5d2f30e426e44",
+            "label": "Nächstes Event",
+            "name": "next_event",
+            "type": "relationship",
+            "instructions": "Wähle das nächste Event aus der Liste aus",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "event"
+            ],
+            "taxonomy": "",
+            "filters": "",
+            "elements": "",
+            "min": "",
+            "max": "",
+            "return_format": "object"
+        },
+        {
+            "key": "field_5da6e5f0c8902",
+            "label": "Event Farbe",
+            "name": "event_color",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "#00a6de": "Soft Blue (Berlin)",
+                "#00b48d": "Soft Green (Hamburg, München, Rostock)",
+                "#f3971b": "Soft Orange",
+                "#2969b2": "Soft Purple (Frankfurt)",
+                "#e6414a": "Soft Red",
+                "#00498c": "Deep Blue",
+                "#4cad37": "Deep Green (AT)",
+                "#ea680c": "Deep Orange (Heidelberg, Ulm)",
+                "#4c2582": "Deep Purple (Köln)",
+                "#e52420": "Deep Red (CH, Fürstenberg)",
+                "#ffe613": "Deep Yellow (Halle)",
+                "#e95197": "Pink"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5dad926e6e4e8",
+            "label": "Anmeldungslink",
+            "name": "anmeldungslink",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "page-event.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "Informationen für Eventseiten",
+    "modified": 1578587341
+}
