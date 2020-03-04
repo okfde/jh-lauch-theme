@@ -40,12 +40,14 @@ function lauch_exchanges_init() {
         'show_in_rest'       => true,
         'query_var'          => true,
         'rewrite'            => array( 'slug' => 'austausch', 'with_front' => false ),
-        'capability_type'    => 'post',
+        'capability_type'    => 'exchange',
         'has_archive'        => true,
         'hierarchical'       => false,
         'menu_position'      => null,
-        'supports'           => array( 'title', 'editor', 'excerpt', 'custom-fields', 'page-attributes', 'thumbnail' ),
+        'supports'           => array( 'title', 'editor', 'excerpt', 'author', 'custom-fields', 'page-attributes', 'thumbnail' ),
         'taxonomies'         => array('exchange-program', 'year'),
+        'menu_icon'  		     => 'dashicons-admin-site-alt3',
+        'map_meta_cap'       => true,
     );
 
     register_post_type( 'exchange', $args );

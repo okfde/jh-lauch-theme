@@ -5,13 +5,13 @@
 
 function lauch_learnings_init() {
     $labels = array(
-        'name'                  => _x( 'Lernmateriale', 'Post type general name', 'lauch' ),
+        'name'                  => _x( 'Lernmaterialien', 'Post type general name', 'lauch' ),
         'singular_name'         => _x( 'Lernmaterial', 'Post type singular name', 'lauch' ),
-        'menu_name'             => _x( 'Lernmateriale', 'Admin Menu text', 'lauch' ),
+        'menu_name'             => _x( 'Lernmaterialien', 'Admin Menu text', 'lauch' ),
         'name_admin_bar'        => _x( 'Lernmaterial', 'Add New on Toolbar', 'lauch' ),
         'add_new'               => __( 'Neues hinzufügen', 'lauch' ),
         'add_new_item'          => __( 'Neues Lernmaterial hinzufügen', 'lauch' ),
-        'new_item'              => __( 'NeuesLernmaterial', 'lauch' ),
+        'new_item'              => __( 'Neues Lernmaterial', 'lauch' ),
         'edit_item'             => __( 'Lernmaterial bearbeiten', 'lauch' ),
         'view_item'             => __( 'Lernmaterial ansehen', 'lauch' ),
         'all_items'             => __( 'Alle Lernmaterialien', 'lauch' ),
@@ -40,12 +40,14 @@ function lauch_learnings_init() {
         'show_in_rest'       => true,
         'query_var'          => true,
         'rewrite'            => array( 'slug' => 'lernmaterial', 'with_front' => false ),
-        'capability_type'    => 'post',
+        'capability_type'    => 'learning',
         'has_archive'        => true,
         'hierarchical'       => false,
         'menu_position'      => null,
-        'supports'           => array( 'title', 'editor', 'excerpt', 'custom-fields', 'page-attributes', 'thumbnail' ),
+        'supports'           => array( 'title', 'editor', 'author', 'excerpt', 'custom-fields', 'page-attributes', 'thumbnail' ),
         'taxonomies'         => array(),
+        'menu_icon'  		     => 'dashicons-lightbulb',
+        'map_meta_cap'       => true,
     );
 
     register_post_type( 'learning', $args );

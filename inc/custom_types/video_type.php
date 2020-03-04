@@ -40,12 +40,14 @@ function lauch_videos_init() {
         'show_in_rest'       => true,
         'query_var'          => true,
         'rewrite'            => array( 'slug' => 'video', 'with_front' => false ),
-        'capability_type'    => 'post',
+        'capability_type'    => 'video',
         'has_archive'        => true,
         'hierarchical'       => false,
         'menu_position'      => null,
-        'supports'           => array( 'title', 'editor', 'custom-fields','page-attributes', 'thumbnail' ),
+        'supports'           => array( 'title', 'editor', 'author', 'custom-fields','page-attributes', 'thumbnail' ),
         'taxonomies'         => array('tech', 'topic', 'location', 'year', 'type'),
+        'menu_icon'  		     => 'dashicons-format-video',
+        'map_meta_cap'       => true,
     );
 
     register_post_type( 'video', $args );

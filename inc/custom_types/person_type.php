@@ -5,17 +5,17 @@
 
 function lauch_persons_init() {
     $labels = array(
-        'name'                  => _x( 'Persons', 'Post type general name', 'textdomain' ),
+        'name'                  => _x( 'Personen', 'Post type general name', 'textdomain' ),
         'singular_name'         => _x( 'Person', 'Post type singular name', 'textdomain' ),
-        'menu_name'             => _x( 'Persons', 'Admin Menu text', 'textdomain' ),
+        'menu_name'             => _x( 'Personen', 'Admin Menu text', 'textdomain' ),
         'name_admin_bar'        => _x( 'Person', 'Add New on Toolbar', 'textdomain' ),
-        'add_new'               => __( 'Add New', 'textdomain' ),
-        'add_new_item'          => __( 'Add New Person', 'textdomain' ),
-        'new_item'              => __( 'New Person', 'textdomain' ),
-        'edit_item'             => __( 'Edit Person', 'textdomain' ),
-        'view_item'             => __( 'View Person', 'textdomain' ),
-        'all_items'             => __( 'All Persons', 'textdomain' ),
-        'search_items'          => __( 'Search Persons', 'textdomain' ),
+        'add_new'               => __( 'Neue hinzufügen', 'textdomain' ),
+        'add_new_item'          => __( 'Neue Person hinzufügen', 'textdomain' ),
+        'new_item'              => __( 'Neue Person', 'textdomain' ),
+        'edit_item'             => __( 'Person bearbeiten', 'textdomain' ),
+        'view_item'             => __( 'Person ansehen', 'textdomain' ),
+        'all_items'             => __( 'Alle Personen', 'textdomain' ),
+        'search_items'          => __( 'Personen durchsuchen', 'textdomain' ),
         'parent_item_colon'     => __( 'Parent Persons:', 'textdomain' ),
         'not_found'             => __( 'No events found.', 'textdomain' ),
         'not_found_in_trash'    => __( 'No events found in Trash.', 'textdomain' ),
@@ -40,12 +40,14 @@ function lauch_persons_init() {
         'show_in_rest'       => false,
         'query_var'          => true,
         //'rewrite'            => array( 'slug' => 'austausch' ),
-        'capability_type'    => 'post',
+        'capability_type'    => 'person',
         'has_archive'        => true,
         'hierarchical'       => false,
         'menu_position'      => null,
-        'supports'           => array( 'title', 'custom-fields', 'thumbnail' ),
+        'supports'           => array( 'title', 'author', 'custom-fields', 'thumbnail' ),
         'taxonomies'         => array('lab', 'job'),
+        'menu_icon'  		     => 'dashicons-universal-access',
+        'map_meta_cap'       => true,
     );
 
     register_post_type( 'person', $args );
