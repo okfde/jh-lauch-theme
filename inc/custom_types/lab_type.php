@@ -44,7 +44,7 @@ function lauch_labs_init() {
         'has_archive'        => true,
         'hierarchical'       => false,
         'menu_position'      => null,
-        'supports'           => array( 'title', 'editor', 'custom-fields', 'page-attributes', 'thumbnail' ),
+        'supports'           => array( 'title', 'editor', 'author', 'custom-fields', 'page-attributes', 'thumbnail' ),
         'taxonomies'         => array('lab-location'),
         'menu_icon'  		     => 'dashicons-admin-multisite',
         'map_meta_cap'       => true,
