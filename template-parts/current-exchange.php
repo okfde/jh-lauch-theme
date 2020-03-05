@@ -40,7 +40,7 @@
 
       <?php if (get_field('anmeldungslink')): ?>
         <a href="<?php the_field('anmeldungslink'); ?>"
-           class="mt-1 button event-button"><?php echo __("Jetzt Anmelden", "lauch"); ?></a>
+           class="mt-1 button event-button"><?php echo __("Jetzt anmelden", "lauch"); ?></a>
       <?php endif; ?>
     </div>
 
@@ -69,10 +69,11 @@
   </div>
 </section>
 
+<?php if (get_field('anmeldungslink')): ?>
 <div>
   <div class="c-planebanner">
     <a href="<?php the_field('anmeldungslink'); ?>"
-       title="<?php echo __("Jetzt Anmelden", "lauch"); ?>">
+       title="<?php echo __("Jetzt anmelden", "lauch"); ?>">
       <?php render_svg("/images/events/Anmeldung.svg"); ?>
       <?php render_svg("/images/events/Anmeldung.svg"); ?>
       <?php render_svg("/images/events/Anmeldung.svg"); ?>
@@ -81,7 +82,7 @@
     </a>
   </div>
 </div>
-
+<?php endif; ?>
 
 <section class="c-page-section">
   <div class="c-event-video">
