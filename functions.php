@@ -369,16 +369,16 @@ function contactperson_handle_shortcode($atts = '') {
   $out .= '<div class="c-contact-text"><p><strong>'. get_the_title($person_id) .'</strong><br>'. $description.'</p><p>';
 
   if ($twitter != "") {
-    $out .= '<a href="'. $twitter .'" title="'. _('Bei Twitter', 'lauch') .'">'. get_svg('/images/icons/contact-twitter.svg') .'</a>';
+    $out .= '<a href="'. $twitter .'" title="'. __('Bei Twitter', 'lauch') .'">'. get_svg('/images/icons/contact-twitter.svg') .'</a>';
   }
   if ($instagram != "") {
-    $out .= '<a href="'. $instagram .'" title="'. _('Bei Instagram', 'lauch') .'">'. get_svg('/images/icons/contact-instagram.svg') .'</a>';
+    $out .= '<a href="'. $instagram .'" title="'. __('Bei Instagram', 'lauch') .'">'. get_svg('/images/icons/contact-instagram.svg') .'</a>';
   }
   if ($mastodon != "") {
-    $out .= '<a href="'. $mastodon .'" title="'. _('Bei Mastodon', 'lauch') .'">'. get_svg('/images/icons/contact-mastodon.svg') .'</a>';
+    $out .= '<a href="'. $mastodon .'" title="'. __('Bei Mastodon', 'lauch') .'">'. get_svg('/images/icons/contact-mastodon.svg') .'</a>';
   }
   if ($email != "") {
-    $out .= '<a href="mailto:'. $email .'" title="'. _('Schreib eine Mail', 'lauch') .'">'. get_svg('/images/icons/contact-mail.svg') .'</a>';
+    $out .= '<a href="mailto:'. $email .'" title="'. __('Schreib eine Mail', 'lauch') .'">'. get_svg('/images/icons/contact-mail.svg') .'</a>';
   }
 
   $out .= '</p></div></div></div>';
