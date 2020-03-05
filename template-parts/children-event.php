@@ -27,7 +27,7 @@ $event_color = get_field('event_color', get_the_ID());
         <a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
 
       <?php
-      $event = get_field('next_event')[0];
+      $event = get_field('next_event');
       if ($event  && get_field('is_active', get_the_ID())) : ?>
         <time class="events-list-date" datetime="">
           <a href="<?php the_permalink() ?>"
