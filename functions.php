@@ -145,7 +145,7 @@ function lauch_setup() {
             'name' => __( 'FrKr Cool Blue', 'lauch' ),
             'slug' => 'frkrcoolblue',
             'color' => '#2969b2',
-        ),
+        ),        
         array(
             'name' => __( 'Pink', 'lauch' ),
             'slug' => 'pink',
@@ -249,17 +249,14 @@ add_action( 'widgets_init', 'lauch_widgets_init' );
  */
 function lauch_scripts() {
   wp_enqueue_style( 'lauch-style', get_template_directory_uri() . '/styles/main.min.css');
-  wp_enqueue_style( 'lauch-colors', get_template_directory_uri() . '/style.css');
   wp_enqueue_script( 'lauch-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
   wp_enqueue_script( 'lauch-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
   wp_enqueue_script( 'vue', get_template_directory_uri() . '/js/vue.min.js', [], '2.5.2', true);
   wp_enqueue_script( 'vueplayer', get_template_directory_uri() . '/js/vueplayer.js', ['vue'], '0.1.0');
 
-//  wp_enqueue_style( 'leaftlet-style', 'https://unpkg.com/leaflet@1.5.1/dist/leaflet.css');
-  wp_enqueue_style( 'leaflet-style', get_template_directory_uri() . '/styles/leaflet.css');
-//  wp_enqueue_script( 'leaflet-js', 'https://unpkg.com/leaflet@1.5.1/dist/leaflet.js', [], '1.51');
-  wp_enqueue_script( 'leaflet-js', get_template_directory_uri() . '/js/leaflet.js', [], '1.51');
+  wp_enqueue_style( 'leaftlet-style', 'https://unpkg.com/leaflet@1.5.1/dist/leaflet.css');
+  wp_enqueue_script( 'leaflet-js', 'https://unpkg.com/leaflet@1.5.1/dist/leaflet.js', [], '1.51');
   wp_enqueue_script( 'isotope', get_template_directory_uri() . '/js/isotope.min.js', [], '1.51');
   wp_enqueue_script( 'tinyslider', get_template_directory_uri() . '/js/tiny-slider.min.js', [], '1.0.0');
   wp_enqueue_script( 'lauch-revolving-claims', get_template_directory_uri() . '/js/revolving-claims.js', ['vue'], '20190809');

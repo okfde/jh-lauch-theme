@@ -26,6 +26,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="<?php echo get_template_directory_uri() ?>/images/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/style.css" type="text/css" media="all" />
 
     <?php wp_head(); ?>
   </head>
