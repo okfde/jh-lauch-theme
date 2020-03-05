@@ -27,12 +27,12 @@ $event_color = get_field('event_color', get_the_ID());
         <a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
 
       <?php
-      $event = get_field('next_event');
+      $event = get_field('next_event')[0];
       if ($event  && get_field('is_active', get_the_ID())) : ?>
         <time class="events-list-date" datetime="">
           <a href="<?php the_permalink() ?>"
              title="Mehr Infos zu <?php the_title() ?>">
-            <?php the_field('datum', get_the_ID()); ?></a></time>
+            <?php the_field('datum', $event->ID); ?></a></time>
       <?php
       endif; ?>
 
@@ -41,9 +41,9 @@ $event_color = get_field('event_color', get_the_ID());
           <a href="<?php the_permalink(); ?>"
              title="Mehr Infos zu Jugend hackt in <?php the_title() ?>">
             <?php echo __('Mehr Infos', 'lauch'); ?></a>
-          <?php if(get_field('anmeldungslink', get_the_ID())
-                   && get_field('anmeldungslink', get_the_ID()) != ""): ?>
-            <a href="<?php the_field('anmeldungslink', get_the_ID()); ?>"
+          <?php if(get_field('anmeldungslink', $event->ID)
+                   && get_field('anmeldungslink', $event->ID) != ""): ?>
+            <a href="<?php the_field('anmeldungslink', $event->ID); ?>"
                title="Anmeldung für Jugend hackt in <?php the_title() ?>">
               <?php echo __('Anmelden', 'lauch'); ?></a>
           <?php endif ?>
