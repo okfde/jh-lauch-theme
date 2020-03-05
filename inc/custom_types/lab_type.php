@@ -46,6 +46,7 @@ function lauch_labs_init() {
         'menu_position'      => null,
         'supports'           => array( 'title', 'editor', 'custom-fields', 'page-attributes', 'thumbnail' ),
         'taxonomies'         => array('lab-location'),
+        'menu_icon'  		     => 'dashicons-admin-multisite',
     );
 
     register_post_type( 'lab', $args );

@@ -40,15 +40,23 @@ function lauch_events_init() {
         'show_in_rest'       => true,
         'query_var'          => true,
         'rewrite'            => array( 'slug' => 'event-rueckblick', 'with_front' => false ),
-        'capability_type'    => 'post',
+        'capability_type'    => 'event',
         'has_archive'        => false,
         'hierarchical'       => false,
         'menu_position'      => null,
-        'supports'           => array( 'title', 'editor', 'excerpt', 'custom-fields', 'page-attributes', 'thumbnail' ),
+        'supports'           => array( 'title', 'editor', 'excerpt', 'author', 'custom-fields', 'page-attributes', 'thumbnail' ),
         'taxonomies'         => array('location', 'year'),
+        'menu_icon'  		     => 'dashicons-calendar-alt',
+        'map_meta_cap'       => true,
     );
 
     register_post_type( 'event', $args );
 }
 
 add_action( 'init', 'lauch_events_init' );
+
+// fix for https://core.trac.wordpress.org/ticket/16841
+$blogusers = get_users( 'role=event-orga' );
+foreach ( $blogusers as $user ) {
+   $user->add_cap('level_1');
+};

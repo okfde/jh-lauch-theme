@@ -27,7 +27,6 @@
     <meta name="msapplication-config" content="<?php echo get_template_directory_uri() ?>/images/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
-
     <?php wp_head(); ?>
   </head>
 

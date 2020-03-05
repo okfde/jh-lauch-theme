@@ -19,3 +19,150 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
+
+/* Gutenberg Text Colors */
+.has-softblue-color {
+	color: #00a6de;
+}
+
+.has-softgreen-color {
+	color: #00b48d;
+}
+
+.has-softorange-color {
+	color: #f3971b;
+}
+
+.has-softpurple-color {
+	color: #51509d;
+}
+
+.has-softred-color {
+	color: #e6414a;
+}
+
+.has-softyellow-color {
+	color: #ffe50c;
+}
+
+.has-deepblue-color {
+	color: #00498c;
+}
+
+.has-deepgreen-color {
+	color: #4cad37;
+}
+
+.has-deeporange-color {
+	color: #ea680c;
+}
+
+.has-deeppurple-color {
+	color: #4c2582;
+}
+
+.has-deepred-color {
+	color: #e52420;
+}
+
+.has-deepyellow-color {
+	color: #ffd003;
+}
+
+.has-frkrcoolblue-color {
+  color: #2969b2;
+}
+
+.has-pink-color {
+  color: #e95197;
+}
+
+.has-black-color {
+  color: #000000;
+}
+
+.has-deepgrey-color {
+  color: #52575b;
+}
+
+.has-softgrey-color {
+  color: #d1d6da;
+}
+
+.has-white-color {
+  color: #ffffff;
+}
+
+/* Gutenberg Background Colors */
+
+.has-softblue-background-color {
+	background-color: #00a6de;
+}
+
+.has-softgreen-background-color {
+	background-color: #00b48d;
+}
+
+.has-softorange-background-color {
+	background-color: #f3971b;
+}
+
+.has-softpurple-background-color {
+	background-color: #51509d;
+}
+
+.has-softred-background-color {
+	background-color: #e6414a;
+}
+
+.has-softyellow-background-color {
+	background-color: #ffe50c;
+}
+
+.has-deepblue-background-color {
+	background-color: #00498c;
+}
+
+.has-deepgreen-background-color {
+	background-color: #4cad37;
+}
+
+.has-deeporange-background-color {
+	background-color: #ea680c;
+}
+
+.has-deeppurple-background-color {
+	background-color: #4c2582;
+}
+
+.has-deepred-background-color {
+	background-color: #e52420;
+}
+
+.has-deepyellow-background-color {
+	background-color: #ffd003;
+}
+
+.has-frkrcoolblue-background-color {
+  background-color: #2969b2;
+}
+
+.has-pink-background-color {
+  background-color: #e95197;
+}
+
+.has-black-background-color {
+  background-color: #000000;
+}
+
+.has-deepgrey-background-color {
+  background-color: #52575b;
+}
+
+.has-softgrey-background-color {
+  background-color: #d1d6da;
+}
+
+.has-white-background-color {
+  background-color: #ffffff;
+}

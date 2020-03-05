@@ -1,2 +1,3 @@
 acf-json/*
 !acf-json/.gitkeep 
+.DS_Store
