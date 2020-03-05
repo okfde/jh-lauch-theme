@@ -78,6 +78,102 @@ function lauch_setup() {
     'flex-height' => true,
   ) );
 
+// Set up our custom colors for the Gutenberg Color Picker -ps
+
+  add_theme_support( 'editor-color-palette', array(
+        array(
+            'name' => __( 'Soft Blue', 'lauch' ),
+            'slug' => 'softblue',
+            'color' => '#00a6de',
+        ),
+        array(
+            'name' => __( 'Soft Green', 'lauch' ),
+            'slug' => 'softgreen',
+            'color' => '#00b48d',
+        ),
+        array(
+            'name' => __( 'Soft Orange', 'lauch' ),
+            'slug' => 'softorange',
+            'color' => '#f3971b',
+        ),
+        array(
+            'name' => __( 'Soft Purple', 'lauch' ),
+            'slug' => 'softpurple',
+            'color' => '#51509d',
+        ),
+        array(
+            'name' => __( 'Soft Red', 'lauch' ),
+            'slug' => 'softred',
+            'color' => '#e6414a',
+        ),
+        array(
+            'name' => __( 'Soft Yellow', 'lauch' ),
+            'slug' => 'softyellow',
+            'color' => '#ffe50c',
+        ),
+        array(
+            'name' => __( 'Deep Blue', 'lauch' ),
+            'slug' => 'deepblue',
+            'color' => '#00498c',
+        ),
+        array(
+            'name' => __( 'Deep Green', 'lauch' ),
+            'slug' => 'deepgreen',
+            'color' => '#4cad37',
+        ),
+        array(
+            'name' => __( 'Deep Orange', 'lauch' ),
+            'slug' => 'deeporange',
+            'color' => '#ea680c',
+        ),
+        array(
+            'name' => __( 'Deep Purple', 'lauch' ),
+            'slug' => 'deeppurple',
+            'color' => '#4c2582',
+        ),
+        array(
+            'name' => __( 'Deep Red', 'lauch' ),
+            'slug' => 'deepred',
+            'color' => '#e52420',
+        ),
+        array(
+            'name' => __( 'Deep Yellow', 'lauch' ),
+            'slug' => 'deepyellow',
+            'color' => '#ffd003',
+        ),
+        array(
+            'name' => __( 'FrKr Cool Blue', 'lauch' ),
+            'slug' => 'frkrcoolblue',
+            'color' => '#2969b2',
+        ),        
+        array(
+            'name' => __( 'Pink', 'lauch' ),
+            'slug' => 'pink',
+            'color' => '#e95197',
+        ),
+        array(
+            'name' => __( 'Black', 'lauch' ),
+            'slug' => 'black',
+            'color' => '#000000',
+        ),
+        array(
+            'name' => __( 'Deep Grey', 'lauch' ),
+            'slug' => 'deepgrey',
+            'color' => '#52575b',
+        ),
+        array(
+            'name' => __( 'Soft Grey', 'lauch' ),
+            'slug' => 'softgrey',
+            'color' => '#d1d6da',
+        ),
+        array(
+            'name' => __( 'White', 'lauch' ),
+            'slug' => 'white',
+            'color' => '#ffffff',
+        ),
+    ) );
+
+
   function replace_svg_css_class_fill($contents, $oldclass, $newclass, $newcolor) {
     preg_match('/'. $oldclass .'{fill:#([[0-9a-fA-F]+);}/i', $contents, $prev_color);
     $contents = str_replace($oldclass, $newclass, $contents);
