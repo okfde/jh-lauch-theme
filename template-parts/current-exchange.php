@@ -144,8 +144,8 @@
   </div>
   <div class="c-page-section pb-2 mt-2 white">
     <ul class="c-list-displayitems pt-2">
-      <?php if( have_rows('event_supporters') ):
-      while( have_rows('event_supporters') ): the_row(); ?>
+      <?php if( have_rows('partner') ):
+      while( have_rows('partner') ): the_row(); ?>
         <?php
         $image = wp_get_attachment_image_src(get_sub_field('partner_img'), 'events-teaser-highdpi'); ?>
         <li class="c-displayitem">
