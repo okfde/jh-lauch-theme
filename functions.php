@@ -145,7 +145,7 @@ function lauch_setup() {
             'name' => __( 'FrKr Cool Blue', 'lauch' ),
             'slug' => 'frkrcoolblue',
             'color' => '#2969b2',
-        ),        
+        ),
         array(
             'name' => __( 'Pink', 'lauch' ),
             'slug' => 'pink',
@@ -249,6 +249,7 @@ add_action( 'widgets_init', 'lauch_widgets_init' );
  */
 function lauch_scripts() {
   wp_enqueue_style( 'lauch-style', get_template_directory_uri() . '/styles/main.min.css');
+  wp_enqueue_style( 'lauch-colors', get_template_directory_uri() . '/style.css');
   wp_enqueue_script( 'lauch-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
   wp_enqueue_script( 'lauch-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
