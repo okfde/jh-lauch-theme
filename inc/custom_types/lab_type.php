@@ -40,13 +40,14 @@ function lauch_labs_init() {
         'show_in_rest'       => true,
         'query_var'          => true,
         'rewrite'            => array( 'slug' => 'lab', 'with_front' => false ),
-        'capability_type'    => 'post',
+        'capability_type'    => 'lab',
         'has_archive'        => true,
         'hierarchical'       => false,
         'menu_position'      => null,
         'supports'           => array( 'title', 'editor', 'custom-fields', 'page-attributes', 'thumbnail' ),
         'taxonomies'         => array('lab-location'),
         'menu_icon'  		     => 'dashicons-admin-multisite',
+        'map_meta_cap'       => true,
     );
 
     register_post_type( 'lab', $args );
