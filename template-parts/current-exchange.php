@@ -148,7 +148,7 @@
       while( have_rows('partner') ): the_row(); ?>
         <?php
         $image = wp_get_attachment_image_src(get_sub_field('partner_img'), 'partner-teaser'); ?>
-        <li class="c-displayitem">
+        <li class="c-displayitem mr-2">
           <a href="<?php the_sub_field('partner_link'); ?>"
              title="Zur Website von <?php the_sub_field('partner_name'); ?> "
              class="hover-line-trigger">
