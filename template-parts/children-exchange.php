@@ -30,9 +30,9 @@
            title="Mehr Infos zu <?php the_title() ?>">
           <?php echo __('Mehr Infos', 'lauch'); ?></a>
         <?php
-        if(get_field('anmeldungslink', $event->ID)
-                 && get_field('anmeldungslink', $event->ID) != ""): ?>
-          <a href="<?php the_field('anmeldungslink', $event->ID); ?>"
+        if(get_field('anmeldungslink')
+                 && get_field('anmeldungslink') != ""): ?>
+          <a href="<?php get_field('anmeldungslink'); ?>"
              title="Anmeldung für <?php the_title() ?>"><?php echo __('Anmelden', 'lauch'); ?></a>
         <?php endif ?>
       </div>
