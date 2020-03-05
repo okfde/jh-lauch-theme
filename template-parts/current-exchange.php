@@ -147,14 +147,14 @@
       <?php if( have_rows('partner') ):
       while( have_rows('partner') ): the_row(); ?>
         <?php
-        $image = wp_get_attachment_image_src(get_sub_field('partner_img'), 'events-teaser-highdpi'); ?>
+        $image = wp_get_attachment_image_src(get_sub_field('partner_img'), 'partner-teaser'); ?>
         <li class="c-displayitem">
-          <a href="<?php the_sub_field('link'); ?>"
-             title="Zur Website von <?php the_sub_field('name'); ?> "
+          <a href="<?php the_sub_field('partner_link'); ?>"
+             title="Zur Website von <?php the_sub_field('partner_name'); ?> "
              class="hover-line-trigger">
             <img src="<?php echo $image[0] ?>" alt="" class="white">
             <h3 class="c-displayitem-title">
-              <span class="hover-line"><?php the_sub_field('name'); ?></span>
+              <span class="hover-line"><?php the_sub_field('partner_name'); ?></span>
             </h3>
           </a>
         </li>
