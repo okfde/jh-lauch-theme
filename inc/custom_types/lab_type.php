@@ -54,3 +54,9 @@ function lauch_labs_init() {
 }
 
 add_action( 'init', 'lauch_labs_init' );
+
+// fix for https://core.trac.wordpress.org/ticket/16841
+$blogusers = get_users( 'role=lab-orga' );
+foreach ( $blogusers as $user ) {
+   $user->add_cap('level_1');
+};
