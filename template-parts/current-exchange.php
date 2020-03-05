@@ -85,7 +85,7 @@
 <?php endif; ?>
 
 <section class="c-page-section">
-  <div class="c-event-video">
+  <div class="c-page-2col jc-sb c-event-video">
     <div class="col-m">
       <h2><?php the_field('event_how_title'); ?></h2>
       <div><?php the_field('event_how_text'); ?></div>
@@ -103,7 +103,7 @@
 
       if ( $the_query->have_posts() ): ?>
         <div class="c-event-throwback">
-          <h3><?php echo __('Vergangene'); ?> <?php echo get_the_terms(get_the_ID(), 'exchange-program')[0]->name;  ?></h3>
+          <h3><?php echo get_the_terms(get_the_ID(), 'exchange-program')[0]->name;  ?> <?php echo __('in den letzten Jahren'); ?> </h3>
           <ol>
             <?php
             while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
