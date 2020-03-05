@@ -85,7 +85,7 @@
 <?php endif; ?>
 
 <section class="c-page-section">
-  <div class="c-page-2col jc-sb c-event-video">
+  <div class="c-event-video">
     <div class="col-m">
       <h2><?php the_field('event_how_title'); ?></h2>
       <div><?php the_field('event_how_text'); ?></div>
