@@ -158,7 +158,7 @@ if ((get_field('next_event'))) {
       <div class="col-l fg">
         <div class="needs-js p-r mt-2">
           <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/<?php the_field('event_how_video', $next->ID); ?>?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <noscript>Kein JavaScript? <a href="https://www.youtube-nocookie.com/watch?v=<?php the_field('event_how_video', $next->ID); ?>">Sie dir das Video hier an!</a></noscript>
+          <noscript>Kein JavaScript? <a href="https://www.youtube-nocookie.com/watch?v=<?php the_field('event_how_video', $next->ID); ?>">Sieh dir das Video hier an!</a></noscript>
           <div class="p-a t-n4 r-n3">
             <?php render_svg("/images/illustrations/change-alpaca.svg"); ?>
           </div>

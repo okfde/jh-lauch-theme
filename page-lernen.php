@@ -68,7 +68,7 @@ while ( have_posts() ) : the_post() ?>
           <span class="a11y-visuallyhidden"><?php echo __($tax[0], 'lauch') ?></span>
           <select id="filter-<?php echo $tax[1] ?>">
             <option value=""><?php echo __($tax[0], 'lauch') ?></option>
-            <?php $terms = get_terms($tax[1]);
+            <?php $terms = get_terms(array('taxonomy' => $tax[1], 'childless' => true));
             foreach ($terms as $t) : ?>
               <option value="<?php echo $t->taxonomy; ?>-<?php echo $t->slug; ?>"><?php echo $t->name; ?></option>
             <?php endforeach; ?>

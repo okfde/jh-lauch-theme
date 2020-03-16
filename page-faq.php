@@ -17,7 +17,7 @@ the_post();
     <div class="c-toc">
       <ul class="c-toc-nav">
         <?php
-        $aud = get_terms('audience');
+        $aud = get_terms('audience', 'orderby=id');
         foreach ($aud as $audience) : ?>
           <li><a href="#<?php echo $audience->slug; ?>"><?php echo $audience->name; ?></a></li>
         <?php

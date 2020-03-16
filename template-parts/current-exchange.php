@@ -40,7 +40,7 @@
 
       <?php if (get_field('anmeldungslink')): ?>
         <a href="<?php the_field('anmeldungslink'); ?>"
-           class="mt-1 button event-button"><?php echo __("Jetzt Anmelden", "lauch"); ?></a>
+           class="mt-1 button event-button"><?php echo __("Jetzt anmelden", "lauch"); ?></a>
       <?php endif; ?>
     </div>
 
@@ -69,10 +69,11 @@
   </div>
 </section>
 
+<?php if (get_field('anmeldungslink')): ?>
 <div>
   <div class="c-planebanner">
     <a href="<?php the_field('anmeldungslink'); ?>"
-       title="<?php echo __("Jetzt Anmelden", "lauch"); ?>">
+       title="<?php echo __("Jetzt anmelden", "lauch"); ?>">
       <?php render_svg("/images/events/Anmeldung.svg"); ?>
       <?php render_svg("/images/events/Anmeldung.svg"); ?>
       <?php render_svg("/images/events/Anmeldung.svg"); ?>
@@ -81,7 +82,7 @@
     </a>
   </div>
 </div>
-
+<?php endif; ?>
 
 <section class="c-page-section">
   <div class="c-event-video">
@@ -102,7 +103,7 @@
 
       if ( $the_query->have_posts() ): ?>
         <div class="c-event-throwback">
-          <h3><?php echo __('Vergangene'); ?> <?php echo get_the_terms(get_the_ID(), 'exchange-program')[0]->name;  ?></h3>
+          <h3><?php echo get_the_terms(get_the_ID(), 'exchange-program')[0]->name;  ?> <?php echo __('in den letzten Jahren'); ?> </h3>
           <ol>
             <?php
             while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
@@ -118,8 +119,8 @@
 
     <div class="col-l fg">
       <div class="needs-js p-r mt-2">
-        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/<?php the_field('event_how_video', ); ?>?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="So ist Auf Reisen"></iframe>
-        <noscript>Kein JavaScript? <a href="https://www.youtube-nocookie.com/watch?v=<?php the_field('event_how_video'); ?>">Sie dir das Video hier an!</a></noscript>
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/<?php the_field('event_how_video'); ?>?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="So ist Auf Reisen"></iframe>
+        <noscript>Kein JavaScript? <a href="https://www.youtube-nocookie.com/watch?v=<?php the_field('event_how_video'); ?>">Sieh dir das Video hier an!</a></noscript>
         <div class="p-a t-n4 r-n3">
           <?php render_svg("/images/illustrations/change-alpaca.svg"); ?>
         </div>
@@ -143,18 +144,18 @@
   </div>
   <div class="c-page-section pb-2 mt-2 white">
     <ul class="c-list-displayitems pt-2">
-      <?php if( have_rows('event_supporters') ):
-      while( have_rows('event_supporters') ): the_row(); ?>
+      <?php if( have_rows('partner') ):
+      while( have_rows('partner') ): the_row(); ?>
         <?php
-        $image = wp_get_attachment_image_src(get_sub_field('partner_img'), 'events-teaser-highdpi'); ?>
-        <li class="c-displayitem">
-          <a href="<?php the_sub_field('link'); ?>"
-             title="Zur Website von <?php the_sub_field('name'); ?> "
+        $image = wp_get_attachment_image_src(get_sub_field('partner_img'), 'partner-teaser'); ?>
+        <li class="c-displayitem mr-2">
+          <a href="<?php the_sub_field('partner_link'); ?>"
+             title="Zur Website von <?php the_sub_field('partner_name'); ?> "
              class="hover-line-trigger">
             <img src="<?php echo $image[0] ?>" alt="" class="white">
-            <h3 class="c-displayitem-title">
-              <span class="hover-line"><?php the_sub_field('name'); ?></span>
-            </h3>
+            <p class="c-displayitem-title">
+              <span class="hover-line"><?php the_sub_field('partner_name'); ?></span>
+            </p>
           </a>
         </li>
       <?php endwhile;

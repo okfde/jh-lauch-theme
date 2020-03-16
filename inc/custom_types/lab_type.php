@@ -44,7 +44,7 @@ function lauch_labs_init() {
         'has_archive'        => true,
         'hierarchical'       => false,
         'menu_position'      => null,
-        'supports'           => array( 'title', 'editor', 'custom-fields', 'page-attributes', 'thumbnail' ),
+        'supports'           => array( 'title', 'editor', 'author', 'custom-fields', 'page-attributes', 'thumbnail' ),
         'taxonomies'         => array('lab-location'),
         'menu_icon'  		     => 'dashicons-admin-multisite',
         'map_meta_cap'       => true,
@@ -54,3 +54,9 @@ function lauch_labs_init() {
 }
 
 add_action( 'init', 'lauch_labs_init' );
+
+// fix for https://core.trac.wordpress.org/ticket/16841
+$blogusers = get_users( 'role=lab-orga' );
+foreach ( $blogusers as $user ) {
+   $user->add_cap('level_1');
+};
