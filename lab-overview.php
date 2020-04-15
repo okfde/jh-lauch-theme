@@ -13,8 +13,10 @@ get_template_part( 'template-parts/header-alpaka', get_post_type() );
 
 <section class="c-blog-list is-grid pt-10">
   <?php
+  $exclude_ids = array( 13511 ); // id of the "lab" not to be shown (being the "community")
   $args = array('post_type' => 'lab',
-                'posts_per_page' => -1);
+                'posts_per_page' => -1,
+                'post__not_in' => $exclude_ids); // this line excludes the community             
   $the_query = new WP_Query( $args ); ?>
 
   <?php if ( $the_query->have_posts() ) : ?>
