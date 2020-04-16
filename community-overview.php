@@ -12,6 +12,7 @@
           'field'    => 'slug',
           'terms'    => $community_id, // set in functions.php
       ),
+  )
  );
  $community_query = new WP_Query( $args );
 
