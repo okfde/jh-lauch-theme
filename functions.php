@@ -469,3 +469,5 @@ function atg_menu_classes($classes, $item, $args) {
   return $classes;
 }
 add_filter('nav_menu_css_class', 'atg_menu_classes', 1, 3);
+
+$community_id = array( 13511 ); // id of the "lab" to be shown (being the "community")

@@ -4,11 +4,11 @@
  * Neu gebaut von Philip im April 2020 aus single-lab.php
  */
 
-$include_ids = array( 13511 ); // id of the "lab" to be shown (being the "community")
+$community_id = array( 13511 ); // id of the "lab" to be shown (being the "community")
 
  $args = array(
  	'post_type' => 'lab',
- 	'post__in' => $include_ids
+ 	'post__in' => $community_id
  );
  $community_query = new WP_Query( $args );
 
@@ -69,7 +69,7 @@ endwhile; ?>
   <div class="c-page-standard ai-c c-event-info">
     <div class="col-l c-event-overview">
       <?php the_field('event_facts'); ?>
-    </div>    
+    </div>
   </div>
 </section>
 
