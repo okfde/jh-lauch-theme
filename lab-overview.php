@@ -14,7 +14,16 @@ get_template_part( 'template-parts/header-alpaka', get_post_type() );
 <section class="c-blog-list is-grid pt-10">
   <?php
   $args = array('post_type' => 'lab',
-                'posts_per_page' => -1);
+                'posts_per_page' => -1,
+                'tax_query' => array(
+                    array(
+                        'taxonomy' => 'lab-location',
+                        'field'    => 'slug',
+                        'terms'    => $community_id, // set in functions.php
+                        'operator' => 'NOT IN', // this line excludes the community
+                    ),
+                )
+           );
   $the_query = new WP_Query( $args ); ?>
 
   <?php if ( $the_query->have_posts() ) : ?>

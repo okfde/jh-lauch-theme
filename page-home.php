@@ -46,7 +46,9 @@ endwhile;
       <div class="c-toc c-toc--horizontal">
         <ul class="c-toc-nav">
           <li><a href="#labs" class="hover-line-trigger">
-            <span class="hover-line"><?php echo __('Labs', 'lauch'); ?></span></a></li>          
+            <span class="hover-line"><?php echo __('Labs', 'lauch'); ?></span></a></li>
+          <li><a href="#community" class="hover-line-trigger">
+              <span class="hover-line"><?php echo __('Community', 'lauch'); ?></span></a></li>
           <li><a href="#events" class="hover-line-trigger">
             <span class="hover-line"><?php echo __('Events', 'lauch'); ?></span></a></li>
         </ul>
@@ -115,7 +117,15 @@ endwhile;
 
             <?php
             $all_dates = array();
-            $args = array('post_type' => 'lab');
+            $args = array('post_type' => 'lab', 'tax_query' => array(
+                array(
+                    'taxonomy' => 'lab-location',
+                    'field'    => 'slug',
+                    'terms'    => $community_id, // set in functions.php
+                    'operator' => 'NOT IN', // this line excludes the community
+                ),
+            )
+          );
             $the_query = new WP_Query( $args ); ?>
 
             <?php if ( $the_query->have_posts() ) :
@@ -161,10 +171,68 @@ endwhile;
             </div>
             <?php endforeach; ?>
           </section>
+          <section id="community">
+
+            <?php
+            $all_dates = array();
+            $args = array('post_type' => 'lab', 'tax_query' => array(
+                array(
+                    'taxonomy' => 'lab-location',
+                    'field'    => 'slug',
+                    'terms'    => $community_id, // set in functions.php
+                ),
+            )
+          );
+            $the_query = new WP_Query( $args ); ?>
+
+            <?php if ( $the_query->have_posts() ) :
+              while ( $the_query->have_posts() ) : $the_query->the_post();
+                while( have_rows('lab_events') ): the_row();
+                  $info = array('lab' => $post->post_title,
+                                'img' => get_sub_field('image'),
+                               'title' => get_sub_field('title'),
+                               'date_technical' => get_sub_field('date_technical'),
+                               'date' => get_sub_field('date'));
+                  array_push($all_dates, $info);
+                endwhile;
+              endwhile;
+            wp_reset_postdata();
+            endif;
+
+            usort($all_dates, function($a, $b) {
+              $da = date_create_from_format('d/m/Y', $a['date_technical']);
+              $db = date_create_from_format('d/m/Y', $b['date_technical']);
+              return $da <=> $db;
+            });
+            $all_dates = array_slice($all_dates, 0, 3);
+
+            foreach ($all_dates as $d) : ?>
+            <div class="event-teaser-list-item no-hover">
+              <a href="<?php echo $community_slug ?>/" title="Zur Community-Seite">
+              <div class="d-f ai-s">
+                <picture class="events-list-image-2">
+                <img src="<?php echo wp_get_attachment_image_src($d['img']['ID'], 'lab-event-teaser')[0] ?>" alt="" width="90">
+                </picture>
+                <div class="event-teaser-list-meta fg">
+                  <div class="c-uppercase-title mb-1"><?php echo $d['lab']; ?></div>
+                  <h3 class="mb-0 mt-0"><?php echo $d['title']; ?></h3>
+                  <p class="mt-1 fw-b">
+                    <time datetime="<?php echo DateTime::createFromFormat('j/m/Y', $d['date_technical'])->format('Y-m-d'); ?>">
+                      <?php echo $d['date']; ?>
+                      <time>
+                  </p>
+                </div>
+              </div>
+              </a>
+            </div>
+            <?php endforeach; ?>
+          </section>
+
         </div>
       </div>
     </div>
 </section>
+
 
 <section class="c-page-section c-blog-list is-grid p-r">
   <div class="p-a c-index-illu-news"><?php render_svg('/images/index/News-Illu.svg'); ?></div>
