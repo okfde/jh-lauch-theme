@@ -6,7 +6,12 @@
 
  $args = array(
  	'post_type' => 'lab',
- 	'category__in' => $community_id
+  'tax_query' => array(
+      array(
+          'taxonomy' => 'lab-location',
+          'field'    => 'slug',
+          'terms'    => $community_id, // set in functions.php
+      ),
  );
  $community_query = new WP_Query( $args );
 
