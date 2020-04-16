@@ -470,4 +470,4 @@ function atg_menu_classes($classes, $item, $args) {
 }
 add_filter('nav_menu_css_class', 'atg_menu_classes', 1, 3);
 
-$community_id = array( 13511 ); // id of the "lab" to be shown (being the "community")
+$community_id = array( 'online-community' ); // slug of the lab category to be shown

@@ -6,7 +6,7 @@
 
  $args = array(
  	'post_type' => 'lab',
- 	'post__in' => $community_id
+ 	'category__in' => $community_id
  );
  $community_query = new WP_Query( $args );
 

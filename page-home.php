@@ -117,7 +117,7 @@ endwhile;
 
             <?php
             $all_dates = array();
-            $args = array('post_type' => 'lab', 'post__not_in' => $community_id);
+            $args = array('post_type' => 'lab', 'category__not_in' => $community_id);
             $the_query = new WP_Query( $args ); ?>
 
             <?php if ( $the_query->have_posts() ) :
@@ -167,7 +167,7 @@ endwhile;
 
             <?php
             $all_dates = array();
-            $args = array('post_type' => 'lab', 'post__in' => $community_id);
+            $args = array('post_type' => 'lab', 'category__in' => $community_id);
             $the_query = new WP_Query( $args ); ?>
 
             <?php if ( $the_query->have_posts() ) :
@@ -193,7 +193,7 @@ endwhile;
 
             foreach ($all_dates as $d) : ?>
             <div class="event-teaser-list-item no-hover">
-              <a href="online-community/" title="Zur Community-Seite"> 
+              <a href="online-community/" title="Zur Community-Seite">
               <div class="d-f ai-s">
                 <picture class="events-list-image-2">
                 <img src="<?php echo wp_get_attachment_image_src($d['img']['ID'], 'lab-event-teaser')[0] ?>" alt="" width="90">

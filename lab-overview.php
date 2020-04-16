@@ -15,7 +15,7 @@ get_template_part( 'template-parts/header-alpaka', get_post_type() );
   <?php
   $args = array('post_type' => 'lab',
                 'posts_per_page' => -1,
-                'post__not_in' => $community_id); // this line excludes the community
+                'category__not_in' => $community_id); // this line excludes the community
   $the_query = new WP_Query( $args ); ?>
 
   <?php if ( $the_query->have_posts() ) : ?>
