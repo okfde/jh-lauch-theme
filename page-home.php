@@ -117,7 +117,15 @@ endwhile;
 
             <?php
             $all_dates = array();
-            $args = array('post_type' => 'lab', 'category__not_in' => $community_id);
+            $args = array('post_type' => 'lab', 'tax_query' => array(
+                array(
+                    'taxonomy' => 'lab-location',
+                    'field'    => 'slug',
+                    'terms'    => $community_id, // set in functions.php
+                    'operator' => 'NOT IN', // this line excludes the community
+                ),
+            )
+          );
             $the_query = new WP_Query( $args ); ?>
 
             <?php if ( $the_query->have_posts() ) :
@@ -167,7 +175,14 @@ endwhile;
 
             <?php
             $all_dates = array();
-            $args = array('post_type' => 'lab', 'category__in' => $community_id);
+            $args = array('post_type' => 'lab', 'tax_query' => array(
+                array(
+                    'taxonomy' => 'lab-location',
+                    'field'    => 'slug',
+                    'terms'    => $community_id, // set in functions.php
+                ),
+            )
+          );
             $the_query = new WP_Query( $args ); ?>
 
             <?php if ( $the_query->have_posts() ) :
