@@ -4,8 +4,6 @@
  * Neu gebaut von Philip im April 2020 aus single-lab.php
  */
 
-$community_id = array( 13511 ); // id of the "lab" to be shown (being the "community")
-
  $args = array(
  	'post_type' => 'lab',
  	'post__in' => $community_id
@@ -78,29 +76,6 @@ endwhile; ?>
 <script>
  document.querySelector('html').style.setProperty("--event-single-color", "<?php echo the_field('event_color'); ?>");
 </script>
-
-<script>
- var mymap = L.map('map').setView([<?php the_field('event_lat'); ?>,
-                                   <?php the_field('event_lon'); ?>], 15);
- //https://api.mapbox.com/styles/v1/okfn/{id}/tiles/256/{z}/{x}/{y}?access_token={accessToken}
-
- L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-   attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-   maxZoom: 18,
-   id: 'mapbox.streets',
-   accessToken: 'pk.eyJ1Ijoib2tmZGUiLCJhIjoiY2syMzZjazFrMDZpejNtcW11Mm5pMnozNSJ9.6QaPMbeUg3k8fcVUmvvpxA'
- }).addTo(mymap);
- var customMarker = L.icon({
-   iconUrl: '<?php echo get_template_directory_uri(); ?>/images/events/Pin-x1.png',
-   iconRetinaUrl: '<?php echo get_template_directory_uri(); ?>/images/events/Pin-x2.png',
-   iconSize:     [17, 23],
-   iconAnchor:   [9, 22],
- });
- var marker = L.marker([<?php the_field('event_lat'); ?>,
-                        <?php the_field('event_lon'); ?>], {icon: customMarker})
-               .addTo(mymap);
-</script>
-
 
 <?php
 get_footer();
