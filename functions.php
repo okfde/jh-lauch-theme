@@ -470,4 +470,6 @@ function atg_menu_classes($classes, $item, $args) {
 }
 add_filter('nav_menu_css_class', 'atg_menu_classes', 1, 3);
 
-$community_id = array( 'online-community' ); // slug of the lab category to be shown
+// semi-hardcoded workaround to use a lab entry as a separate community page
+$community_slug = 'online-community'; // used as slug in page-home.php
+$community_id = array( $community_slug ); // slug of the lab category to be shown, used in page-home.php, lab-overview.php and community-overview.php

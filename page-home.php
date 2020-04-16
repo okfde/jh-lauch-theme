@@ -208,7 +208,7 @@ endwhile;
 
             foreach ($all_dates as $d) : ?>
             <div class="event-teaser-list-item no-hover">
-              <a href="online-community/" title="Zur Community-Seite">
+              <a href="<?php echo $community_slug ?>/" title="Zur Community-Seite">
               <div class="d-f ai-s">
                 <picture class="events-list-image-2">
                 <img src="<?php echo wp_get_attachment_image_src($d['img']['ID'], 'lab-event-teaser')[0] ?>" alt="" width="90">
