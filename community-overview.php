@@ -33,24 +33,6 @@ endwhile; ?>
     </div>
   </div>
   <div class="c-page-alpaca-title">
-    <nav class="c-breadcrumb" aria-label="breadcrumb">
-      <ol>
-        <?php
-        $args = array(
-          'post_type'  => 'page',
-          'meta_query' => array(
-            array(
-              'key'   => '_wp_page_template',
-              'value' => 'lab-overview.php'
-            )
-          )
-        );
-        $events_maybe = get_posts($args); ?>
-        <li>
-          <a href="<?php echo get_post_permalink($events_maybe[0]->ID); ?>"><?php echo get_the_title($events_maybe[0]->ID); ?></a>
-        </li>
-      </ol>
-    </nav>
     <?php the_title('<h1 class="c-page-title pt-1">', '</h1>')?>
     <div class="c-page-excerpt">
       <?php the_content(); ?>
