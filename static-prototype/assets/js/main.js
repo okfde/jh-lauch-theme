@@ -141,13 +141,26 @@ function Slider() {
       if (item.dataset.sliderPreset === "auto") {
         options = {
           container: item,
-          autoWidth: true,
           controls: false,
           autoplay: true,
           autoplayButtonOutput: false,
-          gutter: 90,
+          items: 2,
+          gutter: 20,
+          slideBy: 2,
           nav: false,
-          autoplayTimeout: 3000
+          autoplayTimeout: 3000,
+          responsive: {
+            640: {
+              items: 2
+            },
+            700: {
+              gutter: 30
+            },
+            900: {
+              items: 5,
+              gutter: 90,
+            }
+          }
         }
       } else if (item.dataset.sliderPreset === "price") {
         options = {

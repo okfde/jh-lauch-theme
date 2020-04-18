@@ -1,6 +1,7 @@
 .c-list-displayitems
+  display: flex
+  align-items: center
   body:not(.js) &
-    display: flex
     width: 100%
     overflow-x: scroll
     +scroll-x-hide-scrollbar
@@ -13,12 +14,6 @@
   flex-wrap: wrap
 
 .c-displayitem
-  body:not(.js) &
-    flex: 0 0 50%
-    margin-right: 2rem
-    @media (min-width: $break-medium)
-      flex: 0 0 20%
-      margin-right: 5rem
 
   img
     width: 100%
