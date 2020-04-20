@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
   if (document.querySelector('#vuevideo')) {
     Vue.component('VideoPrev', {
-      props: ['videoItem', 'active'],
+      props: ['videoItem', 'isActive'],
       computed: {
         thumbnailSrc () {
           if (this.videoItem.img) {
@@ -10,9 +10,6 @@ document.addEventListener('DOMContentLoaded', function () {
             return 'https://img.youtube.com/vi/' + this.videoItem.youtubeid + '/hqdefault.jpg';
           }
         },
-        isActive () {
-          return this.active === this.videoItem.youtubeid;
-        }
       },
       template: `
           <li class="thumbnail"
@@ -22,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
                    class="a11y-visuallyhidden"
                    name="playqueue"
                    :value="videoItem.youtubeid"
-                   @change="$emit('chooseVideo', videoItem.youtubeid)">
+                   @change="$emit('chooseVideo', videoItem)">
             <label :for="videoItem.youtubeid">
               <div class="thumbnail-img">
                 <img :src="thumbnailSrc" alt="Video thumbnail" width="75" height="50">
@@ -59,12 +56,12 @@ document.addEventListener('DOMContentLoaded', function () {
       data: {
         baseUrl: '/wp-json/lauch/v1/retro_videos',
         videos: [],
-        activeVideo: '',
+        activeVideo: { youtubeid: '', content: '', link: '', img: '', title: '', id: '' },
         taxonomies: []
       },
       computed: {
         playerSrc () {
-          return 'https://www.youtube-nocookie.com/embed/' + this.activeVideo + '?enablejsapi=1';
+          return 'https://www.youtube-nocookie.com/embed/' + this.activeVideo.youtubeid + '?enablejsapi=1';
         },
         playerSrcdoc () {
           return `<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube-nocookie.com/embed/${this.activeVideo}?autoplay=1><img src=https://img.youtube.com/vi/${this.activeVideo}/hqdefault.jpg alt=''><span>▶</span></a>`;
@@ -78,8 +75,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       },
       methods: {
-        onVideoChoose (vidId) {
-          this.activeVideo = vidId;
+        onVideoChoose (video) {
+          this.activeVideo = video;
         },
         constructUrl () {
           let url = this.baseUrl + '?';
@@ -119,6 +116,9 @@ document.addEventListener('DOMContentLoaded', function () {
                   title="Videoplaylist - Aktives Video"
                   loading="lazy"
                   allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <p v-html="activeVideo.content"></p>
+          <a :href="activeVideo.link">Zum Code und weiteren Projekt-Infos</a>
+          
         </div>
 
       <div class="video-playlist">
@@ -127,9 +127,9 @@ document.addEventListener('DOMContentLoaded', function () {
         <ul>
           <VideoPrev v-on:chooseVideo="onVideoChoose"
                v-for="video in videos"
-               :key="video.id"
+               :key="video.youtubeid"
                :video-item="video"
-               :active="activeVideo"></VideoPrev>
+               :is-active="video.youtubeid === activeVideo.youtubeid"></VideoPrev>
         </ul>
        </div>
       </div>
@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', function () {
           return response.json();
         }).then((data)=>{
           this.videos = data;
-          this.activeVideo = data[0].youtubeid;
+          this.activeVideo = data[0];
         });
       }
     });
