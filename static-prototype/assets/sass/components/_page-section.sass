@@ -119,12 +119,27 @@
   //font-size: 1.2rem
   line-height: 1.6
 
+  .c-videoplayer
+    margin-bottom: 1.5rem
+
+    &.c-videoplayer
+      ul li:before
+        content: none
+
+      a
+        background: 0
+        border: 0
+
   @media (max-width: $break-medium)
     h1
       font-size: 3rem
   @media (min-width: $break-medium)
     max-width: 38.75rem
     margin: auto
+
+    .c-videoplayer
+      margin-left: calc(-45vw + 19.375rem)
+      margin-right: calc(-45vw + 19.375rem)
     h1
       font-size: 4.1rem
   h2, h3, h4
