@@ -32,7 +32,7 @@ function IsoManagement() {
   this.init = function (isoParent, isoChildren, selects, cats) {
     this.selects = document.querySelectorAll(selects);
     this.cats = document.querySelectorAll(cats);
-    this.filterValues = {};
+    this.filterValues = this.buildFilterValuesFromUrl();
     var elem = document.querySelector(isoParent);
     if (elem && this.selects && this.cats) {
       this.iso = new Isotope( elem, {
@@ -49,9 +49,25 @@ function IsoManagement() {
       });
 
       // fix layout issues by running this a bit later
-      window.setTimeout(() => { this.iso.arrange(); }, 1000);
-      window.setTimeout(() => { this.iso.arrange(); }, 5000);
+      window.setTimeout(() => { this.iso.arrange({filter: Object.values(this.filterValues).join("")}); }, 1000);
+      window.setTimeout(() => { this.iso.arrange({filter: Object.values(this.filterValues).join("")}); }, 5000);
     }
+  };
+
+  this.buildFilterValuesFromUrl = function() {
+    const obj = {};
+    if (location.search.length) {
+      const query = location.search.slice(1, location.search.length);
+      const params = query.split('&');
+      params.forEach(item => {
+        const key = item.split('=')[0];
+        const value = item.split('=')[1];
+        obj[key] = '.' + value;
+        document.querySelector(`[value="${value}"]`).selected = 'selected'
+      })
+
+    }
+    return obj;
   };
 
   this.addToFilterValuesAndFilter = function (key, value) {
@@ -61,6 +77,11 @@ function IsoManagement() {
       this.filterValues[key] = undefined;
     }
     let filterString = Object.values(this.filterValues).join("");
+    const url = Object.keys(this.filterValues).map(item => {
+      const value = this.filterValues[item];
+      return value ? `${item}=${value.slice(1, value.length)}&` : '';
+    });
+    history.pushState({}, 'Projekte', `?${url.join('').slice(0, -1)}`);
     this.iso.arrange({filter: filterString});
   };
 
