@@ -19,7 +19,7 @@ the_post();
         <?php
         $aud = get_terms('audience', 'orderby=id');
         foreach ($aud as $audience) : ?>
-          <li><a href="#<?php echo $audience->slug; ?>"><?php echo $audience->name; ?></a></li>
+          <li><a href="#<?php echo $audience->slug; ?>" <?= $audience->slug === ($_GET['toc'] ?? "") ? 'class="is-active"' : '' ?>><?php echo $audience->name; ?></a></li>
         <?php
         endforeach ?>
       </ul>
@@ -27,7 +27,7 @@ the_post();
       <div class="c-toc-content c-page-copy">
         <?php
         foreach ($aud as $audience) : ?>
-          <section id="<?php echo $audience->slug; ?>">
+          <section id="<?php echo $audience->slug; ?>" <?= $audience->slug === ($_GET['toc'] ?? "") ? 'class="is-active"' : '' ?>>
             <?php
             $faqs = get_posts(array('post_type' => 'faq',
                                     'posts_per_page' => -1,
@@ -40,8 +40,9 @@ the_post();
                                       ))));
 
             foreach ($faqs as $faq) : ?>
-              <details>
-                <summary><?php echo $faq->post_title; ?></summary>
+              <details <?= (($_GET['faq'] ?? "") == $faq->ID) ? 'open' : '' ?>>
+
+                <summary id="<?= $faq->ID ?>"><?php echo $faq->post_title; ?></summary>
                 <?php echo apply_filters( 'the_content', $faq->post_content ); ?>
               </details>
             <?php

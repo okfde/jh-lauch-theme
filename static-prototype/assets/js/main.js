@@ -22,6 +22,13 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   }
 
+  let summary = document.querySelectorAll('summary');
+  if (summary.length) {
+    summary.forEach(function(item) {
+      new Summary().init(item);
+    })
+  }
+
   new IsoManagement().init('.js-isotope',
                          '.js-isotope > li',
                          '.c-filter select',
@@ -32,8 +39,10 @@ function IsoManagement() {
   this.init = function (isoParent, isoChildren, selects, cats) {
     this.selects = document.querySelectorAll(selects);
     this.cats = document.querySelectorAll(cats);
-    this.filterValues = this.buildFilterValuesFromUrl();
     var elem = document.querySelector(isoParent);
+
+    if (!elem) return false;
+    this.filterValues = this.buildFilterValuesFromUrl();
     if (elem && this.selects && this.cats) {
       this.iso = new Isotope( elem, {
         itemSelector: isoChildren,
@@ -222,6 +231,8 @@ function Toc(selector) {
     if (this.el) {
       this.nav.querySelectorAll('a')
         .forEach(x => x.addEventListener('click', this.toggleEvent.bind(this)));
+    }
+    if (!this.el.querySelector('.is-active')) {
       let firstElementId = this.nav.querySelector('li:first-of-type a')
           .attributes['href']['nodeValue'];
       this.activateSingle(firstElementId);
@@ -249,9 +260,22 @@ function Toc(selector) {
   this.activateSingle = function (id) {
     let navItem = this.el.querySelector(`[href="${id}"]`);
     let contentItem = this.el.querySelector(id);
+    const params = new URLSearchParams(location.search);
+    params.set('toc', id.substring(1));
+    history.replaceState({}, '', '?' + params);
 
     [navItem, contentItem]
       .forEach(x => x.classList.add('is-active'));
+  };
+}
+
+function Summary() {
+  this.init = function (obj) {
+    obj.addEventListener('click', (e) => {
+      const params = new URLSearchParams(location.search);
+      params.set('faq', e.target.id);
+      history.replaceState({}, '', '?' + params);
+    })
   };
 }
 
