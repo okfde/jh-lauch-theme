@@ -1,21 +1,17 @@
 .image-right,
 .alignright
-  position: relative
-  float: right
-  padding: 0em
-  margin: 1.2em 1em 4em 3em
-  @media (max-width: $break-small)
-    margin: 2em auto 4em
-    width: 100%
-    img
+  &,
+  .wp-block-image &
+    position: relative
+    float: right
+    padding: 0em
+    margin: 1.2em 1em 4em 3em
+    @media (max-width: $break-small)
+      margin: 2em auto 4em
       width: 100%
-      height: auto
-  @media (min-width: $break-medium)
-    right: -3rem
-    margin-left: 0
-  @media (min-width: $break-large)
-    right: -8rem
-    margin-left: 0
+      img
+        width: 100%
+        height: auto
 
 .image-right--float
   @media (min-width: ($break-ml + 40px))
@@ -45,22 +41,34 @@
 
 .image-left,
 .alignleft
-  position: relative
-  float: left
-  padding: 0em
-  margin: 1.2em 3em 4em 0
-  @media (max-width: $break-small)
-    margin: 2em auto 4em
-    width: 100%
-    img
+  &,
+  .wp-block-image &
+    position: relative
+    float: left
+    padding: 0em
+    margin: 1.2em 3em 4em 0
+    @media (max-width: $break-small)
+      margin: 2em auto 4em
       width: 100%
-      height: auto
-  @media (min-width: $break-medium)
-    left: -2rem
-    margin-right: 0
-  @media (min-width: $break-large)
-    left: -5rem
+      img
+        width: 100%
+        height: auto
 
+img.alignright,
+img.alignleft
+  height: auto
+
+.wp-block-image
+  .alignright
+    @media (min-width: $break-medium)
+      margin-right: -4rem
+    @media (min-width: $break-large)
+      margin-right: -8rem
+  .alignleft
+    @media (min-width: $break-medium)
+      margin-left: -4rem
+    @media (min-width: $break-large)
+      margin-left: -5rem
 
 .clip-alpaka
   display: block
