@@ -27,6 +27,10 @@ function lauch_setup() {
   // Add default posts and comments RSS feed links to head.
   add_theme_support( 'automatic-feed-links' );
 
+  // Add responsive embeds
+  add_theme_support( 'responsive-embeds' );
+
+
   /*
    * Let WordPress manage the document title.
    * By adding theme support, we declare that this theme does not use a
@@ -322,6 +326,30 @@ function lauch_custom_sizes( $sizes ) {
     'blog-alpaka-small' => __( 'Alpaka klein' ),
   ) );
 }
+
+function fix_preview_events( string $preview_link, WP_Post $post ) {
+  if ($post->post_type == 'event') {
+    $query = new WP_Query(array(
+      'post_type' => 'page',
+      'meta_query' => array(
+        array(
+          'key' => 'next_event', // name of custom field
+          'value' => $post->ID, // matches exactly "123", not just 123. This prevents a match for "1234"
+          'compare' => 'LIKE'
+        )
+      )
+    ));
+    if (!$query->have_posts()) {
+      return $preview_link;
+    }
+    $page = $query->post;
+    if (get_field('is_active', $page->ID)) {
+      return "/events/$page->post_name";
+    }
+  }
+  return $preview_link;
+}
+add_filter( 'preview_post_link', 'fix_preview_events', 1, 2);
 
 function vuevideo_handle_shortcode($atts = '') {
   $value = shortcode_atts( array(

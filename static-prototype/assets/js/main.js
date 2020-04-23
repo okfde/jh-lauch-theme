@@ -22,6 +22,13 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   }
 
+  let summary = document.querySelectorAll('summary');
+  if (summary.length) {
+    summary.forEach(function(item) {
+      new Summary().init(item);
+    })
+  }
+
   new IsoManagement().init('.js-isotope',
                          '.js-isotope > li',
                          '.c-filter select',
@@ -32,8 +39,10 @@ function IsoManagement() {
   this.init = function (isoParent, isoChildren, selects, cats) {
     this.selects = document.querySelectorAll(selects);
     this.cats = document.querySelectorAll(cats);
-    this.filterValues = {};
     var elem = document.querySelector(isoParent);
+
+    if (!elem) return false;
+    this.filterValues = this.buildFilterValuesFromUrl();
     if (elem && this.selects && this.cats) {
       this.iso = new Isotope( elem, {
         itemSelector: isoChildren,
@@ -49,9 +58,25 @@ function IsoManagement() {
       });
 
       // fix layout issues by running this a bit later
-      window.setTimeout(() => { this.iso.arrange(); }, 1000);
-      window.setTimeout(() => { this.iso.arrange(); }, 5000);
+      window.setTimeout(() => { this.iso.arrange({filter: Object.values(this.filterValues).join("")}); }, 1000);
+      window.setTimeout(() => { this.iso.arrange({filter: Object.values(this.filterValues).join("")}); }, 5000);
     }
+  };
+
+  this.buildFilterValuesFromUrl = function() {
+    const obj = {};
+    if (location.search.length) {
+      const query = location.search.slice(1, location.search.length);
+      const params = query.split('&');
+      params.forEach(item => {
+        const key = item.split('=')[0];
+        const value = item.split('=')[1];
+        obj[key] = '.' + value;
+        document.querySelector(`[value="${value}"]`).selected = 'selected'
+      })
+
+    }
+    return obj;
   };
 
   this.addToFilterValuesAndFilter = function (key, value) {
@@ -61,6 +86,11 @@ function IsoManagement() {
       this.filterValues[key] = undefined;
     }
     let filterString = Object.values(this.filterValues).join("");
+    const url = Object.keys(this.filterValues).map(item => {
+      const value = this.filterValues[item];
+      return value ? `${item}=${value.slice(1, value.length)}&` : '';
+    });
+    history.pushState({}, 'Projekte', `?${url.join('').slice(0, -1)}`);
     this.iso.arrange({filter: filterString});
   };
 
@@ -141,13 +171,26 @@ function Slider() {
       if (item.dataset.sliderPreset === "auto") {
         options = {
           container: item,
-          autoWidth: true,
           controls: false,
           autoplay: true,
           autoplayButtonOutput: false,
-          gutter: 90,
+          items: 2,
+          gutter: 20,
+          slideBy: 2,
           nav: false,
-          autoplayTimeout: 3000
+          autoplayTimeout: 3000,
+          responsive: {
+            640: {
+              items: 2
+            },
+            700: {
+              gutter: 30
+            },
+            900: {
+              items: 5,
+              gutter: 90,
+            }
+          }
         }
       } else if (item.dataset.sliderPreset === "price") {
         options = {
@@ -180,7 +223,7 @@ function Slider() {
   };
 }
 
-function Toc(selector) {
+function Toc() {
   this.init = function (obj) {
     this.el = obj;
     this.nav = this.el.querySelector('.c-toc-nav');
@@ -188,6 +231,8 @@ function Toc(selector) {
     if (this.el) {
       this.nav.querySelectorAll('a')
         .forEach(x => x.addEventListener('click', this.toggleEvent.bind(this)));
+    }
+    if (!this.el.querySelector('.is-active')) {
       let firstElementId = this.nav.querySelector('li:first-of-type a')
           .attributes['href']['nodeValue'];
       this.activateSingle(firstElementId);
@@ -215,9 +260,24 @@ function Toc(selector) {
   this.activateSingle = function (id) {
     let navItem = this.el.querySelector(`[href="${id}"]`);
     let contentItem = this.el.querySelector(id);
+    if (this.el.dataset.setUrl) {
+      const params = new URLSearchParams(location.search);
+      params.set('toc', id.substring(1));
+      history.replaceState({}, '', '?' + params);
+    }
 
     [navItem, contentItem]
       .forEach(x => x.classList.add('is-active'));
+  };
+}
+
+function Summary() {
+  this.init = function (obj) {
+    obj.addEventListener('click', (e) => {
+      const params = new URLSearchParams(location.search);
+      params.set('faq', e.target.id);
+      history.replaceState({}, '', '?' + params);
+    })
   };
 }
 
