@@ -14,7 +14,7 @@ the_post();
   get_template_part( 'template-parts/header-simple', get_post_type() ); ?>
 
   <div class="c-page-section white">
-    <div class="c-toc">
+    <div class="c-toc" data-set-url="true">
       <ul class="c-toc-nav">
         <?php
         $aud = get_terms('audience', 'orderby=id');

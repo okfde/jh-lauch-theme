@@ -223,7 +223,7 @@ function Slider() {
   };
 }
 
-function Toc(selector) {
+function Toc() {
   this.init = function (obj) {
     this.el = obj;
     this.nav = this.el.querySelector('.c-toc-nav');
@@ -260,9 +260,11 @@ function Toc(selector) {
   this.activateSingle = function (id) {
     let navItem = this.el.querySelector(`[href="${id}"]`);
     let contentItem = this.el.querySelector(id);
-    const params = new URLSearchParams(location.search);
-    params.set('toc', id.substring(1));
-    history.replaceState({}, '', '?' + params);
+    if (this.el.dataset.setUrl) {
+      const params = new URLSearchParams(location.search);
+      params.set('toc', id.substring(1));
+      history.replaceState({}, '', '?' + params);
+    }
 
     [navItem, contentItem]
       .forEach(x => x.classList.add('is-active'));
