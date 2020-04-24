@@ -117,3 +117,9 @@
     right: -15rem
   @media (min-width: $break-large)
     right: -20rem
+
+@each $name, $color in $backend-colors
+  .has-#{$name}-color
+    color: $color
+  .has-#{$name}-background-color
+    background-color: $color

@@ -25,16 +25,9 @@
     float: left
     margin-right: 2.8125rem
     margin-left: -8.625rem
-.float-box--orange
-  border-color: $color-deeporange
-.float-box--softblue
-  border-color: $color-softblue
-.float-box--deepblue
-  border-color: $color-deepblue
-.float-box--softgreen
-  border-color: $color-softgreen
-.float-box--deeppurple
-  border-color: $color-deeppurple
+@each $name, $color in $backend-colors
+  .float-box--#{$name}
+    border-color: $color
 h2.float-box-title
   font-size: 1.1rem
   font-weight: $font-weight-bold
