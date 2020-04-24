@@ -15,6 +15,13 @@ a.button--simple
   font-size: 0.875rem
   font-weight: $font-weight-bold
 
+@each $name, $color in $backend-colors
+  a.button--#{$name}
+    background: $color
+    &:hover, &:active
+      background: map_get($backend-colors-hover, $name) !important
+
+// keep these so we don't break any existing references
 a.button--red
   background: $color-softred
   &:hover, &:active
@@ -29,23 +36,3 @@ a.button--blue
   background: $color-softblue
   &:hover, &:active
     background: $color-deepblue !important
-
-a.button--softblue
-  background: $color-softblue
-  &:hover, &:active
-    background: $color-deepblue !important
-
-a.button--deepblue
-  background: $color-deepblue
-  &:hover, &:active
-    background: $color-deepblue !important
-
-a.button--softgreen
-  background: $color-softgreen
-  &:hover, &:active
-    background: $color-deepgreen !important
-
-a.button--deeppurple
-  background: $color-deeppurple
-  &:hover, &:active
-    background: $color-deeppurple !important
