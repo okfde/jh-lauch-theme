@@ -17,7 +17,6 @@
 @import "components/tns"
 @import "components/event-teaser-list"
 @import "components/accordion"
-@import "components/float-box"
 @import "components/button"
 @import "components/index"
 @import "components/page-header"
@@ -42,6 +41,8 @@
 @import "components/tags"
 @import "components/author"
 @import "components/project"
+@import "components/gallery"
+@import "components/float-box"
 
 @import "util/blocks"
 @import "util/wordpress"
@@ -116,3 +117,9 @@
     right: -15rem
   @media (min-width: $break-large)
     right: -20rem
+
+@each $name, $color in $backend-colors
+  .has-#{$name}-color
+    color: $color
+  .has-#{$name}-background-color
+    background-color: $color

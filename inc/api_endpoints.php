@@ -42,6 +42,8 @@ function lauch_event_retro_videos( $data ) {
       'id' => $post->ID,
       'youtubeid' =>  get_field('youtubeid', $post->ID),
       'img' => get_the_post_thumbnail_url($post->ID, 'events-teaser-m'),
+      'content' => get_the_excerpt($post->ID),
+      'link' => get_permalink($post->ID),
       //'tags' => wp_get_post_terms($post->ID, ['tech', 'topics'], true),
     );
     array_push($payload, $item);

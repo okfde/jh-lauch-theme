@@ -10,6 +10,7 @@ body
   -moz-osx-font-smoothing: grayscale
   font-smooth: always
   overflow-x: hidden
+  position: relative
 
 body
   +bg-pattern($color-bg-grey)
@@ -83,8 +84,39 @@ summary
 
 iframe
   width: 100%
-  height: auto
 //  min-height: 40vh
 
 hr
   border-color: $color-softgrey
+
+em
+  font-style: italic
+
+code,
+kbd,
+pre,
+samp
+  font-family: monospace
+  font-size: 0.9em
+  padding: 0.4rem 0.6rem
+
+
+code,
+kbd,
+samp
+  background: rgba(0, 0, 0, 0.075)
+  border-radius: 0.2rem
+
+
+pre
+  border: 0.1rem solid #dcd7ca
+  line-height: 1.5
+  margin: 4rem 0
+  overflow: auto
+  padding: 3rem 2rem
+  text-align: left
+
+
+pre code
+  background: transparent
+  padding: 0

@@ -1,0 +1,38 @@
+.gallery
+  display: flex
+  flex-wrap: wrap
+  margin: 3em 0 3em -0.8em
+  width: calc(100% + 1.6em)
+
+
+.gallery-item
+  margin: 0.8em 0
+  padding: 0 0.8em
+  width: 100%
+
+
+.gallery-caption
+  display: block
+  margin-top: 0.8em
+
+
+@media (min-width: $break-medium)
+  .gallery-columns-2 .gallery-item
+    max-width: 50%
+  .gallery-columns-3 .gallery-item
+    max-width: 33.33%
+  .gallery-columns-4 .gallery-item
+    max-width: 25%
+  .gallery-columns-5 .gallery-item
+    max-width: 20%
+  .gallery-columns-6 .gallery-item
+    max-width: 16.66%
+  .gallery-columns-7 .gallery-item
+    max-width: 14.28%
+  .gallery-columns-8 .gallery-item
+    max-width: 12.5%
+  .gallery-columns-9 .gallery-item
+    max-width: 11.11%
+
+.gallery-size-medium figcaption
+  width: 100%
