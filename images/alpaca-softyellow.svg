@@ -1,0 +1,21 @@
+<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 77 77">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #ffe50c;
+      }
+    </style>
+  </defs>
+  <title>Zeichenfläche 1</title>
+  <polygon class="cls-1" points="21 70 21 70 21 70 21 63 14 63 14 56 7 56 7 35 14 35 14 28 63 28 63 35 70 35 70 56 63 56 63 63 56 63 56 70 21 70"/>
+  <g>
+    <rect x="14" y="42" width="7" height="7"/>
+    <rect x="56" y="42" width="7" height="7"/>
+    <polygon points="42 56 35 56 35 49 28 49 28 63 49 63 49 49 42 49 42 56"/>
+  </g>
+  <path class="cls-2" d="M70,7V0H56V7H49v7H28V7H21V0H7V7H0V63H7v7h7v7H63V70h7V63h7V7Zm0,49H63v7H56v7H21V63H14V56H7V35h7V28H63v7h7Z"/>
+</svg>
