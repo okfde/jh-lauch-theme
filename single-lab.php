@@ -68,9 +68,10 @@ endwhile; ?>
 
     <ul class="event-teaser-list-wrapper c-page-content">
       <?php while( have_rows('lab_events') ): the_row(); ?>
-
+        <?php if (get_sub_field('visible') == TRUE) : ?>
           <?php get_template_part('template-parts/event', 'lab') ?>
-        <?php endwhile ?>
+        <?php endif ?>
+      <?php endwhile ?>
     </ul>
     <?php endif ?>
   </div>
