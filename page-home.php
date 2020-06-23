@@ -190,12 +190,15 @@ endwhile;
             <?php if ( $the_query->have_posts() ) :
               while ( $the_query->have_posts() ) : $the_query->the_post();
                 while( have_rows('lab_events') ): the_row();
-                  $info = array('lab' => $post->post_title,
-                                'img' => get_sub_field('image'),
-                               'title' => get_sub_field('title'),
-                               'date_technical' => get_sub_field('date_technical'),
-                               'date' => get_sub_field('date'));
-                  array_push($all_dates, $info);
+                  if (get_sub_field('visible') == TRUE) :
+                    $info = array('lab' => $post->post_title,
+                                 'link' => get_post_permalink(),
+                                  'img' => get_sub_field('image'),
+                                 'title' => get_sub_field('title'),
+                                 'date_technical' => get_sub_field('date_technical'),
+                                 'date' => get_sub_field('date'));
+                    array_push($all_dates, $info);
+                  endif;
                 endwhile;
               endwhile;
             wp_reset_postdata();
