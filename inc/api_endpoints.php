@@ -65,10 +65,12 @@ add_action( 'rest_api_init', function () {
   register_rest_route( 'lauch/v1', '/retro_videos', array(
     'methods' => 'GET',
     'callback' => 'lauch_event_retro_videos',
+    'permission_callback' => '__return_true'
   ));
 
   register_rest_route( 'lauch/v1', '/revolving_claims', array(
     'methods' => 'GET',
     'callback' => 'lauch_revolving_claims_endoint',
+    'permission_callback' => '__return_true'
   ));
 });

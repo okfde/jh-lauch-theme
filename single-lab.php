@@ -58,24 +58,29 @@ endwhile; ?>
 </header>
 
 
+<?php
+$lab_events = get_field('lab_events');
+if ($lab_events):
+?>
 <section class="c-page-section pb-2 mt-2 white addon--relative">
   <span class="addon addon--small addon--right addon--top addon--catdog sm-only"></span>
   <div class="event-teaser-list">
     <h2 class="event-teaser-list-title addon--relative">
       <?php echo __('Die nächsten Termine', 'lauch') ?>
-      <span class="d-b mt-2 addon addon--small addon--catdog sm-up"></span></h2>
-    <?php if( have_rows('lab_events') ): ?>
-
+      <span class="d-b mt-2 addon addon--small addon--catdog sm-up"></span>
+    </h2>
     <ul class="event-teaser-list-wrapper c-page-content">
-      <?php while( have_rows('lab_events') ): the_row(); ?>
-        <?php if (get_sub_field('visible') == TRUE) : ?>
-          <?php get_template_part('template-parts/event', 'lab') ?>
-        <?php endif ?>
-      <?php endwhile ?>
+      <?php foreach ($lab_events as $post): ?>
+        <?php setup_postdata($post); ?>
+          <?php if (get_post_status() == 'publish'): ?>
+            <?php get_template_part('template-parts/event', 'lab') ?>
+          <?php endif; ?>
+      <?php endforeach; ?>
+    <?php wp_reset_postdata(); ?>
     </ul>
-    <?php endif ?>
   </div>
 </section>
+<?php endif ?>
 
 <section class="c-page-section pb-0 c-page-center addon--relative addon addon--large addon--l-0 addon--top addon--octopus">
   <h2 class="ta-c c-event-title"><?php echo __("Wissenswertes zum Ort", "lauch"); ?></h2>
