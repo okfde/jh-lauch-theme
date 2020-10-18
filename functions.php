@@ -248,6 +248,30 @@ function lauch_widgets_init() {
 }
 add_action( 'widgets_init', 'lauch_widgets_init' );
 
+// Guttenberg Block Editor Changes for Mitmachen
+function advanced_block_enqueue() {
+  $baseurl = get_template_directory_uri();
+    echo "<script type='text/javascript' src='{$baseurl}/js/advanced_block_script.js'></script>\n";
+}
+add_action( 'wp_tiny_mce_init', 'advanced_block_enqueue' );
+
+function advanced_block_style() {
+    wp_enqueue_style(
+      'advanced_block_style',
+      get_template_directory_uri() . '/styles/advanced_block_style.css'
+    );
+}
+add_action( 'enqueue_block_assets', 'advanced_block_style' );
+
+add_filter( 'render_block', 'wrap_classic_block', 10, 2 );
+function wrap_classic_block( $block_content, $block ) {
+  if ($block['blockName'] == 'core/paragraph') {
+    $type = substr($block['blockName'], strpos($block['blockName'], "/") + 1);
+    $block_content = '<div class="block-' . $type . ' ' . ($block['attrs']['className'] ?? '') . '">' . $block_content . '</div>';
+  }
+  return $block_content;
+}
+
 /**
  * Enqueue scripts and styles.
  */
