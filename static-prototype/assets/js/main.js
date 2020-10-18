@@ -29,6 +29,11 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   }
 
+  let page = document.querySelector('.c-page-full-width');
+  if (page) {
+    new FullwidthPage().init(page);
+  }
+
   new IsoManagement().init('.js-isotope',
                          '.js-isotope > li',
                          '.c-filter select',
@@ -337,5 +342,26 @@ function Accordion() {
     }
 
     this.$content.style.maxHeight = '';
+  };
+}
+
+function FullwidthPage() {
+  this.init = function ($el) {
+    this.$el = $el;
+    const images = this.$el.querySelectorAll('.blocks-gallery-item, .wp-block-image, .wp-block-video');
+    const titles = this.$el.querySelectorAll('.is-style-overlapping-title');
+
+    for (let i = 0; i < images.length; i++) {
+      const image = images[i]
+      const rotation = Math.floor(Math.random() * (16) - 8)
+      image.style.transform = 'rotateZ(' + rotation + 'deg)'
+    }
+
+    for (let i = 0; i < titles.length; i++) {
+      const title = titles[i]
+      const words = title.textContent.split(' ')
+      title.innerHTML = words.map(word => `<span class="is-style-overlapping-title__word">${word}</span>`).join('')
+    }
+
   };
 }

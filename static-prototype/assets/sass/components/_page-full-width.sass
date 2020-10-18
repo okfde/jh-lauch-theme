@@ -1,0 +1,39 @@
+.c-page-full-width
+  margin: 0 (-$body-padding)
+
+  .has-background
+    background-image: $pattern-bg
+    background-size: 95px
+    padding: 4em $body-padding / 2
+    background-blend-mode: normal
+    @media (min-width: 320px)
+      background-size: 45px
+    @media (min-width: 900px)
+      background-size: 55px
+    @media (min-width: 1200px)
+      background-size: 65px
+    @media (min-width: 1900px)
+      background-size: 85px
+
+  > *
+    padding: 0 $body-padding / 2
+
+  > .wp-block-image:first-child
+    margin-bottom: -50px
+
+    + .has-background
+      padding-top: 100px
+
+
+  .block-paragraph
+    position: relative
+    z-index: 1
+
+  .wp-block-image img
+    height: auto
+
+  .wp-block-columns:last-child .wp-block-image:last-child
+      margin-bottom: -4em
+
+  .wp-block-group .wp-block-column:nth-child(n-3) .wp-block-image
+    margin-top: 100px
