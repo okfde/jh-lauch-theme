@@ -34,6 +34,11 @@ document.addEventListener('DOMContentLoaded', function () {
     new FullwidthPage().init(page);
   }
 
+  let styledCaptions = document.querySelectorAll('[class*="is-style-caption-"] figcaption');
+  if (styledCaptions.length) {
+    new StyledCaptions().init(styledCaptions);
+  }
+
   new IsoManagement().init('.js-isotope',
                          '.js-isotope > li',
                          '.c-filter select',
@@ -363,5 +368,16 @@ function FullwidthPage() {
       title.innerHTML = words.map(word => `<span class="is-style-overlapping-title__word">${word}</span>`).join('')
     }
 
+  };
+}
+
+function StyledCaptions() {
+  this.init = function ($els) {
+    for (let i = 0; i < $els.length; i++) {
+      const $el = $els[i]
+      const caption = document.createElement('span')
+      caption.textContent = $el.textContent;
+      $el.innerHTML = caption.outerHTML;
+    }
   };
 }
