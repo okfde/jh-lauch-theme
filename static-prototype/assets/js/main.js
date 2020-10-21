@@ -350,15 +350,22 @@ function Accordion() {
   };
 }
 
+function getRandom(max, _min) {
+  const min = _min || 0;
+  return Math.floor(Math.random() * (max + min) - min) + 1
+}
+
 function FullwidthPage() {
   this.init = function ($el) {
     this.$el = $el;
     const images = this.$el.querySelectorAll('.blocks-gallery-item, .wp-block-image, .wp-block-video');
     const titles = this.$el.querySelectorAll('.is-style-overlapping-title');
+    const addons = document.querySelectorAll('.wp-block-group, .wp-block-image, .c-page-title');
+    const addonTypes = ['wrestler', 'robot', 'octopus', 'alpaka', 'alien', 'monster', 'glasses', 'catdog']
 
     for (let i = 0; i < images.length; i++) {
       const image = images[i]
-      const rotation = Math.floor(Math.random() * (16) - 8)
+      const rotation = getRandom(16,8)
       image.style.transform = 'rotateZ(' + rotation + 'deg)'
     }
 
@@ -366,6 +373,21 @@ function FullwidthPage() {
       const title = titles[i]
       const words = title.textContent.split(' ')
       title.innerHTML = words.map(word => `<span class="is-style-overlapping-title__word">${word}</span>`).join('')
+    }
+
+    for (let i = 0; i < addons.length; i++) {
+      const addonEl = addons[i]
+      if (Math.random() > 0.6) {
+        const addon = addonTypes[getRandom(addonTypes.length)]
+        addonEl.classList.add('addon', 'addon--' + addon)
+        if (addonEl.classList.contains('wp-block-image')) {
+          addonEl.classList.add('addon--top', Math.random() > .5 ? 'addon--left' : 'addon--right')
+
+          if (addonEl.querySelector('img').clientWidth < 250) {
+            addonEl.classList.add('addon--tiny')
+          }
+        }
+      }
     }
 
   };
