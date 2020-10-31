@@ -37,3 +37,15 @@
 
   .wp-block-group .wp-block-column:nth-child(n-3) .wp-block-image
     margin-top: 100px
+
+  .wp-block-columns
+    display: block
+    margin: 1em
+  @media (min-width: 900px)
+    .wp-block-columns
+      display: flex
+
+  @media (max-width: 899px)
+    .pl-5
+      padding-left: 0
+

@@ -22,6 +22,10 @@ wp.blocks.registerBlockStyle( 'core/heading', {
     name: 'overlapping-title',
     label: 'Überlappender Titel',
 } );
+wp.blocks.registerBlockStyle( 'core/heading', {
+    name: 'huge-title',
+    label: 'Riesiger Titel',
+} );
 
 for (const key in colors) {
     if (colors.hasOwnProperty(key)) {
