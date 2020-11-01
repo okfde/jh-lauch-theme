@@ -263,6 +263,57 @@ function advanced_block_style() {
 }
 add_action( 'enqueue_block_assets', 'advanced_block_style' );
 
+function advanced_blocks_render_callback($type, $block_attributes, $content ) {
+    $links = '';
+    if ($type == 'event') {
+      $terms = get_terms( array(
+          'taxonomy' => 'location',
+          'hide_empty' => true,
+      ) );
+      $terms = array_filter($terms, function($item) {
+          return $item->parent !== 0;
+      });
+      $links = join(array_map(function($item) {
+        return '<a class="c-info-block__link" href="/events/' . $item->slug .'">' . $item->name . '</a>';
+      }, $terms));
+    } else {
+      $labs = get_posts(array(
+        'post_type' => 'lab',
+      ));
+      $links = join(array_map(function($item) {
+        return '<a class="c-info-block__link" href="/lab/' . $item->post_name .'">' . $item->post_title . '</a>';
+      }, $labs));
+    }
+    return "
+<div class=\"c-info-block " . ($type == 'event' ? 'wp-block-advancedblock-event' : 'wp-block-advancedblock-lab') . "\">
+  <div class=\"c-info-block__top\">
+    <h2>". ($type == 'event' ? 'Events' : 'Labs') . "</h2>
+    $content
+  </div>
+  <div class=\"c-info-block__bottom\">
+    $links
+  </div>
+</div>
+";
+}
+
+function advanced_blocks() {
+
+    register_block_type( 'advancedblock/event', array(
+        'render_callback' => function($a, $b) {
+          return advanced_blocks_render_callback('event', $a, $b);
+        }
+    ) );
+
+    register_block_type( 'advancedblock/lab', array(
+        'render_callback' => function($a, $b) {
+          return advanced_blocks_render_callback('lab', $a, $b);
+        }
+    ) );
+
+}
+add_action( 'init', 'advanced_blocks' );
+
 add_filter( 'render_block', 'wrap_classic_block', 10, 2 );
 function wrap_classic_block( $block_content, $block ) {
   if ($block['blockName'] == 'core/paragraph') {

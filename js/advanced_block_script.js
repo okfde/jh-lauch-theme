@@ -42,3 +42,86 @@ if (tinyMCEPreInit) {
         document.body.classList.add('page-template-full-width');
     }
 }
+
+
+(function(blocks, editor, element, data, blockEditor) {
+	const el = element.createElement; // The wp.element.createElement() function to create elements.
+	const registerBlockType = blocks.registerBlockType; // The registerBlockType() to register blocks.
+
+	registerBlockType( 'advancedblock/event', {
+		title: 'Event Block',
+		icon: 'calendar-alt',
+		category: 'common',
+		keywords: [ 'event', 'termine', 'liste' ],
+		attributes: {},
+		example: {
+			attributes: {},
+		},
+		edit: data.withSelect(function(select, ownProps) {
+			const query = {
+				hide_empty: true,
+			}
+			return {
+				places: select('core').getEntityRecords('taxonomy', 'location', query)
+			}
+		})(function( props ) {
+			if (props.places) {
+				const places = props.places.filter(function(item) {
+					return item.parent !== 0;
+				})
+				return el( 'div', { className: props.className + ' c-info-block' },
+					el( 'div', { className: 'c-info-block__top' },
+						el( 'h2', null, 'Events'),
+						el( blockEditor.InnerBlocks, {allowedBlocks: 'core/paragraph'} )
+					),
+					el( 'div', { className: 'c-info-block__bottom' },
+						places.map(function( item ) {
+							return el( 'span', { className: 'c-info-block__link' }, item.name)
+						})
+					)
+				)
+			}
+			return null;
+		}),
+		save: props =>  el('div', { className: props.className }, el( blockEditor.InnerBlocks.Content ))
+	} );
+	registerBlockType( 'advancedblock/lab', {
+		title: 'Lab Block',
+		icon: 'admin-site-alt3',
+		category: 'common',
+		keywords: [ 'lab', 'liste' ],
+		attributes: {},
+		example: {
+			attributes: {},
+		},
+		edit: data.withSelect(function(select) {
+			const query = {
+				hide_empty: true,
+			}
+			return {
+				labs: select('core').getEntityRecords('postType', 'lab', query)
+			}
+		})(function( props ) {
+			if (props.labs) {
+				return el( 'div', { className: props.className + ' c-info-block' },
+					el( 'div', { className: 'c-info-block__top' },
+						el( 'h2', null, 'Labs'),
+						el( blockEditor.InnerBlocks, {allowedBlocks: 'core/paragraph'} )
+					),
+					el( 'div', { className: 'c-info-block__bottom' },
+						props.labs.map(function( item ) {
+							return el( 'span', { className: 'c-info-block__link' }, item.name)
+						})
+					)
+				)
+			}
+			return null;
+		}),
+		save: props =>  el('div', { className: props.className }, el( blockEditor.InnerBlocks.Content ))
+	} );
+})(window.wp.blocks,
+    window.wp.editor,
+	window.wp.element,
+	window.wp.data,
+	window.wp.blockEditor
+);

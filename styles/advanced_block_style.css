@@ -322,3 +322,75 @@
     margin-right: 2.5vw;
 }
 
+.c-info-block {
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 2em 4em;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.c-info-block h2 {
+    margin-top: 0;
+    margin-bottom: .25em;
+    position: relative;
+}
+
+
+@media (min-width: 900px) {
+    .c-info-block {
+        min-height: 500px;
+        padding: 3em 6em;
+    }
+}
+
+.c-info-block:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #00498C;
+    clip-path: polygon(0% 0%, 94% 0%, 100% 100%, 13% 100%, 0% 80%);
+    transform: rotateZ(4deg)
+}
+
+.wp-block-advancedblock-lab {
+    color: #000000;
+}
+
+.wp-block-advancedblock-lab:before {
+    background-color: #FFE713;
+    transform: rotateZ(-2deg);
+    clip-path: polygon(0% 0%, 90% 0%, 100% 15%, 100% 100%, 0% 100%);
+}
+
+.c-info-block__top {
+    margin-bottom: 2em;
+}
+
+.c-info-block__top .block-editor-rich-text__editable,
+.c-info-block__top .block-paragraph {
+    margin: 0;
+}
+
+.c-info-block__link {
+    margin-right: 1em;
+    font-size: 1.5rem;
+    display: inline-block;
+    text-decoration: none;
+    color: currentColor;
+}
+
+.c-info-block__link:last-child {
+    margin-right: 0;
+}
+
+.c-info-block__bottom {
+    margin-top: auto;
+    position: relative;
+}
