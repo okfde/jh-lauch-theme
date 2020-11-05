@@ -48,7 +48,7 @@
 
 //      if ($city && get_field('is_active', $city[0]->ID) == true) :
 //         $event = get_field('next_event', $city[0]->ID)[0];
-        if (get_field('anmeldungslink'): ?>
+        if (get_field('anmeldungslink')) : ?>
         <a href="<?php the_field('anmeldungslink') ?>" class="button event-button">Anmelden für <?php echo date('Y') ?></a>
       <?php endif; ?>
     </div>
