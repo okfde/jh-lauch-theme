@@ -38,22 +38,9 @@
 
       <?php
       $loc_term = wp_get_post_terms($post->ID, 'location'); ?>
-//      $city = get_posts(array(
-//      'post_type' => 'page',
-//      'posts_per_page' => 1,
-//      'tax_query' => array(
-//        lauch_fill_tax_query('location', $loc_term[0]->slug),
-//      )
-//      ));
 
-//      if ($city && get_field('is_active', $city[0]->ID) == true) :
-//         $event = get_field('next_event', $city[0]->ID)[0];
+      <p><?php the_field('anmeldungslink'); ?></p>
 
-<p><?php the_field('anmeldungslink'); ?></p>
-
-//        if (! empty(get_field('anmeldungslink'))) : ?>
-//        <a href="<?php the_field('anmeldungslink') ?>" class="button event-button">Anmelden für <?php echo date('Y') ?></a>
-//      < ?php endif; ?>
     </div>
 
     <?php if (get_field('illustration_right')) : ?>
