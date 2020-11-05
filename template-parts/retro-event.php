@@ -46,9 +46,9 @@
       )
       ));
 
-      if (get_field('anmeldungslink', $event->ID)):
+      if (get_field('anmeldungslink')):
       ?>
-        <a href="<?php echo get_field('anmeldungslink', $event->ID) ?>" class="button event-button">Anmelden für <?php echo date('Y') ?></a>
+        <a href="<?php the_field('anmeldungslink') ?>" class="button event-button">Anmelden für <?php echo date('Y') ?></a>
       <?php endif; ?>
     </div>
 
