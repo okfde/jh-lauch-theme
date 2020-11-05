@@ -53,7 +53,7 @@
 
 //        if (! empty(get_field('anmeldungslink'))) : ?>
 //        <a href="<?php the_field('anmeldungslink') ?>" class="button event-button">Anmelden für <?php echo date('Y') ?></a>
-//      <?php endif; ?>
+//      < ?php endif; ?>
     </div>
 
     <?php if (get_field('illustration_right')) : ?>
