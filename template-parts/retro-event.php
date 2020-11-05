@@ -50,7 +50,7 @@
          $event = get_field('next_event', $city[0]->ID)[0];
          if (get_field('anmeldungslink', $event->ID)):
       ?>
-        <a href="<?php themes_field('anmeldungslink', $event->ID) ?>" class="button event-button">Anmelden für <?php echo date('Y') ?></a>
+        <a href="<?php the_field('anmeldungslink', $event->ID) ?>" class="button event-button">Anmelden für <?php echo date('Y') ?></a>
       <?php endif; endif; ?>
     </div>
 
