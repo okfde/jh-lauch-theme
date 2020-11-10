@@ -59,8 +59,25 @@ endwhile; ?>
 
 
 <?php
-$lab_events = get_field('lab_events');
-if ($lab_events):
+$args = array(
+  'post_type' => 'date',
+  'meta_query' => array(
+    'relation' => 'AND',
+    array(
+      'key' => 'parent', // name of custom field
+      'value' => get_the_ID(),
+      'compare' => 'LIKE'
+    ),
+    array(
+      'key' => 'begin', // name of custom field
+      'value' => date("Y-m-d H:i:s", strtotime('today')),
+      'compare' => '>=',
+      'type' => 'DATETIME'
+    )
+  )
+);
+$the_query = new WP_Query( $args );
+if ($the_query->have_posts()):
 ?>
 <section class="c-page-section pb-2 mt-2 white addon--relative">
   <span class="addon addon--small addon--right addon--top addon--catdog sm-only"></span>
@@ -70,12 +87,12 @@ if ($lab_events):
       <span class="d-b mt-2 addon addon--small addon--catdog sm-up"></span>
     </h2>
     <ul class="event-teaser-list-wrapper c-page-content">
-      <?php foreach ($lab_events as $post): ?>
-        <?php setup_postdata($post); ?>
+      <?php while ( $the_query->have_posts() ) : $the_query->the_post();
+        setup_postdata($post); ?>
           <?php if (get_post_status() == 'publish'): ?>
             <?php get_template_part('template-parts/event', 'lab') ?>
           <?php endif; ?>
-      <?php endforeach; ?>
+      <?php endwhile; ?>
     <?php wp_reset_postdata(); ?>
     </ul>
   </div>
