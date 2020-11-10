@@ -43,6 +43,7 @@ function lauch_dates_init() {
         'has_archive'        => true,
         'hierarchical'       => false,
         'menu_position'      => null,
+        'rewrite'            => array( 'slug' => 'termin', 'with_front' => false ),
         'supports'           => array( 'title', 'editor', 'custom-fields', 'thumbnail' ),
         'menu_icon'  		     => 'dashicons-calendar-alt',
         'map_meta_cap'       => true,

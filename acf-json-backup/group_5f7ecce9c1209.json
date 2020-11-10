@@ -1,0 +1,84 @@
+{
+    "key": "group_5f7ecce9c1209",
+    "title": "Lab-Event",
+    "fields": [
+        {
+            "key": "field_5f7f7ade3ae14",
+            "label": "Startdatum",
+            "name": "begin",
+            "type": "date_time_picker",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "F j, Y g:i a",
+            "return_format": "U",
+            "first_day": 1
+        },
+        {
+            "key": "field_5f7f7c1a3ae15",
+            "label": "Enddatum",
+            "name": "end",
+            "type": "date_time_picker",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "F j, Y g:i a",
+            "return_format": "U",
+            "first_day": 1
+        },
+        {
+            "key": "field_5fa9783737e2f",
+            "label": "Dazugehöriger Post",
+            "name": "parent",
+            "type": "post_object",
+            "instructions": "Dazugehöriges Event, Lab oder Austausch auswählen",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "event",
+                "exchange",
+                "lab"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "object",
+            "ui": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "date"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "permalink"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1604942110
+}
