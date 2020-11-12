@@ -73,6 +73,16 @@
 .pl-2
   padding-left: 2rem
 
+.pl-5
+  padding-left: 5rem
+
+$i: -10
+@while $i < 11
+  .mt-#{$i}
+    margin-top: $i * 1rem !important
+  $i: $i + 1
+
+
 .mr-2
   margin-right: 2rem
 
@@ -81,21 +91,6 @@
 
 .mr-10
   margin-right: 10rem
-
-.mt-0
-  margin-top: 0
-
-.mt-1
-  margin-top: 1rem
-
-.mt-2
-  margin-top: 2rem
-
-.mt-3
-  margin-top: 3rem
-
-.mt-10
-  margin-top: 10rem
 
 .mb-0
   margin-bottom: 0

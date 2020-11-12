@@ -248,6 +248,81 @@ function lauch_widgets_init() {
 }
 add_action( 'widgets_init', 'lauch_widgets_init' );
 
+// Guttenberg Block Editor Changes for Mitmachen
+function advanced_block_enqueue() {
+  $baseurl = get_template_directory_uri();
+    echo "<script type='text/javascript' src='{$baseurl}/js/advanced_block_script.js'></script>\n";
+}
+add_action( 'wp_tiny_mce_init', 'advanced_block_enqueue' );
+
+function advanced_block_style() {
+    wp_enqueue_style(
+      'advanced_block_style',
+      get_template_directory_uri() . '/styles/advanced_block_style.css'
+    );
+}
+add_action( 'enqueue_block_assets', 'advanced_block_style' );
+
+function advanced_blocks_render_callback($type, $block_attributes, $content ) {
+    $links = '';
+    if ($type == 'event') {
+      $terms = get_terms( array(
+          'taxonomy' => 'location',
+          'hide_empty' => true,
+      ) );
+      $terms = array_filter($terms, function($item) {
+          return $item->parent !== 0;
+      });
+      $links = join(array_map(function($item) {
+        return '<a class="c-info-block__link" href="/events/' . $item->slug .'">' . $item->name . '</a>';
+      }, $terms));
+    } else {
+      $labs = get_posts(array(
+        'post_type' => 'lab',
+      ));
+      $links = join(array_map(function($item) {
+        return '<a class="c-info-block__link" href="/lab/' . $item->post_name .'">' . $item->post_title . '</a>';
+      }, $labs));
+    }
+    return "
+<div class=\"c-info-block " . ($type == 'event' ? 'wp-block-advancedblock-event' : 'wp-block-advancedblock-lab') . "\">
+  <div class=\"c-info-block__top\">
+    <h2>". ($type == 'event' ? 'Events' : 'Labs') . "</h2>
+    $content
+  </div>
+  <div class=\"c-info-block__bottom\">
+    $links
+  </div>
+</div>
+";
+}
+
+function advanced_blocks() {
+
+    register_block_type( 'advancedblock/event', array(
+        'render_callback' => function($a, $b) {
+          return advanced_blocks_render_callback('event', $a, $b);
+        }
+    ) );
+
+    register_block_type( 'advancedblock/lab', array(
+        'render_callback' => function($a, $b) {
+          return advanced_blocks_render_callback('lab', $a, $b);
+        }
+    ) );
+
+}
+add_action( 'init', 'advanced_blocks' );
+
+add_filter( 'render_block', 'wrap_classic_block', 10, 2 );
+function wrap_classic_block( $block_content, $block ) {
+  if ($block['blockName'] == 'core/paragraph') {
+    $type = substr($block['blockName'], strpos($block['blockName'], "/") + 1);
+    $block_content = '<div class="block-' . $type . ' ' . ($block['attrs']['className'] ?? '') . '">' . $block_content . '</div>';
+  }
+  return $block_content;
+}
+
 /**
  * Enqueue scripts and styles.
  */
