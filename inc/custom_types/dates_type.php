@@ -39,11 +39,11 @@ function lauch_dates_init() {
         'show_in_menu'       => true,
         'show_in_rest'       => true,
         'query_var'          => true,
-        'capability_type'    => 'event',
+        'capability_type'    => 'date',
         'has_archive'        => true,
         'hierarchical'       => false,
         'menu_position'      => null,
-        'rewrite'            => array( 'slug' => 'termin', 'with_front' => false ),
+        'rewrite'            => array( 'slug' => 'kalender', 'with_front' => false ),
         'supports'           => array( 'title', 'editor', 'custom-fields', 'thumbnail' ),
         'menu_icon'  		     => 'dashicons-calendar-alt',
         'map_meta_cap'       => true,
@@ -53,12 +53,6 @@ function lauch_dates_init() {
 }
 
 add_action( 'init', 'lauch_dates_init' );
-
-// fix for https://core.trac.wordpress.org/ticket/16841
-$blogusers = get_users( 'role=date-orga' );
-foreach ( $blogusers as $user ) {
-   $user->add_cap('level_1');
-};
 
 function rewrite_date_url( $url, $post ) {
   if ( 'date' == get_post_type( $post ) ) {
@@ -71,22 +65,6 @@ function rewrite_date_url( $url, $post ) {
   return $url;
 }
 add_filter( 'post_type_link', 'rewrite_date_url', 10, 2 );
-
-function save_date($id) {
-  $parent = get_field('parent', $id);
-  if (!$parent) return false;
-  $taxonomies = get_object_taxonomies(get_post_type($parent->ID));
-
-  remove_action( 'save_post_date', 'save_date' );
-  foreach ($taxonomies as $tax) {
-    $terms = get_the_terms($parent->ID, $tax);
-    wp_set_object_terms($id, array_map(function($term) {
-      return $term->term_id;
-    }, $terms), $tax);
-  }
-  add_action( 'save_post_date', 'save_date' );
-}
-add_action( 'save_post_date', 'save_date' );
 
 function post_date_get_datetime($pos = 'begin') {
   return DateTime::createFromFormat('U', get_field($pos), wp_timezone())->getTimestamp();
@@ -106,4 +84,13 @@ function post_date_format_date() {
 function post_date_is_past($post) {
   $today = strtotime('today');
   return get_field('end', $post) <= $today;
+}
+
+function post_date_get_timed_query($should_be_past=true) {
+  return array(
+    'key' => 'begin', // name of custom field
+    'value' => date("Y-m-d H:i:s", strtotime('today')),
+    'compare' => $should_be_past ? '>=' : '<',
+    'type' => 'DATETIME'
+  );
 }

@@ -41,7 +41,7 @@
             "label": "Dazugehöriger Post",
             "name": "parent",
             "type": "post_object",
-            "instructions": "Dazugehöriges Event, Lab oder Austausch auswählen",
+            "instructions": "Dazugehöriges Lab auswählen",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -50,8 +50,6 @@
                 "id": ""
             },
             "post_type": [
-                "event",
-                "exchange",
                 "lab"
             ],
             "taxonomy": "",

@@ -152,9 +152,12 @@ endwhile;
             <div class="event-teaser-list-item no-hover">
               <a href="<?php echo $d['link']?>" title="Zur Seite von Lab: <?php echo $d['lab']; ?>">
               <div class="d-f ai-s">
-                <picture class="events-list-image-2">
-                <img src="<?php echo wp_get_attachment_image_src($d['img'], 'lab-event-teaser')[0] ?>" alt="" width="90">
-                </picture>
+                <?php if ( isset(wp_get_attachment_image_src($d['img'], 'lab-event-teaser')[0])) : ?>
+                  <picture class="events-list-image-2">
+                      <img src="<?php echo wp_get_attachment_image_src($d['img'], 'lab-event-teaser')[0] ?>"
+                           alt="" width="90">
+                  </picture>
+                <?php endif; ?>
                 <div class="event-teaser-list-meta fg">
                   <div class="c-uppercase-title mb-1">Lab: <?php echo $d['lab']; ?></div>
                   <h3 class="mb-0 mt-0"><?php echo $d['title']; ?></h3>
@@ -207,9 +210,12 @@ endwhile;
             <div class="event-teaser-list-item no-hover">
               <a href="<?php echo $community_slug ?>/" title="Zur Community-Seite">
               <div class="d-f ai-s">
-                <picture class="events-list-image-2">
-                <img src="<?php echo wp_get_attachment_image_src($d['img'], 'lab-event-teaser')[0] ?>" alt="" width="90">
-                </picture>
+                <?php if ( isset(wp_get_attachment_image_src($d['img'], 'lab-event-teaser')[0])) : ?>
+                  <picture class="events-list-image-2">
+                      <img src="<?php echo wp_get_attachment_image_src($d['img'], 'lab-event-teaser')[0] ?>"
+                           alt="" width="90">
+                  </picture>
+                <?php endif; ?>
                 <div class="event-teaser-list-meta fg">
                   <div class="c-uppercase-title mb-1"><?php echo $d['lab']; ?></div>
                   <h3 class="mb-0 mt-0"><?php echo $d['title']; ?></h3>

@@ -68,12 +68,7 @@ $args = array(
       'value' => get_the_ID(),
       'compare' => 'LIKE'
     ),
-    array(
-      'key' => 'begin', // name of custom field
-      'value' => date("Y-m-d H:i:s", strtotime('today')),
-      'compare' => '>=',
-      'type' => 'DATETIME'
-    )
+    post_date_get_timed_query()
   )
 );
 $the_query = new WP_Query( $args );
@@ -86,15 +81,18 @@ if ($the_query->have_posts()):
       <?php echo __('Die nächsten Termine', 'lauch') ?>
       <span class="d-b mt-2 addon addon--small addon--catdog sm-up"></span>
     </h2>
-    <ul class="event-teaser-list-wrapper c-page-content">
-      <?php while ( $the_query->have_posts() ) : $the_query->the_post();
-        setup_postdata($post); ?>
-          <?php if (get_post_status() == 'publish'): ?>
-            <?php get_template_part('template-parts/event', 'lab') ?>
-          <?php endif; ?>
-      <?php endwhile; ?>
-    <?php wp_reset_postdata(); ?>
-    </ul>
+      <div class="event-teaser-list-wrapper c-page-content">
+        <ul>
+          <?php while ( $the_query->have_posts() ) : $the_query->the_post();
+            setup_postdata($post); ?>
+              <?php if (get_post_status() == 'publish'): ?>
+                <?php get_template_part('template-parts/event', 'lab') ?>
+              <?php endif; ?>
+          <?php endwhile; ?>
+        <?php wp_reset_postdata(); ?>
+        </ul>
+      <p class="c-page-copy"><a href="/kalender/?lab_id=<?= get_the_ID() ?>">Alle Termine anzeigen</a></p>
+    </div>
   </div>
 </section>
 <?php endif ?>
