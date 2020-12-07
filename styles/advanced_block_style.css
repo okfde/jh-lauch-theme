@@ -1,5 +1,5 @@
-.block-paragraph p.has-background,
-.wp-block.rich-text.has-background {
+.page-template-full-width .block-paragraph p.has-background,
+.page-template-full-width .wp-block.rich-text.has-background {
     display: inline;
     padding: 0;
     background-image: none;
@@ -7,76 +7,76 @@
     box-shadow: -.2em 0 0 black, .2em 0 0 black;
 
 }
-.block-paragraph p.has-softblue-background-color,
-.wp-block.rich-text.has-softblue-background-color {
+.page-template-full-width .block-paragraph p.has-softblue-background-color,
+.page-template-full-width .wp-block.rich-text.has-softblue-background-color {
     box-shadow: -.2em 0 0 #00a6de, .2em 0 0 #00a6de;
 }
-.block-paragraph p.has-softgreen-background-color,
-.wp-block.rich-text.has-softgreen-background-color {
+.page-template-full-width .block-paragraph p.has-softgreen-background-color,
+.page-template-full-width .wp-block.rich-text.has-softgreen-background-color {
     box-shadow: -.2em 0 0 #00b48d, .2em 0 0 #00b48d;
 }
-.block-paragraph p.has-softorange-background-color,
-.wp-block.rich-text.has-softorange-background-color {
+.page-template-full-width .block-paragraph p.has-softorange-background-color,
+.page-template-full-width .wp-block.rich-text.has-softorange-background-color {
     box-shadow: -.2em 0 0 #f3971b, .2em 0 0 #f3971b;
 }
-.block-paragraph p.has-softpurple-background-color,
-.wp-block.rich-text.has-softpurple-background-color {
+.page-template-full-width .block-paragraph p.has-softpurple-background-color,
+.page-template-full-width .wp-block.rich-text.has-softpurple-background-color {
     box-shadow: -.2em 0 0 #2969b2, .2em 0 0 #2969b2;
 }
-.block-paragraph p.has-softred-background-color,
-.wp-block.rich-text.has-softred-background-color {
+.page-template-full-width .block-paragraph p.has-softred-background-color,
+.page-template-full-width .wp-block.rich-text.has-softred-background-color {
     box-shadow: -.2em 0 0 #e6414a, .2em 0 0 #e6414a;
 }
-.block-paragraph p.has-softyellow-background-color,
-.wp-block.rich-text.has-softyellow-background-color {
+.page-template-full-width .block-paragraph p.has-softyellow-background-color,
+.page-template-full-width .wp-block.rich-text.has-softyellow-background-color {
     box-shadow: -.2em 0 0 #ffe50c, .2em 0 0 #ffe50c;
 }
-.block-paragraph p.has-deepblue-background-color,
-.wp-block.rich-text.has-deepblue-background-color {
+.page-template-full-width .block-paragraph p.has-deepblue-background-color,
+.page-template-full-width .wp-block.rich-text.has-deepblue-background-color {
     box-shadow: -.2em 0 0 #00498c, .2em 0 0 #00498c;
 }
-.block-paragraph p.has-deepgreen-background-color,
-.wp-block.rich-text.has-deepgreen-background-color {
+.page-template-full-width .block-paragraph p.has-deepgreen-background-color,
+.page-template-full-width .wp-block.rich-text.has-deepgreen-background-color {
     box-shadow: -.2em 0 0 #4cad37, .2em 0 0 #4cad37;
 }
-.block-paragraph p.has-deeporange-background-color,
-.wp-block.rich-text.has-deeporange-background-color {
+.page-template-full-width .block-paragraph p.has-deeporange-background-color,
+.page-template-full-width .wp-block.rich-text.has-deeporange-background-color {
     box-shadow: -.2em 0 0 #ea680c, .2em 0 0 #ea680c;
 }
-.block-paragraph p.has-deeppurple-background-color,
-.wp-block.rich-text.has-deeppurple-background-color {
+.page-template-full-width .block-paragraph p.has-deeppurple-background-color,
+.page-template-full-width .wp-block.rich-text.has-deeppurple-background-color {
     box-shadow: -.2em 0 0 #4c2582, .2em 0 0 #4c2582;
 }
-.block-paragraph p.has-deepred-background-color,
-.wp-block.rich-text.has-deepred-background-color {
+.page-template-full-width .block-paragraph p.has-deepred-background-color,
+.page-template-full-width .wp-block.rich-text.has-deepred-background-color {
     box-shadow: -.2em 0 0 #e52420, .2em 0 0 #e52420;
 }
-.block-paragraph p.has-deepyellow-background-color,
-.wp-block.rich-text.has-deepyellow-background-color {
+.page-template-full-width .block-paragraph p.has-deepyellow-background-color,
+.page-template-full-width .wp-block.rich-text.has-deepyellow-background-color {
     box-shadow: -.2em 0 0 #ffd003, .2em 0 0 #ffd003;
 }
-.block-paragraph p.has-frkrcoolblue-background-color,
-.wp-block.rich-text.has-frkrcoolblue-background-color {
+.page-template-full-width .block-paragraph p.has-frkrcoolblue-background-color,
+.page-template-full-width .wp-block.rich-text.has-frkrcoolblue-background-color {
     box-shadow: -.2em 0 0 #2969b2, .2em 0 0 #2969b2;
 }
-.block-paragraph p.has-pink-background-color,
-.wp-block.rich-text.has-pink-background-color {
+.page-template-full-width .block-paragraph p.has-pink-background-color,
+.page-template-full-width .wp-block.rich-text.has-pink-background-color {
     box-shadow: -.2em 0 0 #e95197, .2em 0 0 #e95197;
 }
-.block-paragraph p.has-black-background-color,
-.wp-block.rich-text.has-black-background-color {
+.page-template-full-width .block-paragraph p.has-black-background-color,
+.page-template-full-width .wp-block.rich-text.has-black-background-color {
     box-shadow: -.2em 0 0 #000, .2em 0 0 #000;
 }
-.block-paragraph p.has-deepgrey-background-color,
-.wp-block.rich-text.has-deepgrey-background-color {
+.page-template-full-width .block-paragraph p.has-deepgrey-background-color,
+.page-template-full-width .wp-block.rich-text.has-deepgrey-background-color {
     box-shadow: -.2em 0 0 #52575b, .2em 0 0 #52575b;
 }
-.block-paragraph p.has-softgrey-background-color,
-.wp-block.rich-text.has-softgrey-background-color {
+.page-template-full-width .block-paragraph p.has-softgrey-background-color,
+.page-template-full-width .wp-block.rich-text.has-softgrey-background-color {
     box-shadow: -.2em 0 0 #e7eaed, .2em 0 0 #e7eaed;
 }
-.block-paragraph p.has-white-background-color,
-.wp-block.rich-text.has-white-background-color {
+.page-template-full-width .block-paragraph p.has-white-background-color,
+.page-template-full-width .wp-block.rich-text.has-white-background-color {
     box-shadow: -.2em 0 0 #fff, .2em 0 0 #fff;
 }
 
