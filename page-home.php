@@ -45,12 +45,12 @@ endwhile;
 
       <div class="c-toc c-toc--horizontal">
         <ul class="c-toc-nav">
-          <li><a href="#events" class="hover-line-trigger">
-            <span class="hover-line"><?php echo __('Events', 'lauch'); ?></span></a></li>
           <li><a href="#labs" class="hover-line-trigger">
             <span class="hover-line"><?php echo __('Labs', 'lauch'); ?></span></a></li>
           <li><a href="#community" class="hover-line-trigger">
               <span class="hover-line"><?php echo __('Online', 'lauch'); ?></span></a></li>
+          <li><a href="#events" class="hover-line-trigger">
+              <span class="hover-line"><?php echo __('Events', 'lauch'); ?></span></a></li>
         </ul>
         <div class="c-toc-content c-events-list">
           <section id="events">
@@ -100,7 +100,7 @@ endwhile;
                           <?php if(get_field('anmeldungslink', $event->ID)
                                    && get_field('anmeldungslink', $event->ID) != ""): ?>
                           <a href="<?php the_field('anmeldungslink', $event->ID); ?>"
-                             title=Anmeldung für Jugend hackt in <?php the_title() ?>">Anmelden</a>
+                             title="Anmeldung für Jugend hackt in <?php the_title() ?>">Anmelden</a>
                           <?php endif ?>
                         </div>
                       </div>
@@ -109,6 +109,22 @@ endwhile;
                   </li>
                 <?php endwhile; ?>
                 <?php wp_reset_postdata(); ?>
+              </ul>
+            <?php else: ?>
+              <ul>
+                <li>
+                  <div class="event-teaser-list-item no-hover">
+                    <div class="d-f ai-s">
+                        <picture class="events-list-image">
+                        </picture>
+                      <div class="event-teaser-list-meta fg">
+                        <h3 class="mb-0 mt-0">Bald gibt es wieder neue Event-Termine</h3>
+                        <p class="mt-1 fw-b">Es dauert noch etwas, bis wir die neuen Events ankündigen können - <a href="events/">hier geht's zum Archiv</a>.</p>
+                      </div>
+                    </div>
+                    </a>
+                  </div>
+                </li>
               </ul>
             <?php endif; ?>
 
@@ -199,6 +215,18 @@ endwhile;
                   endif;
               endwhile;
             wp_reset_postdata();
+            else: ?>
+            <div class="event-teaser-list-item no-hover">
+              <div class="d-f ai-s">
+                  <picture class="events-list-image-2">
+                  </picture>
+                <div class="event-teaser-list-meta fg">
+                  <h3 class="mb-0 mt-0">Aktuell keine Termine geplant</h3>
+                  <p class="mt-1 fw-b">Bald haben wir wieder neue Online-Events und Streams im Programm</p>
+                </div>
+              </div>
+            </div>
+            <?php
             endif;
 
             usort($all_dates, function($a, $b) {
@@ -231,7 +259,7 @@ endwhile;
             <?php endforeach; ?>
           </section>
 
-        </div>      
+        </div>
       </div>
     </div>
 </section>
