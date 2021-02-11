@@ -46,7 +46,7 @@ function lauch_events_init() {
         'menu_position'      => null,
         'supports'           => array( 'title', 'editor', 'excerpt', 'author', 'custom-fields', 'page-attributes', 'thumbnail' ),
         'taxonomies'         => array('location', 'year'),
-        'menu_icon'  		     => 'dashicons-calendar-alt',
+        'menu_icon'  		     => 'dashicons-networking',
         'map_meta_cap'       => true,
     );
 

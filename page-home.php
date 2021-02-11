@@ -100,7 +100,7 @@ endwhile;
                           <?php if(get_field('anmeldungslink', $event->ID)
                                    && get_field('anmeldungslink', $event->ID) != ""): ?>
                           <a href="<?php the_field('anmeldungslink', $event->ID); ?>"
-                             title=Anmeldung für Jugend hackt in <?php the_title() ?>">Anmelden</a>
+                             title="Anmeldung für Jugend hackt in <?php the_title() ?>">Anmelden</a>
                           <?php endif ?>
                         </div>
                       </div>
@@ -110,6 +110,22 @@ endwhile;
                 <?php endwhile; ?>
                 <?php wp_reset_postdata(); ?>
               </ul>
+            <?php else: ?>
+              <ul>
+                <li>
+                  <div class="event-teaser-list-item no-hover">
+                    <div class="d-f ai-s">
+                        <picture class="events-list-image">
+                        </picture>
+                      <div class="event-teaser-list-meta fg">
+                        <h3 class="mb-0 mt-0">Bald gibt es wieder neue Event-Termine</h3>
+                        <p class="mt-1 fw-b">Es dauert noch etwas, bis wir die neuen Events ankündigen können - <a href="events/">hier geht's zum Archiv</a>.</p>
+                      </div>
+                    </div>
+                    </a>
+                  </div>
+                </li>
+              </ul>
             <?php endif; ?>
 
           </section>
@@ -117,7 +133,7 @@ endwhile;
 
             <?php
             $all_dates = array();
-            $args = array('post_type' => 'lab', 'tax_query' => array(
+            $args = array('post_type' => 'date', 'tax_query' => array(
                 array(
                     'taxonomy' => 'lab-location',
                     'field'    => 'slug',
@@ -130,25 +146,21 @@ endwhile;
 
             <?php if ( $the_query->have_posts() ) :
               while ( $the_query->have_posts() ) : $the_query->the_post();
-                while( have_rows('lab_events') ): the_row();
-                  if (get_sub_field('visible') == TRUE) :
-                    $info = array('lab' => $post->post_title,
+                if ( !post_date_is_past($post) ) :
+                    $info = array('lab' => get_field('parent')->post_title,
                                  'link' => get_post_permalink(),
-                                  'img' => get_sub_field('image'),
-                                 'title' => get_sub_field('title'),
-                                 'date_technical' => get_sub_field('date_technical'),
-                                 'date' => get_sub_field('date'));
+                                  'img' => get_post_thumbnail_id(),
+                                 'title' => $post->post_title,
+                                 'date_technical' => post_date_get_datetime(),
+                                 'date' => post_date_format_date());
                     array_push($all_dates, $info);
                   endif;
-                endwhile;
               endwhile;
             wp_reset_postdata();
             endif;
 
             usort($all_dates, function($a, $b) {
-              $da = date_create_from_format('d/m/Y', $a['date_technical']);
-              $db = date_create_from_format('d/m/Y', $b['date_technical']);
-              return $da <=> $db;
+              return $a['date_technical'] <=> $b['date_technical'];
             });
             $all_dates = array_slice($all_dates, 0, 3);
 
@@ -156,16 +168,19 @@ endwhile;
             <div class="event-teaser-list-item no-hover">
               <a href="<?php echo $d['link']?>" title="Zur Seite von Lab: <?php echo $d['lab']; ?>">
               <div class="d-f ai-s">
-                <picture class="events-list-image-2">
-                <img src="<?php echo wp_get_attachment_image_src($d['img']['ID'], 'lab-event-teaser')[0] ?>" alt="" width="90">
-                </picture>
+                <?php if ( isset(wp_get_attachment_image_src($d['img'], 'lab-event-teaser')[0])) : ?>
+                  <picture class="events-list-image-2">
+                      <img src="<?php echo wp_get_attachment_image_src($d['img'], 'lab-event-teaser')[0] ?>"
+                           alt="" width="90">
+                  </picture>
+                <?php endif; ?>
                 <div class="event-teaser-list-meta fg">
                   <div class="c-uppercase-title mb-1">Lab: <?php echo $d['lab']; ?></div>
                   <h3 class="mb-0 mt-0"><?php echo $d['title']; ?></h3>
                   <p class="mt-1 fw-b">
-                    <time datetime="<?php echo DateTime::createFromFormat('j/m/Y', $d['date_technical'])->format('Y-m-d'); ?>">
+                    <time>
                       <?php echo $d['date']; ?>
-                      <time>
+                    <time>
                   </p>
                 </div>
               </div>
@@ -177,7 +192,7 @@ endwhile;
 
             <?php
             $all_dates = array();
-            $args = array('post_type' => 'lab', 'tax_query' => array(
+            $args = array('post_type' => 'date', 'tax_query' => array(
                 array(
                     'taxonomy' => 'lab-location',
                     'field'    => 'slug',
@@ -189,25 +204,33 @@ endwhile;
 
             <?php if ( $the_query->have_posts() ) :
               while ( $the_query->have_posts() ) : $the_query->the_post();
-                while( have_rows('lab_events') ): the_row();
-                  if (get_sub_field('visible') == TRUE) :
-                    $info = array('lab' => $post->post_title,
+                if ( !post_date_is_past($post) ) :
+                    $info = array('lab' => get_field('parent')->post_title,
                                  'link' => get_post_permalink(),
-                                  'img' => get_sub_field('image'),
-                                 'title' => get_sub_field('title'),
-                                 'date_technical' => get_sub_field('date_technical'),
-                                 'date' => get_sub_field('date'));
+                                  'img' => get_post_thumbnail_id(),
+                                 'title' => $post->post_title,
+                                 'date_technical' => post_date_get_datetime(),
+                                 'date' => post_date_format_date());
                     array_push($all_dates, $info);
                   endif;
-                endwhile;
               endwhile;
             wp_reset_postdata();
+            else: ?>
+            <div class="event-teaser-list-item no-hover">
+              <div class="d-f ai-s">
+                  <picture class="events-list-image-2">
+                  </picture>
+                <div class="event-teaser-list-meta fg">
+                  <h3 class="mb-0 mt-0">Aktuell keine Termine geplant</h3>
+                  <p class="mt-1 fw-b">Bald haben wir wieder neue Online-Events und Streams im Programm</p>
+                </div>
+              </div>
+            </div>
+            <?php
             endif;
 
             usort($all_dates, function($a, $b) {
-              $da = date_create_from_format('d/m/Y', $a['date_technical']);
-              $db = date_create_from_format('d/m/Y', $b['date_technical']);
-              return $da <=> $db;
+                return $a['date_technical'] <=> $b['date_technical'];
             });
             $all_dates = array_slice($all_dates, 0, 3);
 
@@ -215,16 +238,19 @@ endwhile;
             <div class="event-teaser-list-item no-hover">
               <a href="<?php echo $community_slug ?>/" title="Zur Community-Seite">
               <div class="d-f ai-s">
-                <picture class="events-list-image-2">
-                <img src="<?php echo wp_get_attachment_image_src($d['img']['ID'], 'lab-event-teaser')[0] ?>" alt="" width="90">
-                </picture>
+                <?php if ( isset(wp_get_attachment_image_src($d['img'], 'lab-event-teaser')[0])) : ?>
+                  <picture class="events-list-image-2">
+                      <img src="<?php echo wp_get_attachment_image_src($d['img'], 'lab-event-teaser')[0] ?>"
+                           alt="" width="90">
+                  </picture>
+                <?php endif; ?>
                 <div class="event-teaser-list-meta fg">
                   <div class="c-uppercase-title mb-1"><?php echo $d['lab']; ?></div>
                   <h3 class="mb-0 mt-0"><?php echo $d['title']; ?></h3>
                   <p class="mt-1 fw-b">
-                    <time datetime="<?php echo DateTime::createFromFormat('j/m/Y', $d['date_technical'])->format('Y-m-d'); ?>">
+                    <time>
                       <?php echo $d['date']; ?>
-                      <time>
+                    <time>
                   </p>
                 </div>
               </div>

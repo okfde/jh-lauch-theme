@@ -58,24 +58,44 @@ endwhile; ?>
 </header>
 
 
+<?php
+$args = array(
+  'post_type' => 'date',
+  'meta_query' => array(
+    'relation' => 'AND',
+    array(
+      'key' => 'parent', // name of custom field
+      'value' => get_the_ID(),
+      'compare' => 'LIKE'
+    ),
+    post_date_get_timed_query()
+  )
+);
+$the_query = new WP_Query( $args );
+if ($the_query->have_posts()):
+?>
 <section class="c-page-section pb-2 mt-2 white addon--relative">
   <span class="addon addon--small addon--right addon--top addon--catdog sm-only"></span>
   <div class="event-teaser-list">
     <h2 class="event-teaser-list-title addon--relative">
       <?php echo __('Die nächsten Termine', 'lauch') ?>
-      <span class="d-b mt-2 addon addon--small addon--catdog sm-up"></span></h2>
-    <?php if( have_rows('lab_events') ): ?>
-
-    <ul class="event-teaser-list-wrapper c-page-content">
-      <?php while( have_rows('lab_events') ): the_row(); ?>
-        <?php if (get_sub_field('visible') == TRUE) : ?>
-          <?php get_template_part('template-parts/event', 'lab') ?>
-        <?php endif ?>
-      <?php endwhile ?>
-    </ul>
-    <?php endif ?>
+      <span class="d-b mt-2 addon addon--small addon--catdog sm-up"></span>
+    </h2>
+      <div class="event-teaser-list-wrapper c-page-content">
+        <ul>
+          <?php while ( $the_query->have_posts() ) : $the_query->the_post();
+            setup_postdata($post); ?>
+              <?php if (get_post_status() == 'publish'): ?>
+                <?php get_template_part('template-parts/event', 'lab') ?>
+              <?php endif; ?>
+          <?php endwhile; ?>
+        <?php wp_reset_postdata(); ?>
+        </ul>
+      <p class="c-page-copy"><a href="/kalender/?lab_id=<?= get_the_ID() ?>">Alle Termine anzeigen</a></p>
+    </div>
   </div>
 </section>
+<?php endif ?>
 
 <section class="c-page-section pb-0 c-page-center addon--relative addon addon--large addon--l-0 addon--top addon--octopus">
   <h2 class="ta-c c-event-title"><?php echo __("Wissenswertes zum Ort", "lauch"); ?></h2>
