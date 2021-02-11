@@ -29,6 +29,16 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   }
 
+  let page = document.querySelector('.c-page-full-width');
+  if (page) {
+    new FullwidthPage().init(page);
+  }
+
+  let styledCaptions = document.querySelectorAll('[class*="is-style-caption-"] figcaption');
+  if (styledCaptions.length) {
+    new StyledCaptions().init(styledCaptions);
+  }
+
   new IsoManagement().init('.js-isotope',
                          '.js-isotope > li',
                          '.c-filter select',
@@ -337,5 +347,59 @@ function Accordion() {
     }
 
     this.$content.style.maxHeight = '';
+  };
+}
+
+function getRandom(max, _min) {
+  const min = _min || 0;
+  return Math.floor(Math.random() * (max + min) - min) + 1
+}
+
+function FullwidthPage() {
+  this.init = function ($el) {
+    this.$el = $el;
+    const images = this.$el.querySelectorAll('.blocks-gallery-item, .wp-block-image, .wp-block-video');
+    const titles = this.$el.querySelectorAll('.is-style-overlapping-title');
+    const addons = document.querySelectorAll('.wp-block-group, .wp-block-image, .c-page-title');
+    const addonTypes = ['wrestler', 'robot', 'octopus', 'alpaka', 'alien', 'monster', 'glasses', 'catdog']
+
+    for (let i = 0; i < images.length; i++) {
+      const image = images[i]
+      const rotation = getRandom(2,2)
+      image.style.transform = 'rotateZ(' + rotation + 'deg)'
+    }
+
+    for (let i = 0; i < titles.length; i++) {
+      const title = titles[i]
+      const words = title.textContent.split(' ')
+      title.innerHTML = words.map(word => `<span class="is-style-overlapping-title__word">${word}</span>`).join('')
+    }
+
+    for (let i = 0; i < addons.length; i++) {
+      const addonEl = addons[i]
+      if (Math.random() > 0.6) {
+        const addon = addonTypes[getRandom(addonTypes.length)]
+        addonEl.classList.add('addon', 'addon--' + addon)
+        if (addonEl.classList.contains('wp-block-image')) {
+          addonEl.classList.add('addon--top', Math.random() > .5 ? 'addon--left' : 'addon--right')
+
+          if (addonEl.querySelector('img').clientWidth < 250) {
+            addonEl.classList.add('addon--tiny')
+          }
+        }
+      }
+    }
+
+  };
+}
+
+function StyledCaptions() {
+  this.init = function ($els) {
+    for (let i = 0; i < $els.length; i++) {
+      const $el = $els[i]
+      const caption = document.createElement('span')
+      caption.textContent = $el.textContent;
+      $el.innerHTML = caption.outerHTML;
+    }
   };
 }

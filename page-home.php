@@ -48,9 +48,9 @@ endwhile;
           <li><a href="#labs" class="hover-line-trigger">
             <span class="hover-line"><?php echo __('Labs', 'lauch'); ?></span></a></li>
           <li><a href="#community" class="hover-line-trigger">
-              <span class="hover-line"><?php echo __('Online', 'lauch'); ?></span></a></li>
+            <span class="hover-line"><?php echo __('Online', 'lauch'); ?></span></a></li>
           <li><a href="#events" class="hover-line-trigger">
-              <span class="hover-line"><?php echo __('Events', 'lauch'); ?></span></a></li>
+            <span class="hover-line"><?php echo __('Events', 'lauch'); ?></span></a></li>              
         </ul>
         <div class="c-toc-content c-events-list">
           <section id="events">
