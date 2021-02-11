@@ -365,7 +365,7 @@ function FullwidthPage() {
 
     for (let i = 0; i < images.length; i++) {
       const image = images[i]
-      const rotation = getRandom(16,8)
+      const rotation = getRandom(2,2)
       image.style.transform = 'rotateZ(' + rotation + 'deg)'
     }
 
