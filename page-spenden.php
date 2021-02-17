@@ -10,7 +10,7 @@ while (have_posts()) :
   the_post();
   ?>
 
-    <div class="c-page-alpaca-header">
+    <div class="c-page-alpaca-header pb-6">
         <div class="c-page-alpaca-featured">
             <img src="<?php echo get_the_post_thumbnail_url($post->ID, 'blog-alpaka'); ?>" alt="" class="clip-alpaka">
             <div class="c-page-alpaca-friend">
@@ -24,15 +24,17 @@ while (have_posts()) :
             <div class="c-donate-excerpt"><?php the_content(); ?></div>
         </div>
 
-      <?php if (get_field('illustration_right')) : ?>
-          <div class="c-page-header-illustration right-top">
-              <img src="<?php echo get_field('illustration_right'); ?>" alt="" width="200">
+          <div class="c-page-header-illustration right-bottom">
+              <div class="c-page-alpaca-friend--small">
+          <?php
+          $svg = get_random_illustration();
+          echo get_svg_content($svg); ?></div>
           </div>
-      <?php endif ?>
     </div>
 
 
-    <section class="c-page-section white pt-4 pb-4 mt-8">
+    <section class="c-page-section white pt-4 pb-4">
+
         <div class="c-page-slim">
             <h2>Spenden via <br/>betterplace</h2>
             <div id="betterplace_donation_iframe" style="background: none;">
@@ -84,9 +86,9 @@ while (have_posts()) :
         </div>
     </section>
 
-  <section class="c-page-section pb-0 pt-1 white">
-    <?php get_template_part('template-parts/support-cta', get_post_type()); ?>
-  </section>
+    <section class="c-page-section pb-0 pt-1 white">
+      <?php get_template_part('template-parts/support-cta', get_post_type()); ?>
+    </section>
 <?php
 endwhile;
 get_footer();
