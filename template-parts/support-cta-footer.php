@@ -4,11 +4,11 @@
   </div>
   <div class="support-cta">
     <div>
-      <?php echo explode(PHP_EOL, get_theme_mod('support_copy', 'foo'))[0]; ?>
+      <?php echo get_theme_mod('footer_support_copy', 'foo'); ?>
       <p>
-        <a href="<?php echo get_theme_mod('support_link', 'https://freundeskreis.jugendhackt.org'); ?>"
+        <a href="<?php echo get_theme_mod('footer_support_link', 'https://freundeskreis.jugendhackt.org'); ?>"
            class="support-link--red">
-          <?php echo __('Jetzt unterstützen!', 'lauch'); ?>
+          <?php echo get_theme_mod('footer_support_link_text', 'Jetzt unterstützen!'); ?>
           <?php echo render_svg('/images/arrow-external-red.svg'); ?></a>
       </p>
     </div>
