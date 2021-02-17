@@ -15,14 +15,7 @@ get_header();
         <div class="col-50">
             <header class="c-page-section pb-2">
                 <h1 class="mt-0 mb-3">Kalender</h1>
-                <p>Morbi dapibus imperdiet orci vel luctus. Nam id pharetra elit. Vestibulum sollicitudin bibendum
-                    sollicitudin. Vestibulum in dignissim ligula. Vestibulum at bibendum velit. Vestibulum ante ipsum
-                    primis in faucibus orci luctus et ultrices posuere cubilia curae; Fusce ut ex tellus. Curabitur
-                    aliquam dignissim risus nec feugiat. Vivamus quis felis et odio vulputate congue. Aenean auctor
-                    metus quis nunc tristique, vitae gravida erat rhoncus. In hac habitasse platea dictumst. Nulla
-                    faucibus leo sit amet arcu tincidunt, volutpat aliquet eros pulvinar. Sed dignissim metus et magna
-                    vulputate, ac tempus velit congue. Quisque sit amet iaculis sapien, sed commodo elit. Nulla sit amet
-                    risus sed lorem varius hendrerit.</p>
+                <p>Hier findest du alle kommenden Event- und Workshop-Angebote von Jugend hackt. Jeder Eintrag bringt dich zur Termin-Seite mit mehr Infos.</p>
             </header>
             <div class="c-toc c-toc--horizontal">
                 <ul class="c-toc-nav">
