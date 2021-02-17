@@ -61,6 +61,8 @@ endwhile; ?>
 <?php
 $args = array(
   'post_type' => 'date',
+  'orderby' => 'begin',
+  'order' => 'ASC',
   'meta_query' => array(
     'relation' => 'AND',
     array(

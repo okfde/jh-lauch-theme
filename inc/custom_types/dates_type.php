@@ -74,6 +74,7 @@ function post_date_format_date() {
   $begin = post_date_get_datetime();
   $end = post_date_get_datetime('end');
   setlocale(LC_TIME, get_locale());
+//  setlocale(LC_TIME, 'de_DE.UTF-8');
   if (strftime('%Y-%m-%d', $begin) == strftime('%Y-%m-%d', $end)) {
       return strftime('%a. %d.%m. | %H:%M', $begin) . strftime(' - %H:%M', $end);
   } else {
