@@ -128,6 +128,7 @@ the_post();
       <ul class="c-toc-nav fs">
         <li><a href="#<?php echo sanitize_title(get_field('partner_category')); ?>"><?php the_field('partner_category'); ?></a></li>
         <li><a href="#<?php echo sanitize_title(get_field('supporter_category')); ?>"><?php the_field('supporter_category'); ?></a></li>
+        <li><a href="#<?php echo sanitize_title(get_field('sponsors_category')); ?>"><?php the_field('sponsors_category'); ?></a></li>
       </ul>
 
       <div class="c-toc-content fg">
@@ -154,6 +155,21 @@ the_post();
 
                   <div class="c-displayitem-text">
                     <?php the_sub_field('sup_text'); ?>
+                  </div>
+                </li>
+              <?php endwhile ?>
+            </ul>
+          <?php endif ?>
+        </section>
+        <section id="<?php echo sanitize_title(get_field('sponsors_category')); ?>">
+          <?php if( have_rows('sponsors') ): ?>
+            <ul class="c-grid-displayitems">
+              <?php while ( have_rows('sponsors') ): the_row(); ?>
+                <li class="c-displayitem">
+                  <img src="<?php echo wp_get_attachment_image_src(get_sub_field('sponsor_logo'), 'medium')[0]; ?>" alt="Logo" >
+
+                  <div class="c-displayitem-text">
+                    <?php the_sub_field('sponsor_text'); ?>
                   </div>
                 </li>
               <?php endwhile ?>
