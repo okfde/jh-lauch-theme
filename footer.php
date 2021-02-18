@@ -63,7 +63,7 @@
           <div  class="c-footer-partner">
             <p><?php echo __("Jugend hackt ist ein Programm von", "lauch"); ?></p>
             <a href="https://okfn.de" target="_blank" title="Open Knowledge Foundation Deutschland e.V.">
-              <?php get_template_part('images/logos', 'okfn.svg' ); ?></a>
+              <img src="<?php echo get_template_directory_uri(); ?>/images/okf_10jahre.png" width="140" alt="Open Knowledge Foundation Deutschland e.V."></a>
             <a href="https://medialepfade.org" target="_blank" title="mediale pfade.org - Verein für Medienbildung">
               <img src="<?php echo get_template_directory_uri(); ?>/images/mp.png" width="130" alt="mediale pfade.org - Verein für Medienbildung"></a>
           </div>
