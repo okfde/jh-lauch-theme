@@ -248,6 +248,10 @@ function lauch_widgets_init() {
 }
 add_action( 'widgets_init', 'lauch_widgets_init' );
 
+// semi-hardcoded workaround to use a lab entry as a separate community page
+$community_slug = 'online-community'; // used as slug in page-home.php
+$community_id = array( $community_slug ); // slug of the lab category to be shown, used in page-home.php, lab-overview.php and community-overview.php
+
 // Guttenberg Block Editor Changes for Mitmachen
 function advanced_block_enqueue() {
   $baseurl = get_template_directory_uri();
@@ -264,6 +268,7 @@ function advanced_block_style() {
 add_action( 'enqueue_block_assets', 'advanced_block_style' );
 
 function advanced_blocks_render_callback($type, $block_attributes, $content ) {
+    global $community_id;
     $links = '';
     if ($type == 'event') {
       $terms = get_terms( array(
@@ -279,6 +284,14 @@ function advanced_blocks_render_callback($type, $block_attributes, $content ) {
     } else {
       $labs = get_posts(array(
         'post_type' => 'lab',
+        'tax_query' => array(
+            array(
+                'taxonomy' => 'lab-location',
+                'field'    => 'slug',
+                'terms'    => $community_id, // set in functions.php
+                'operator' => 'NOT IN', // this line excludes the community
+            ),
+        )
       ));
       $links = join(array_map(function($item) {
         return '<a class="c-info-block__link" href="/lab/' . $item->post_name .'">' . $item->post_title . '</a>';
@@ -577,7 +590,3 @@ function atg_menu_classes($classes, $item, $args) {
   return $classes;
 }
 add_filter('nav_menu_css_class', 'atg_menu_classes', 1, 3);
-
-// semi-hardcoded workaround to use a lab entry as a separate community page
-$community_slug = 'online-community'; // used as slug in page-home.php
-$community_id = array( $community_slug ); // slug of the lab category to be shown, used in page-home.php, lab-overview.php and community-overview.php
