@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 200 166" style="enable-background:new 0 0 200 166;" xml:space="preserve">
+<style type="text/css">
+	
+	
+.st0{
+	fill:#FF4B4E;
+	animation: a1 3s steps(1) infinite;
+}
+.st1{
+	fill:#2ABB8E;
+	animation: a5 3s steps(1) infinite;
+}
+.st2{
+	fill:#2070BC;
+	animation: a4 3s steps(1) infinite;
+}
+.st3{
+	fill:#FFCB41;
+	animation: a2 3s steps(1) infinite;
+}
+.st4{
+	fill:#CCD4D9;
+	animation: a3 3s steps(1) infinite;
+}
+
+@keyframes a1 {
+  0% {
+    fill: #FF4B4E;
+  }
+  25% {
+    fill: #2ABB8E;
+  }
+  50% {
+    fill:  #2070BC;
+  }
+  75% {
+    fill:  #CCD4D9;
+  }
+  100% {
+    fill: #FF4B4E;
+  }
+}
+
+@keyframes a2 {
+  0% {
+     fill: #FFCB41;
+  }
+  25% {
+    fill:  #CCD4D9;
+  }
+  50% {
+    fill: #FF4B4E;
+  }
+  75% {
+    fill:  #2070BC;
+  }
+  100% {
+    fill: #FFCB41;
+  }
+}
+
+@keyframes a3 {
+  0% {
+    fill:  #CCD4D9;
+  }
+  25% {
+    fill: #FF4B4E;
+  }
+  50% {
+    fill:  #2070BC;
+  }
+  75% {
+    fill: #FFCB41;
+  }
+  100% {
+    fill:  #CCD4D9;
+  }
+}
+
+@keyframes a4 {
+0% {
+	fill:  #2070BC;
+}
+25% {
+	fill: #CCD4D9;
+}
+50% {
+	fill: #FF4B4E;
+}
+75% {
+	fill: #2ABB8E;
+}
+100% {
+	fill:  #2070BC;
+  }
+}
+
+@keyframes a5 {
+  0% {
+    fill:  #2ABB8E;
+  }
+  25% {
+    fill:  #2070BC;
+  }
+  50% {
+    fill: #FFCB41;
+  }
+  75% {
+    fill: #FF4B4E;
+  }
+  100% {
+    fill:  #2ABB8E;
+  }
+}
+
+
+</style>
+<rect id="Rechteck_129" x="17.2" y="110.8" class="st0" width="9" height="9"/>
+<rect id="Rechteck_130" y="89.9" class="st1" width="9" height="9"/>
+<rect id="Rechteck_131" x="28.5" y="78.9" class="st3" width="9" height="9"/>
+
+<rect id="Rechteck_133" x="175.5" y="38.5" class="st1" width="9" height="9"/>
+<rect id="Rechteck_134" x="189.1" class="st0" width="9" height="9"/>
+<rect id="Rechteck_135" x="169.2" y="8.6" class="st2" width="9" height="9"/>
+</svg>

@@ -9,7 +9,7 @@
       <p>
         <a href="<?php echo get_theme_mod('support_link', 'https://freundeskreis.jugendhackt.org'); ?>"
            class="support-link--black">
-          <?php echo __('Jetzt unterstützen!', 'lauch'); ?>
+          <?php echo get_theme_mod('support_link_text', 'Jetzt unterstützen!'); ?>
           <?php echo render_svg('/images/arrow-external.svg'); ?></a>
       </p>
     </div>

@@ -570,6 +570,10 @@ function atg_menu_classes($classes, $item, $args) {
      $args->theme_location == 'menu-footer-3') {
     $classes[] = 'hover-line-trigger';
   }
+  /*$page = get_post_meta( $item->ID, '_menu_item_object_id', true );
+  if (get_page_template_slug($page) == 'page-spenden.php') {
+    $classes[] = 'menu-item-donate';
+  }*/
   return $classes;
 }
 add_filter('nav_menu_css_class', 'atg_menu_classes', 1, 3);
