@@ -24,12 +24,12 @@ while (have_posts()) :
             <div class="c-donate-excerpt"><?php the_content(); ?></div>
         </div>
 
-          <div class="c-page-header-illustration right-bottom">
-              <div class="c-page-alpaca-friend--small">
-          <?php
-          $svg = get_random_illustration();
-          echo get_svg_content($svg); ?></div>
-          </div>
+        <div class="c-page-header-illustration right-bottom">
+            <div class="c-page-alpaca-friend--small">
+              <?php
+              $svg = get_random_illustration();
+              echo get_svg_content($svg); ?></div>
+        </div>
     </div>
 
 
@@ -59,15 +59,15 @@ while (have_posts()) :
                       <img class="img-fluid" src="<?= get_template_directory_uri(); ?>/images/alpaka-red.svg"
                            alt="alpaka-red">
                       <div class="c-donate-member-box-price">
-                          <div class="text-center">ab <br> €<?php the_sub_field('price') ?></div>
+                          <div class="text-center"><?php echo nl2br(get_sub_field('price')) ?></div>
                       </div>
 
-                    <?php if ($index == 1): ?>
+                    <?php if (get_sub_field('decoration') == 'medium'): ?>
                         <img class="c-donate-member-box-deco-2 c-donate-member-box-deco"
                              src="<?= get_template_directory_uri(); ?>/images/pixel-deco.svg" alt="">
                     <?php endif; ?>
 
-                    <?php if ($index == 2): ?>
+                    <?php if (get_sub_field('decoration') == 'major'): ?>
                         <img class="c-donate-member-box-deco" style="width: 22%; top: -30%; right: 0%;"
                              src="<?= get_template_directory_uri(); ?>/images/pixel-cross-1.svg" alt="">
                         <img class="c-donate-member-box-deco" style="width: 22%; top: 30%; right: -40%;"
@@ -87,7 +87,14 @@ while (have_posts()) :
     </section>
 
     <section class="c-page-section pb-0 pt-1 white">
-      <?php get_template_part('template-parts/support-cta', get_post_type()); ?>
+        <div class="c-page-2col c-support col-break-small ai-c mt-3">
+            <div class="c-page-2col col-m fg">
+              <?php get_template_part('images/illustrations', 'freundeskreis.svg'); ?>
+            </div>
+            <div class="c-donate-contact-text">
+                <?php the_field('alpaca_box'); ?>
+            </div>
+        </div>
     </section>
 <?php
 endwhile;

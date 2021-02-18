@@ -82,7 +82,7 @@
                     "key": "field_602ce90b3d92d",
                     "label": "Preis",
                     "name": "price",
-                    "type": "text",
+                    "type": "textarea",
                     "instructions": "",
                     "required": 1,
                     "conditional_logic": 0,
@@ -93,11 +93,58 @@
                     },
                     "default_value": "",
                     "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "maxlength": "",
+                    "rows": 2,
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_602d5a2c9474c",
+                    "label": "Dekoration",
+                    "name": "decoration",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "minor": "Ohne",
+                        "medium": "Punkte",
+                        "major": "Sterne"
+                    },
+                    "default_value": [
+                        "minor"
+                    ],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
                 }
             ]
+        },
+        {
+            "key": "field_602d5c839474d",
+            "label": "Alpaka-Box",
+            "name": "alpaca_box",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         }
     ],
     "location": [
@@ -117,5 +164,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1613556130
+    "modified": 1613585774
 }
