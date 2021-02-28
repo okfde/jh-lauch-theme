@@ -4,7 +4,7 @@
 	 viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
 <style type="text/css">
 	.st0{
-		fill: #FF4B4E;
+		fill: #E6414A;
 		animation: a1 3s steps(1) infinite;
 	}
 	.st1{
@@ -22,7 +22,7 @@
 
 @keyframes a1 {
   0% {
-    fill: #FF4B4E;
+    fill: #E6414A;
   }
   25% {
     fill: #2ABB8E;
@@ -34,7 +34,7 @@
     fill:  #CCD4D9;
   }
   100% {
-    fill: #FF4B4E;
+    fill: #E6414A;
   }
 }
 
@@ -43,7 +43,7 @@
 	fill: #CCD4D9;
 }
 25% {
-	fill: #FF4B4E;
+	fill: #E6414A;
 }
 50% {
 	fill: #2ABB8E;
@@ -64,7 +64,7 @@
 	fill: #CCD4D9;
 }
 50% {
-	fill: #FF4B4E;
+	fill: #E6414A;
 }
 75% {
 	fill: #2ABB8E;
@@ -85,7 +85,7 @@
 	fill: #CCD4D9;
 }
 75% {
-	fill: #FF4B4E;
+	fill: #E6414A;
 }
 100% {
 	fill: #2ABB8E;
