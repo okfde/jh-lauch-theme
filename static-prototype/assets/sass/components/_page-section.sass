@@ -116,6 +116,7 @@
   margin: auto
 
 .c-page-standard
+  @extend .c-rich-text-content
   //font-size: 1.2rem
   line-height: 1.6
 
@@ -142,6 +143,17 @@
       margin-right: calc(-45vw + 19.375rem)
     h1
       font-size: 4.1rem
+  a
+    +copy-link(var(--event-single-color))
+
+  iframe
+    width: 100%
+
+  //img
+  //  width: 100%
+  //  height: auto
+
+.c-rich-text-content
   h2, h3, h4
     line-height: 1.4
     margin-top: 1.6em
@@ -151,8 +163,6 @@
     margin-top: -.2em
   p, ol, ul, blockquote, figure, hr
     margin-bottom: 1em
-  a
-    +copy-link(var(--event-single-color))
 
   blockquote
     margin: 4rem 0
@@ -194,14 +204,6 @@
         border-top: 5px solid transparent
         border-bottom: 5px solid transparent
         transform: rotateZ(-45deg) translate(-0.9em, -0.6em)
-
-  iframe
-    width: 100%
-
-  //img
-  //  width: 100%
-  //  height: auto
-
 
 .c-page-capital-first
   > p:first-of-type:first-letter

@@ -19,7 +19,7 @@ while (have_posts()) :
               echo get_svg_content($svg); ?>
             </div>
         </div>
-        <div class="c-page-alpaca-title">
+        <div class="c-rich-text-content c-page-alpaca-title">
           <?php the_title('<h1 class="c-donate-title">', '</h1>') ?>
             <div class="c-donate-excerpt"><?php the_content(); ?></div>
         </div>
@@ -35,11 +35,11 @@ while (have_posts()) :
 
     <section class="c-page-section white pt-4 pb-4">
 
-        <div class="c-page-slim">
-            <h2>Spenden via <br/>betterplace</h2>
+        <div class="c-page-slim c-rich-text-content">
+            <h2 id="spenden">Spenden via <br/>betterplace</h2>
             <div id="betterplace_donation_iframe" style="background: none;">
                 <iframe height="1200" width="100%" frameborder="0"
-                        src="https://www.betterplace.org/de/donate/iframe/projects/19214?background_color=ffffff&amp;color=ff4b4e&amp;donation_amount=50&amp;bottom_logo=false&amp;default_payment_method=&amp;default_interval=single&amp;utm_campaign=external_donation_forms&amp;utm_source=domain:%20freundeskreis.jugendhackt.org&amp;utm_medium=project_19214&amp;utm_content=freundeskreis.jugendhackt.org"
+                        src="https://www.betterplace.org/de/donate/iframe/projects/19214?background_color=ffffff&amp;color=E6414A&amp;donation_amount=50&amp;bottom_logo=false&amp;default_payment_method=&amp;default_interval=single&amp;utm_campaign=external_donation_forms&amp;utm_source=domain:%20freundeskreis.jugendhackt.org&amp;utm_medium=project_19214&amp;utm_content=freundeskreis.jugendhackt.org"
                         id="iFrameResizer0" scrolling="no"
                         style="max-height: none; width: 100%; background-color: transparent; overflow: hidden; height: 905px;"></iframe>
             </div>
@@ -47,7 +47,7 @@ while (have_posts()) :
         </div>
     </section>
     <section class="c-page-section pb-4">
-        <div class="c-page-slim mb-5">
+        <div class="c-page-slim mb-5 c-rich-text-content">
           <?php the_field('member_header') ?>
         </div>
         <div class="c-page-3col">
@@ -86,7 +86,7 @@ while (have_posts()) :
         </div>
     </section>
 
-    <section class="c-page-section pb-0 pt-1 white">
+    <section class="c-rich-text-content c-page-section pb-4 pt-1 white">
         <div class="c-page-2col c-support col-break-small ai-c mt-3">
             <div class="c-page-2col col-m fg">
               <?php get_template_part('images/illustrations', 'freundeskreis.svg'); ?>

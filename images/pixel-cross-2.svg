@@ -8,7 +8,7 @@
 		animation: a1 3s steps(1) infinite;
 	}
 	.st1{
-		fill: #FF4B4E;
+		fill: #E6414A;
 		animation: a2 3s steps(1) infinite;
 	}
 	.st2{
@@ -25,7 +25,7 @@
     fill:  #CCD4D9;
   }
   25% {
-    fill: #FF4B4E;
+    fill: #E6414A;
   }
   50% {
     fill:  #2070BC;
@@ -46,7 +46,7 @@
     fill:  #CCD4D9;
   }
   50% {
-    fill: #FF4B4E;
+    fill: #E6414A;
   }
   75% {
     fill:  #2070BC;
@@ -66,7 +66,7 @@
     fill:  #CCD4D9;
   }
   75% {
-    fill: #FF4B4E;
+    fill: #E6414A;
   }
   100% {
     fill:  #2070BC;
@@ -74,7 +74,7 @@
 }
 @keyframes a4 {
   0% {
-    fill: #FF4B4E;
+    fill: #E6414A;
   }
   25% {
     fill:  #2070BC;
@@ -86,7 +86,7 @@
     fill:  #CCD4D9;
   }
   100% {
-    fill: #FF4B4E;
+    fill: #E6414A;
   }
 }
 
