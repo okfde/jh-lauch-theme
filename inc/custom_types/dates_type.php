@@ -73,15 +73,11 @@ function post_date_get_datetime($pos = 'begin') {
 function post_date_format_date() {
   $begin = post_date_get_datetime();
   $end = post_date_get_datetime('end');
-  $weekdays = array('So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa');
 
   if (strftime('%Y-%m-%d', $begin) == strftime('%Y-%m-%d', $end)) {
-      $weekday = $weekdays[strftime('%w', $begin)];
-      return $weekday . strftime('. %d.%m. | %H:%M', $begin) . strftime(' - %H:%M', $end);
+      return date_i18n('D. d.m.Y | H:i', $begin) . date_i18n(' – H:i', $end);
   } else {
-      $weekday_b = $weekdays[strftime('%w', $begin)];
-      $weekday_e = $weekdays[strftime('%w', $end)];
-      return $weekday_b . strftime('. %d.%m. %H:%M - ', $begin) . $weekday_e . strftime('. %d.%m. %H:%M', $end);
+      return date_i18n('D. d.m.Y | H:i', $begin) . date_i18n(' – D. d.m.Y | H:i', $end);
   }
 }
 
