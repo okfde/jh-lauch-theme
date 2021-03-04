@@ -122,7 +122,7 @@ the_post();
 
   <section class="c-page-section white">
     <div class="c-page-2col">
-      <h2 class="col-s"><?php the_field('partner_title'); ?></h2>
+      <h2 id="friends" class="col-s"><?php the_field('partner_title'); ?></h2>
     </div>
     <div class="c-toc ai-s">
       <ul class="c-toc-nav fs">
