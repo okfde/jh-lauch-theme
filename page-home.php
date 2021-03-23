@@ -132,7 +132,6 @@ endwhile;
           <section id="labs">
 
             <?php
-            $all_dates = array();
             $args = array('post_type' => 'date', 'tax_query' => array(
                 array(
                     'taxonomy' => 'lab-location',
@@ -142,28 +141,8 @@ endwhile;
                 ),
             )
           );
-            $the_query = new WP_Query( $args ); ?>
-
-            <?php if ( $the_query->have_posts() ) :
-              while ( $the_query->have_posts() ) : $the_query->the_post();
-                if ( !post_date_is_past($post) ) :
-                    $info = array('lab' => get_field('parent')->post_title,
-                                 'link' => get_post_permalink(),
-                                  'img' => get_post_thumbnail_id(),
-                                 'title' => $post->post_title,
-                                 'date_technical' => post_date_get_datetime(),
-                                 'date' => post_date_format_date());
-                    array_push($all_dates, $info);
-                  endif;
-              endwhile;
-            wp_reset_postdata();
-            endif;
-
-            usort($all_dates, function($a, $b) {
-              return $a['date_technical'] <=> $b['date_technical'];
-            });
-            $all_dates = array_slice($all_dates, 0, 3);
-
+            $the_query = new WP_Query( $args );
+            $all_dates = array_slice(post_date_get_sorted($the_query), 0, 3);
             foreach ($all_dates as $d) : ?>
             <div class="event-teaser-list-item no-hover">
               <a href="<?php echo $d['link']?>" title="Zur Seite von Lab: <?php echo $d['lab']; ?>">
