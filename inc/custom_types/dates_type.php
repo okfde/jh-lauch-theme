@@ -66,8 +66,8 @@ function rewrite_date_url( $url, $post ) {
 }
 add_filter( 'post_type_link', 'rewrite_date_url', 10, 2 );
 
-function post_date_get_datetime($pos = 'begin') {
-  return DateTime::createFromFormat('U', get_field($pos), wp_timezone())->getTimestamp();
+function post_date_get_datetime($pos = 'begin', $post_id = false) {
+  return DateTime::createFromFormat('U', get_field($pos, $post_id), wp_timezone())->getTimestamp();
 }
 
 function post_date_format_date() {
@@ -93,4 +93,33 @@ function post_date_get_timed_query($should_be_past=true) {
     'compare' => $should_be_past ? '>=' : '<',
     'type' => 'DATETIME'
   );
+}
+
+function post_date_get_sorted($query) {
+  $all_dates = array();
+  if ($query->have_posts()) :
+    while ($query->have_posts()) : $query->the_post();
+      global $post;
+      if (!post_date_is_past($post)) :
+        $info = array('lab' => get_field('parent')->post_title,
+          'link' => get_post_permalink(),
+          'img' => get_post_thumbnail_id(),
+          'content' => get_the_content(),
+          'title' => $post->post_title,
+          'date_technical' => post_date_get_datetime(),
+          'date' => post_date_format_date());
+        array_push($all_dates, $info);
+      endif;
+    endwhile;
+    wp_reset_postdata();
+  endif;
+
+  usort($all_dates, function ($a, $b) {
+    return $a['date_technical'] <=> $b['date_technical'];
+  });
+
+  usort($query->posts, function ($a, $b) {
+    return post_date_get_datetime('begin', $a->ID) <=> post_date_get_datetime('begin', $b->ID);
+  });
+  return $all_dates;
 }

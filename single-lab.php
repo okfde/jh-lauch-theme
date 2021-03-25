@@ -74,6 +74,7 @@ $args = array(
   )
 );
 $the_query = new WP_Query( $args );
+post_date_get_sorted($the_query);
 if ($the_query->have_posts()):
 ?>
 <section class="c-page-section pb-2 mt-2 white addon--relative">

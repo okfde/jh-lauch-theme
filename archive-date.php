@@ -118,7 +118,8 @@ get_header();
                               'compare' => 'LIKE'
                             );
                           }
-                          $the_query = new WP_Query($args); ?>
+                          $the_query = new WP_Query($args);
+                          post_date_get_sorted($the_query); ?>
 
                           <?php if ($the_query->have_posts()) : ?>
                             <h2><?= $is_active ? 'Kommende Events' : 'Vergangene Events' ?></h2>
