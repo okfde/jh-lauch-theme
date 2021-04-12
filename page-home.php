@@ -132,15 +132,20 @@ endwhile;
           <section id="labs">
 
             <?php
-            $args = array('post_type' => 'date', 'tax_query' => array(
+            $args = array(
+              'post_type' => 'date',
+              'orderby' => 'meta_value_datetime',
+              'meta_key' => 'begin',
+              'meta_query' => post_date_get_timed_query(),
+              'tax_query' => array(
                 array(
                     'taxonomy' => 'lab-location',
                     'field'    => 'slug',
                     'terms'    => $community_id, // set in functions.php
                     'operator' => 'NOT IN', // this line excludes the community
                 ),
-            )
-          );
+              )
+            );
             $the_query = new WP_Query( $args );
             $all_dates = array_slice(post_date_get_sorted($the_query), 0, 3);
             foreach ($all_dates as $d) : ?>
