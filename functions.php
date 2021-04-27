@@ -509,8 +509,8 @@ add_shortcode('contactperson', 'contactperson_handle_shortcode');
 function frkr_handle_shortcode($atts = "") {
   $value = shortcode_atts( array(
     'text' => null,
-    'button' => 'Jetzt Mitglied werden',
-    'link' => 'https://freundeskreis.jugendhackt.org',
+    'button' => 'Jetzt unterstützen',
+    'link' => 'https://jugendhackt.org/spenden/',
   ), $atts );
 
   $out = '<div class="c-breakbox c-breakbox--bg">';

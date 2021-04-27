@@ -9,9 +9,9 @@
          title="Jugend hackt bei Instagram">
     <?php get_template_part('images/icons/icon', 'instagram.svg' ); ?></a></li>
   <li><a href="https://www.youtube.com/jugendhackt"
-         title="YouTube Kanal von Jugend hackt">
+         title="YouTube-Kanal von Jugend hackt">
     <?php get_template_part('images/icons/icon', 'youtube.svg' ); ?></a></li>
   <li><a href="https://www.facebook.com/jugendhackt"
-         title="Jugend hackt Freundeskreis auf Facebook">
+         title="Jugend hackt auf Facebook">
     <?php get_template_part('images/icons/icon', 'facebook.svg' ); ?></a></li>
 </ul>

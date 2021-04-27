@@ -18,22 +18,22 @@ function lauch_customize_register( $wp_customize ) {
   // revolving claims
   $wp_customize->add_setting( 'revolving_claims', array('default' => 'Code') );
 
-  $wp_customize->add_setting( 'support_link', array('default' => 'https://freundeskreis.jugendhackt.org') );
+  $wp_customize->add_setting( 'support_link', array('default' => 'https://jugendhackt.org/spenden/') );
   $wp_customize->add_setting( 'support_link_text', array('default' => 'Jetzt unterstützen!') );
   $wp_customize->add_setting( 'support_title', array('default' => 'Unterstütze unsere Arbeit') );
   $wp_customize->add_setting( 'support_copy', array('default' => '') );
 
-  $wp_customize->add_setting( 'footer_support_link', array('default' => 'https://freundeskreis.jugendhackt.org') );
+  $wp_customize->add_setting( 'footer_support_link', array('default' => 'https://jugendhackt.org/spenden/') );
   $wp_customize->add_setting( 'footer_support_link_text', array('default' => 'Jetzt unterstützen!') );
   $wp_customize->add_setting( 'footer_support_copy', array('default' => '') );
 
   $wp_customize->add_section( 'lauch_variables_section' , array(
-      'title'      => __( 'Lauch Variablen', 'lauch' ),
+      'title'      => __( 'Lauch-Variablen', 'lauch' ),
       'priority'   => 10,
   ) );
 
   $wp_customize->add_control( 'revolving_claims_setting', array(
-      'label'      => __( 'Revolving Claims', 'lauch' ),
+      'label'      => __( 'Wechselnde Sprüche', 'lauch' ),
       'description' => __( 'Komma-separierte Liste, ohne Leerzeichen nach dem Komma.', 'lauch' ),
       'section'    => 'lauch_variables_section',
       'settings'   => 'revolving_claims',
@@ -42,7 +42,7 @@ function lauch_customize_register( $wp_customize ) {
 
   $wp_customize->add_control( 'support_link_setting', array(
     'label'      => __( '"Unterstützt uns" Link', 'lauch' ),
-    'description' => __( 'Vermutlich der Freundeskreis Link', 'lauch' ),
+    'description' => __( 'Link zur Spendenseite', 'lauch' ),
     'section'    => 'lauch_variables_section',
     'settings'   => 'support_link',
     'type'       => 'text'
@@ -50,7 +50,7 @@ function lauch_customize_register( $wp_customize ) {
 
   $wp_customize->add_control( 'support_link_text_setting', array(
     'label'      => __( '"Unterstützt uns" Link Text', 'lauch' ),
-    'description' => __( 'Text der als Link angezeigt wird', 'lauch' ),
+    'description' => __( 'Text, der als Link angezeigt wird', 'lauch' ),
     'section'    => 'lauch_variables_section',
     'settings'   => 'support_link_text',
     'type'       => 'text'
@@ -74,7 +74,7 @@ function lauch_customize_register( $wp_customize ) {
 
   $wp_customize->add_control( 'footer_support_link_setting', array(
     'label'      => __( 'Footer "Unterstützt uns" Link', 'lauch' ),
-    'description' => __( 'Vermutlich der Freundeskreis Link', 'lauch' ),
+    'description' => __( 'Link zur Spendenseite', 'lauch' ),
     'section'    => 'lauch_variables_section',
     'settings'   => 'footer_support_link',
     'type'       => 'text'
@@ -82,7 +82,7 @@ function lauch_customize_register( $wp_customize ) {
 
   $wp_customize->add_control( 'footer_support_link_text_setting', array(
     'label'      => __( 'Footer "Unterstützt uns" Link Text', 'lauch' ),
-    'description' => __( 'Text der als Link angezeigt wird', 'lauch' ),
+    'description' => __( 'Text, der als Link angezeigt wird', 'lauch' ),
     'section'    => 'lauch_variables_section',
     'settings'   => 'footer_support_link_text',
     'type'       => 'text'

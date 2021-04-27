@@ -7,7 +7,7 @@
     <div>
       <?php echo apply_filters('the_content',get_theme_mod('support_copy', 'foo')); ?>
       <p>
-        <a href="<?php echo get_theme_mod('support_link', 'https://freundeskreis.jugendhackt.org'); ?>"
+        <a href="<?php echo get_theme_mod('support_link', 'https://jugendhackt.org/spenden/'); ?>"
            class="support-link--black">
           <?php echo get_theme_mod('support_link_text', 'Jetzt unterstützen!'); ?>
           <?php echo render_svg('/images/arrow-external.svg'); ?></a>
