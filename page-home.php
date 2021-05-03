@@ -47,8 +47,6 @@ endwhile;
         <ul class="c-toc-nav">
           <li><a href="#labs" class="hover-line-trigger">
             <span class="hover-line"><?php echo __('Labs', 'lauch'); ?></span></a></li>
-          <li><a href="#community" class="hover-line-trigger">
-            <span class="hover-line"><?php echo __('Online', 'lauch'); ?></span></a></li>
           <li><a href="#events" class="hover-line-trigger">
             <span class="hover-line"><?php echo __('Events', 'lauch'); ?></span></a></li>
         </ul>
@@ -160,76 +158,6 @@ endwhile;
                 <?php endif; ?>
                 <div class="event-teaser-list-meta fg">
                   <div class="c-uppercase-title mb-1">Lab: <?php echo $d['lab']; ?></div>
-                  <h3 class="mb-0 mt-0"><?php echo $d['title']; ?></h3>
-                  <p class="mt-1 fw-b">
-                    <time>
-                      <?php echo $d['date']; ?>
-                    <time>
-                  </p>
-                </div>
-              </div>
-              </a>
-            </div>
-            <?php endforeach; ?>
-          </section>
-          <section id="community">
-
-            <?php
-            $all_dates = array();
-            $args = array('post_type' => 'date', 'tax_query' => array(
-                array(
-                    'taxonomy' => 'lab-location',
-                    'field'    => 'slug',
-                    'terms'    => $community_id, // set in functions.php
-                ),
-            )
-          );
-            $the_query = new WP_Query( $args ); ?>
-
-            <?php if ( $the_query->have_posts() ) :
-              while ( $the_query->have_posts() ) : $the_query->the_post();
-                if ( !post_date_is_past($post) ) :
-                    $info = array('lab' => get_field('parent')->post_title,
-                                 'link' => get_post_permalink(),
-                                  'img' => get_post_thumbnail_id(),
-                                 'title' => $post->post_title,
-                                 'date_technical' => post_date_get_datetime(),
-                                 'date' => post_date_format_date());
-                    array_push($all_dates, $info);
-                  endif;
-              endwhile;
-            wp_reset_postdata();
-            else: ?>
-            <div class="event-teaser-list-item no-hover">
-              <div class="d-f ai-s">
-                  <picture class="events-list-image-2">
-                  </picture>
-                <div class="event-teaser-list-meta fg">
-                  <h3 class="mb-0 mt-0">Aktuell keine Termine geplant</h3>
-                  <p class="mt-1 fw-b">Bald haben wir wieder neue Online-Events und Streams im Programm</p>
-                </div>
-              </div>
-            </div>
-            <?php
-            endif;
-
-            usort($all_dates, function($a, $b) {
-                return $a['date_technical'] <=> $b['date_technical'];
-            });
-            $all_dates = array_slice($all_dates, 0, 3);
-
-            foreach ($all_dates as $d) : ?>
-            <div class="event-teaser-list-item no-hover">
-              <a href="<?php echo $community_slug ?>/" title="Zur Community-Seite">
-              <div class="d-f ai-s">
-                <?php if ( isset(wp_get_attachment_image_src($d['img'], 'lab-event-teaser')[0])) : ?>
-                  <picture class="events-list-image-2">
-                      <img src="<?php echo wp_get_attachment_image_src($d['img'], 'lab-event-teaser')[0] ?>"
-                           alt="" width="90">
-                  </picture>
-                <?php endif; ?>
-                <div class="event-teaser-list-meta fg">
-                  <div class="c-uppercase-title mb-1"><?php echo $d['lab']; ?></div>
                   <h3 class="mb-0 mt-0"><?php echo $d['title']; ?></h3>
                   <p class="mt-1 fw-b">
                     <time>
