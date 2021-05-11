@@ -23,9 +23,12 @@
         </ol>
       </nav>
       <?php the_title('<h1 class="c-page-title">', '</h1>')?>
-      <time class="c-page-excerpt"><?php echo post_date_format_date()?></time>
-      <div class="c-page-content"><?php the_content() ?></div>
+      <time class="c-page-excerpt">Hat stattgefunden am <?php echo post_date_format_date()?></time>
+    </div>
+  </div>
+  <div class="c-page-section white c-page-cpital-first">
+    <div class="c-page-standard wp-styles mb-5">
+      <?php the_content() ?>
     </div>
   </div>
 </section>
-
