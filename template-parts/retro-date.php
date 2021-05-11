@@ -18,7 +18,7 @@
       <nav class="c-breadcrumb" aria-label="breadcrumb">
         <ol>
           <li>
-            <a href="<?php echo get_post_type_archive_link('date') ?>">Termine</a>
+            <a href="<?php echo get_post_type_archive_link('date') ?>">Kalender</a>
           </li>
         </ol>
       </nav>
