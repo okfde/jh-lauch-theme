@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Lernen
+ * Template Name: OER-Übersicht
  */
 get_header();
 ?>
