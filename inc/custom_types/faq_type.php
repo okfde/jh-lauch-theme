@@ -43,7 +43,7 @@ function lauch_faq_init() {
         'capability_type'    => 'faq',
         'has_archive'        => true,
         'hierarchical'       => false,
-        'menu_position'      => null,
+        'menu_position'      => 40,
         'supports'           => array( 'title', 'editor', 'author', 'page-attributes' ),
         'taxonomies'         => array('audience'),
         'menu_icon'  		     => 'dashicons-editor-help',

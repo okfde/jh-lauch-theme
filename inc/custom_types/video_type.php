@@ -43,7 +43,7 @@ function lauch_videos_init() {
         'capability_type'    => 'video',
         'has_archive'        => true,
         'hierarchical'       => false,
-        'menu_position'      => null,
+        'menu_position'      => 36,
         'supports'           => array( 'title', 'editor', 'author', 'custom-fields','page-attributes', 'thumbnail', 'excerpt' ),
         'taxonomies'         => array('tech', 'topic', 'location', 'year', 'type'),
         'menu_icon'  		     => 'dashicons-format-video',

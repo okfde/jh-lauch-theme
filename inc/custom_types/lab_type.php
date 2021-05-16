@@ -43,7 +43,7 @@ function lauch_labs_init() {
         'capability_type'    => 'lab',
         'has_archive'        => true,
         'hierarchical'       => false,
-        'menu_position'      => null,
+        'menu_position'      => 32,
         'supports'           => array( 'title', 'editor', 'author', 'custom-fields', 'page-attributes', 'thumbnail' ),
         'taxonomies'         => array('lab-location'),
         'menu_icon'  		     => 'dashicons-admin-multisite',

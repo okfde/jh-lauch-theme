@@ -43,7 +43,7 @@ function lauch_persons_init() {
         'capability_type'    => 'person',
         'has_archive'        => true,
         'hierarchical'       => false,
-        'menu_position'      => null,
+        'menu_position'      => 38,
         'supports'           => array( 'title', 'author', 'custom-fields', 'thumbnail' ),
         'taxonomies'         => array('lab', 'job'),
         'menu_icon'  		     => 'dashicons-universal-access',

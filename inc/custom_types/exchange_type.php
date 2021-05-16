@@ -43,7 +43,7 @@ function lauch_exchanges_init() {
         'capability_type'    => 'exchange',
         'has_archive'        => true,
         'hierarchical'       => false,
-        'menu_position'      => null,
+        'menu_position'      => 34,
         'supports'           => array( 'title', 'editor', 'excerpt', 'author', 'custom-fields', 'page-attributes', 'thumbnail' ),
         'taxonomies'         => array('exchange-program', 'year'),
         'menu_icon'  		     => 'dashicons-admin-site-alt3',

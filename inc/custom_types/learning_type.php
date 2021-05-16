@@ -43,7 +43,7 @@ function lauch_learnings_init() {
         'capability_type'    => 'learning',
         'has_archive'        => true,
         'hierarchical'       => false,
-        'menu_position'      => null,
+        'menu_position'      => 42,
         'supports'           => array( 'title', 'editor', 'author', 'excerpt', 'custom-fields', 'page-attributes', 'thumbnail' ),
         'taxonomies'         => array(),
         'menu_icon'  		     => 'dashicons-lightbulb',

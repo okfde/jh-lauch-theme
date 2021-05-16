@@ -43,7 +43,7 @@ function lauch_events_init() {
         'capability_type'    => 'event',
         'has_archive'        => false,
         'hierarchical'       => false,
-        'menu_position'      => null,
+        'menu_position'      => 30,
         'supports'           => array( 'title', 'editor', 'excerpt', 'author', 'custom-fields', 'page-attributes', 'thumbnail' ),
         'taxonomies'         => array('location', 'year'),
         'menu_icon'  		     => 'dashicons-networking',
