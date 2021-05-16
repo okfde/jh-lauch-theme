@@ -21,7 +21,7 @@
 }
 .page-template-full-width .block-paragraph p.has-softpurple-background-color,
 .page-template-full-width .wp-block.rich-text.has-softpurple-background-color {
-    box-shadow: -.2em 0 0 #2969b2, .2em 0 0 #2969b2;
+    box-shadow: -.2em 0 0 #51509d, .2em 0 0 #51509d;
 }
 .page-template-full-width .block-paragraph p.has-softred-background-color,
 .page-template-full-width .wp-block.rich-text.has-softred-background-color {
@@ -109,12 +109,12 @@
     background: #f3971b;
 }
 .wp-block-image.is-style-caption-softpurple .block-editor-rich-text__editable {
-    background: #2969b2;
+    background: #51509d;
     color: #ffffff;
 }
 .wp-block-image.is-style-caption-softpurple figcaption span {
     box-shadow: -.2em 0 0 #2969b2, .2em 0 0 #2969b2;
-    background: #2969b2;
+    background: #51509d;
 }
 .wp-block-image.is-style-caption-softred .block-editor-rich-text__editable {
     background: #e6414a;
