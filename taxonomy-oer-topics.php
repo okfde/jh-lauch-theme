@@ -8,7 +8,7 @@ get_header();
   <div class="p-r">
     <header class="c-page-offcenter-header">
       <h1 class="c-page-title">Projekte zum Thema <?= get_queried_object()->name;?></h1>
-      <div class="c-page-excerpt"><?= get_queried_object()->description; ?>></div>
+      <div class="c-page-excerpt"><?= get_queried_object()->description; ?></div>
     </header>
   </div>
 
