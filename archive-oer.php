@@ -10,13 +10,8 @@ while (have_posts()) : the_post() ?>
 
     <div class="p-r">
         <header class="c-page-offcenter-header">
-            <h1 class="c-page-title">OER</h1>
-            <div class="c-page-excerpt"><p>There is no strife, no prejudice, no national conflict in outer space as yet.
-                    Its hazards are hostile
-                    to us all. Its conquest deserves the best of all mankind, and its opportunity for peaceful
-                    cooperation many never come again. But why, some say, the moon? Why choose this as our
-                    goal? And they may well ask why climb the highest mountain? Why, 35 years ago, fly the
-                    Atlantic? Why does Rice play Texas?</p></div>
+          <h1 class="c-page-title"><?php the_title() ?></h1>
+          <div class="c-page-excerpt"><?php the_content() ?></div>
             <div class="c-page-header-illustration right-one">
                 <img src="<?php echo get_field('illustration_right'); ?>" alt="" width="120">
             </div>
