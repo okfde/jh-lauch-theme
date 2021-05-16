@@ -565,6 +565,7 @@ add_shortcode('floatbox', 'floatbox_handle_shortcode');
 
 require get_template_directory() . '/inc/custom_types/event_type.php';
 require get_template_directory() . '/inc/custom_types/dates_type.php';
+require get_template_directory() . '/inc/custom_types/oer_type.php';
 require get_template_directory() . '/inc/custom_types/lab_type.php';
 require get_template_directory() . '/inc/custom_types/exchange_type.php';
 require get_template_directory() . '/inc/custom_types/video_type.php';

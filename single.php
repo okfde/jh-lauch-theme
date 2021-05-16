@@ -93,7 +93,7 @@ the_post(); ?>
                   'posts_per_page' => 2,
                   'post__not_in' => array($post->ID),
                   'orderby' => 'rand',
-                  'tax-query' => array(
+                  'tax_query' => array(
                     array(
                       'taxonomy' => 'category',
                       'field'    => 'slug',
