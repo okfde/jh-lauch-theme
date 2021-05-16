@@ -94,6 +94,19 @@ register_taxonomy( 'lab-location', ['lab', 'person', 'post'], $args );
 }
 add_action( 'init', 'lauch_register_labs_taxonomy', 0 );
 
+function lauch_register_oer_taxonomy() {
+$args = array(
+'label'        => __( 'Thema', 'textdomain' ),
+'public'       => true,
+'rewrite' => array( 'slug' => 'oer', 'with_front' => false ),
+'hierarchical' => true,
+'show_in_rest' => true,
+);
+
+register_taxonomy( 'oer-topics', ['oer'], $args );
+}
+add_action( 'init', 'lauch_register_oer_taxonomy', 0 );
+
 function lauch_register_jobs_taxonomy() {
     $args = array(
         'label'        => __( 'Job', 'textdomain' ),

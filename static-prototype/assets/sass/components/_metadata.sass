@@ -1,0 +1,43 @@
+.c-metadata
+    @media (min-width: $break-medium)
+      display: flex
+      flex-flow: wrap
+      justify-content: center
+
+.c-metadata-item
+  display: flex
+  align-items: center
+  margin-bottom: .5em
+  flex: 0 0 percentage(1/3)
+  padding: 0 0.5em
+  font-size: 1.2rem
+
+  @media (min-width: $break-medium)
+    margin-bottom: 3rem
+
+  dl
+    display: flex
+
+  dt, strong
+    font-weight: 800
+    margin-right: auto
+
+.c-metadata-item-wrapper
+  flex-grow: 1
+  margin-left: 0.5em
+  padding-right: 1em
+
+  &:first-child
+    margin-left: 0
+
+.c-metadata-item-column
+
+  img
+    max-width: 100%
+
+  dl
+    display: block
+
+.c-metadata-download
+  text-decoration: none
+  text-transform: uppercase
