@@ -3,11 +3,13 @@
  * Template Name: OER-Kategorien
  */
 get_header();
+
+$image_id = get_queried_object()->topic-picture;
 ?>
 
 <header class="c-page-alpaca-header">
     <div class="c-page-alpaca-featured medium-up as-s p-r">
-        <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'blog-alpaka'); ?>"
+        <img src="<?php echo wp_get_attachment_image( $image_id, $size = 'blog-alpaka' ); ?>"
              alt="" class="clip-alpaka">
     </div>
     <div class="c-page-alpaca-title">
