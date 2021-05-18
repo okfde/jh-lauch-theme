@@ -10,7 +10,7 @@ while (have_posts()) : the_post() ?>
 
     <div class="p-r">
         <header class="c-page-offcenter-header">
-            <h1 class="c-page-title">OER</h1>
+            <h1 class="c-page-title">Freie Bildungsmaterialien</h1>
             <div class="c-page-excerpt"><p>There is no strife, no prejudice, no national conflict in outer space as yet.
                     Its hazards are hostile to us all. Its conquest deserves the best of all mankind, and its opportunity for peaceful
                     cooperation many never come again. But why, some say, the moon? Why choose this as our
@@ -40,7 +40,7 @@ while (have_posts()) : the_post() ?>
 
                                 <picture><?php
                                     $image_id = get_field('topic-picture', $term->taxonomy . '_' . $term->term_id);
-                                    echo wp_get_attachment_image( $image_id);
+                                    echo wp_get_attachment_image( $image_id, $size = 'large' );
                                 ?></picture>
                             </div>
                             <h3 class="teaser-title"><span class="hover-line"><?= $term->name ?></span></h3>
