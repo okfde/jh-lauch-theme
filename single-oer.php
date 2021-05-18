@@ -87,11 +87,11 @@ while (have_posts()) :
                     <div class="c-metadata-item-wrapper">
                         <dl>
                             <dt>Vorbereitung</dt>
-                            <dd><?php the_field('preparation') ?></dd>
+                            <dd><?php the_field('preparation') ?> h</dd>
                         </dl>
                         <dl>
                             <dt>Dauer</dt>
-                            <dd><?php the_field('duration') ?></dd>
+                            <dd><?php the_field('duration') ?> h</dd>
                         </dl>
                     </div>
                 </li>
@@ -123,7 +123,7 @@ while (have_posts()) :
                     <img src="<?php echo get_template_directory_uri() ?>/images/meta_icons/download_zim.png" alt="" width="80" height="80">
                     <div class="c-metadata-item-wrapper">
                         <dl class="d-b">
-                            <dt>ZIM-Papier</dt>
+                            <dt>Ziele, Inhalte, Methoden</dt>
                             <dd>
                                 <?php foreach (get_field('download_zim') as $download) : $url = wp_get_attachment_url($download['file']); ?>
                                     <a href="<?= $url ?>" target="_blank" class="c-metadata-download"><?= wp_check_filetype($url)['ext'] ?></a>
@@ -135,15 +135,16 @@ while (have_posts()) :
                 <li class="c-metadata-item">
                     <img src="<?php echo get_template_directory_uri() ?>/images/meta_icons/google_drive.png" alt="" width="80" height="80">
                     <div class="c-metadata-item-wrapper">
-                        <a href="<?= get_field('google_drive') ?>" target="_blank">
-                            <strong>Drive-Link zum Mitwirken</strong>
-                        </a>
+                      <dl class="d-b">
+                          <dt><?= get_field('external_link_title') ?></dt>
+                          <dd><a href="<?= get_field('external_link_url') ?>" target="_blank">Link</a></dd>
+                      </dl>
                     </div>
                 </li>
                 <li class="c-metadata-item">
                     <img src="<?php echo get_template_directory_uri() ?>/images/meta_icons/cc.png" alt="" width="80" height="80">
                     <div class="c-metadata-item-wrapper">
-                        <strong><?php the_field('cc'); ?></strong>
+                        <strong>Lizenz: <?php the_field('cc'); ?></strong>
                     </div>
                 </li>
                 <li class="c-metadata-item">
