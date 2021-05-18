@@ -132,7 +132,7 @@ while (have_posts()) :
                         </dl>
                     </div>
                 </li>
-                <li class="c-metadata-item">
+                <li class="c-metadata-item c-metadata-item-column">
                     <img src="<?php echo get_template_directory_uri() ?>/images/meta_icons/google_drive.png" alt="" width="80" height="80">
                     <div class="c-metadata-item-wrapper">
                       <dl class="d-b">
