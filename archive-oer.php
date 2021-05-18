@@ -40,7 +40,7 @@ while (have_posts()) : the_post() ?>
 
                                 <picture><?php
                                     $image_id = get_field('topic-picture', $term->taxonomy . '_' . $term->term_id);
-                                    echo wp_get_attachment_image( $image_id, $size = 'large' );
+                                    echo wp_get_attachment_image( $image_id, $size = 'full' );
                                 ?></picture>
                             </div>
                             <h3 class="teaser-title"><span class="hover-line"><?= $term->name ?></span></h3>
