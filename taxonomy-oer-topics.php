@@ -25,7 +25,7 @@ get_header();
     </div>
 </header>
 
-  <section class="c-page-section c-project-list pb-0 pt-0">
+  <section class="c-page-section c-project-list pb-0 pt-10">
     <ul>
         <?php while ( have_posts() ) : the_post(); ?>
 
