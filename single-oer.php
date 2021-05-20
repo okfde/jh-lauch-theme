@@ -115,7 +115,7 @@ while (have_posts()) :
                     <img src="<?php echo get_template_directory_uri() ?>/images/meta_icons/download_zim.png" alt="" width="160" height="160">
                     <div class="c-metadata-item-wrapper">
                         <dl class="d-b">
-                            <dt>Ziele, Inhalte, Methoden</dt>
+                            <dt>Ziele,&nbsp;Inhalte,&nbsp;Methoden</dt>
                             <dd>
                                 <?php foreach (get_field('download_zim') as $download) : $url = wp_get_attachment_url($download['file']); ?>
                                     <a href="<?= $url ?>" target="_blank"><?= wp_check_filetype($url)['ext'] ?></a>
@@ -138,7 +138,7 @@ while (have_posts()) :
                     <div class="c-metadata-item-wrapper">
                         <dl class="d-b">
                             <dt>Lizenz</dt>
-                            <dd><a href="<?= get_field('cc')['value']; ?>" target="_blank"><?= get_field('cc')['label']; ?> Lab <?= get_field('lab')->post_title; ?></a></dd>
+                            <dd><a href="<?= get_field('cc')['value']; ?>" target="_blank"><?= get_field('cc')['label']; ?> Jugend hackt Lab <?= get_field('lab')->post_title; ?></a></dd>
                         </dl>
                     </div>
                 </li>
