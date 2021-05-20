@@ -23,7 +23,7 @@
                 "12+": "12+",
                 "14+": "14+"
             },
-            "default_value": false,
+            "default_value": [],
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,
@@ -33,7 +33,7 @@
         },
         {
             "key": "field_60a10c4ee111e",
-            "label": "Anzahl Teilnehmer*innen",
+            "label": "Anzahl Teilnehmer",
             "name": "participants",
             "type": "text",
             "instructions": "",
@@ -55,7 +55,7 @@
             "label": "Dauer",
             "name": "duration",
             "type": "text",
-            "instructions": "In Stunden, Schreibweise H:MM, z.B. 0:30 oder 2",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -74,7 +74,7 @@
             "label": "Vorbereitungszeit",
             "name": "preparation",
             "type": "text",
-            "instructions": "In Stunden, Schreibweise H:MM, z.B. 0:30 oder 2",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -196,34 +196,15 @@
             ]
         },
         {
-            "key": "field_60a39649a4d9f",
-            "label": "Externer Link (Beschriftung)",
-            "name": "external_link_title",
-            "type": "text",
-            "instructions": "z.B. 'Link zum Pad' oder 'Drive-Link zum Mitmachen'",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
             "key": "field_60a10e4ae1127",
-            "label": "Externer Link (URL)",
-            "name": "external_link_url",
+            "label": "Google Drive Link",
+            "name": "google_drive",
             "type": "url",
-            "instructions": "https:\/\/ ...",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "100",
                 "class": "",
                 "id": ""
             },
@@ -244,14 +225,14 @@
                 "id": ""
             },
             "choices": {
-                "CC BY 4.0": "CC BY 4.0",
-                "CC BY SA 4.0": "CC BY SA 4.0"
+                "https:\/\/creativecommons.org\/licenses\/by\/4.0\/": "CC BY 4.0",
+                "https:\/\/creativecommons.org\/licenses\/by-sa\/4.0\/": "CC BY SA 4.0"
             },
-            "default_value": false,
+            "default_value": [],
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,
-            "return_format": "value",
+            "return_format": "array",
             "ajax": 0,
             "placeholder": ""
         },
@@ -293,6 +274,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": true,
-    "description": ""
+    "active": 1,
+    "description": "",
+    "modified": 1621517764
 }

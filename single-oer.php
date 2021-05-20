@@ -17,14 +17,11 @@ while (have_posts()) :
     <header class="c-page-alpaca-header">
         <div class="c-page-alpaca-featured medium-up as-s p-r">
             <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'blog-alpaka'); ?>"
-                 alt="" class="clip-alpaka">
+                 alt="">
             <div class="c-page-alpaca-friend">
                 <?php
                 $svg = get_random_illustration();
-                echo replace_svg_css_class_fill(get_svg_content($svg),
-                    "changecolor",
-                    "event-" . get_the_ID() . "-" . $svg,
-                    get_field('event_color')); ?>
+                echo get_svg_content($svg); ?>
             </div>
         </div>
         <div class="c-page-alpaca-title">
@@ -47,29 +44,19 @@ while (have_posts()) :
             <?php foreach ($terms as $term) : ?>
                 <li class="c-category-list-item">
                     <a href="<?= get_term_link($term->slug, 'oer-topics'); ?>"
+                       class="c-tag"
                        title="Mehr zum Thema <?= $term->name ?>">
                         <?= $term->name ?>
                     </a>
                 </li>
             <?php endforeach; ?>
         </ul>
-        <?php
-        $metadata = array(
-            array('icon' => 'people', array('fieldname' => 'age'), array('fieldname' => 'participants')),
-            array('icon' => 'hourglass', array('fieldname' => 'preparation'), array('fieldname' => 'duration')),
-            array(array('fieldname' => 'difficulty')),
-            array(array('fieldname' => 'download_project')),
-            array(array('fieldname' => 'download_zim')),
-            array(array('fieldname' => 'google_drive')),
-            array(array('fieldname' => 'cc')),
-            array(array('fieldname' => 'lab')),
-        );
-        ?>
+
         <div class="c-page-wide">
             <ul class="c-metadata">
                 <li class="c-metadata-item">
-                    <img src="<?php echo get_template_directory_uri() ?>/images/meta_icons/people.png" alt="" width="80"
-                         height="80">
+                    <img src="<?php echo get_template_directory_uri() ?>/images/meta_icons/people.png" alt="" width="160"
+                         height="160">
                     <div class="c-metadata-item-wrapper">
                         <dl>
                             <dt>Alter</dt>
@@ -82,8 +69,8 @@ while (have_posts()) :
                     </div>
                 </li>
                 <li class="c-metadata-item">
-                    <img src="<?php echo get_template_directory_uri() ?>/images/meta_icons/hourglass.png" alt="" width="80"
-                         height="80">
+                    <img src="<?php echo get_template_directory_uri() ?>/images/meta_icons/hourglass.png" alt="" width="160"
+                         height="160">
                     <div class="c-metadata-item-wrapper">
                         <dl>
                             <dt>Vorbereitung</dt>
@@ -100,40 +87,45 @@ while (have_posts()) :
                         <dl class="d-b">
                             <dt>Schwierigkeit</dt>
                             <dd>
-                                <img src="<?php echo get_template_directory_uri() ?>/images/meta_icons/difficulty.png" alt="" width="250" height="25">
-                                <?php get_field('difficulty') ?>
+                                <?php
+                                $difficulty = intval(get_field('difficulty'));
+                                for($i = 0; $i < 5; $i++) : ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/images/meta_icons/level-<?= $i < $difficulty ? 'full' : 'empty' ?>.png"
+                                         class="c-metadata-item-difficulty"
+                                         alt="" width="100" height="50">
+                                <?php endfor; ?>
                             </dd>
                         </dl>
                     </div>
                 </li>
                 <li class="c-metadata-item c-metadata-item-column">
-                    <img src="<?php echo get_template_directory_uri() ?>/images/meta_icons/download_project.png" alt="" width="80" height="80">
+                    <img src="<?php echo get_template_directory_uri() ?>/images/meta_icons/download_project.png" alt="" widt h="160" height="160">
                     <div class="c-metadata-item-wrapper">
                         <dl class="d-b">
                             <dt>Projektbeschreibung</dt>
                             <dd>
                                 <?php foreach (get_field('download_project') as $download) : $url = wp_get_attachment_url($download['file']); ?>
-                                    <a href="<?= $url ?>" target="_blank" class="c-metadata-download"><?= wp_check_filetype($url)['ext'] ?></a>
+                                    <a href="<?= $url ?>" target="_blank"><?= wp_check_filetype($url)['ext'] ?></a>
                                 <?php endforeach; ?>
                             </dd>
                         </dl>
                     </div>
                 </li>
                 <li class="c-metadata-item c-metadata-item-column">
-                    <img src="<?php echo get_template_directory_uri() ?>/images/meta_icons/download_zim.png" alt="" width="80" height="80">
+                    <img src="<?php echo get_template_directory_uri() ?>/images/meta_icons/download_zim.png" alt="" width="160" height="160">
                     <div class="c-metadata-item-wrapper">
                         <dl class="d-b">
                             <dt>Ziele, Inhalte, Methoden</dt>
                             <dd>
                                 <?php foreach (get_field('download_zim') as $download) : $url = wp_get_attachment_url($download['file']); ?>
-                                    <a href="<?= $url ?>" target="_blank" class="c-metadata-download"><?= wp_check_filetype($url)['ext'] ?></a>
+                                    <a href="<?= $url ?>" target="_blank"><?= wp_check_filetype($url)['ext'] ?></a>
                                 <?php endforeach; ?>
                             </dd>
                         </dl>
                     </div>
                 </li>
                 <li class="c-metadata-item c-metadata-item-column">
-                    <img src="<?php echo get_template_directory_uri() ?>/images/meta_icons/google_drive.png" alt="" width="80" height="80">
+                    <img src="<?php echo get_template_directory_uri() ?>/images/meta_icons/google_drive.png" alt="" width="160" height="160">
                     <div class="c-metadata-item-wrapper">
                       <dl class="d-b">
                           <dt><?= get_field('external_link_title') ?></dt>
@@ -141,16 +133,13 @@ while (have_posts()) :
                       </dl>
                     </div>
                 </li>
-                <li class="c-metadata-item">
-                    <img src="<?php echo get_template_directory_uri() ?>/images/meta_icons/cc.png" alt="" width="80" height="80">
+                <li class="c-metadata-item c-metadata-item-column">
+                    <img src="<?php echo get_template_directory_uri() ?>/images/meta_icons/cc.png" alt="" width="160" height="160">
                     <div class="c-metadata-item-wrapper">
-                        <strong>Lizenz: <?php the_field('cc'); ?></strong>
-                    </div>
-                </li>
-                <li class="c-metadata-item">
-                    <img src="<?php echo get_template_directory_uri() ?>/images/meta_icons/lab.png" alt="" width="80" height="80">
-                    <div class="c-metadata-item-wrapper">
-                        <strong><?= get_field('lab')->post_title; ?></strong>
+                        <dl class="d-b">
+                            <dt>Lizenz</dt>
+                            <dd><a href="<?= get_field('cc')['value']; ?>" target="_blank"><?= get_field('cc')['label']; ?> Lab <?= get_field('lab')->post_title; ?></a></dd>
+                        </dl>
                     </div>
                 </li>
             </ul>
