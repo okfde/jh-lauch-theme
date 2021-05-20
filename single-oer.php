@@ -99,7 +99,7 @@ while (have_posts()) :
                     </div>
                 </li>
                 <li class="c-metadata-item c-metadata-item-column">
-                    <img src="<?php echo get_template_directory_uri() ?>/images/meta_icons/download_project.png" alt="" widt h="160" height="160">
+                    <img src="<?php echo get_template_directory_uri() ?>/images/meta_icons/download_project.png" alt="" width="160" height="160">
                     <div class="c-metadata-item-wrapper">
                         <dl class="d-b">
                             <dt>Projektbeschreibung</dt>

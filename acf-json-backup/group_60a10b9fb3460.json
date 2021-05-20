@@ -23,7 +23,7 @@
                 "12+": "12+",
                 "14+": "14+"
             },
-            "default_value": [],
+            "default_value": false,
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,
@@ -33,7 +33,7 @@
         },
         {
             "key": "field_60a10c4ee111e",
-            "label": "Anzahl Teilnehmer",
+            "label": "Anzahl Teilnehmer*innen",
             "name": "participants",
             "type": "text",
             "instructions": "",
@@ -55,7 +55,7 @@
             "label": "Dauer",
             "name": "duration",
             "type": "text",
-            "instructions": "",
+            "instructions": "In Stunden, Schreibweise H:MM, z.B. 0:30 oder 2",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -74,7 +74,7 @@
             "label": "Vorbereitungszeit",
             "name": "preparation",
             "type": "text",
-            "instructions": "",
+            "instructions": "In Stunden, Schreibweise H:MM, z.B. 0:30 oder 2",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -196,15 +196,34 @@
             ]
         },
         {
-            "key": "field_60a10e4ae1127",
-            "label": "Google Drive Link",
-            "name": "google_drive",
-            "type": "url",
-            "instructions": "",
+            "key": "field_60a39649a4d9f",
+            "label": "Externer Link (Beschriftung)",
+            "name": "external_link_title",
+            "type": "text",
+            "instructions": "z.B. 'Link zum Pad' oder 'Drive-Link zum Mitmachen'",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "100",
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_60a10e4ae1127",
+            "label": "Externer Link (URL)",
+            "name": "external_link_url",
+            "type": "url",
+            "instructions": "https:\/\/ ...",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -274,7 +293,6 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
-    "description": "",
-    "modified": 1621517764
+    "active": true,
+    "description": ""
 }
