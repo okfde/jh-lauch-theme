@@ -5,9 +5,6 @@
 get_header();
 ?>
 
-<?php
-while (have_posts()) : the_post() ?>
-
     <div class="p-r">
         <header class="c-page-offcenter-header">
             <h1 class="c-page-title">Freie Bildungsmaterialien</h1>
@@ -53,5 +50,4 @@ while (have_posts()) : the_post() ?>
     </section>
 
 <?php
-endwhile;
 get_footer();

@@ -8,12 +8,20 @@
   display: flex
   align-items: center
   margin-bottom: .5em
-  flex: 0 0 percentage(1/3)
+  flex: 0 0 percentage(1/4)
   padding: 0 0.5em
-  font-size: 1.2rem
+  max-width: 50%
+  margin-left: auto
+  margin-right: auto
+  min-width: 25em
+
+  a
+    +copy-link(var(--link-color))
 
   @media (min-width: $break-medium)
-    margin-bottom: 3rem
+    margin-bottom: 1.5em
+    max-width: unset
+    min-width: unset
 
   dl
     display: flex
@@ -22,10 +30,18 @@
     font-weight: 800
     margin-right: auto
 
+  img
+    height: 60px
+    width: 60px
+
+  .c-metadata-item-difficulty
+    width: 35px
+    height: auto
+
 .c-metadata-item-wrapper
   flex-grow: 1
   margin-left: 0.5em
-  padding-right: 1em
+  padding-right: .25em
 
   &:first-child
     margin-left: 0
@@ -37,7 +53,3 @@
 
   dl
     display: block
-
-.c-metadata-download
-  text-decoration: none
-  text-transform: uppercase
