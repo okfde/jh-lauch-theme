@@ -138,7 +138,7 @@ while (have_posts()) :
                     <div class="c-metadata-item-wrapper">
                         <dl class="d-b">
                             <dt>Lizenz</dt>
-                            <dd><a href="<?= get_field('cc')['value']; ?>" target="_blank"><?= get_field('cc')['label']; ?> Jugend hackt Lab <?= get_field('lab')->post_title; ?></a></dd>
+                            <dd><a href="<?= get_field('cc')['value']; ?>" target="_blank"><?= get_field('cc')['label']; ?> Jugend hackt Lab&nbsp;<?= get_field('lab')->post_title; ?></a></dd>
                         </dl>
                     </div>
                 </li>
