@@ -1,31 +1,43 @@
-<svg width="34px" height="34" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-     viewBox="0 0 34 34" style="enable-background:new 0 0 34 34;" xml:space="preserve">
-     <style type="text/css">
-	 .st0{fill-rule:evenodd;clip-rule:evenodd;fill:#52575B;}
-	 .st1{fill-rule:evenodd;clip-rule:evenodd;}
-	 .st2{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
-     </style>
-     <title>Mikrofon</title>
-     <g transform="translate(-836.000000, -3247.000000)">
-	 <g id="Group-22" transform="translate(58.000000, 2693.000000)">
-	     <g id="Group-19" transform="translate(761.000000, 316.000000)">
-		 <g id="Group-18" transform="translate(17.000000, 238.000000)">
-		     <polygon id="Path-4" class="st0" points="18,11 18,8 20,8 20,5 22,5 22,2 30,2 30,5 32,5 32,12.9 30,13 29,14 27,15 26,1 24,17 24,15 22,15 22,13 20,13 20,11 					"/>
-		     <polygon id="Fill-4" class="st1" points="22,2 30,2 30,0 22,0 					"/>
-		     <polygon class="st1" points="30,5 32,5 32,2 30,2 					"/>
-		     <polygon class="st1" points="20,5 22,5 22,2 20,2 					"/>
-		     <polygon class="st2" points="27,11 29,11 29,9 27,9 					"/>
-		     <polygon class="st2" points="25,9 27,9 27,7 25,7 					"/>
-		     <polygon class="st2" points="23,7 25,7 25,5 23,5 					"/>
-		     <polygon class="st1" points="0,30 2,30 2,28 0,28 					"/>
-		     <polygon class="st1" points="0,34 2,34 2,32 0,32 					"/>
-		     <polygon class="st1" points="18,8 20,8 20,5 18,5 					"/>
-		     <polygon class="st1" points="29,14 32,14 32,12 29,12 					"/>
-		     <polygon class="st1" points="26,16 29,16 29,14 26,14 					"/>
-		     <polygon class="st1" points="24,16 24,14 22,14 22,12 20,12 20,10 18,10 18,8 16,8 16,11 14,11 14,13 12,13 12,15 10,15 10,17 8,17 8,19 6,19 6,21 4,21 4,23 2,23 2,25 0,25 0,30 2,30 2,32 4,32 4,34 7,34 9,34 9,32 11,32 11,30 13,30 13,28 15,28 15,26 17,26 17,24 19,24 19,22 21,22 21,20 23,20 23,18 26,18 26,16 					"/>
-		     <polygon class="st1" points="32,12 34,12 34,5 32,5 					"/>
-		 </g>
-	     </g>
-	 </g>
-     </g>
- </svg>
+<svg width="34px" height="34" enable-background="new 0 0 34 34" version="1.1" viewBox="0 0 34 34" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+  <style type="text/css">
+    .st0 {
+      fill-rule: evenodd;
+      clip-rule: evenodd;
+      fill: #52575B;
+    }
+    .st1 {
+      fill-rule: evenodd;
+      clip-rule: evenodd;
+    }
+    .st2 {
+      fill-rule: evenodd;
+      clip-rule: evenodd;
+      fill: #FFFFFF;
+    }
+  </style>
+  <title>Mikrofon</title>
+  <g transform="translate(-836 -3247)">
+    <g transform="translate(58 2693)">
+      <g transform="translate(761 316)">
+        <g transform="translate(17 238)">
+          <path class="st0" d="m22 5v-3h8v3h2v7.9l-2 0.1-1 1-2 1-1 1-2 1v-2h-2v-2h-2v-2h-2v-3h2v-3z" clip-rule="evenodd" fill="#52575b" fill-rule="evenodd"/>
+          <polygon class="st1" points="22 2 30 2 30 0 22 0"/>
+          <polygon class="st1" points="30 5 32 5 32 2 30 2"/>
+          <polygon class="st1" points="20 5 22 5 22 2 20 2"/>
+          <polygon class="st2" points="27 11 29 11 29 9 27 9"/>
+          <polygon class="st2" points="25 9 27 9 27 7 25 7"/>
+          <polygon class="st2" points="23 7 25 7 25 5 23 5"/>
+          <polygon class="st1" points="0 30 2 30 2 28 0 28"/>
+          <polygon class="st1" points="0 34 2 34 2 32 0 32"/>
+          <polygon class="st1" points="18 8 20 8 20 5 18 5"/>
+          <polygon class="st1" points="29 14 32 14 32 12 29 12"/>
+          <polygon class="st1" points="26 16 29 16 29 14 26 14"/>
+          <polygon
+            class="st1"
+            points="24 16 24 14 22 14 22 12 20 12 20 10 18 10 18 8 16 8 16 11 14 11 14 13 12 13 12 15 10 15 10 17 8 17 8 19 6 19 6 21 4 21 4 23 2 23 2 25 0 25 0 30 2 30 2 32 4 32 4 34 7 34 9 34 9 32 11 32 11 30 13 30 13 28 15 28 15 26 17 26 17 24 19 24 19 22 21 22 21 20 23 20 23 18 26 18 26 16"/>
+          <polygon class="st1" points="32 12 34 12 34 5 32 5"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
