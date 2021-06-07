@@ -129,7 +129,7 @@
                 "id": ""
             },
             "collapsed": "",
-            "min": 1,
+            "min": 0,
             "max": 0,
             "layout": "row",
             "button_label": "",
@@ -169,7 +169,7 @@
                 "id": ""
             },
             "collapsed": "",
-            "min": 1,
+            "min": 0,
             "max": 0,
             "layout": "row",
             "button_label": "",

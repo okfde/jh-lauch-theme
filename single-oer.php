@@ -98,6 +98,7 @@ while (have_posts()) :
                         </dl>
                     </div>
                 </li>
+                <?php if (get_field('download_project')) : ?>
                 <li class="c-metadata-item c-metadata-item-column">
                     <img src="<?php echo get_template_directory_uri() ?>/images/meta_icons/download_project.png" alt="" width="160" height="160">
                     <div class="c-metadata-item-wrapper">
@@ -111,6 +112,8 @@ while (have_posts()) :
                         </dl>
                     </div>
                 </li>
+                <?php endif; ?>
+                <?php if (get_field('download_zim')) : ?>
                 <li class="c-metadata-item c-metadata-item-column">
                     <img src="<?php echo get_template_directory_uri() ?>/images/meta_icons/download_zim.png" alt="" width="160" height="160">
                     <div class="c-metadata-item-wrapper">
@@ -124,6 +127,7 @@ while (have_posts()) :
                         </dl>
                     </div>
                 </li>
+                <?php endif; ?>
                 <li class="c-metadata-item c-metadata-item-column">
                     <img src="<?php echo get_template_directory_uri() ?>/images/meta_icons/google_drive.png" alt="" width="160" height="160">
                     <div class="c-metadata-item-wrapper">
@@ -138,7 +142,7 @@ while (have_posts()) :
                     <div class="c-metadata-item-wrapper">
                         <dl class="d-b">
                             <dt>Lizenz</dt>
-                            <dd><a href="<?= get_field('cc')['value']; ?>" target="_blank"><?= get_field('cc')['label']; ?> Lab <?= get_field('lab')->post_title; ?></a></dd>
+                            <dd><?php the_field('cc'); ?></dd>
                         </dl>
                     </div>
                 </li>
