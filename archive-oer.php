@@ -8,11 +8,7 @@ get_header();
     <div class="p-r">
         <header class="c-page-offcenter-header">
             <h1 class="c-page-title">Freie Bildungsmaterialien</h1>
-            <div class="c-page-excerpt"><p>There is no strife, no prejudice, no national conflict in outer space as yet.
-                    Its hazards are hostile to us all. Its conquest deserves the best of all mankind, and its opportunity for peaceful
-                    cooperation many never come again. But why, some say, the moon? Why choose this as our
-                    goal? And they may well ask why climb the highest mountain? Why, 35 years ago, fly the
-                    Atlantic? Why does Rice play Texas?</p></div>
+            <div class="c-page-excerpt"><p>Aus unserer Arbeit in den Jugend hackt Labs sind eine Reihe von Workshop-Ideen entstanden, die wir gern mit allen teilen wollen. Uns liegt das Thema <strong>O</strong>pen <strong>E</strong>ducational <strong>R</strong>esources oder auch freie Bildungsmaterialien sehr am Herzen. Zusätzlich verweisen wir auf spannende OER-Materialien von anderen, um eine umfassende Sammlung bereitstellen zu können. Sämtliche Materialien sind frei nutzbar und können auf die jeweilige Workshopsituation angepasst werden.</p></div>
             <div class="c-page-header-illustration right-one">
                 <img src="<?php echo get_field('illustration_right'); ?>" alt="" width="120">
             </div>
