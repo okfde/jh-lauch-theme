@@ -151,7 +151,7 @@ get_header();
                                               <p class="mt-1 fw-b">
                                                   <time>
                                                     <?php echo $d['date']; ?>
-                                                      <time>
+                                                  </time>
                                               </p>
                                           </div>
                                       </div>
