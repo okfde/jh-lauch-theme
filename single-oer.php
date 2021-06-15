@@ -141,7 +141,7 @@ while (have_posts()) :
                     <div class="c-metadata-item-wrapper">
                         <dl class="d-b">
                             <dt>Lizenz</dt>
-                            <dd><a href="<?= get_field('cc')['value']; ?>" target="_blank"><?= get_field('cc')['label']; ?></a> <?= get_field('author') ?></dd>
+                            <dd><a href="<?= get_field('cc')['value']; ?>" target="_blank"><?= get_field('cc')['label']; ?></a> <?= strip_tags(get_field('author'),'<a>') ?></dd>
                         </dl>
                     </div>
                 </li>
