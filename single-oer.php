@@ -132,8 +132,7 @@ while (have_posts()) :
                     <img src="<?php echo get_template_directory_uri() ?>/images/meta_icons/google_drive.png" alt="" width="160" height="160">
                     <div class="c-metadata-item-wrapper">
                       <dl class="d-b">
-                          <dt><?= get_field('external_link_title') ?></dt>
-                          <dd><a href="<?= get_field('external_link_url') ?>" target="_blank">Link</a></dd>
+                          <a href="<?= get_field('external_link_url') ?>" target="_blank"><?= get_field('external_link_title') ?></a>
                       </dl>
                     </div>
                 </li>
