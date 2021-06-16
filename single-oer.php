@@ -140,8 +140,8 @@ while (have_posts()) :
                     <img src="<?php echo get_template_directory_uri() ?>/images/meta_icons/cc.png" alt="" width="160" height="160">
                     <div class="c-metadata-item-wrapper">
                         <dl class="d-b">
-                            <dt>Lizenz</dt>
-                            <dd><a href="<?= get_field('cc')['value']; ?>" target="_blank"><?= get_field('cc')['label']; ?></a> <?= strip_tags(get_field('author'),'<a>') ?></dd>
+                            <dt><a href="<?= get_field('cc')['value']; ?>" target="_blank"><?= get_field('cc')['label']; ?></a></dt>
+                            <dd><?= strip_tags(get_field('author'),'<a>') ?></dd>
                         </dl>
                     </div>
                 </li>
