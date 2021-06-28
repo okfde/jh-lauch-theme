@@ -37,7 +37,7 @@ function lauch_oer_init() {
         'show_in_menu'       => true,
         'show_in_rest'       => true,
         'query_var'          => true,
-        'rewrite'            => array( 'slug' => 'oer', 'with_front' => false ),
+        'rewrite'            => false,
         'capability_type'    => 'oer',
         'has_archive'        => true,
         'hierarchical'       => false,

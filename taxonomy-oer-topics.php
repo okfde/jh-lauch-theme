@@ -6,6 +6,18 @@ get_header();
 $term = get_query_var('term');
 $term = get_term_by('slug', $term, 'oer-topics');
 $image = get_field('topic-picture', $term->taxonomy . '_' . $term->term_id);
+
+
+$args = array(
+  'post_type' => 'page',
+  'meta_query' => array(
+    array(
+      'key' => '_wp_page_template',
+      'value' => 'oer-overview.php'
+    )
+  )
+);
+$overview = get_posts($args);
 ?>
 
 <header class="c-page-alpaca-header">
@@ -17,7 +29,7 @@ $image = get_field('topic-picture', $term->taxonomy . '_' . $term->term_id);
         <nav class="c-breadcrumb" aria-label="breadcrumb">
             <ol>
                 <li>
-                    <a href="<?php echo get_post_type_archive_link('oer'); ?>">OER</a>
+                    <a href="<?php echo get_post_permalink($overview[0]->ID); ?>">OER</a>
                 </li>
             </ol>
         </nav>
@@ -30,7 +42,10 @@ $image = get_field('topic-picture', $term->taxonomy . '_' . $term->term_id);
 
   <section class="c-page-section c-project-list pb-0 pt-10">
     <ul>
-        <?php while ( have_posts() ) : the_post(); ?>
+        <?php
+        $term_posts = new WP_Query($query_string."&posts_per_page=-1");
+
+        while ( $term_posts->have_posts() ) : $term_posts->the_post(); ?>
 
           <?php
           get_template_part( 'template-parts/children', 'project' ) ?>
