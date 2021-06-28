@@ -9,6 +9,17 @@
 
 get_header();
 
+$args = array(
+  'post_type' => 'page',
+  'meta_query' => array(
+    array(
+      'key' => '_wp_page_template',
+      'value' => 'oer-overview.php'
+    )
+  )
+);
+$overview = get_posts($args);
+
 while (have_posts()) :
     the_post();
     $terms = get_the_terms($post, 'oer-topics');
@@ -28,7 +39,7 @@ while (have_posts()) :
             <nav class="c-breadcrumb" aria-label="breadcrumb">
                 <ol>
                     <li>
-                        <a href="<?php echo get_post_type_archive_link('oer'); ?>">OER</a>
+                        <a href="<?php echo get_post_permalink($overview[0]->ID); ?>">OER</a>
                     </li>
                 </ol>
             </nav>

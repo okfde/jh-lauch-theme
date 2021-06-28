@@ -18,10 +18,12 @@ $s = get_option( 'sticky_posts' ); ?>
     <h2 class="teaser-title"><span class="hover-line"><?php the_title(); ?></span></h2>
     <div>
       <div class="teaser-summary"><?php the_excerpt(); ?></div>
-      <div class="teaser-date">
-        <time datetime="<?php echo get_the_date( 'Y-m-j'); ?>">
-          <?php echo get_the_date('j. F Y'); ?></time>
-      </div>
+        <?php if (get_post_type() !== 'oer') : ?>
+          <div class="teaser-date">
+            <time datetime="<?php echo get_the_date( 'Y-m-j'); ?>">
+              <?php echo get_the_date('j. F Y'); ?></time>
+          </div>
+        <?php endif; ?>
     </div>
   </a>
 </article>

@@ -7,8 +7,8 @@ get_header();
 
     <div class="p-r">
         <header class="c-page-offcenter-header">
-            <h1 class="c-page-title">Freie Bildungsmaterialien</h1>
-            <div class="c-page-excerpt"><p>Aus unserer Arbeit in den Jugend hackt Labs sind eine Reihe von Workshop-Ideen entstanden, die wir gern mit allen teilen wollen. Uns liegt das Thema <strong>O</strong>pen <strong>E</strong>ducational <strong>R</strong>esources oder auch freie Bildungsmaterialien sehr am Herzen. Zusätzlich verweisen wir auf spannende OER-Materialien von anderen, um eine umfassende Sammlung bereitstellen zu können. Sämtliche Materialien sind frei nutzbar und können auf die jeweilige Workshopsituation angepasst werden.</p></div>
+            <?php the_title('<h1 class="c-page-title pt-1">', '</h1>')?>
+            <div class="c-page-excerpt"><?php the_content(); ?></div>
             <div class="c-page-header-illustration right-one">
                 <img src="<?php echo get_field('illustration_right'); ?>" alt="" width="120">
             </div>
