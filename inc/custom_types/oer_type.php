@@ -42,7 +42,7 @@ function lauch_oer_init() {
         'has_archive'        => true,
         'hierarchical'       => false,
         'menu_position'      => 44,
-        'supports'           => array( 'title', 'editor', 'excerpt', 'custom-fields', 'page-attributes', 'thumbnail' ),
+        'supports'           => array( 'title', 'author', 'editor', 'excerpt', 'custom-fields', 'page-attributes', 'thumbnail' ),
         'taxonomies'         => array('oer-topics'),
         'menu_icon'  		     => 'dashicons-book-alt',
         'map_meta_cap'       => true,
