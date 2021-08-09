@@ -591,17 +591,3 @@ function atg_menu_classes($classes, $item, $args) {
   return $classes;
 }
 add_filter('nav_menu_css_class', 'atg_menu_classes', 1, 3);
-
-function cpt_proper_title( $title )
-{
-    if is_singular( 'lab' ); {
-        $title = "Jugend hackt Lab ".single_post_title( '', false );
-    }
-
-    if is_singular( 'event' ); {
-        $title = "Jugend hackt in ".single_post_title( '', false );
-    }
-
-    return $title;
-}
-add_filter( 'pre_get_document_title', 'cpt_proper_title' );
