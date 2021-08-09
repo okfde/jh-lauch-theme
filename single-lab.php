@@ -57,6 +57,10 @@ endwhile; ?>
         <?php endif; ?>
     </header>
 
+    <section
+        class="c-page-section pb-0 c-page-center">
+        <div class="c-page-standard wp-styles mb-3"><?php the_content(); ?></div>
+    </section>
 
 <?php
 $args = array(
@@ -103,7 +107,6 @@ if ($the_query->have_posts()):
     <section
         class="c-page-section pb-0 c-page-center addon--relative addon addon--large addon--l-0 addon--top addon--octopus">
         <h2 class="ta-c c-event-title"><?php echo __("Wissenswertes zum Ort", "lauch"); ?></h2>
-        <div class="c-page-standard wp-styles mb-3"><?php the_content(); ?></div>
         <div class="c-page-2col ai-c c-event-info">
             <div class="col-l c-event-overview">
                 <?php the_field('event_facts'); ?>
