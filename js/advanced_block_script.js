@@ -97,6 +97,7 @@ if (tinyMCEPreInit) {
 		edit: data.withSelect(function(select) {
 			const query = {
 				hide_empty: true,
+                                per_page: -1
 			}
 			return {
 				labs: select('core').getEntityRecords('postType', 'lab', query)
