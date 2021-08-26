@@ -284,12 +284,13 @@ function advanced_blocks_render_callback($type, $block_attributes, $content ) {
     } else {
       $labs = get_posts(array(
         'post_type' => 'lab',
+        'posts_per_page' => -1,
         'tax_query' => array(
             array(
-                'taxonomy' => 'lab-location',
-                'field'    => 'slug',
-                'terms'    => $community_id, // set in functions.php
-                'operator' => 'NOT IN', // this line excludes the community
+                'taxonomy'  => 'lab-location',
+                'field'     => 'slug',
+                'terms'     => $community_id, // set in functions.php
+                'operator'  => 'NOT IN', // this line excludes the community
             ),
         )
       ));
