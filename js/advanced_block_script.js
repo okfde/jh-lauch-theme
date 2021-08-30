@@ -111,7 +111,7 @@ if (tinyMCEPreInit) {
 					),
 					el( 'div', { className: 'c-info-block__bottom' },
 						props.labs.map(function( item ) {
-							return el( 'span', { className: 'c-info-block__link' }, item.name)
+							return el( 'span', { className: 'c-info-block__link' }, item.title.rendered)
 						})
 					)
 				)
