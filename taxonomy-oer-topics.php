@@ -48,7 +48,7 @@ $overview = get_posts($args);
         while ( $term_posts->have_posts() ) : $term_posts->the_post(); ?>
 
           <?php
-          get_template_part( 'template-parts/children', 'project' ) ?>
+          get_template_part( 'template-parts/children', 'oer' ) ?>
 
         <?php endwhile; ?>
     </ul>
