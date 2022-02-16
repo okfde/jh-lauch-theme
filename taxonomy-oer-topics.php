@@ -40,7 +40,7 @@ $overview = get_posts($args);
     </div>
 </header>
 
-  <section class="c-page-section c-project-list pb-0 pt-10">
+  <section class="c-blog-list is-grid pt-5">
     <ul>
         <?php
         $term_posts = new WP_Query($query_string."&posts_per_page=-1");

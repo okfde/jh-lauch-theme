@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Lab Übersicht
+ * Template Name: Lab-Übersicht
  */
 get_header();
 ?>
