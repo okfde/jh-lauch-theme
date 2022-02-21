@@ -83,40 +83,40 @@ if ((get_field('next_event'))) {
     </div>
     <div class="c-page-3col c-program jc-sb mt-3">
       <div class="col-s">
-        <h3><?php render_svg("/images/events/_freitag.svg"); ?></h3>
-        <ol class="">
-          <?php if( have_rows('event_friday', $next->ID) ):
-          while( have_rows('event_friday', $next->ID) ): the_row(); ?>
-            <li><img src="<?php the_sub_field('icon'); ?>" class="" alt="">
-              <time><?php the_sub_field('time', $next->ID); ?></time>
-              <div><?php the_sub_field('what', $next->ID); ?></time></div></li>
-          <?php endwhile;
-          endif; ?>
-        </ol>
+        <?php if( have_rows('event_friday', $next->ID) ): ?>
+            <h3><?php render_svg("/images/events/_freitag.svg"); ?></h3>
+            <ol class="">
+              <?php while( have_rows('event_friday', $next->ID) ): the_row(); ?>
+                <li><img src="<?php the_sub_field('icon'); ?>" class="" alt="">
+                  <time><?php the_sub_field('time', $next->ID); ?></time>
+                  <div><?php the_sub_field('what', $next->ID); ?></time></div></li>
+              <?php endwhile; ?>
+            </ol>
+          <?php endif; ?>
       </div>
       <div class="col-s">
-        <h3><?php render_svg("/images/events/_samstag.svg"); ?></h3>
-        <ol class="">
-          <?php if( have_rows('event_saturday', $next->ID) ):
-          while( have_rows('event_saturday', $next->ID) ): the_row(); ?>
-            <li><img src="<?php the_sub_field('icon'); ?>" class="" alt="">
-              <time><?php the_sub_field('time', $next->ID); ?></time>
-              <div><?php the_sub_field('what', $next->ID); ?></time></div></li>
-          <?php endwhile;
-          endif; ?>
-        </ol>
+        <?php if( have_rows('event_saturday', $next->ID) ): ?>
+            <h3><?php render_svg("/images/events/_samstag.svg"); ?></h3>
+            <ol class="">
+              <?php while( have_rows('event_saturday', $next->ID) ): the_row(); ?>
+                <li><img src="<?php the_sub_field('icon'); ?>" class="" alt="">
+                  <time><?php the_sub_field('time', $next->ID); ?></time>
+                  <div><?php the_sub_field('what', $next->ID); ?></time></div></li>
+              <?php endwhile;?>
+            </ol>
+            <?php endif; ?>
       </div>
       <div class="col-s">
-        <h3><?php render_svg("/images/events/_sonntag.svg"); ?></h3>
-        <ol class="">
-          <?php if( have_rows('event_sunday', $next->ID) ):
-          while( have_rows('event_sunday', $next->ID) ): the_row(); ?>
-            <li><img src="<?php the_sub_field('icon'); ?>" class="" alt="">
-              <time><?php the_sub_field('time', $next->ID); ?></time>
-              <div><?php the_sub_field('what', $next->ID); ?></time></div></li>
-          <?php endwhile;
-          endif; ?>
-        </ol>
+        <?php if( have_rows('event_sunday', $next->ID) ): ?>
+            <h3><?php render_svg("/images/events/_sonntag.svg"); ?></h3>
+            <ol class="">
+              <?php while( have_rows('event_sunday', $next->ID) ): the_row(); ?>
+                <li><img src="<?php the_sub_field('icon'); ?>" class="" alt="">
+                  <time><?php the_sub_field('time', $next->ID); ?></time>
+                  <div><?php the_sub_field('what', $next->ID); ?></time></div></li>
+              <?php endwhile; ?>
+            </ol>
+        <?php endif; ?>
       </div>
     </div>
   </section>
