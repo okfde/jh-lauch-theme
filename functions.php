@@ -592,3 +592,5 @@ function atg_menu_classes($classes, $item, $args) {
   return $classes;
 }
 add_filter('nav_menu_css_class', 'atg_menu_classes', 1, 3);
+
+add_post_type_support( 'page', 'excerpt' );
