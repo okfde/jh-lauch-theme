@@ -8,7 +8,7 @@
     <head>
         <title>Credits</title>
         <link href='https://fonts.googleapis.com/css?family=Press Start 2P' rel='stylesheet'>
-        <link href='styles/empty-credits.css' rel='stylesheet'>
+        <link href='<?php echo get_template_directory_uri() ?>/styles/empty-credits.css' rel='stylesheet'>
     </head>
     <body style="background-color:black;">
 
