@@ -180,7 +180,7 @@ if ((get_field('next_event'))) {
         <img src="<?php the_field('event_learnings_illustration', $next->ID); ?>" alt="">
       </div>
     </div>
-    <div class="c-page-3col c-blog-list is-grid">
+    <div class="pt-5 c-blog-list is-grid">
       <?php if( have_rows('learnings', $next->ID) ): ?>
         <ul>
           <?php while( have_rows('learnings', $next->ID) ): the_row(); ?>
