@@ -185,7 +185,7 @@ if ((get_field('next_event'))) {
         <ul>
           <?php while( have_rows('learnings', $next->ID) ): the_row(); ?>
             <?php foreach (get_sub_field('learning') as $l): ?>
-              <li class="c-compact-teaser">
+              <li class="c-compact-teaser fg-0">
                 <a href="<?php echo get_permalink($l->ID); ?>"
                    title="Zum Lernmaterial <?php echo $l->post_title; ?>"
                    class="hover-line-trigger">
