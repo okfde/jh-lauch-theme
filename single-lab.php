@@ -120,6 +120,8 @@ if ($the_query->have_posts()):
 
 <?php get_template_part('template-parts/partner', 'lab') ?>
 
+<?php get_template_part( 'template-parts/support-cta', get_post_type() ); ?>
+
     <script>
         document.querySelector('html').style.setProperty("--event-single-color", "<?php echo the_field('event_color'); ?>");
     </script>
