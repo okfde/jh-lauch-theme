@@ -139,6 +139,15 @@ while (have_posts()) :
                     </div>
                 </li>
                 <?php endif; ?>
+                <li class="c-metadata-item c-metadata-item-column">
+                    <img src="<?php echo get_template_directory_uri() ?>/images/meta_icons/cc.png" alt="" width="160" height="160">
+                    <div class="c-metadata-item-wrapper">
+                        <dl class="d-b">
+                            <dt><a href="<?= get_field('cc')['value']; ?>" target="_blank"><?= get_field('cc')['label']; ?></a></dt>
+                            <dd><?= strip_tags(get_field('author'),'<a>') ?></dd>
+                        </dl>
+                    </div>
+                </li>
                 <?php if (get_field('external_link_url')) : ?>
                 <li class="c-metadata-item c-metadata-item-column">
                     <img src="<?php echo get_template_directory_uri() ?>/images/meta_icons/google_drive.png" alt="" width="160" height="160">
@@ -149,15 +158,6 @@ while (have_posts()) :
                     </div>
                 </li>
                 <?php endif; ?>
-                <li class="c-metadata-item c-metadata-item-column">
-                    <img src="<?php echo get_template_directory_uri() ?>/images/meta_icons/cc.png" alt="" width="160" height="160">
-                    <div class="c-metadata-item-wrapper">
-                        <dl class="d-b">
-                            <dt><a href="<?= get_field('cc')['value']; ?>" target="_blank"><?= get_field('cc')['label']; ?></a></dt>
-                            <dd><?= strip_tags(get_field('author'),'<a>') ?></dd>
-                        </dl>
-                    </div>
-                </li>
             </ul>
         </div>
         <div class="c-page-standard c-page-wide wp-styles">
