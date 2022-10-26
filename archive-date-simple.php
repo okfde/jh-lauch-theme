@@ -35,7 +35,7 @@ get_header();
                             'order' => $is_active ? 'ASC' : 'DESC',
                             'meta_query' => array(
                                 'begin' => post_date_get_timed_query($is_active),
-                            'posts_per_page' => 100
+                            'posts_per_page' => -1
                             )
                           );
                           if (isset($_GET['lab_id'])) {
