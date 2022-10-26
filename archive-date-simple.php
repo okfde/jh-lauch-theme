@@ -33,9 +33,9 @@ get_header();
                             'post_type' => 'date',
                             'orderby' => 'begin',
                             'order' => $is_active ? 'ASC' : 'DESC',
+                            'posts_per_page' => -1,
                             'meta_query' => array(
                                 'begin' => post_date_get_timed_query($is_active),
-                            'posts_per_page' => -1
                             )
                           );
                           if (isset($_GET['lab_id'])) {
