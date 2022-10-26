@@ -20,7 +20,7 @@ get_header();
             <div class="c-toc c-toc--horizontal">
                 <ul class="c-toc-nav">
                     <li><a href="#labs" class="hover-line-trigger <?= isset($_GET['lab_id']) ? "is-active" : '' ?>">
-                            <span class="hover-line"><?php echo __('Labs', 'lauch'); ?></span></a></li>                  
+                            <span class="hover-line"><?php echo __('Labs', 'lauch'); ?></span></a></li>
                     <li><a href="#events" class="hover-line-trigger">
                             <span class="hover-line"><?php echo __('Events', 'lauch'); ?></span></a></li>
                 </ul>
@@ -107,6 +107,7 @@ get_header();
                             'post_type' => 'date',
                             'orderby' => 'begin',
                             'order' => $is_active ? 'ASC' : 'DESC',
+                            'posts_per_page' => $is_active ? -1 : 25,
                             'meta_query' => array(
                                 'begin' => post_date_get_timed_query($is_active),
                             )
