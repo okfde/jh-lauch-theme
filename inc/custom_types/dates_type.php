@@ -81,6 +81,17 @@ function post_date_format_date() {
   }
 }
 
+function post_date_format_date_simple() {
+  $begin = post_date_get_datetime();
+  $end = post_date_get_datetime('end');
+
+  if (strftime('%Y-%m-%d', $begin) == strftime('%Y-%m-%d', $end)) {
+      return date_i18n('d. F', $begin);
+  } else {
+      return date_i18n('d.', $begin) . date_i18n(' – 'd. F'', $end);
+  }
+}
+
 function post_date_is_past($post) {
   $today = strtotime('today');
   return get_field('end', $post) <= $today;
