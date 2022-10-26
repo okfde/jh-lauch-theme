@@ -17,7 +17,7 @@ get_header();
         <div class="col-50">
             <header class="c-page-section pb-2">
                 <h1 class="mt-0 mb-3">Kalender</h1>
-                <p>Hier findest du alle kommenden Event- und Workshop-Angebote von Jugend hackt. Jeder Eintrag bringt dich zur Termin-Seite mit mehr Infos.</p>
+                <p>Schnelle Übersicht über alle kommenden Termine - vor allem für Philip und den Newsletter :)</p>
             </header>
             <div class="c-toc c-toc--horizontal">
                 <ul class="c-toc-nav">
@@ -35,6 +35,7 @@ get_header();
                             'order' => $is_active ? 'ASC' : 'DESC',
                             'meta_query' => array(
                                 'begin' => post_date_get_timed_query($is_active),
+                            'posts_per_page' => 100
                             )
                           );
                           if (isset($_GET['lab_id'])) {
@@ -48,7 +49,7 @@ get_header();
                           post_date_get_sorted($the_query); ?>
 
                           <?php if ($the_query->have_posts()) : ?>
-                            <h2><?= $is_active ? 'Kommende Events' : 'Vergangene Events' ?></h2>
+                            <h2><?= $is_active ? 'Kommende Termine' : 'Vergangene Termine' ?></h2>
                             <?php while ($the_query->have_posts()) : $the_query->the_post();
                                 $info = array('lab' => get_field('parent')->post_title,
                                   'link' => get_post_permalink(),
