@@ -85,7 +85,7 @@ function post_date_format_date_simple($mit_jahr) {
   $begin = post_date_get_datetime();
   $end = post_date_get_datetime('end');
 
-  if ($mit_jahr == true) {$jahr = date_i18n(' o', $begin)};
+  
 
   if (strftime('%Y-%m-%d', $begin) == strftime('%Y-%m-%d', $end)) {
       return date_i18n('j. F', $begin) . $jahr;
