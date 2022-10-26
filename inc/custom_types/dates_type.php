@@ -81,14 +81,16 @@ function post_date_format_date() {
   }
 }
 
-function post_date_format_date_simple() {
+function post_date_format_date_simple($mit_jahr) {
   $begin = post_date_get_datetime();
   $end = post_date_get_datetime('end');
 
+  if ($mit_jahr == true) {$jahr = date_i18n(' o', $begin)};
+
   if (strftime('%Y-%m-%d', $begin) == strftime('%Y-%m-%d', $end)) {
-      return date_i18n('d. F', $begin);
+      return date_i18n('j. F', $begin) . $jahr;
   } else {
-      return date_i18n('d.', $begin) . " - " . date_i18n('d. F', $end);
+      return date_i18n('j.', $begin) . " - " . date_i18n('d. F', $end) . $jahr;
   }
 }
 
