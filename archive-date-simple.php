@@ -56,7 +56,7 @@ get_header();
                                   'img' => get_post_thumbnail_id(),
                                   'title' => $post->post_title,
                                   'date_technical' => post_date_get_datetime(),
-                                  'date' => $is_active ? post_date_format_date_simple(false) : post_date_format_date_simple(true));
+                                  'date' => $is_active ? post_date_format_date_simple() : post_date_format_date_simple_y();
                                 array_push($all_dates, $info);
                             endwhile;
                             wp_reset_postdata();

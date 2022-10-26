@@ -81,16 +81,25 @@ function post_date_format_date() {
   }
 }
 
-function post_date_format_date_simple($mit_jahr) {
+function post_date_format_date_simple() {
   $begin = post_date_get_datetime();
   $end = post_date_get_datetime('end');
 
-  
+  if (strftime('%Y-%m-%d', $begin) == strftime('%Y-%m-%d', $end)) {
+      return date_i18n('j. F', $begin);
+  } else {
+      return date_i18n('j.', $begin) . " - " . date_i18n('d. F', $end);
+  }
+}
+
+function post_date_format_date_simple_y() {
+  $begin = post_date_get_datetime();
+  $end = post_date_get_datetime('end');
 
   if (strftime('%Y-%m-%d', $begin) == strftime('%Y-%m-%d', $end)) {
-      return date_i18n('j. F', $begin) . $jahr;
+      return date_i18n('j. F o', $begin);
   } else {
-      return date_i18n('j.', $begin) . " - " . date_i18n('d. F', $end) . $jahr;
+      return date_i18n('j.', $begin) . " - " . date_i18n('d. F o', $end);
   }
 }
 
