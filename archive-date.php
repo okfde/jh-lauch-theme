@@ -18,12 +18,14 @@ get_header();
                 <p>Hier findest du alle kommenden Event- und Workshop-Angebote von Jugend hackt. Jeder Eintrag bringt dich zur Termin-Seite mit mehr Infos.</p>
             </header>
             <div class="c-toc c-toc--horizontal">
+              <?php if ( !isset( $_GET['lab_id'])) : ?>
                 <ul class="c-toc-nav">
                     <li><a href="#labs" class="hover-line-trigger <?= isset($_GET['lab_id']) ? "is-active" : '' ?>">
                             <span class="hover-line"><?php echo __('Labs', 'lauch'); ?></span></a></li>
                     <li><a href="#events" class="hover-line-trigger">
                             <span class="hover-line"><?php echo __('Events', 'lauch'); ?></span></a></li>
                 </ul>
+              <?php endif; ?>
                 <div class="c-toc-content c-events-list">
                     <section id="events">
                       <?php
@@ -123,7 +125,7 @@ get_header();
                           post_date_get_sorted($the_query); ?>
 
                           <?php if ($the_query->have_posts()) : ?>
-                            <h2><?= $is_active ? 'Kommende Events' : 'Vergangene Events' ?></h2>
+                            <h2><?= $is_active ? 'Kommende Lab-Angebote' : 'Vergangene Termine' ?></h2>
                             <?php while ($the_query->have_posts()) : $the_query->the_post();
                                 $info = array('lab' => get_field('parent')->post_title,
                                   'link' => get_post_permalink(),
