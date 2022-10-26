@@ -88,7 +88,7 @@ function post_date_format_date_simple() {
   if (strftime('%Y-%m-%d', $begin) == strftime('%Y-%m-%d', $end)) {
       return date_i18n('d. F', $begin);
   } else {
-      return date_i18n('d.', $begin) . date_i18n(' – 'd. F'', $end);
+      return date_i18n('d.', $begin) . " - " . date_i18n('d. F', $end);
   }
 }
 
