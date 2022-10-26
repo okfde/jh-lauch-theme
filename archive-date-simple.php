@@ -23,85 +23,9 @@ get_header();
                 <ul class="c-toc-nav">
                     <li><a href="#labs" class="hover-line-trigger <?= isset($_GET['lab_id']) ? "is-active" : '' ?>">
                             <span class="hover-line"><?php echo __('Labs', 'lauch'); ?></span></a></li>
-                    <li><a href="#events" class="hover-line-trigger">
-                            <span class="hover-line"><?php echo __('Events', 'lauch'); ?></span></a></li>
                 </ul>
                 <div class="c-toc-content c-events-list">
-                    <section id="events">
-                      <?php
-                      foreach ([1, 0] as $is_active) :
-
-                          $eventp = get_posts(array('post_type' => 'page',
-                            'meta_query' => array(
-                              array('key' => '_wp_page_template',
-                                'value' => 'event-overview.php'))))[0];
-
-                          $args = array('post_type' => 'page',
-                            'post_parent' => $eventp->ID,
-                            'meta_key' => 'is_active',
-                            'meta_value' => $is_active,
-                            'orderby' => 'post_date',
-                            'order' => 'DESC',
-                            'posts_per_page' => 100
-                          );
-                          $the_query = new WP_Query($args); ?>
-
-                          <?php if ($the_query->have_posts()) : ?>
-                            <h2><?= $is_active ? 'Kommende Events' : 'Vergangene Events' ?></h2>
-                              <ul>
-                                <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-                                    <li>
-                                        <div class="event-teaser-list-item no-hover">
-                                            <div class="d-f ai-s">
-                                                <picture class="events-list-image">
-                                                    <source srcset="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'events-teaser-s'); ?>"
-                                                            media="(max-width: 1900px)">
-                                                    <source srcset="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'events-teaser-highdpi'); ?>"
-                                                            media="(min-resolution: 192dpi)">
-                                                    <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'events-teaser-m'); ?>"
-                                                         width="90" loading="lazy">
-                                                </picture>
-                                                <div class="">
-                                                    <div class="d-f">
-                                                        <h3 class="mb-0 mt-0">
-                                                            <a href="<?php the_permalink() ?>"
-                                                               title="Mehr Infos zu <?php the_title() ?>">
-                                                              <?php the_title() ?>
-                                                              <?php if (isset(get_field('next_event')[0])) :
-                                                                $event = get_field('next_event')[0]; ?>
-                                                                  <time><?php the_field('datum', $event->ID); ?></time>
-                                                              <?php endif; ?>
-                                                            </a></h3>
-                                                        </a>
-                                                    </div>
-                                                    <div class="events-list-actions active">
-                                                        <a
-                                                                href="<?php the_permalink() ?>"
-                                                                title="Mehr Infos zu Jugend hackt in <?php the_title() ?>">Mehr
-                                                            Infos</a>
-                                                      <?php if (isset(get_field('next_event')[0])) :
-                                                        $event = get_field('next_event')[0]; ?>
-                                                        <?php if (get_field('anmeldungslink', $event->ID)
-                                                        && get_field('anmeldungslink', $event->ID) != ""): ?>
-                                                          <a href="<?php the_field('anmeldungslink', $event->ID); ?>"
-                                                             title="Anmeldung für Jugend hackt
-                                                             in <?php the_title() ?>">Anmelden</a>
-                                                      <?php endif; ?>
-                                                      <?php endif ?>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                <?php endwhile; ?>
-                                <?php wp_reset_postdata(); ?>
-                              </ul>
-                          <?php endif;
-                      endforeach; ?>
-
-                    </section>
                     <section id="labs" <?= isset($_GET['lab_id']) ? 'class="is-active"' : '' ?>>
-
                       <?php
                         foreach ([true, false] as $is_active) :
                           $all_dates = array();
