@@ -1,7 +1,12 @@
 <div class="c-page-section jc-sb c-page-2col c-project">
   <div class="col-l fg needs-js">
+    <?php if (get_field('mediaccc')): ?>
+    <iframe width="560" height="315" src="<?php the_field('mediaccc')?>/oembed" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <noscript>Kein JavaScript? <a href="<?php the_field('mediaccc')?>">Sie dir das Video hier an!</a></noscript>
+    <?php else ?>
     <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/<?php the_field('youtubeid', $post) ?>?controls=1&rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <noscript>Kein JavaScript? <a href="https://youtube.com/watch?v=<?php the_field('youtubeid', $post) ?>">Sie dir das Video hier an!</a></noscript>
+    <? endif ?>
   </div>
   <div class="col-s c-project-profile">
     <dl>
@@ -34,7 +39,10 @@
           <a href="<?php the_field('github'); ?>">Git-Repository <?php echo render_svg('/images/arrow-external-white.svg'); ?></a>
         <?php endif ?>
         <?php if (get_field('mediaccc')): ?>
-          <a href="<?php the_field('mediaccc')?>">Media.CCC <?php echo render_svg('/images/arrow-external-white.svg'); ?></a>
+          <a href="<?php the_field('mediaccc')?>">Media.CCC.de <?php echo render_svg('/images/arrow-external-white.svg'); ?></a>
+        <?php endif ?>
+        <?php if (get_field('youtubeid')): ?>
+          <a href="https://youtube.com/watch?v=<?php the_field('youtubeid', $post) ?>">YouTube <?php echo render_svg('/images/arrow-external-white.svg'); ?></a>
         <?php endif ?>
         <?php if (get_field('hackdashurl')): ?>
           <a href="<?php the_field('hackdashurl')?>">HackDash <?php echo render_svg('/images/arrow-external-white.svg'); ?></a>
