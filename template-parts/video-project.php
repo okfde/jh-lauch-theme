@@ -6,7 +6,7 @@
     <?php else ?>
     <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/<?php the_field('youtubeid', $post) ?>?controls=1&rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <noscript>Kein JavaScript? <a href="https://youtube.com/watch?v=<?php the_field('youtubeid', $post) ?>">Sie dir das Video hier an!</a></noscript>
-    <? endif ?>
+    <?php endif ?>
   </div>
   <div class="col-s c-project-profile">
     <dl>
