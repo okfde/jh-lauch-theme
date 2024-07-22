@@ -75,9 +75,9 @@ if ((get_field('next_event'))) {
   <?php endif; ?>
 
   <section class="c-page-section">
-    <div class="">
-      <div class="c-program-title">
-        <h2><?php echo __("Das Programm", "lauch"); ?></h2>
+    <div class="c-program-title">
+      <h2><?php echo __("Das Programm", "lauch"); ?></h2>
+      <div class="c-page-standard wp-styles">
         <?php the_field('event_programm', $next->ID); ?>
       </div>
     </div>
