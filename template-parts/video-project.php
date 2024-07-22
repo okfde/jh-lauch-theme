@@ -2,10 +2,10 @@
   <div class="col-l fg needs-js">
     <?php if (get_field('mediaccc')): ?>
     <iframe width="560" height="315" src="<?php the_field('mediaccc')?>/oembed" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <noscript>Kein JavaScript? <a href="<?php the_field('mediaccc')?>">Sie dir das Video hier an!</a></noscript>
-    <?php else ?>
+    <noscript>Kein JavaScript? <a href="<?php the_field('mediaccc')?>">Sieh dir das Video hier an!</a></noscript>
+    <?php else: ?>
     <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/<?php the_field('youtubeid', $post) ?>?controls=1&rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <noscript>Kein JavaScript? <a href="https://youtube.com/watch?v=<?php the_field('youtubeid', $post) ?>">Sie dir das Video hier an!</a></noscript>
+    <noscript>Kein JavaScript? <a href="https://youtube.com/watch?v=<?php the_field('youtubeid', $post) ?>">Sieh dir das Video hier an!</a></noscript>
     <?php endif ?>
   </div>
   <div class="col-s c-project-profile">
