@@ -36,7 +36,7 @@ while (have_posts()) :
     <section class="c-page-section white pt-4 pb-4">
 
         <div class="c-page-slim c-rich-text-content">
-            <h2 id="spenden">Spenden via <br/>betterplace</h2>
+            <h2 id="spenden">Spenden via betterplace</h2>
             <div id="betterplace_donation_iframe" style="background: none;">
                 <iframe height="1350" width="100%" frameborder="0"
                         src="https://www.betterplace.org/de/donate/iframe/projects/19214?background_color=ffffff&amp;color=E6414A&amp;donation_amount=50&amp;bottom_logo=false&amp;default_payment_method=&amp;default_interval=single&amp;utm_campaign=external_donation_forms&amp;utm_source=domain:%20freundeskreis.jugendhackt.org&amp;utm_medium=project_19214&amp;utm_content=freundeskreis.jugendhackt.org"
