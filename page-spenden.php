@@ -40,7 +40,7 @@ while (have_posts()) :
             <div id="betterplace_donation_iframe" style="background: none;">
                 <iframe height="1350" width="100%" frameborder="0"
                         src="https://www.betterplace.org/de/donate/iframe/projects/19214?background_color=ffffff&amp;color=E6414A&amp;donation_amount=50&amp;bottom_logo=false&amp;default_payment_method=&amp;default_interval=single&amp;utm_campaign=external_donation_forms&amp;utm_source=domain:%20freundeskreis.jugendhackt.org&amp;utm_medium=project_19214&amp;utm_content=freundeskreis.jugendhackt.org"
-                        id="iFrameResizer0" scrolling="no"
+                        id="iFrameResizer0" scrolling="yes"
                         style="max-height: none; width: 100%; background-color: transparent; overflow: hidden; height: 1350px;"></iframe>
             </div>
           <?php the_field('donations_bank_transfer') ?>
