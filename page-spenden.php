@@ -37,12 +37,24 @@ while (have_posts()) :
 
         <div class="c-page-slim c-rich-text-content">
             <h2 id="spenden">Spenden via betterplace</h2>
-            <div id="betterplace_donation_iframe" style="background: none;">
-                <iframe height="1350" width="100%" frameborder="0"
-                        src="https://www.betterplace.org/de/donate/iframe/projects/19214?background_color=ffffff&amp;color=E6414A&amp;donation_amount=50&amp;bottom_logo=false&amp;default_payment_method=&amp;default_interval=single&amp;utm_campaign=external_donation_forms&amp;utm_source=domain:%20freundeskreis.jugendhackt.org&amp;utm_medium=project_19214&amp;utm_content=freundeskreis.jugendhackt.org"
-                        id="iFrameResizer0" scrolling="yes"
-                        style="max-height: none; width: 100%; background-color: transparent; overflow: hidden; height: 1350px;"></iframe>
-            </div>
+<script type="text/javascript">
+  /* Configure at https://www.betterplace.org/de/manage/projects/19214-jugend-hackt-unterstuetze-junge-menschen-mit-code-die-welt-zu-verbessern/iframe_donation_form/new */
+  var _bp_iframe        = _bp_iframe || {};
+  _bp_iframe.project_id = 19214; /* REQUIRED */
+  _bp_iframe.lang       = 'de'; /* Language of the form */
+  _bp_iframe.width = 600; /* Custom iframe-tag-width, integer */
+  _bp_iframe.color = 'E6414A'; /* Button and banderole color, hex without "#" */
+  _bp_iframe.background_color = 'ffffff'; /* Background-color, hex without "#" */
+  _bp_iframe.default_amount = 50; /* Donation-amount, integer 1-99 */
+  _bp_iframe.recurring_interval = 'single'; /* Interval for recurring donations, string out of single, monthly und yearly */
+  _bp_iframe.bottom_logo = true;
+  (function() {
+    var bp = document.createElement('script'); bp.type = 'text/javascript'; bp.async = true;
+    bp.src = 'https://betterplace-assets.betterplace.org/assets/load_donation_iframe.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(bp, s);
+  })();
+</script>
+<div id="betterplace_donation_iframe" style="background: transparent url('https://www.betterplace.org/assets/new_spinner.gif') 275px 20px no-repeat;"><strong><a href="https://www.betterplace.org/de/donate/platform/projects/19214-jugend-hackt-unterstuetze-junge-menschen-mit-code-die-welt-zu-verbessern">Jetzt Spenden für „Jugend hackt - Unterstütze junge Menschen, mit Code die Welt zu verbessern!“ bei unserem Partner betterplace.org</a></strong></div>
           <?php the_field('donations_bank_transfer') ?>
         </div>
     </section>
