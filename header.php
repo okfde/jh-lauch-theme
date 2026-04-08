@@ -52,9 +52,8 @@
 	  ?>
 	    <h1 class="c-nav-logo">
               <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"
-                 class="no-text"
-                 style="background-image: url(<?php echo get_header_image(); ?>)">
-                <?php bloginfo( 'name' ); ?>
+                  class="" title="<?php bloginfo( 'name' ); ?>">
+                  <?php echo get_template_part('template-svg/logo', 'sw'); ?>
               </a>
             </h1>
 	  <?php
@@ -62,9 +61,9 @@
 	  ?>
              <p class="c-nav-logo">
                   <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"
-                     class="no-text"
-                     style="background-image: url(<?php echo get_header_image(); ?>)">
-                    <?php bloginfo( 'name' ); ?>
+                      class="" title="<?php bloginfo( 'name' ); ?>">
+                      <?php echo get_template_part('template-svg/logo', 'sw'); ?>
+
                   </a>
              </p>
 	  <?php
