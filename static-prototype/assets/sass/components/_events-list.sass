@@ -87,6 +87,14 @@
       font-size: 1rem
 
 
+.c-event-list__list
+  @media (min-width: $break-sm)
+    column-count: 2
+    column-gap: 4em;
+    break-inside: avoid;
+  @media (min-width: $break-ml)
+    column-count: 3
+
 .c-events-list + .c-events-list
   margin-top: 8rem
 
