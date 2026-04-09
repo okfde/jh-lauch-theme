@@ -34,6 +34,7 @@ function lauch_dates_init() {
     $args = array(
         'labels'             => $labels,
         'public'             => true,
+        'has_archive'        => true,
         'publicly_queryable' => true,
         'show_ui'            => true,
         'show_in_menu'       => true,

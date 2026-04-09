@@ -11,9 +11,9 @@ body
   font-smooth: always
   overflow-x: hidden
   position: relative
+  background-color:  #F8F8FF
 
 body
-  +bg-pattern($color-bg-grey)
   line-height: 1.47
 
 h1
@@ -69,7 +69,7 @@ strong
 
 details
   padding: 1em 0 0.7em
-  border-bottom: 1px solid $color-softgrey
+  border-bottom: 1px solid $color-grey
   &[open]
     padding-bottom: 1.7em
 
@@ -78,7 +78,7 @@ summary
   font-weight: $font-weight-bold
   font-size: 20px
   &::-webkit-details-marker
-    color: $color-pink
+    color: $color-orange
   @media (min-width: $break-small)
     list-style-position: outside
 
@@ -87,7 +87,7 @@ iframe
 //  min-height: 40vh
 
 hr
-  border-color: $color-softgrey
+  border-color: $color-grey
 
 em
   font-style: italic
