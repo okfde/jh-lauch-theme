@@ -1,3 +1,4 @@
+
 <div class="c-footer-support">
   <div class="support-illustration">
     <?php get_template_part('images/illustrations', 'freundeskreis.svg' ); ?>
