@@ -8,31 +8,12 @@
   border: none !important
   cursor: pointer
   line-height: 2
+  background: $color-orange
+  &:hover, &:active
+    background: $color-orange
 
 a.button--simple
   color: $color-white
   border-bottom: 0
   font-size: 0.875rem
   font-weight: $font-weight-bold
-
-@each $name, $color in $backend-colors
-  a.button--#{$name}
-    background: $color
-    &:hover, &:active
-      background: map_get($backend-colors-hover, $name) !important
-
-// keep these so we don't break any existing references
-a.button--red
-  background: $color-softred
-  &:hover, &:active
-    background: $color-deepred !important
-
-a.button--orange
-  background: $color-softorange
-  &:hover, &:active
-    background: $color-deeporange !important
-
-a.button--blue
-  background: $color-softblue
-  &:hover, &:active
-    background: $color-deepblue !important

@@ -1,5 +1,5 @@
 <?php
-/**
+    /**
  * The main template file
  *
  * This is the most generic template file in a WordPress theme
@@ -55,8 +55,8 @@ $blog = get_option( 'page_for_posts' ); ?>
   </ul>
 </section>
 
-<section class="c-catnav c-catnav--light" id="kategorien">
-  <h2 class="c-catnav-title"><?php echo _('Alles zum Thema', 'lauch'); ?></h2>
+<h1>TEST<h1><section class="c-catnav c-catnav--light" id="kategorien">
+  <h2 class="c-catnav-title">Alles zum Thema</h2>
   <nav>
     <div class="tns-controls">
       <button class="tns-prev" title="Nach links"><?php render_svg('/images/icons/arrow-left.svg'); ?></button>

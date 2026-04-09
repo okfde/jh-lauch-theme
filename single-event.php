@@ -13,6 +13,8 @@ get_header();
 while ( have_posts() ) :
 the_post(); ?>
 
+<h1>SINGLE EVENT</h1>
+
   <?php get_template_part( 'template-parts/retro', 'event'); ?>
 
   <div class="c-page-section pb-0 white">

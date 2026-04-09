@@ -35,16 +35,10 @@ if ((get_field('next_event'))) {
         <?php the_field('event_longform', $next->ID); ?>
       </div>
       <?php if (get_field('contact_person', $next->ID)): ?>
-        <?php echo do_shortcode('[contactperson person="'. get_field('contact_person', $next->ID) .'" title="'. _("Du hast Fragen?", 'lauch') .'"]'); ?>
+        <?php echo do_shortcode('[contactperson person="'. get_field('contact_person', $next->ID) .'" title="Du hast Fragen?"]'); ?>
       <?php endif; ?>
     </div>
 
-
-    <?php if (get_field('illustration_right')) : ?>
-      <div class="c-page-header-illustration right-top">
-        <img src="<?php the_field('illustration_right'); ?>" alt="" width="200">
-      </div>
-    <?php endif ?>
   </div>
 
   <section class="c-page-section c-page-center">
@@ -53,10 +47,6 @@ if ((get_field('next_event'))) {
       <div class="col-l c-event-overview">
         <?php the_field('event_facts', $next->ID); ?>
       </div>
-      <div class="col-s fg c-event-map">
-        <div  id="map" class="c-map"></div>
-        <noscript>Kein JavaScript? Hier sollte eine Karte mit der Event Location dargestellt werden.</noscript></div>
-    </div>
   </section>
 
   <?php if (get_field('anmeldungslink', $next->ID)): ?>

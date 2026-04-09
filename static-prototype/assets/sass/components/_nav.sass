@@ -49,17 +49,19 @@
 .c-nav-logo
   flex-grow: 1
   align-self: flex-start
-  a
+  svg
     display: block
-    width: 10.7rem
-    height: 3.7rem
-    background-size: 99%
-    background-repeat: no-repeat
+    width: 100%
+  a
+    width: 11em
+    display: block
+
   @media (min-width: $break-medium)
     margin-top: 1rem
   @media (min-width: $break-small)
     a
       width: 15rem
+
 
 @media (max-width: $break-medium)
   .c-nav-toggle:checked ~ .c-nav-items
@@ -93,8 +95,6 @@
     a
       color: $color-white
       border-color: $color-white
-  .c-nav-toggle:checked ~ .c-nav-logo a
-    background-image: url(../images/JH_Logo_RGB-weiss.svg) !important
 
   .c-nav-logo
     position: absolute
