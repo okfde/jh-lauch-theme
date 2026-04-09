@@ -16,17 +16,14 @@
     endwhile;
 ?>
 
-<header class="c-page-home-header pb-10 c-index-header p-r">
+<header class="c-page-home-header c-index-header p-r">
     <div class="c-index-wrapper">
         <h1 class="c-index-title">Mit <span id="revolving-claims">Code</span> die<br> Welt verbessern</h1>
         <div class="c-page-content"><?php the_content(); ?></div>
-        <div class="c-index-illu">
-            <?php render_svg("/images/index/Illustration-Mashup-Start-02-1200-02.svg") ?>
-        </div>
     </div>
 </header>
 
-<section class="c-page-section white pt-10">
+<section class="c-page-section white pt-5">
 
     <h2 class="c-index-subtitle mt-1"><?php echo __('Die nächsten Termine', 'lauch'); ?></h2>
 
@@ -134,7 +131,6 @@
 
 
 <section class="c-page-section c-blog-list is-grid p-r">
-    <div class="p-a c-index-illu-news"><?php render_svg('/images/index/News-Illu.svg'); ?></div>
     <h2 class="c-flag mini softblue points-bottom upper mb-3"><?php echo __('Aus dem Blog', 'lauch'); ?></h2>
     <?php
         setlocale(LC_TIME, "de_DE");
@@ -179,13 +175,6 @@
 
         echo do_shortcode($out); ?>
 </section>
-
-
-<!--
-     <section class="c-page-section">
-     <h2><?php echo __('So war es in', 'lauch'); ?></h2>
-     </section>
--->
 
 <section class="">
     <?php get_template_part( 'template-parts/support-cta', get_post_type() ); ?>
