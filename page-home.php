@@ -16,12 +16,12 @@
     endwhile;
 ?>
 
-<header class="c-page-home-header c-index-header p-r">
+<section class="c-page-home-header c-index-header p-r" style="background-image: url(<?php if (is_front_page()) { echo get_the_post_thumbnail_url(null, 'full'); } ?>)">
     <div class="c-index-wrapper">
         <h1 class="c-index-title">Mit <span id="revolving-claims">Code</span> die<br> Welt verbessern</h1>
         <div class="c-page-content"><?php the_content(); ?></div>
     </div>
-</header>
+</section>
 
 <section class="c-page-section white pt-5">
 
@@ -31,7 +31,7 @@
         <div class=" c-events-list">
             <?php get_template_part('template-parts/calendar', 'overview'); ?>
 
-            <p class="c-page-copy"><a href="kalender/">Alle Termine anzeigen</a></p>
+            <p class=""><a href="kalender/" class="button">Alle Termine anzeigen</a></p>
 
         </div>
     </div>

@@ -65,7 +65,7 @@ function rewrite_date_url( $url, $post ) {
   }
   return $url;
 }
-add_filter( 'post_type_link', 'rewrite_date_url', 10, 2 );
+//add_filter( 'post_type_link', 'rewrite_date_url', 10, 2 );
 
 function post_date_get_datetime($pos = 'begin', $post_id = false) {
   return DateTime::createFromFormat('U', get_field($pos, $post_id), wp_timezone())->getTimestamp();

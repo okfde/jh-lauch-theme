@@ -18,7 +18,7 @@ get_header();
 <?php
 $blog = get_option( 'page_for_posts' ); ?>
 
-<header class="c-page-offcenter-header">
+<header class="c-page-offcenter-header mt-2">
   <h1 class="c-page-title"><?php echo get_the_title($blog);  ?></h1>
   <div class="c-page-excerpt"><?php echo get_post($blog)->post_content; ?></div>
 </header>
