@@ -18,23 +18,25 @@
     transition: opacity 125ms ease-out
     opacity: 0
   li:not(.c-nav-logo)
-    margin-left: 1.6rem
+    margin-left: 0.3rem
     @media (max-width: $break-medium)
       text-align: right
       display: none
     a
-      transition: border 80ms ease
+      transition: background 100ms ease
       font-size: 1rem
       font-weight: $font-weight-bold
       color: $body-color
       text-decoration: none
       font-family: 'Geist Mono', monospace
+      padding: 0.3em 0.6em 0.2em;
       &:hover,
       &:active,
       &[aria-current="page"]
-        border-bottom: 3px solid var(--event-single-color)
-        @media (min-width: $break-large)
-          border-width: 4px
+        background: var(--event-single-color);
+        //border-bottom: 3px solid var(--event-single-color)
+        //@media (min-width: $break-large)
+          //border-width: 4px
 
       @media (max-width: $break-medium)
         display: block

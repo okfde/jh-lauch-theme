@@ -61,19 +61,20 @@
       color: currentColor
       text-decoration: none
       font-size: 0.65rem
+      padding: 0.1em 0.3em
       margin-right: 1.12rem
-      transition: color 200ms ease
+      transition: color 100ms ease, background 100ms ease
       @media (min-width: $break-medium)
         font-size: 0.8125rem
       &:hover,
       &:active
-        border-bottom: 3px solid $color-black
-        background-color: transparent
+        background-color: $color-black
+        color: $color-white
       &:last-child
         margin-right: 0
     &.active
       a:nth-of-type(2)
-        color: $color-blue
+        //color: $color-blue
   .events-list-sectionheader
     font-weight: $font-weight-bold
     text-transform: uppercase
@@ -110,7 +111,7 @@
     .events-list-hover
       opacity: 1
     a
-      color: $color-black !important
+      //color: $color-black !important
 
   display: flex
   padding: 1.8em $body-padding 1.8em
