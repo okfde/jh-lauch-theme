@@ -33,7 +33,7 @@
   .events-list-title
     font-size: 1.17rem
     margin: 0
-    //white-space: nowrap
+    font-weight: 600;
     padding-right: 1rem
     @media (min-width: $break-medium)
       font-size: 2.4rem
@@ -62,16 +62,18 @@
       text-decoration: none
       font-size: 0.65rem
       margin-right: 1.12rem
+      transition: color 200ms ease
       @media (min-width: $break-medium)
         font-size: 0.8125rem
       &:hover,
       &:active
+        border-bottom: 3px solid $color-black
         background-color: transparent
       &:last-child
         margin-right: 0
     &.active
       a:nth-of-type(2)
-        color: $color-primary
+        color: $color-blue
   .events-list-sectionheader
     font-weight: $font-weight-bold
     text-transform: uppercase
@@ -84,7 +86,6 @@
   .events-list-actions--overview
     a
       font-size: 1rem
-
 
 .c-event-list__list
   @media (min-width: $break-sm)
@@ -105,9 +106,12 @@
   overflow: hidden
   &:hover,
   &:active
-    background-color: #2969b2
+    background-color: $color-blue
     .events-list-hover
       opacity: 1
+    a
+      color: $color-black !important
+
   display: flex
   padding: 1.8em $body-padding 1.8em
 
@@ -119,18 +123,3 @@
   @media (min-width: $break-small)
     display: flex
     flex-wrap: wrap
-
-.events-list-hover
-  position: absolute
-  top: 0
-  bottom: 0
-  right: 10vw
-  @media (max-width: $break-small)
-    display: none
-  @media (min-width: $break-small)
-    opacity: 0
-    transition: opacity 170ms ease-in 200ms
-
-  svg
-    height: 100%
-    width: 9rem

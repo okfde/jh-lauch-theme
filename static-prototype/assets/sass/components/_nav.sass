@@ -28,6 +28,7 @@
       font-weight: $font-weight-bold
       color: $body-color
       text-decoration: none
+      font-family: 'Geist Mono', monospace
       &:hover,
       &:active,
       &[aria-current="page"]
@@ -75,26 +76,14 @@
     flex-flow: column nowrap
     align-items: flex-end
     opacity: 1
-    background-color: $color-primary
-    background-image: url(../images/menu-bg.svg), url(../images/JH-Pattern.svg)
-    background-blend-mode: normal, soft-light
-    background-repeat: no-repeat, repeat
-    background-position: -8em 85%,top left
-
-    @media (min-width: 320px)
-      background-size: 40em, 45px
-    @media (min-width: 900px)
-      background-size: 40em, 55px
-    @media (min-width: 1200px)
-      background-size: 40em, 65px
-    @media (min-width: 1900px)
-      background-size: 40em, 85px
+    background-color: $color-lilac
 
     li
       display: block
     a
-      color: $color-white
+      color: $color-black
       border-color: $color-white
+      font-family: 'Geist Mono', monospace
 
   .c-nav-logo
     position: absolute
