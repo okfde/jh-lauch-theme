@@ -21,7 +21,7 @@
 
     <div class="c-toc--horizontal mt-4">
         <div class="c-toc-horizontal c-events-list">
-            <?php get_template_part('template-parts/calendar', 'overview'); ?>
+            <?php get_template_part('template-parts/calendar', 'overview', array('num' => -1)); ?>
         </div>
     </div>
 </section>

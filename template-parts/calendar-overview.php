@@ -1,4 +1,5 @@
 <?php
+    $num = $args['num'];
     $eventp = get_posts(array('post_type' => 'page',
                               'meta_query' => array(
                                   array('key' => '_wp_page_template',
@@ -16,7 +17,7 @@
         'orderby' => 'meta_value_datetime',
         'meta_key' => 'begin',
         'meta_query' => post_date_get_timed_query(),
-        'posts_per_page' => -1,
+        'posts_per_page' => $num,
         'tax_query' => array(
             array(
                 'taxonomy' => 'lab-location',

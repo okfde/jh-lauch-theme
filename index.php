@@ -55,7 +55,7 @@ $blog = get_option( 'page_for_posts' ); ?>
   </ul>
 </section>
 
-<h1>TEST<h1><section class="c-catnav c-catnav--light" id="kategorien">
+<section class="c-catnav c-catnav--light" id="kategorien">
   <h2 class="c-catnav-title">Alles zum Thema</h2>
   <nav>
     <div class="tns-controls">
@@ -73,7 +73,7 @@ $blog = get_option( 'page_for_posts' ); ?>
           <a href="<?php echo get_term_link($term->slug, $term->taxonomy ); ?>"
              title="Alle Posts zu <?php echo $term->name ?>"
              class="hover-line-trigger">
-            <h3><span class="hover-line"><?php echo $term->name; ?></span></h3>
+            <h3><span class="hover-line bold"><?php echo $term->name; ?></span></h3>
             <p><?php echo $term->description; ?></p>
           </a>
         </li>
