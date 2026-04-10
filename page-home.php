@@ -29,7 +29,7 @@
 
     <div class="c-toc c-toc--horizontal">
         <div class=" c-events-list">
-            <?php get_template_part('template-parts/calendar', 'overview'); ?>
+            <?php get_template_part('template-parts/calendar', 'overview', array('num' => 9)); ?>
 
             <p class=""><a href="kalender/" class="button">Alle Termine anzeigen</a></p>
 
@@ -42,7 +42,7 @@
     <h2 class="c-flag mini softblue points-bottom upper mb-3"><?php echo __('Aus dem Blog', 'lauch'); ?></h2>
     <?php
         setlocale(LC_TIME, "de_DE");
-        $args2 = array('posts_per_page' => 3);
+        $args2 = array('posts_per_page' => 2);
         $the_query2 = new WP_Query( $args2 ); ?>
 
     <?php if ( $the_query2->have_posts() ) : ?>

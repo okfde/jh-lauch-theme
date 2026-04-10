@@ -10,10 +10,11 @@
             <div class="d-f">
                 <h3 class="mb-0 mt-0 bold">
                     <a href="<?php the_permalink() ?>"
-                        title="Mehr Infos zu <?php the_title() ?>">
-                        <?php the_title() ?>
+                        title="Mehr Infos zu <?php the_title() ?>"
+                        class="hover-line-trigger">
+                        <span class="hover-line"><?php the_title() ?>
                         <time class="" datetime="">
-                            <?php the_field('datum', $event->ID); ?></time>
+                            <?php the_field('datum', $event->ID); ?></time></span>
                     </a>
                 </h3>
             </div>

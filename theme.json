@@ -1,0 +1,40 @@
+{
+  "version": 2,
+  "settings": {
+	"color": {
+	  "background": true,
+	  "custom": false,
+	  "customDuotone": false,
+	  "customGradient": false,
+	  "defaultDuotone": false,
+	  "defaultGradients": false,
+	  "defaultPalette": false,
+	  "duotone": [],
+	  "gradients": [],
+	  "link": true,
+	  "palette": [
+        {
+        "color": "#0096FF",
+        "name": "Blau",
+        "slug": "blue"
+      },
+        {
+        "color": "#CF9FFF",
+        "name": "Flieder",
+        "slug": "lilac"
+      },
+        {
+        "color": "#F3971B",
+        "name": "Orange",
+        "slug": "orange"
+      },
+        {
+        "color": "#000000",
+        "name": "Schwarz",
+        "slug": "black"
+      }
+      ],
+	  "text": true
+	}
+  }
+}
