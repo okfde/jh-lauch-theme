@@ -5,15 +5,14 @@
 get_header();
 ?>
 
-    <div class="p-r">
-        <header class="c-page-offcenter-header">
-            <?php the_title('<h1 class="c-page-title pt-1">', '</h1>')?>
+
+        <header class="c-page-offcenter-header mt-2">
+            <?php the_title('<h1 class="c-page-title">', '</h1>')?>
             <div class="c-page-excerpt"><?php the_content(); ?></div>
             <div class="c-page-header-illustration right-one">
                 <img src="<?php echo get_field('illustration_right'); ?>" alt="" width="120">
             </div>
         </header>
-    </div>
 
     <section class="c-blog-list is-grid pt-5">
         <?php $args = array(

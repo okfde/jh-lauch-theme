@@ -1,5 +1,5 @@
 <div class="event-teaser-list-item no-hover">
-    <a href="<?php echo $post->guid; ?>" title="Zur Seite von Lab: <?php echo get_field('parent', $post->ID)->post_title; ?>">
+    <a href="<?php echo get_permalink($post->ID);; ?>" title="Zur Seite von Lab: <?php echo get_field('parent', $post->ID)->post_title; ?>">
         <div class="d-f ai-s">
             <picture class="events-list-image">
                 <?php echo get_the_post_thumbnail($post->ID, 'lab-event-teaser') ?>

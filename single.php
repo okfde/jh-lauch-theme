@@ -13,7 +13,7 @@ while ( have_posts() ) :
 the_post(); ?>
 
   <section>
-    <div class="c-page-alpaca-header p-r">
+    <div class="c-page-alpaca-header p-r mt-2">
       <div class="c-page-alpaca-featured addon addon--<?php the_field('illustration_class'); ?> addon--large addon--<?php the_field('illustration_xaxis'); ?> addon--<?php the_field('illustration_yaxis'); ?>">
         <?php if (get_the_post_thumbnail_url($post->ID, 'blog-alpaka')):  ?>
         <img src="<?php echo get_the_post_thumbnail_url($post->ID, 'blog-alpaka'); ?>" alt="" class="clip-alpaka">
