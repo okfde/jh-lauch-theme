@@ -55,32 +55,6 @@ function lauch_dates_init() {
 
 add_action( 'init', 'lauch_dates_init' );
 
-function rewrite_date_url( $url, $post ) {
-  if ( 'date' == get_post_type( $post ) ) {
-    $parent = get_field('parent', $post->ID);
-    if (post_date_is_past($post)) {
-      return $url;
-    }
-    return get_permalink($parent->ID);
-  }
-  return $url;
-}
-//add_filter( 'post_type_link', 'rewrite_date_url', 10, 2 );
-
-function post_date_get_datetime($pos = 'begin', $post_id = false) {
-  return DateTime::createFromFormat('U', get_field($pos, $post_id), wp_timezone())->getTimestamp();
-}
-
-function post_date_format_date() {
-  $begin = post_date_get_datetime();
-  $end = post_date_get_datetime('end');
-
-  if (strftime('%Y-%m-%d', $begin) == strftime('%Y-%m-%d', $end)) {
-      return date_i18n('D. d.m.Y | H:i', $begin) . date_i18n(' – H:i', $end);
-  } else {
-      return date_i18n('D. d.m.Y | H:i', $begin) . date_i18n(' – D. d.m.Y | H:i', $end);
-  }
-}
 
 function post_date_format_date_simple() {
   $begin = post_date_get_datetime();
