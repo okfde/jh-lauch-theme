@@ -18,6 +18,8 @@
   .events-list-image
     flex: 0 0 7rem
     margin-right: 1em
+    max-height: 182px
+    overflow: hidden
 
   .events-list-image-2
     flex: 0 0 7rem
@@ -91,10 +93,18 @@
 .c-event-list__list
   @media (min-width: $break-sm)
     //column-count: 2
-    column-gap: 2em;
-    break-inside: avoid;
+    //column-gap: 2em;
+    //break-inside: avoid;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    li
+      flex: 0 0 48%
   @media (min-width: $break-ml)
     //column-count: 3
+    //justify-content: space-evenly
+    li
+      flex: 0 0 31%
 
 .c-events-list + .c-events-list
   margin-top: 8rem
