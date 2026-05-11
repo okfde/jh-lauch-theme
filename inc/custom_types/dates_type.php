@@ -120,3 +120,34 @@ function post_date_get_sorted($query) {
   });
   return $all_dates;
 }
+
+
+    function lauch_date_custom_column_values($column, $post_id) {
+        switch ( $column ) {
+            case 'lab' :
+                echo get_field('parent', $post_id)->post_title;
+                break;
+            case 'begin':
+                echo wp_date('d. M Y', get_field( 'begin', $post_id));
+                break;
+        }
+    }
+
+
+
+    function set_custom_edit_date_columns($columns) {
+        //unset( $columns['author'] );
+
+        $custom_col_order = array(
+            'title' => $columns['title'],
+            'lab' => __( 'Lab', 'lauch' ),
+            'begin' => __( 'Begin', 'lauch' ),
+            'author' => $colums['author'],
+            'date' => $columns['date']
+        );
+        return $custom_col_order;
+    }
+
+
+    add_filter( 'manage_date_posts_columns', 'set_custom_edit_date_columns' );
+    add_action( 'manage_date_posts_custom_column' , 'lauch_date_custom_column_values', 10, 2 );
