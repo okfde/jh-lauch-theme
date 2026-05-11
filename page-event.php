@@ -25,7 +25,6 @@ while ( $the_query->have_posts() ) {
 
 get_header();
 ?>
-<h1>PAGE EVENT</h1>
 
 <?php
 while ( have_posts() ) :
