@@ -390,8 +390,6 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 
 // project teaser medium 240x135
 // project teaser small 290x162
-
-
 add_image_size( 'lab-event-teaser', 182, 224, true );
 add_image_size( 'learning-teaser', 620, 304, true );
 
@@ -559,8 +557,6 @@ function floatbox_handle_shortcode($atts = "") {
   return $out;
 }
 add_shortcode('floatbox', 'floatbox_handle_shortcode');
-
-
 
 
 
