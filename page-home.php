@@ -7,6 +7,8 @@
      */
 
     get_header();
+
+    $mod_color = get_theme_mod('header_textcolor');
 ?>
 
 
@@ -18,8 +20,8 @@
 
 <section class="c-page-home-header c-index-header p-r" style="background-image: url(<?php if (is_front_page()) { echo get_the_post_thumbnail_url(null, 'full'); } ?>)">
     <div class="c-index-wrapper">
-        <h1 class="c-index-title">Mit <span id="revolving-claims">Code</span><br>die Welt verbessern</h1>
-        <div class="c-page-content"><?php the_content(); ?></div>
+        <h1 class="c-index-title" style="color: #<?php echo $mod_color ?>;">Mit <span id="revolving-claims">Code</span><br>die Welt verbessern</h1>
+        <div class="c-page-content"  style="color: #<?php echo $mod_color ?>;"><?php the_content(); ?></div>
     </div>
 </section>
 

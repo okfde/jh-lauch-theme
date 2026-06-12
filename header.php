@@ -48,27 +48,17 @@
                         <span></span>
                     </label>
 
-                    <?php
-	                    if ( is_front_page() && is_home() ) :
-	                ?>
-	                    <h1 class="c-nav-logo">
-                            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"
-                                class="" title="<?php bloginfo( 'name' ); ?>">
-                                <?php echo get_template_part('template-svg/logo', 'sw'); ?>
-                            </a>
-                        </h1>
-	                <?php
-	                    else :
-	                ?>
-                        <p class="c-nav-logo">
-                            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"
-                                class="" title="<?php bloginfo( 'name' ); ?>">
-                                <?php echo get_template_part('template-svg/logo', 'sw'); ?>
-
-                            </a>
-                        </p>
-	                <?php
-	                    endif; ?>
+	                <h1 class="c-nav-logo">
+                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="" title="<?php bloginfo( 'name' ); ?>">
+                            <?php
+                                if (get_theme_mod('custom_logo')) {
+                                    echo wp_get_attachment_image(get_theme_mod('custom_logo'));
+                                } else {
+                                    echo get_template_part('template-svg/logo', 'sw');
+                                }
+                            ?>
+                        </a>
+                    </h1>
 
                     <?php
 	                    wp_nav_menu( array(

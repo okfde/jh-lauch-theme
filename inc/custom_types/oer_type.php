@@ -61,9 +61,9 @@ function oer_rewrite() {
 }
 add_action( 'init', 'oer_rewrite' );
 
-function oer_permalink( $post_link, $id = 0, $leavename ) {
+    function oer_permalink( $post_link, $leavename,  $id = 0) {
     global $wp_rewrite;
-    $post = &get_post( $id );
+    $post = get_post( $id );
     if ( is_wp_error( $post ) || get_post_type($post) != 'oer')
         return $post_link;
 
