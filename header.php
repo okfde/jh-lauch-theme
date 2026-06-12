@@ -48,7 +48,7 @@
                         <span></span>
                     </label>
 
-	                <h1 class="c-nav-logo">
+	                <p class="c-nav-logo">
                         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="" title="<?php bloginfo( 'name' ); ?>">
                             <?php
                                 if (get_theme_mod('custom_logo')) {
@@ -58,7 +58,7 @@
                                 }
                             ?>
                         </a>
-                    </h1>
+                    </p>
 
                     <?php
 	                    wp_nav_menu( array(
