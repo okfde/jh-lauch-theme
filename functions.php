@@ -82,9 +82,8 @@
             'flex-height' => true,
         ) );
 
-        // Set up our custom colors for the Gutenberg Color Picker -ps
-        // moved to theme.json
-
+        // Custom block editor colors are defined in theme.json.
+        add_theme_support( 'editor-styles' );
     }
     endif;
     add_action( 'after_setup_theme', 'lauch_setup' );
@@ -126,20 +125,34 @@
     $community_slug = 'online-community'; // used as slug in page-home.php
     $community_id = array( $community_slug ); // slug of the lab category to be shown, used in page-home.php, lab-overview.php and community-overview.php
 
-    // Guttenberg Block Editor Changes for Mitmachen
-    function advanced_block_enqueue() {
-        $baseurl = get_template_directory_uri();
-        echo "<script type='text/javascript' src='{$baseurl}/js/advanced_block_script.js'></script>\n";
-    }
-    add_action( 'wp_tiny_mce_init', 'advanced_block_enqueue' );
-
-    function advanced_block_style() {
+    // Gutenberg block styles: keep frontend layout CSS off the editor canvas.
+    function advanced_block_frontend_style() {
         wp_enqueue_style(
             'advanced_block_style',
-            get_template_directory_uri() . '/styles/advanced_block_style.css'
+            get_template_directory_uri() . '/styles/advanced_block_style.css',
+            array(),
+            wp_get_theme()->get( 'Version' )
         );
     }
-    add_action( 'enqueue_block_assets', 'advanced_block_style' );
+    add_action( 'wp_enqueue_scripts', 'advanced_block_frontend_style' );
+
+    function advanced_block_editor_assets() {
+        wp_enqueue_style(
+            'advanced_block_editor',
+            get_template_directory_uri() . '/styles/advanced_block_editor.css',
+            array(),
+            wp_get_theme()->get( 'Version' )
+        );
+
+        wp_enqueue_script(
+            'advanced_block_script',
+            get_template_directory_uri() . '/js/advanced_block_script.js',
+            array( 'wp-blocks', 'wp-element', 'wp-editor', 'wp-data', 'wp-block-editor' ),
+            wp_get_theme()->get( 'Version' ),
+            true
+        );
+    }
+    add_action( 'enqueue_block_editor_assets', 'advanced_block_editor_assets' );
 
     function advanced_blocks_render_callback($type, $block_attributes, $content ) {
         global $community_id;
@@ -281,9 +294,6 @@
         return $preview_link;
     }
     add_filter( 'preview_post_link', 'fix_preview_events', 1, 2);
-
-
-    add_editor_style();
 
     /**
      * ALL THE CUSTOM POST TYPES
