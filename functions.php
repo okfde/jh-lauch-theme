@@ -84,6 +84,7 @@
 
         // Set up our custom colors for the Gutenberg Color Picker -ps
         // moved to theme.json
+
     }
     endif;
     add_action( 'after_setup_theme', 'lauch_setup' );
@@ -236,6 +237,7 @@
     add_action( 'wp_enqueue_scripts', 'lauch_scripts' );
 
 
+
     /**
      * Implement the Custom Header feature.
      */
@@ -280,6 +282,8 @@
     }
     add_filter( 'preview_post_link', 'fix_preview_events', 1, 2);
 
+
+    add_editor_style();
 
     /**
      * ALL THE CUSTOM POST TYPES
