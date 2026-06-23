@@ -31,20 +31,20 @@
 .page-template-pojects-overview,
 .single-project,
 .single-video
-  +bg-pattern($color-deepblue, soft-light)
-  +turn-font-white
+ // background-color: $color-blue
+
 
 .page-template-exchange-overview,
 .post-type-archive-exchange
-  +bg-pattern($color-deeppurple, soft-light)
+  +bg-pattern($color-lilac, soft-light)
   +turn-font-white
   .events-list-item
-    &:hover,x
+    &:hover,
     &:active
-      background-color: #7300a6
+      background-color: $color-lilac
   .events-list-actions
     a:nth-of-type(2)
-      color: $color-pink
+      color: $color-lilac
 
 
 .alm-btn-wrap
@@ -58,3 +58,6 @@
 .wp-caption img
   width: 100%
   height: auto
+
+.wp-block-button__link
+  font-family: 'Geist Mono', monospace

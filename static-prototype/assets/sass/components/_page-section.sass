@@ -10,6 +10,7 @@
   h2
     font-size: 2.4rem
     line-height: 1.1
+    font-weight: 600
 
 .c-page-2col
   @media (max-width: $break-medium)
@@ -143,7 +144,7 @@
       margin-right: calc(-45vw + 19.375rem)
     h1
       font-size: 4.1rem
-  a
+  a:not(.wp-block-button__link)
     +copy-link(var(--event-single-color))
 
   iframe
@@ -185,7 +186,7 @@
   figcaption
     width: 70%
     margin-top: 0
-    color: $color-deepgrey
+    color: $color-grey
     text-align: left
     font-size: 0.85rem
     a

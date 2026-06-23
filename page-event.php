@@ -25,6 +25,7 @@ while ( $the_query->have_posts() ) {
 
 get_header();
 ?>
+
 <?php
 while ( have_posts() ) :
 the_post();

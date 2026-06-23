@@ -11,19 +11,42 @@
 
 <section>
   <div class="c-page-alpaca-header">
-    <div class="c-page-alpaca-featured addon addon--<?php the_field('illustration_class'); ?> addon--large addon--<?php the_field('illustration_xaxis'); ?> addon--<?php the_field('illustration_yaxis'); ?>">
+    <div class="c-page-alpaca-featured addon ">
       <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'blog-alpaka'); ?>" alt="" class="clip-alpaka">
     </div>
     <div class="c-page-alpaca-title">
       <nav class="c-breadcrumb" aria-label="breadcrumb">
-        <ol>
-          <li>
-            <a href="<?php echo get_post_type_archive_link('date') ?>">Kalender</a>
-          </li>
+          <ol>
+              <?php
+                  $args = array(
+                      'post_type' => 'page',
+                      'meta_query' => array(
+                          array(
+                              'key' => '_wp_page_template',
+                              'value' => 'lab-overview.php'
+                          )
+                      )
+                  );
+                  $events_maybe = get_posts($args); ?>
+              <li>
+                  <a href="<?php echo get_post_permalink($events_maybe[0]->ID); ?>"><?php echo get_the_title($events_maybe[0]->ID); ?></a>
+              </li>
+              <?php
+                  $parent = get_field('parent');
+                  $parent_post = get_post($parent->ID); ?>
+              <li>
+                  <a href="<?php echo get_post_permalink($parent_post->ID); ?>"><?php echo get_the_title($parent_post->ID); ?></a>
+              </li>
         </ol>
       </nav>
-      <?php the_title('<h1 class="c-page-title">', '</h1>')?>
-      <time class="c-page-excerpt">Hat stattgefunden am <?php echo post_date_format_date()?></time>
+      <?php the_title('<h1 class="c-page-title mb-1">', '</h1>')?>
+      <p class="mb-1">
+          <time class="c-flag c-flag--eventsingle mini points-bottom mb-1">
+          <?php echo wp_date('D d.m.Y | G:i -', get_field('begin', $post->ID)); ?>
+
+          <?php echo wp_date('G:i', get_field('end', $post->ID)); ?>
+          </time>
+      </p>
     </div>
   </div>
   <div class="c-page-section white c-page-cpital-first">
@@ -32,3 +55,7 @@
     </div>
   </div>
 </section>
+
+<script>
+    document.querySelector('html').style.setProperty("--event-single-color", "<?php echo the_field('event_color', $parent->ID); ?>");
+</script>

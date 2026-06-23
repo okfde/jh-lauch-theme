@@ -1,0 +1,106 @@
+{
+  "version": 2,
+  "settings": {
+	"color": {
+	  "background": true,
+	  "custom": false,
+	  "customDuotone": false,
+	  "customGradient": false,
+	  "defaultDuotone": false,
+	  "defaultGradients": false,
+	  "defaultPalette": false,
+	  "duotone": [],
+	  "gradients": [],
+	  "link": true,
+	  "palette": [
+        {
+        "color": "#FF69B4",
+        "name": "Hot_Pink",
+        "slug": "hot_pink"
+      },
+        {
+        "color": "#FF4500",
+        "name": "Intensive_Orange",
+        "slug": "intensive_orange"
+      },
+        {
+        "color": "#FFFF00",
+        "name": "Yellow",
+        "slug": "yellow"
+      },
+        {
+        "color": "#0000FF",
+        "name": "Blue",
+        "slug": "blue"
+      },
+        {
+        "color": "#0096FF",
+        "name": "Bright_Blue",
+        "slug": "bright_blue"
+      },
+        {
+        "color": "#F8F8FF",
+        "name": "Hell",
+        "slug": "hell"
+      },
+        {
+        "color": "#EADDCA",
+        "name": "Almond",
+        "slug": "almond"
+      },
+        {
+        "color": "#7CFC00",
+        "name": "Grün",
+        "slug": "gruen"
+      },
+        {
+        "color": "#50C878",
+        "name": "Emerald_Green",
+        "slug": "emerald_green"
+      },
+        {
+        "color": "#96D8FF",
+        "name": "Baby_Blue",
+        "slug": "baby_blue"
+      },
+        {
+        "color": "#5C4033",
+        "name": "Dark_Brown",
+        "slug": "dark_brown"
+      },
+        {
+        "color": "#D3D3D3",
+        "name": "Light_Gray",
+        "slug": "light_gray"
+      },
+        {
+        "color": "#7B68EE",
+        "name": "Indigo",
+        "slug": "indigo"
+      },
+        {
+        "color": "#FFFFFF",
+        "name": "White",
+        "slug": "white"
+      },
+        {
+        "color": "#CF9FFF",
+        "name": "Lilac",
+        "slug": "lilac"
+      },
+        {
+        "color": "#F3971B",
+        "name": "Orange",
+        "slug": "orange"
+      },
+
+        {
+        "color": "#000000",
+        "name": "Schwarz",
+        "slug": "black"
+      }
+      ],
+	  "text": true
+	}
+  }
+}
