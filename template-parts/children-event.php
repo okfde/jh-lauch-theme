@@ -27,14 +27,16 @@ $event_color = get_field('event_color', get_the_ID());
         <a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
 
       <?php
-      $event = get_field('next_event')[0];
-      if ($event  && get_field('is_active', get_the_ID())) : ?>
-        <time class="events-list-date" datetime="">
-          <a href="<?php the_permalink() ?>"
-             title="Mehr Infos zu <?php the_title() ?>">
-            <?php the_field('datum', $event->ID); ?></a></time>
-      <?php
-      endif; ?>
+          if (get_field('next_event')):
+            $event = get_field('next_event')[0];
+          if ($event  && get_field('is_active', get_the_ID())) : ?>
+          <time class="events-list-date" datetime="">
+              <a href="<?php the_permalink() ?>"
+                  title="Mehr Infos zu <?php the_title() ?>">
+                  <?php the_field('datum', $event->ID); ?></a></time>
+    <?php
+        endif;
+        endif;?>
 
       <?php if (get_field('is_active') == 1): ?>
         <div class="events-list-actions events-list-actions--overview active">
@@ -71,15 +73,6 @@ $event_color = get_field('event_color', get_the_ID());
           wp_reset_postdata(); // resets _all_ post data. We're 2 levels deep at this point ?>
         </div>
       <?php endif; ?>
-
-    </div>
-    <div class="events-list-hover">
-      <?php
-      $svg = get_random_illustration();
-      echo replace_svg_css_class_fill(get_svg_content($svg),
-                                      "changecolor",
-                                      "event-". get_the_ID() ."-" . $svg,
-                                      $event_color); ?>
 
     </div>
   </div>

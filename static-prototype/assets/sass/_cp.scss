@@ -1,4 +1,9 @@
 :root {
-  --link-color: #00a6de;
-  --event-single-color: var(--link-color);
+  --color-bluewhite: #F8F8FF;
+  --color-blue: #0096FF;
+  --color-lilac: #CF9FFF;
+  --color-orange: #F3971B;
+
+  --link-color: var(--color-blue);
+  --event-single-color: var(--color-blue);
 }

@@ -19,10 +19,6 @@ the_post(); ?>
     <?php get_template_part( 'template-parts/support-cta', get_post_type() ); ?>
   </div>
 
-  <script>
-   document.querySelector('html').style.setProperty("--event-single-color", "<?php echo the_field('event_color'); ?>");
-  </script>
-
 <?php
 endwhile; ?>
 

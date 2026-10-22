@@ -18,22 +18,26 @@
     transition: opacity 125ms ease-out
     opacity: 0
   li:not(.c-nav-logo)
-    margin-left: 1.6rem
+    margin-left: 0.3rem
     @media (max-width: $break-medium)
       text-align: right
       display: none
     a
-      transition: border 80ms ease
+      transition: background 100ms ease
       font-size: 1rem
       font-weight: $font-weight-bold
       color: $body-color
       text-decoration: none
+      font-family: 'Geist Mono', monospace
+      padding: 0.3em 0.6em 0.2em
       &:hover,
       &:active,
       &[aria-current="page"]
-        border-bottom: 3px solid var(--event-single-color)
-        @media (min-width: $break-large)
-          border-width: 4px
+        background: var(--event-single-color)
+        color: $color-white
+        //border-bottom: 3px solid var(--event-single-color)
+        //@media (min-width: $break-large)
+          //border-width: 4px
 
       @media (max-width: $break-medium)
         display: block
@@ -49,17 +53,19 @@
 .c-nav-logo
   flex-grow: 1
   align-self: flex-start
-  a
+  svg
     display: block
-    width: 10.7rem
-    height: 3.7rem
-    background-size: 99%
-    background-repeat: no-repeat
+    width: 100%
+  a
+    width: 11em
+    display: block
+
   @media (min-width: $break-medium)
     margin-top: 1rem
   @media (min-width: $break-small)
     a
       width: 15rem
+
 
 @media (max-width: $break-medium)
   .c-nav-toggle:checked ~ .c-nav-items
@@ -73,28 +79,14 @@
     flex-flow: column nowrap
     align-items: flex-end
     opacity: 1
-    background-color: $color-primary
-    background-image: url(../images/menu-bg.svg), url(../images/JH-Pattern.svg)
-    background-blend-mode: normal, soft-light
-    background-repeat: no-repeat, repeat
-    background-position: -8em 85%,top left
-
-    @media (min-width: 320px)
-      background-size: 40em, 45px
-    @media (min-width: 900px)
-      background-size: 40em, 55px
-    @media (min-width: 1200px)
-      background-size: 40em, 65px
-    @media (min-width: 1900px)
-      background-size: 40em, 85px
+    background-color: $color-lilac
 
     li
       display: block
     a
-      color: $color-white
+      color: $color-black
       border-color: $color-white
-  .c-nav-toggle:checked ~ .c-nav-logo a
-    background-image: url(../images/JH_Logo_RGB-weiss.svg) !important
+      font-family: 'Geist Mono', monospace
 
   .c-nav-logo
     position: absolute

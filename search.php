@@ -22,10 +22,6 @@ get_header();
            value="<?php the_search_query(); ?>">
     <input type="submit" value="Suche" class="c-search-submit--black">
   </form>
-
-  <div class="c-page-header-illustration right-one">
-    <img src="<?php echo get_template_directory_uri() ?>/images/JH-Illustration-Katze-Hund.svg" alt="" width="300">
-  </div>
 </div>
 
 <div class="c-page-section white">

@@ -11,6 +11,7 @@ get_template_part( 'template-parts/header-alpaka', get_post_type() );
 
 endwhile; ?>
 
+
 <section class="c-events-list">
   <?php
   $args = array('post_type' => 'page',

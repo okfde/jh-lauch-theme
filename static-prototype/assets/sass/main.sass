@@ -51,14 +51,14 @@
 @import "util/blocks"
 @import "util/wordpress"
 @import "util/pretix"
-@import "util/addon"
+//@import "util/addon"
 @import "util/util"
 
 @import "tiny-slider"
 
 .l-header
   padding-top: 1.6rem
-  padding-bottom: 2.5rem
+  padding-bottom: 0.5rem
   @media (max-width: $break-medium)
     margin-bottom: 5rem
 
@@ -72,7 +72,10 @@
   padding-left: $body-padding
   padding-right: $body-padding
 
-//.l-main
+.l-main__hero
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center center
 
 .c-list-pointless
   margin: 0
@@ -111,19 +114,8 @@
 .js .needs-js
   display: block
 
-.c-rando-illu
-  display: none
-  @media (min-width: $break-medium)
-    display: block
-    position: absolute
-    width: 10em
-    top: 0
-    right: -15rem
-  @media (min-width: $break-large)
-    right: -20rem
-
 @each $name, $color in $backend-colors
   .has-#{$name}-color
-    color: $color
+    color: $color-orange
   .has-#{$name}-background-color
-    background-color: $color
+    background-color: $color-orange

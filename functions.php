@@ -1,596 +1,231 @@
 <?php
-/**
- * Lauch functions and definitions
- *
- * @link https://developer.wordpress.org/themes/basics/theme-functions/
- *
- * @package Lauch
- */
+    /**
+     * Lauch functions and definitions
+     *
+     * @link https://developer.wordpress.org/themes/basics/theme-functions/
+     *
+     * @package Lauch
+     */
 
-if ( ! function_exists( 'lauch_setup' ) ) :
-/**
- * Sets up theme defaults and registers support for various WordPress features.
- *
- * Note that this function is hooked into the after_setup_theme hook, which
- * runs before the init hook. The init hook is too late for some features, such
- * as indicating support for post thumbnails.
- */
-function lauch_setup() {
-  /*
-   * Make theme available for translation.
-   * Translations can be filed in the /languages/ directory.
-   * If you're building a theme based on Lauch, use a find and replace
-   * to change 'lauch' to the name of your theme in all the template files.
-   */
-  load_theme_textdomain( 'lauch', get_template_directory() . '/languages' );
+    if ( ! function_exists( 'lauch_setup' ) ) :
+    /**
+     * Sets up theme defaults and registers support for various WordPress features.
+     *
+     * Note that this function is hooked into the after_setup_theme hook, which
+     * runs before the init hook. The init hook is too late for some features, such
+     * as indicating support for post thumbnails.
+     */
+    function lauch_setup() {
+        /*
+         * Make theme available for translation.
+         * Translations can be filed in the /languages/ directory.
+         * If you're building a theme based on Lauch, use a find and replace
+         * to change 'lauch' to the name of your theme in all the template files.
+         */
+        load_theme_textdomain( 'lauch', get_template_directory() . '/languages' );
 
-  // Add default posts and comments RSS feed links to head.
-  add_theme_support( 'automatic-feed-links' );
+        // Add default posts and comments RSS feed links to head.
+        add_theme_support( 'automatic-feed-links' );
 
-  // Add responsive embeds
-  add_theme_support( 'responsive-embeds' );
-
-
-  /*
-   * Let WordPress manage the document title.
-   * By adding theme support, we declare that this theme does not use a
-   * hard-coded <title> tag in the document head, and expect WordPress to
-   * provide it for us.
-   */
-  add_theme_support( 'title-tag' );
-
-  /*
-   * Enable support for Post Thumbnails on posts and pages.
-   *
-   * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
-   */
-  add_theme_support( 'post-thumbnails' );
-
-  // This theme uses wp_nav_menu() in one location.
-  register_nav_menus( array(
-    'menu-main' => esc_html__( 'Primary', 'lauch' ),
-    'menu-sub' => esc_html__( 'Secondary', 'lauch' ),
-    'menu-footer-1' => esc_html__('Footer 1', 'lauch'),
-    'menu-footer-2' => esc_html__('Footer 2', 'lauch'),
-    'menu-footer-3' => esc_html__('Footer 3', 'lauch'),
-  ) );
-
-  /*
-   * Switch default core markup for search form, comment form, and comments
-   * to output valid HTML5.
-   */
-  add_theme_support( 'html5', array(
-    'search-form',
-    'comment-form',
-    'comment-list',
-    'gallery',
-    'caption',
-  ) );
-
-  // Add theme support for selective refresh for widgets.
-  add_theme_support( 'customize-selective-refresh-widgets' );
-
-  /**
-   * Add support for core custom logo.
-   *
-   * @link https://codex.wordpress.org/Theme_Logo
-   */
-  add_theme_support( 'custom-logo', array(
-    'height'      => 250,
-    'width'       => 250,
-    'flex-width'  => true,
-    'flex-height' => true,
-  ) );
-
-// Set up our custom colors for the Gutenberg Color Picker -ps
-
-  add_theme_support( 'editor-color-palette', array(
-        array(
-            'name' => __( 'Soft Blue', 'lauch' ),
-            'slug' => 'softblue',
-            'color' => '#00a6de',
-        ),
-        array(
-            'name' => __( 'Soft Green', 'lauch' ),
-            'slug' => 'softgreen',
-            'color' => '#00b48d',
-        ),
-        array(
-            'name' => __( 'Soft Orange', 'lauch' ),
-            'slug' => 'softorange',
-            'color' => '#f3971b',
-        ),
-        array(
-            'name' => __( 'Soft Purple', 'lauch' ),
-            'slug' => 'softpurple',
-            'color' => '#51509d',
-        ),
-        array(
-            'name' => __( 'Soft Red', 'lauch' ),
-            'slug' => 'softred',
-            'color' => '#e6414a',
-        ),
-        array(
-            'name' => __( 'Soft Yellow', 'lauch' ),
-            'slug' => 'softyellow',
-            'color' => '#ffe50c',
-        ),
-        array(
-            'name' => __( 'Deep Blue', 'lauch' ),
-            'slug' => 'deepblue',
-            'color' => '#00498c',
-        ),
-        array(
-            'name' => __( 'Deep Green', 'lauch' ),
-            'slug' => 'deepgreen',
-            'color' => '#4cad37',
-        ),
-        array(
-            'name' => __( 'Deep Orange', 'lauch' ),
-            'slug' => 'deeporange',
-            'color' => '#ea680c',
-        ),
-        array(
-            'name' => __( 'Deep Purple', 'lauch' ),
-            'slug' => 'deeppurple',
-            'color' => '#4c2582',
-        ),
-        array(
-            'name' => __( 'Deep Red', 'lauch' ),
-            'slug' => 'deepred',
-            'color' => '#e52420',
-        ),
-        array(
-            'name' => __( 'Deep Yellow', 'lauch' ),
-            'slug' => 'deepyellow',
-            'color' => '#ffd003',
-        ),
-        array(
-            'name' => __( 'FrKr Cool Blue', 'lauch' ),
-            'slug' => 'frkrcoolblue',
-            'color' => '#2969b2',
-        ),
-        array(
-            'name' => __( 'Pink', 'lauch' ),
-            'slug' => 'pink',
-            'color' => '#e95197',
-        ),
-        array(
-            'name' => __( 'Black', 'lauch' ),
-            'slug' => 'black',
-            'color' => '#000000',
-        ),
-        array(
-            'name' => __( 'Deep Grey', 'lauch' ),
-            'slug' => 'deepgrey',
-            'color' => '#52575b',
-        ),
-        array(
-            'name' => __( 'Soft Grey', 'lauch' ),
-            'slug' => 'softgrey',
-            'color' => '#d1d6da',
-        ),
-        array(
-            'name' => __( 'White', 'lauch' ),
-            'slug' => 'white',
-            'color' => '#ffffff',
-        ),
-    ) );
+        // Add responsive embeds
+        add_theme_support( 'responsive-embeds' );
 
 
-  function replace_svg_css_class_fill($contents, $oldclass, $newclass, $newcolor) {
-    preg_match('/'. $oldclass .'{fill:#([[0-9a-fA-F]+);}/i', $contents, $prev_color);
-    $contents = str_replace($oldclass, $newclass, $contents);
-    $contents = str_replace('#'.$prev_color[1], $newcolor, $contents);
-    return $contents;
-  }
+        /*
+         * Let WordPress manage the document title.
+         * By adding theme support, we declare that this theme does not use a
+         * hard-coded <title> tag in the document head, and expect WordPress to
+         * provide it for us.
+         */
+        add_theme_support( 'title-tag' );
 
-  function get_random_illustration() {
-    $illustrations = array('wrestler', 'octopus', 'teddy', 'monster', 'elias', 'robot');
-    $rand_key = array_rand($illustrations, 1);
-    return $illustrations[$rand_key];
-  }
+        /*
+         * Enable support for Post Thumbnails on posts and pages.
+         *
+         * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+         */
+        add_theme_support( 'post-thumbnails' );
 
-  function get_svg_content($svgname) {
-    $filename = get_template_directory() . "/images/illustrations/change-". $svgname .".svg";
-    $handle = fopen($filename, "r");
-    $contents = fread($handle, filesize($filename));
-    fclose($handle);
-    return $contents;
-  }
+        // This theme uses wp_nav_menu() in one location.
+        register_nav_menus( array(
+            'menu-main' => esc_html__( 'Primary', 'lauch' ),
+            'menu-sub' => esc_html__( 'Secondary', 'lauch' ),
+            'menu-footer-1' => esc_html__('Footer 1', 'lauch'),
+            'menu-footer-2' => esc_html__('Footer 2', 'lauch'),
+            'menu-footer-3' => esc_html__('Footer 3', 'lauch'),
+        ) );
 
-  function get_svg($svgpath) {
-    $filename = get_template_directory() . "". $svgpath;
-    $handle = fopen($filename, "r");
-    $contents = fread($handle, filesize($filename));
-    fclose($handle);
-    return $contents;
-  }
+        /*
+         * Switch default core markup for search form, comment form, and comments
+         * to output valid HTML5.
+         */
+        add_theme_support( 'html5', array(
+            'search-form',
+            'comment-form',
+            'comment-list',
+            'gallery',
+            'caption',
+        ) );
 
-  function render_svg($svgpath) {
-    echo get_svg($svgpath);
-  }
+        // Add theme support for selective refresh for widgets.
+        add_theme_support( 'customize-selective-refresh-widgets' );
 
-}
-endif;
-add_action( 'after_setup_theme', 'lauch_setup' );
+        /**
+         * Add support for core custom logo.
+         *
+         * @link https://codex.wordpress.org/Theme_Logo
+         */
+        add_theme_support( 'custom-logo', array(
+            'height'      => 250,
+            'width'       => 250,
+            'flex-width'  => true,
+            'flex-height' => true,
+        ) );
 
-/**
- * Set the content width in pixels, based on the theme's design and stylesheet.
- *
- * Priority 0 to make it available to lower priority callbacks.
- *
- * @global int $content_width
- */
-function lauch_content_width() {
-  // This variable is intended to be overruled from themes.
-  // Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
-  // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
-  $GLOBALS['content_width'] = apply_filters( 'lauch_content_width', 640 );
-}
-add_action( 'after_setup_theme', 'lauch_content_width', 0 );
-
-/**
- * Register widget area.
- *
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
- */
-function lauch_widgets_init() {
-  register_sidebar( array(
-    'name'          => esc_html__( 'Sidebar', 'lauch' ),
-    'id'            => 'sidebar-1',
-    'description'   => esc_html__( 'Add widgets here.', 'lauch' ),
-    'before_widget' => '<section id="%1$s" class="widget %2$s">',
-    'after_widget'  => '</section>',
-    'before_title'  => '<h2 class="widget-title">',
-    'after_title'   => '</h2>',
-  ) );
-}
-add_action( 'widgets_init', 'lauch_widgets_init' );
-
-// semi-hardcoded workaround to use a lab entry as a separate community page
-$community_slug = 'online-community'; // used as slug in page-home.php
-$community_id = array( $community_slug ); // slug of the lab category to be shown, used in page-home.php, lab-overview.php and community-overview.php
-
-// Guttenberg Block Editor Changes for Mitmachen
-function advanced_block_enqueue() {
-  $baseurl = get_template_directory_uri();
-    echo "<script type='text/javascript' src='{$baseurl}/js/advanced_block_script.js'></script>\n";
-}
-add_action( 'wp_tiny_mce_init', 'advanced_block_enqueue' );
-
-function advanced_block_style() {
-    wp_enqueue_style(
-      'advanced_block_style',
-      get_template_directory_uri() . '/styles/advanced_block_style.css'
-    );
-}
-add_action( 'enqueue_block_assets', 'advanced_block_style' );
-
-function advanced_blocks_render_callback($type, $block_attributes, $content ) {
-    global $community_id;
-    $links = '';
-    if ($type == 'event') {
-      $terms = get_terms( array(
-          'taxonomy' => 'location',
-          'hide_empty' => true,
-      ) );
-      $terms = array_filter($terms, function($item) {
-          return $item->parent !== 0;
-      });
-      $links = join(array_map(function($item) {
-        return '<a class="c-info-block__link" href="/events/' . $item->slug .'">' . $item->name . '</a>';
-      }, $terms));
-    } else {
-      $labs = get_posts(array(
-        'post_type' => 'lab',
-        'posts_per_page' => -1,
-        'tax_query' => array(
-            array(
-                'taxonomy'  => 'lab-location',
-                'field'     => 'slug',
-                'terms'     => $community_id, // set in functions.php
-                'operator'  => 'NOT IN', // this line excludes the community
-            ),
-        )
-      ));
-      $links = join(array_map(function($item) {
-        return '<a class="c-info-block__link" href="/lab/' . $item->post_name .'">' . $item->post_title . '</a>';
-      }, $labs));
+        // Custom block editor colors are defined in theme.json.
+        add_theme_support( 'editor-styles' );
     }
-    return "
-<div class=\"c-info-block " . ($type == 'event' ? 'wp-block-advancedblock-event' : 'wp-block-advancedblock-lab') . "\">
-  <div class=\"c-info-block__top\">
-    <h2>". ($type == 'event' ? 'Events' : 'Labs') . "</h2>
-    $content
-  </div>
-  <div class=\"c-info-block__bottom\">
-    $links
-  </div>
-</div>
-";
-}
+    endif;
+    add_action( 'after_setup_theme', 'lauch_setup' );
 
-function advanced_blocks() {
+    /**
+     * Set the content width in pixels, based on the theme's design and stylesheet.
+     *
+     * Priority 0 to make it available to lower priority callbacks.
+     *
+     * @global int $content_width
+     */
+    function lauch_content_width() {
+        // This variable is intended to be overruled from themes.
+        // Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
+        // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
+        $GLOBALS['content_width'] = apply_filters( 'lauch_content_width', 640 );
+    }
+    add_action( 'after_setup_theme', 'lauch_content_width', 0 );
 
-    register_block_type( 'advancedblock/event', array(
-        'render_callback' => function($a, $b) {
-          return advanced_blocks_render_callback('event', $a, $b);
+    /**
+     * Register widget area.
+     *
+     * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
+     */
+    function lauch_widgets_init() {
+        register_sidebar( array(
+            'name'          => esc_html__( 'Sidebar', 'lauch' ),
+            'id'            => 'sidebar-1',
+            'description'   => esc_html__( 'Add widgets here.', 'lauch' ),
+            'before_widget' => '<section id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</section>',
+            'before_title'  => '<h2 class="widget-title">',
+            'after_title'   => '</h2>',
+        ) );
+    }
+    add_action( 'widgets_init', 'lauch_widgets_init' );
+
+    // semi-hardcoded workaround to use a lab entry as a separate community page
+    $community_slug = 'online-community'; // used as slug in page-home.php
+    $community_id = array( $community_slug ); // slug of the lab category to be shown, used in page-home.php, lab-overview.php and community-overview.php
+
+
+    /**
+     * Enqueue scripts and styles.
+     */
+    function lauch_scripts() {
+        wp_enqueue_style( 'lauch-colors', get_template_directory_uri() . '/style.css');
+        wp_enqueue_style( 'lauch-style', get_template_directory_uri() . '/styles/main.min.css');
+        wp_enqueue_script( 'lauch-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+        wp_enqueue_script( 'lauch-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+
+        wp_enqueue_script( 'vue', get_template_directory_uri() . '/js/vue.min.js', [], '2.5.2', true);
+        wp_enqueue_script( 'vueplayer', get_template_directory_uri() . '/js/vueplayer.js', ['vue'], '0.1.0');
+
+        wp_enqueue_style( 'leaflet-style', get_template_directory_uri() . '/styles/leaflet.css');
+        wp_enqueue_script( 'leaflet-js', get_template_directory_uri() . '/js/leaflet.js', [], '1.51');
+        wp_enqueue_script( 'isotope', get_template_directory_uri() . '/js/isotope.min.js', [], '1.51');
+        wp_enqueue_script( 'tinyslider', get_template_directory_uri() . '/js/tiny-slider.min.js', [], '1.0.0');
+        wp_enqueue_script( 'lauch-revolving-claims', get_template_directory_uri() . '/js/revolving-claims.js', ['vue'], '20190809');
+        wp_enqueue_script( 'lauch-main', get_template_directory_uri() . '/js/main.min.js', array('isotope'), '20190830', true );
+
+        if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+            wp_enqueue_script( 'comment-reply' );
         }
-    ) );
+    }
+    add_action( 'wp_enqueue_scripts', 'lauch_scripts' );
 
-    register_block_type( 'advancedblock/lab', array(
-        'render_callback' => function($a, $b) {
-          return advanced_blocks_render_callback('lab', $a, $b);
+
+
+    /**
+     * Implement the Custom Header feature.
+     */
+    require get_template_directory() . '/inc/custom-header.php';
+
+    require get_template_directory() . '/inc/template-tags.php';
+    //require get_template_directory() . '/inc/template-functions.php';
+
+    /**
+     * Customizer additions.
+     */
+    require get_template_directory() . '/inc/customizer.php';
+
+    /**
+     * Load Jetpack compatibility file.
+     */
+    if ( defined( 'JETPACK__VERSION' ) ) {
+        require get_template_directory() . '/inc/jetpack.php';
+    }
+
+    function fix_preview_events( string $preview_link, WP_Post $post ) {
+        if ($post->post_type == 'event') {
+            $query = new WP_Query(array(
+                'post_type' => 'page',
+                'meta_query' => array(
+                    array(
+                        'key' => 'next_event', // name of custom field
+                        'value' => $post->ID, // matches exactly "123", not just 123. This prevents a match for "1234"
+                        'compare' => 'LIKE'
+                    )
+                )
+            ));
+            if (!$query->have_posts()) {
+                return $preview_link;
+            }
+            $page = $query->post;
+            if (get_field('is_active', $page->ID)) {
+                return "/events/$page->post_name";
+            }
         }
-    ) );
-
-}
-add_action( 'init', 'advanced_blocks' );
-
-add_filter( 'render_block', 'wrap_classic_block', 10, 2 );
-function wrap_classic_block( $block_content, $block ) {
-  if ($block['blockName'] == 'core/paragraph') {
-    $type = substr($block['blockName'], strpos($block['blockName'], "/") + 1);
-    $block_content = '<div class="block-' . $type . ' ' . ($block['attrs']['className'] ?? '') . '">' . $block_content . '</div>';
-  }
-  return $block_content;
-}
-
-/**
- * Enqueue scripts and styles.
- */
-function lauch_scripts() {
-  wp_enqueue_style( 'lauch-colors', get_template_directory_uri() . '/style.css');
-  wp_enqueue_style( 'lauch-style', get_template_directory_uri() . '/styles/main.min.css');
-  wp_enqueue_script( 'lauch-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-  wp_enqueue_script( 'lauch-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
-
-  wp_enqueue_script( 'vue', get_template_directory_uri() . '/js/vue.min.js', [], '2.5.2', true);
-  wp_enqueue_script( 'vueplayer', get_template_directory_uri() . '/js/vueplayer.js', ['vue'], '0.1.0');
-
-  wp_enqueue_style( 'leaflet-style', get_template_directory_uri() . '/styles/leaflet.css');
-  wp_enqueue_script( 'leaflet-js', get_template_directory_uri() . '/js/leaflet.js', [], '1.51');
-  wp_enqueue_script( 'isotope', get_template_directory_uri() . '/js/isotope.min.js', [], '1.51');
-  wp_enqueue_script( 'tinyslider', get_template_directory_uri() . '/js/tiny-slider.min.js', [], '1.0.0');
-  wp_enqueue_script( 'lauch-revolving-claims', get_template_directory_uri() . '/js/revolving-claims.js', ['vue'], '20190809');
-  wp_enqueue_script( 'lauch-main', get_template_directory_uri() . '/js/main.min.js', array('isotope'), '20190830', true );
-
-  if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-    wp_enqueue_script( 'comment-reply' );
-  }
-}
-add_action( 'wp_enqueue_scripts', 'lauch_scripts' );
-
-
-/**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
-
-require get_template_directory() . '/inc/template-tags.php';
-//require get_template_directory() . '/inc/template-functions.php';
-
-/**
- * Customizer additions.
- */
-require get_template_directory() . '/inc/customizer.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-if ( defined( 'JETPACK__VERSION' ) ) {
-  require get_template_directory() . '/inc/jetpack.php';
-}
-
-/**
- * ALL THE CUSTOM POST TYPES
- */
-
-
-// project teaser medium 240x135
-// project teaser small 290x162
-
-
-add_image_size( 'lab-event-teaser', 182, 224, true );
-add_image_size( 'learning-teaser', 620, 304, true );
-
-add_image_size( 'blog-alpaka-small', 300, 300, true );
-add_image_size( 'blog-alpaka', 560, 560, true );
-add_image_size( 'blog-alpaka-highdpi', 1120, 1120, true );
-add_image_size( 'blog-large', 760, 500, true );
-//add_image_size( 'blog-small', 320, 200, true );
-add_image_size( 'blog-large-highdpi', 1430, 1180, true );
-//add_image_size( 'blog-small-highdpi', 640, 400, true);
-add_image_size( 'partner-teaser', 340, 240);
-add_image_size( 'events-teaser-s', 180, 120, true);
-add_image_size( 'events-teaser-m', 170, 120, true);
-add_image_size( 'events-teaser-highdpi', 340, 240, true);
-
-
-add_filter( 'image_size_names_choose', 'lauch_custom_sizes' );
-function lauch_custom_sizes( $sizes ) {
-  return array_merge( $sizes, array(
-    'blog-alpaka' => __( 'Alpaka' ),
-    'blog-alpaka-small' => __( 'Alpaka klein' ),
-  ) );
-}
-
-function fix_preview_events( string $preview_link, WP_Post $post ) {
-  if ($post->post_type == 'event') {
-    $query = new WP_Query(array(
-      'post_type' => 'page',
-      'meta_query' => array(
-        array(
-          'key' => 'next_event', // name of custom field
-          'value' => $post->ID, // matches exactly "123", not just 123. This prevents a match for "1234"
-          'compare' => 'LIKE'
-        )
-      )
-    ));
-    if (!$query->have_posts()) {
-      return $preview_link;
+        return $preview_link;
     }
-    $page = $query->post;
-    if (get_field('is_active', $page->ID)) {
-      return "/events/$page->post_name";
+    add_filter( 'preview_post_link', 'fix_preview_events', 1, 2);
+
+    /**
+     * ALL THE CUSTOM POST TYPES
+     */
+    require get_template_directory() . '/inc/custom_types/event_type.php';
+    require get_template_directory() . '/inc/custom_types/dates_type.php';
+    require get_template_directory() . '/inc/custom_types/oer_type.php';
+    require get_template_directory() . '/inc/custom_types/lab_type.php';
+    require get_template_directory() . '/inc/custom_types/exchange_type.php';
+    require get_template_directory() . '/inc/custom_types/video_type.php';
+    require get_template_directory() . '/inc/custom_types/person_type.php';
+    require get_template_directory() . '/inc/custom_types/faq_type.php';
+    require get_template_directory() . '/inc/custom_types/learning_type.php';
+
+    require get_template_directory() . '/inc/taxonomies.php';
+    require get_template_directory() . '/inc/api_endpoints.php';
+    require get_template_directory() . '/inc/shortcodes.php';
+    require get_template_directory() . '/inc/custom_image_sizes.php';
+    require get_template_directory() . '/inc/custom_svg_render.php';
+    require get_template_directory() . '/inc/advanced-blocks.php';
+
+
+    function atg_menu_classes($classes, $item, $args) {
+        if($args->theme_location == 'menu-footer-1' ||
+           $args->theme_location == 'menu-footer-2' ||
+           $args->theme_location == 'menu-footer-3') {
+            $classes[] = 'hover-line-trigger';
+        }
+        return $classes;
     }
-  }
-  return $preview_link;
-}
-add_filter( 'preview_post_link', 'fix_preview_events', 1, 2);
+    add_filter('nav_menu_css_class', 'atg_menu_classes', 1, 3);
 
-function vuevideo_handle_shortcode($atts = '') {
-  $value = shortcode_atts( array(
-    'color' => null,
-    'location' => null,
-    'year' => null,
-    'type' => null,
-    'topics' => null,
-    'tech' => null,
-  ), $atts );
-
-  $data_str = 'window.v = {}; window.v.location = "'. $value['location'] .'"; ';
-  $data_str .= 'window.v.color = "'. $value['color'] .'"; ';
-  $data_str .= 'window.v.year = "'. $value['year'] .'"; ';
-  $data_str .= 'window.v.type = "'. $value['type'] .'";';
-  $data_str .= 'window.v.tech = "'. $value['tech'] .'";';
-  $data_str .= 'window.v.topics = "'. $value['topics'] .'";';
-
-  return '<div class="js"><script>'. $data_str .'</script><div id="vuevideo"></div></div><noscript>Aktiviere JavaScript um den Videoplayer zu benutzen</noscript>';
-}
-add_shortcode('vuevideo', 'vuevideo_handle_shortcode');
-
-
-function contactperson_handle_shortcode($atts = '') {
-  $value = shortcode_atts( array(
-      'person' => null,
-      'title' => null,
-  ), $atts );
-
-  $person_id = $value['person'];
-
-  $img = get_the_post_thumbnail_url( $person_id, array(139, 106) );
-  $description = get_field('person_description', $person_id);
-  $twitter = get_field('person_twitter', $person_id);
-  $mastodon = get_field('person_mastodon', $person_id);
-  $instagram = get_field('person_instagram', $person_id);
-  $email = get_field('person_email', $person_id);
-
-  $out = '<div class="c-contact">';
-  if ($value['title']) {
-    $out .= '<h4 class="c-contact-title">'. $value['title'] .'</h4>';
-  }
-  $out .= '<div class="c-contact-body">';
-  $out .= '<img src="'. $img .'" alt="" class="c-contact-image" width="100">';
-  $out .= '<div class="c-contact-text"><p><strong>'. get_the_title($person_id) .'</strong><br>'. $description.'</p><p>';
-
-  if ($twitter != "") {
-    $out .= '<a href="'. $twitter .'" title="'. __('Bei Twitter', 'lauch') .'">'. get_svg('/images/icons/contact-twitter.svg') .'</a>';
-  }
-  if ($instagram != "") {
-    $out .= '<a href="'. $instagram .'" title="'. __('Bei Instagram', 'lauch') .'">'. get_svg('/images/icons/contact-instagram.svg') .'</a>';
-  }
-  if ($mastodon != "") {
-    $out .= '<a href="'. $mastodon .'" title="'. __('Bei Mastodon', 'lauch') .'">'. get_svg('/images/icons/contact-mastodon.svg') .'</a>';
-  }
-  if ($email != "") {
-    $out .= '<a href="mailto:'. $email .'" title="'. __('Schreib eine Mail', 'lauch') .'">'. get_svg('/images/icons/contact-mail.svg') .'</a>';
-  }
-
-  $out .= '</p></div></div></div>';
-
-  return $out;
-
-}
-add_shortcode('contactperson', 'contactperson_handle_shortcode');
-
-
-
-function frkr_handle_shortcode($atts = "") {
-  $value = shortcode_atts( array(
-    'text' => null,
-    'button' => 'Jetzt unterstützen',
-    'link' => 'https://jugendhackt.org/spenden/',
-  ), $atts );
-
-  $out = '<div class="c-breakbox c-breakbox--bg">';
-  $out .= '<p class="c-breakbox-head">'. $value['text'] .'</p>';
-  $out .= '<a href="'. $value['link'] .'" class="button button--simple button--red">'. $value['button'] .'</a></div> ';
-  return $out;
-}
-add_shortcode('frkr', 'frkr_handle_shortcode');
-
-
-
-function buttonbox_handle_shortcode($atts = "") {
-  $value = shortcode_atts( array(
-    'text' => null,
-    'button' => null,
-    'link' => null,
-  ), $atts );
-
-  $out = '<div class="c-breakbox c-breakbox--grey">';
-  $out .= '<p class="c-breakbox-head">'. $value['text'] .'</p>';
-  $out .= '<a href="'. $value['link'] .'" class="button button--simple button--blue">'. $value['button'] .'</a></div> ';
-  return $out;
-}
-add_shortcode('buttonbox', 'buttonbox_handle_shortcode');
-
-
-function floatbox_handle_shortcode($atts = "") {
-  $value = shortcode_atts( array(
-    'color' => 'softblue',
-    'text' => null,
-    'title' => null,
-    'button' => null,
-    'link' => null,
-    'image' => null,
-  ), $atts );
-
-  $out = '<div class="float-box float-box--'. $value['color'] .' float-box--right">';
-  $out .= '<img src="'. get_template_directory_uri() .'/images/alpaca-'. $value['color'] .'.svg" alt="" class="float-box-head">';
-  if ($value['image']) {
-    $out .= '<img src="'. $value['image']  .'" alt="">';
-  }
-  $out .= '<h2 class="float-box-title">'. $value['title'] .'</h2>';
-  $out .= '<p>'. $value['text'] .'</p>';
-  $out .= '<a href="'. $value['link'] .'" class="button button--simple button--'. $value['color'] .'">'. $value['button'] .'</a></div>';
-  return $out;
-}
-add_shortcode('floatbox', 'floatbox_handle_shortcode');
-
-
-
-
-
-require get_template_directory() . '/inc/custom_types/event_type.php';
-require get_template_directory() . '/inc/custom_types/dates_type.php';
-require get_template_directory() . '/inc/custom_types/oer_type.php';
-require get_template_directory() . '/inc/custom_types/lab_type.php';
-require get_template_directory() . '/inc/custom_types/exchange_type.php';
-require get_template_directory() . '/inc/custom_types/video_type.php';
-require get_template_directory() . '/inc/custom_types/person_type.php';
-require get_template_directory() . '/inc/custom_types/faq_type.php';
-require get_template_directory() . '/inc/custom_types/learning_type.php';
-
-require get_template_directory() . '/inc/taxonomies.php';
-
-require get_template_directory() . '/inc/api_endpoints.php';
-
-
-function atg_menu_classes($classes, $item, $args) {
-  if($args->theme_location == 'menu-footer-1' ||
-     $args->theme_location == 'menu-footer-2' ||
-     $args->theme_location == 'menu-footer-3') {
-    $classes[] = 'hover-line-trigger';
-  }
-  /*$page = get_post_meta( $item->ID, '_menu_item_object_id', true );
-  if (get_page_template_slug($page) == 'page-spenden.php') {
-    $classes[] = 'menu-item-donate';
-  }*/
-  return $classes;
-}
-add_filter('nav_menu_css_class', 'atg_menu_classes', 1, 3);
-
-add_post_type_support( 'page', 'excerpt' );
+    add_post_type_support( 'page', 'excerpt' );

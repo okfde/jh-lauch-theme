@@ -15,7 +15,7 @@ get_header();
   <header class="d-f jc-fe">
     <div class="c-bookmarklike">
       <div class="bookmark-right">
-        <p class="bookmark-sub"><?php echo _('Alles zum Thema', 'lauch'); ?></p>
+        <p class="bookmark-sub">Alles zum Thema</p>
         <h1 class="bookmark-title"><?php single_term_title();  ?></h1>
         <?php //the_archive_description( '<div class="archive-description">', '</div>' ); ?>
       </div>

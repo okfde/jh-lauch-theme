@@ -1,5 +1,5 @@
 <?php
-/**
+    /**
  * The main template file
  *
  * This is the most generic template file in a WordPress theme
@@ -18,7 +18,7 @@ get_header();
 <?php
 $blog = get_option( 'page_for_posts' ); ?>
 
-<header class="c-page-offcenter-header">
+<header class="c-page-offcenter-header mt-2">
   <h1 class="c-page-title"><?php echo get_the_title($blog);  ?></h1>
   <div class="c-page-excerpt"><?php echo get_post($blog)->post_content; ?></div>
 </header>
@@ -56,7 +56,7 @@ $blog = get_option( 'page_for_posts' ); ?>
 </section>
 
 <section class="c-catnav c-catnav--light" id="kategorien">
-  <h2 class="c-catnav-title"><?php echo _('Alles zum Thema', 'lauch'); ?></h2>
+  <h2 class="c-catnav-title">Alles zum Thema</h2>
   <nav>
     <div class="tns-controls">
       <button class="tns-prev" title="Nach links"><?php render_svg('/images/icons/arrow-left.svg'); ?></button>
@@ -73,7 +73,7 @@ $blog = get_option( 'page_for_posts' ); ?>
           <a href="<?php echo get_term_link($term->slug, $term->taxonomy ); ?>"
              title="Alle Posts zu <?php echo $term->name ?>"
              class="hover-line-trigger">
-            <h3><span class="hover-line"><?php echo $term->name; ?></span></h3>
+            <h3><span class="hover-line bold"><?php echo $term->name; ?></span></h3>
             <p><?php echo $term->description; ?></p>
           </a>
         </li>
