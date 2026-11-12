@@ -61,31 +61,6 @@
         <a href="<?php echo get_permalink( get_option( 'page_for_posts' )) ?>" class="button button--softblue"><?php echo __('Alle Blogposts', 'lauch') ?></a></div>
 </section>
 
-<section class="c-page-section pb-0 pt-0 white">
-    <?php
-        $loc_term = get_field('term_location');
-        $year_term = get_field('term_year');
-        $topic_term = get_field('term_topics');
-        $tech_term = get_field('term_tech');
-
-        $out = "[vuevideo type='project-presentation' color='white' ";
-        if ($loc_term) {
-            $out .= "location='". $loc_term->slug ."' ";
-        }
-        if ($year_term) {
-            $out .= "year='". $year_term->slug ."' ";
-        }
-        if ($tech_term) {
-            $out .= "tech='". $tech_term->slug ."' ";
-        }
-        if ($topic_term) {
-            $out .= "topics='". $topic_term->slug ."' ";
-        }
-        $out .= "]";
-
-        echo do_shortcode($out); ?>
-</section>
-
 <section class="">
     <?php get_template_part( 'template-parts/support-cta', get_post_type() ); ?>
 </section>
