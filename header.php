@@ -35,6 +35,11 @@
 
             <a class="skip show-on-focus" href="#content"><?php esc_html_e( 'Skip to content', 'lauch' ); ?></a>
 
+            <div class="banner" style="text-align: center;background-color: #D44F50;padding: 1rem;font-size: 1.5rem;color: #fff;font-weight: bold;">
+                Jugend hackt retten!
+                <a href="/spenden" class="wp-block-button__link has-softblue-background-color">Jetzt hier spenden</a>
+            </div>
+        
             <header class="l-header" id="masthead">
                 <nav class="c-nav c-topnav l-inner" id="site-navigation">
                     <input type="checkbox" id="menu-toggle"
@@ -72,8 +77,10 @@
                     <input type="checkbox" id="search-toggle"
                         class="c-search-toggle a11y-visuallyhidden"
                         tabindex=0>
+                    <!-- had to disable search toggle because it was absolutely positioned... -->
                     <label for="search-toggle" class="c-search-label"
                         title="Suche öffnen"
+                        style="display:none"
                         aria-label="Suche öffnen"></label>
 
                     <?php get_search_form(); ?>
