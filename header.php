@@ -37,7 +37,7 @@
 
             <div class="banner" style="text-align: center;background-color: #D44F50;padding: 1rem;font-size: 1.5rem;color: #fff;font-weight: bold;">
                 Jugend hackt retten!
-                <a href="/spenden" class="wp-block-button__link has-softblue-background-color">Jetzt hier spenden</a>
+                <a href="/spenden" style="background-color: #f3971b;color: white;display: block;" class="">Jetzt spenden</a>
             </div>
         
             <header class="l-header" id="masthead">
