@@ -35,9 +35,9 @@
 
             <a class="skip show-on-focus" href="#content"><?php esc_html_e( 'Skip to content', 'lauch' ); ?></a>
 
-            <div class="banner" style="text-align: center;background-color: #D44F50;padding: 1rem;font-size: 1.5rem;color: #fff;font-weight: bold;">
+            <div class="banner" style="text-align: center;background-color: #E6414A;padding: 1rem;font-size: 1.5rem;color: #fff;font-weight: bold;">
                 Jugend hackt retten!
-                <a href="/spenden" style="background-color: #f3971b;color: white;display: block;" class="">Jetzt spenden</a>
+                <a href="/spenden" style="background-color: #0096FF;color: white;display: block;" class="">Jetzt spenden</a>
             </div>
         
             <header class="l-header" id="masthead">
