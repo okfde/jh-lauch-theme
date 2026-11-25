@@ -35,11 +35,16 @@
 
             <a class="skip show-on-focus" href="#content"><?php esc_html_e( 'Skip to content', 'lauch' ); ?></a>
 
+        <?php 
+            if ( is_page_template( array( 'page-spenden.php', 'page-spenden-neu.php' ) ) ) { }
+            else { ?>
             <div class="banner" style="text-align: center;background-color: #E6414A;padding: 1rem;font-size: 1.5rem;color: #fff;font-weight: bold;">
                 Jugend hackt retten!
                 <a href="/spenden" style="background-color: #0096FF;color: white;display: block;" class="">Jetzt spenden</a>
             </div>
-        
+        <?php          
+            }
+        ?>
             <header class="l-header" id="masthead">
                 <nav class="c-nav c-topnav l-inner" id="site-navigation">
                     <input type="checkbox" id="menu-toggle"
