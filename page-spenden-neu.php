@@ -19,7 +19,7 @@ while (have_posts()) :
        <?php the_content(); ?>
     </div>
 
-    <section class="c-page-section pb-4 style="background-color:#96d8ff">
+    <section class="c-page-section pb-4" style="background-color:#96d8ff">
         <div class="c-page-slim mb-5 c-rich-text-content">
           <?php the_field('member_header') ?>
         </div>
