@@ -10,7 +10,7 @@ while (have_posts()) :
   the_post();
   ?>
 
-    <div class="c-page-header">
+    <div class="c-page-alpaca-header">
       <img src="<?php echo get_the_post_thumbnail_url($post->ID, 'blog-alpaka'); ?>" alt="" class="clip-alpaka" >
       <h1 class="c-donate-title"><?php the_title()?></h1>
     </div>
