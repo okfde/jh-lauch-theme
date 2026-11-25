@@ -10,16 +10,13 @@ while (have_posts()) :
   the_post();
   ?>
 
-    <div class="c-page-alpaca-header mb-5 mt-3">
-        <div class="c-page-alpaca-featured">
-            <img src="<?php echo get_the_post_thumbnail_url($post->ID, 'blog-alpaka'); ?>" alt="" class="clip-alpaka">
+    <div class="c-page-header">
+      <img src="<?php echo get_the_post_thumbnail_url($post->ID, 'blog-alpaka'); ?>" alt="" class="clip-alpaka" >
+      <h1 class="c-donate-title"><?php the_title()?></h1>
+    </div>
 
-        </div>
-        <div class="c-rich-text-content c-page-alpaca-title">
-          <?php the_title('<h1 class="c-donate-title">', '</h1>') ?>
-            <div class="c-page-full-width"><?php the_content(); ?></div>
-        </div>
-
+    <div class="c-page-full-width">
+       <?php the_content(); ?>
     </div>
 
     <section class="c-page-section pb-4">
